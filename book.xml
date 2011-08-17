@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
 "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
 <book lang="ru">
@@ -2000,54 +2000,6 @@
       корректно, то следует проверить настройки, введённые в пункте Set Boot
       Params. Так же может помочь смена MAC-адреса и проверка, не блокирует ли
       сервер TFTP соединения с маршрутизатора.</para>
-    </section>
-
-    <section>
-      <title>Установка программ</title>
-
-      <para>Функциональность маршрутизатора может быть расширена за счёт
-      установки дополнительного программного обеспечения, поставляемого в виде
-      пакетов.</para>
-
-      <para>Перед установкой пакета его надо загрузить на маршрутизатор.
-      Сделать это можно несколькими способами:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>Разместить на WWW/FTP сервере и загрузить с помощью утилиты
-          <command>wget</command> .</para>
-        </listitem>
-
-        <listitem>
-          <para>Разместить на TFTP-сервере и загрузить с помощью
-          <command>tftp</command> клиента.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Загрузка пакета с TFTP-сервера:</para>
-
-      <para># <command>tftp</command> <replaceable>192.168.2.1</replaceable>
-      <option>-r</option>
-      <replaceable>libpthread_0.9.28-1_mipsel.ipk</replaceable>
-      <option>-g</option></para>
-
-      <para>Установка пакета:</para>
-
-      <screen>
-				#
-				<command>ipkg</command>
-				<option>install</option>
-				<replaceable>libpthread_0.9.28-1_mipsel.ipk</replaceable>
-				Installing libpthread (0.9.28-1) to root...
-				Configuring libpthread
-				Done.
-			</screen>
-
-      <para>Если при выполнении установки пакета будет выведено сообщение
-      <computeroutput> ERROR: Cannot satisfy the following dependencies for
-      <replaceable>fprobe</replaceable> : </computeroutput> , следует
-      установить указанный пакет и повторить установку текущего пакета (
-      <replaceable>fprobe</replaceable> ).</para>
     </section>
 
     <section id="mac-address">
