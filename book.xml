@@ -417,8 +417,8 @@
       </section>
 
       <section id="hw.desc.rs232">
-        <title id="hw.desc.rs232.title">Параметры несущего модуля интерфейсов
-        VoIP (модуль расширения)</title>
+        <title id="hw.desc.rs232.title">Параметры несущего модуля для
+        интерфейсов VoIP (модуль расширения)</title>
 
         <itemizedlist>
           <listitem>
@@ -439,6 +439,209 @@
           <listitem>
             <para><emphasis>Количество интерфейсов VoIP в зависимости от
             заполняемости модуля</emphasis> субмодулями : 2, 4, 6, 8.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Параметры интерфейсов FXO (субмодуль расширения)</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Тип разъема </emphasis>: RJ-11.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Напряжение батареи, В </emphasis>: 30-72.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Амплитуда вызывного напряжения, В</emphasis> :
+            30-120.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Частота вызывного сигнала, Гц</emphasis> :
+            15-65.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Импеданс двухпроводного окончания, Ом </emphasis>:
+            600.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Используемые кодеки</emphasis> </para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Высокое качество</emphasis> : G711
+                (A-law).</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Высокая скорость</emphasis> : G729.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Возможность поддержки полного VoIP стека
+                кодеков</emphasis>.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Количество интерфейсов на одном
+            субмодуле</emphasis> : 2.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Параметры интерфейсов FXS (субмодуль расширения)</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Тип разъема </emphasis>: RJ-11.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Напряжение батареи, В </emphasis>: 48.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Амплитуда вызывного напряжения, В</emphasis> :
+            65.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Максимальная нагрузка, REN</emphasis> : 3.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Импеданс двухпроводного окончания, Ом </emphasis>:
+            600.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Используемые кодеки</emphasis> </para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Высокое качество</emphasis> : G711
+                (A-law).</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Высокая скорость</emphasis> : G729.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Возможность поддержки полного VoIP стека
+                кодеков</emphasis>.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Количество интерфейсов на одном
+            субмодуле</emphasis> : 2.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Параметры интерфейсов VF - каналов тональной частоты (субмодуль
+        расширения)</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Тип разъема </emphasis>: RJ-11.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Параметры четырёхпроводного окончания</emphasis>
+            </para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Контакты</emphasis> : 3-4 - приём (выход), 2-5
+                - передача (вход).</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Входной и выходной импеданс, Ом</emphasis> :
+                600.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на входе канала,
+                дБо</emphasis> : минус 13.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на выходе канала,
+                дБо</emphasis> : плюс 4.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на входе канала в
+                транзитном режиме, дБо</emphasis> : плюс 4.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на выходе канала в
+                транзитном режиме, дБо</emphasis> : плюс 4.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </itemizedlist>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Параметры двухпроводного окончания</emphasis>
+            </para>
+
+            <itemizedlist>
+              <listitem>
+                <para><emphasis>Контакты</emphasis> : 3,4 -
+                приём/передача.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Входной и выходной импеданс, Ом</emphasis> :
+                600.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на входе канала,
+                дБо</emphasis> : 0.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на выходе канала,
+                дБо</emphasis> : минус 7.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на входе канала в
+                транзитном режиме, дБо</emphasis> : минус 3,5.</para>
+              </listitem>
+
+              <listitem>
+                <para><emphasis>Относительный уровень на выходе канала в
+                транзитном режиме, дБо</emphasis> : минус 3,5.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Количество интерфейсов на одном
+            субмодуле</emphasis> : 2.</para>
           </listitem>
         </itemizedlist>
       </section>
