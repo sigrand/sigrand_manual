@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
 "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
 <book lang="ru">
   <bookinfo>
-    <title>Руководство пользователя SG-16R/SG-17R</title>
+    <title>Руководство пользователя SG-17R</title>
 
     <copyright>
       <year>2007</year>
@@ -42,13 +42,13 @@
   </bookinfo>
 
   <chapter>
-    <title>Описание маршрутизатора SG-16R/SG-17R</title>
+    <title>Описание маршрутизатора SG-17R</title>
 
-    <para>Маршрутизаторы Sigrand SG-16R, Sigrand SG-17R предназначены для
-    организации межсетевого взаимодействия в сетях с произвольной
-    конфигурацией, в которых используются различные протоколы и физические
-    канальные уровни. Маршрутизатор SG-17R имеет наращиваемую модульную
-    архитектуру и работает с модулями Е1, SHDSL и VoIP. Так же имеется
+    <para>Маршрутизатор Sigrand SG-17R предназначен для организации
+    межсетевого взаимодействия в сетях с произвольной конфигурацией, в которых
+    используются различные протоколы и физические канальные уровни.
+    Маршрутизатор SG-17R имеет наращиваемую модульную архитектуру и работает с
+    модулями Е1, SHDSL, RS-232 и VoIP (FXO, FXS, VF). Так же имеется
     возможность увеличения дальности связи при сохранении требуемой скорости
     при использовании совместно с маршрутизаторами SG-17R регенераторов
     SG-17E, при этом возможно получать информацию о канале связи со всех
@@ -69,7 +69,7 @@
       ограничению функциональности устройства.</para>
     </important>
 
-    <para>Маршрутизаторы SG-16R и SG-17R имеют следующий функционал:</para>
+    <para>Маршрутизатор SG-17R имеет следующий функционал:</para>
 
     <itemizedlist>
       <listitem>
@@ -115,18 +115,18 @@
       </listitem>
 
       <listitem>
-        <para>Поддержка сетевых интерфейсов: SHDSL, E1, Ethernet, RS232,
-        FXO/FXS, ТЧ.</para>
+        <para>Поддержка сетевых интерфейсов: SHDSL, E1, Ethernet, RS-232,
+        FXO/FXS, VF (ТЧ-каналов).</para>
       </listitem>
 
       <listitem>
-        <para>Работа с SHDSL интерфейсами: SG-17 и SG-17+, обеспечивающие
-        скорости 5,7 и 14 Мбит/c по одной паре (для SG-17R).</para>
+        <para>Работа с SHDSL интерфейсами, обеспечивающие скорости до 14
+        Мбит/c по одной паре.</para>
       </listitem>
 
       <listitem>
         <para>При использовании SHDSL интерфейсов, обеспечение удалённого
-        питания для регенераторов SG-17E (для SG-17R).</para>
+        питания для регенераторов SG-17E-P, модемов SG-17B-P .</para>
       </listitem>
 
       <listitem>
@@ -150,44 +150,6 @@
 
   <chapter>
     <title>Комплектация поставки</title>
-
-    <section>
-      <title>SG-16R</title>
-
-      <itemizedlist>
-        <listitem>
-          <para>Маршрутизатор.</para>
-        </listitem>
-
-        <listitem>
-          <para>Блок питания от сети 220В/50Гц (для настольной версии) или
-          сетевой шнур для подключения к сети 220В/50Гц (для стоечного
-          форм-фактора).</para>
-        </listitem>
-
-        <listitem>
-          <para>Переходник DB-9F — RJ-45 для подключения к терминальному порту
-          маршрутизатора.</para>
-        </listitem>
-
-        <listitem>
-          <para>Компакт-диск с программным обеспечением и
-          документацией.</para>
-        </listitem>
-
-        <listitem>
-          <para>Гарантийный талон.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Схема переходника DB-9F — RJ-45 приведена на рисунке.</para>
-
-      <figure>
-        <title>Схема переходника DB-9F — RJ-45</title>
-
-        <graphic fileref="img/hw-rj45_db9f.png" width="6in" />
-      </figure>
-    </section>
 
     <section>
       <title>SG-17R</title>
@@ -257,8 +219,7 @@
               </listitem>
 
               <listitem>
-                <para>4 интерфейсных слота для установки модулей (для
-                SG-17R).</para>
+                <para>4 интерфейсных слота для установки модулей.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -268,18 +229,44 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Вес</emphasis> — 1,2 кг.</para>
+            <para><emphasis>Питание</emphasis> — 220 B/50 Гц или 36-72 В
+            постоянного тока (в зависимости от модели и поставки).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Питание</emphasis> — 220 B/50 Гц или 36-72 В
-            постоянного тока (в зависимости от модели и поставки).</para>
+            <para><emphasis>Вес базовой платформы </emphasis> — 3,9 кг для
+            варианта 220В/50 Гц и 3,3 кг для варианта 36-72 В постоянного
+            тока.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Параметры интерфейса RS-232C (консольный порт)</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Тип разъема</emphasis> : DB-9F.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Скорость передачи, бит/сек</emphasis> : 115
+            200.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Протокол</emphasis> : 8-N-1.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Управление потоком</emphasis> : нет.</para>
           </listitem>
         </itemizedlist>
       </section>
 
       <section id="hw.desc.shdsl">
-        <title>Параметры линейного интерфейса SHDSL</title>
+        <title>Параметры линейного интерфейса SHDSL (модули
+        расширения)</title>
 
         <itemizedlist>
           <listitem>
@@ -301,21 +288,7 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Скорость передачи</emphasis> :</para>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>SG-16</emphasis> : 6 Мбит/с</para>
-              </listitem>
-
-              <listitem>
-                <para><emphasis>SG-17</emphasis> : 5.7 Мбит/с</para>
-              </listitem>
-
-              <listitem>
-                <para><emphasis>SG-17+</emphasis> : 14 Мбит/с</para>
-              </listitem>
-            </itemizedlist>
+            <para><emphasis>Скорость передачи</emphasis> : 14 Мбит/с</para>
           </listitem>
 
           <listitem>
@@ -340,11 +313,16 @@
               </listitem>
             </itemizedlist>
           </listitem>
+
+          <listitem>
+            <para><emphasis>Количество интерфейсов в зависимости от
+            модификаций модуля</emphasis> : 1, 2.</para>
+          </listitem>
         </itemizedlist>
       </section>
 
       <section id="hw.desc.e1">
-        <title>Параметры интерфейса Е1</title>
+        <title>Параметры интерфейса Е1 (модули расширения)</title>
 
         <itemizedlist>
           <listitem>
@@ -384,41 +362,83 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Отключение цикловой структуры (unframed mode)
-            </emphasis> : есть.</para>
+            <para><emphasis>Отключение цикловой структуры (unframed
+            mode)</emphasis> : есть.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Количество интерфейсов в зависимости от
+            модификаций модуля</emphasis> : 1, 2, 4, 8.</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Параметры интерфейса RS-232 (модули расширения)</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><emphasis>Тип разъема</emphasis> : DB-9F (DCE), DB-9M
+            (DTE).</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Тип интерфейса</emphasis> : RS-232 (V.28).</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Скорость передачи</emphasis> : от 300 до 230400
+            бод.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Разрядность данных</emphasis> : 7 или 8
+            бит.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Количество стоп-бит</emphasis> : 1 или 2.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Четность</emphasis> : ODD, EVEN, NONE.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Сигналы управления</emphasis> : ODD, EVEN,
+            NONE.</para>
+          </listitem>
+
+          <listitem>
+            <para><emphasis>Количество интерфейсов в зависимости от
+            модификаций модуля</emphasis> : 2, 4.</para>
           </listitem>
         </itemizedlist>
       </section>
 
       <section id="hw.desc.rs232">
-        <title id="hw.desc.rs232.title">Параметры интерфейса RS-232C</title>
+        <title id="hw.desc.rs232.title">Параметры несущего модуля интерфейсов
+        VoIP (модуль расширения)</title>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Тип разъема</emphasis> :</para>
-
-            <itemizedlist>
-              <listitem>
-                <para><emphasis>SG-16R</emphasis> : RJ-45 (розетка).</para>
-              </listitem>
-
-              <listitem>
-                <para><emphasis>SG-17R</emphasis> : DB-9F.</para>
-              </listitem>
-            </itemizedlist>
+            <para><emphasis>Установочный интерфейс для субмодулей</emphasis> :
+            2 разъёма: 40+10 контактов (системная + линейная часть).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Скорость передачи, бит/сек</emphasis> : 115
-            200.</para>
+            <para><emphasis>Максимальное количество устанавливаемых
+            субмодулей</emphasis> : 4.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Протокол</emphasis> : 8-N-1.</para>
+            <para><emphasis>Поддерживаемые субмодули</emphasis> : FXO, FXS, FV
+            (ТЧ) в любых сочетаниях.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Управление потоком</emphasis> : нет.</para>
+            <para><emphasis>Количество интерфейсов VoIP в зависимости от
+            заполняемости модуля</emphasis> субмодулями : 2, 4, 6, 8.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -1704,71 +1724,70 @@
       <title>Загрузчик</title>
 
       <para>Меню загрузчика доступно при подключении к маршрутизатору по
-      консольному интерфейсу RS-232. После включения питания, на экран
-      программы эмулятора терминала будет выведено предложение войти в меню
-      загрузчика. Для этого необходимо быстро (в течение 3-х секунд) нажать на
-      любую клавишу, кроме 'q':</para>
+      консольному интерфейсу. После включения питания, на экран будет выведено
+      предложение войти в меню загрузчика. Для этого вам необходимо 3 раза
+      быстро нажать на клавишу пробела.</para>
 
       <screen>
-ADM5120 Boot:
-CPU: Infineon 5120-175MHz
-SDRAM: 64MB
-Flash: NAND-32MB
-Boot System: Linux-5120
-Version: 2.3 (Feb  1 2011 - 17:53:29)
+				ADM5120 Boot:
 
-Press any key to enter boot menu or 'q' to boot OS immediately...
-3
-Checking flash......</screen>
 
-      <para>Если вы нажали любую клавишу, кроме 'q', то выведутся параметры и
-      меню загрузчика:</para>
+				CPU: Infineon 5120-175MHz
+				SDRAM: 64MB
+				Flash: NAND-32MB
+				Boot System:
+				Linux-5120
+				Loader Version: 1.00.03
+				Creation Date: 17.04.2007
+
+				Press &lt;space&gt; key tree times to enter boot menu..
+				3
+			</screen>
+
+      <para>Если вы трижды нажали на пробел, то выведется меню
+      загрузчика:</para>
 
       <screen>
+				==================================
+				Bootloader Menu
+				[1] Xmodem
+				Download
+				[2] TFTP Download
+				[3] Print Boot Params
+				[4] Set Boot Params
+				[5] Exit
 
-ADM5120 based router: Bootloader menu
-=====================================
-
-MAC address: 00-FF-0F-22-32-11
-IP address: 192.168.2.100
-TFTP Server IP address: 192.168.2.1
-TFTP Server Gateway IP address: 0.0.0.0
-Remote bootloader file name: sg5120boot_rom.bin
-Remote linux file name: sg17-r-cp1_1-2223_sigrand.bin
-
-[P] Set Parameters
-[S] Update OS
-[B] Update bootloader
-[F] Flash operations
-[R] Reset
-Enter your option:</screen>
+				Please enter your number:
+			</screen>
 
       <para>В этом меню доступны несколько действий:</para>
 
       <itemizedlist>
         <listitem>
-          <para>Set Parameters - вход в меню установки всех параметров
-          загрузчика</para>
+          <para><emphasis>Xmodem Download</emphasis> — обновление загрузчика
+          или системы через последовательный порт по протоколу Xmodem. Данный
+          способ обновления занимает много времени.</para>
         </listitem>
 
         <listitem>
-          <para>Update OS - обновление системы с сервера TFTP</para>
-        </listitem>
-      </itemizedlist>
-
-      <itemizedlist>
-        <listitem>
-          <para>Update bootloader — обновление загрузчика с сервера
-          TFTP</para>
+          <para><emphasis>TFTP Download</emphasis> — обновление системы или
+          загрузчика с помощью TFTP-сервера.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Flash</emphasis> operations — Управление
-          флэш-памятью. Неокончено.</para>
+          <para><emphasis>Print Boot Params</emphasis> — показывает сетевые
+          параметры загрузчика, основные — мак адрес и IP-адрес.</para>
         </listitem>
 
         <listitem>
-          <para>Reset - сброс процессора и перезагрузка.</para>
+          <para><emphasis>Set Boot Params</emphasis> — установка сетевых
+          параметров для загрузки. Подробнее эти параметры рассмотрены в
+          разделе "Обновление прошивки маршрутизатора".</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>Check flash</emphasis> — проверка флэш-памяти
+          маршрутизатора на наличие поврежденных блоков.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -1777,20 +1796,19 @@ Enter your option:</screen>
       <title id="update.title">Обновление прошивки маршрутизатора</title>
 
       <important>
-        <para>Перед прошивкой следует сохранить конфигурацию (см. раздел <link
-        endterm="cfg.title" linkend="cfg"></link>), т.к. установка новой
-        прошивки вернёт все параметры в исходное состояние, а так же сбросит
-        установленные производителем MAC-адреса (см. раздел <link
-        endterm="mac-address.title" linkend="mac-address"></link>).</para>
+        <para>Перед перепрошивкой следует сохранить конфигурацию (см. раздел
+        <link endterm="cfg.title" linkend="cfg"></link> ), т.к. установка
+        новой прошивки вернёт все параметры в исходное состояние, а так же
+        сбросит установленные производителем MAC-адреса (см. раздел <link
+        endterm="mac-address.title" linkend="mac-address"></link> ).</para>
       </important>
 
-      <para>Обновление прошивки выполняется через консольный интерфейс RS-232,
-      для этого вам потребуется:</para>
+      <para>Обновление прошивки выполняется через консольный интерфейс, для
+      этого вам потребуется:</para>
 
       <itemizedlist>
         <listitem>
-          <para>Компьютер с портом последовательного интерфейса RS-232 (или с
-          кабелем-переходником USB -&gt; RS232).</para>
+          <para>Компьютер с последовательным интерфейсом.</para>
         </listitem>
 
         <listitem>
@@ -1807,87 +1825,249 @@ Enter your option:</screen>
       <para>Если используется локальный TFTP-сервер, то после его настройки
       необходимо в каталог, являющийся для него (TFTP-сервера) корневым,
       скопировать файл прошивки, который можно скачать с веб-сайта <ulink
-      url="http://www.sigrand.ru">sigrand.ru</ulink> . Последние версии
-      прошивки находятся по адресу <ulink
-      url="http://sigrand.ru/temp/sigrand">http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/</ulink>
+      url="http://www.sigrand.ru">www.sigrand.ru</ulink> . Последняя версия
+      прошивки находится по адресу <ulink
+      url="http://sigrand.ru/temp/sigrand">http://sigrand.ru/temp/sigrand</ulink>
       .</para>
 
       <para>Как подготовить маршрутизатор для управления по консольному
       интерфейсу написано в разделе <link endterm="firstboot.title"
-      linkend="firstboot"></link>. После запуска программы эмуляции терминала
-      и установки соответствующих настроек порта, надо включить маршрутизатор.
-      В окне программы выведется информация о маршрутизаторе с предложением
-      войти в меню загрузчика (см. раздел <link endterm="firstboot.title"
-      linkend="bootloader"></link>).</para>
+      linkend="firstboot"></link> . После запуска программы управления
+      терминалом и установки соответствующих настроек порта, надо включить
+      маршрутизатор. В окне программы выведется информация о маршрутизаторе с
+      предложением войти в меню загрузчика:</para>
+
+      <screen>
+				ADM5120 Boot:
+
+
+				CPU: ADM5120-175MHz
+				SDRAM: 128MB
+				Flash: NAND-32MB
+				Boot System: Linux-5120
+				Loader Version: 1.00.03
+				Creation Date: 2004.06.04
+
+				Press &lt;space&gt; key tree times to enter boot menu..
+				2
+			</screen>
+
+      <para>Для активации меню загрузчика надо быстро нажать на клавишу
+      пробела 3 раза. Меню загрузчика выглядит следующим образом:</para>
+
+      <screen>
+				==================================
+				Bootloader Menu
+				[1] Xmodem
+				Download
+				[2] TFTP Download
+				[3] Print Boot Params
+				[4] Set Boot Params
+				[5] Exit
+
+				Please enter your number:
+			</screen>
 
       <para>Перед обновлением прошивки необходимо выставить сетевые параметры,
       которые соответствуют вашей сети. Для этого нужно перейти в пункт меню
-      <emphasis>Set Parameters</emphasis> , нажав клавишу 'P'.</para>
+      <emphasis>Set Boot Params</emphasis> , нажав клавишу 4. Здесь будет
+      предложено указать:</para>
 
-      <para>Меню конфигурации приведено ниже:</para>
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>MAC-адрес сетевого интерфейса</emphasis> — (Enter
+          new mac address) — можно оставить установленный MAC адрес (его
+          значение отображено выше, Current Mac Address), или ввести новое
+          значение.</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>Число MAC адресов</emphasis> — (Enter new number of
+          mac address) — этот параметр следует пропустить (по умолчанию число
+          MAC адресов равно 1).</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>IP-адрес</emphasis> — (Enter new IP address for this
+          board) — следует ввести IP-адрес, находящийся в одной сети с
+          TFTP-сервером.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Пример конфигурации приведен ниже:</para>
 
       <screen>
-Parameters Menu
-===============
-[P] Pre-defined parameters menu
-[M] Local MAC address: 00-FF-0F-22-32-11
-[I] Local IP  address: 192.168.2.100
-[T] TFTP server IP address: 192.168.2.1
-[G] TFTP server gateway address: 0.0.0.0
-[B] Bootloader file name: sg5120boot_rom.bin
-[S] OS file name: sg17-r-cp1_1-2223_sigrand.bin
-[E] Expert mode: Off
-[X] Save parameters and exit menu
-Enter your option: </screen>
+				Set Boot Parameters.
+				==========================
+				Current mac
+				addres: 00-05-5D-77-86-01
+				Number of mac address: 1
+				Enter new mac
+				address (AA-AA-AA-AA-AA-AA):
+				Enter new number of mac address (between
+				1-8):
+				Mac address unchanged.
+				IP address for this board: 10.10.10.1
+				Enter new IP address for this board: 10.10.10.1
+				IP updated
+				successfully.
+			</screen>
 
-      <para>После настройки сетевых параметров, следует выбрать пункт меню 'X'
-      (сохранение параметров и выход в вышестоящее меню).</para>
+      <para>В приведённом примере был введён только IP адрес маршрутизатора,
+      остальные параметры оставлены без изменений.</para>
+
+      <para>После настройки сетевых параметров, следует выбрать пункт меню 2
+      (TFTP Download) для настройки параметров обновления с помощью
+      TFTP-сервера. Содержание этого меню приведено ниже:</para>
+
+      <screen>
+				Server IP: 80.66.88.167
+				Gateway IP: 10.10.10.2
+				Remote File
+				system: openwrt
+
+				TFTP Client Menu
+				===============================
+				[S]: Update system
+				[P]:
+				Set parameters
+				[X]: exit
+				Enter your option:
+			</screen>
+
+      <note>
+        <para>Приведённое выше меню соответствует новому загрузчику, в который
+        была добавлена возможность загрузки системы с TFTP-сервера,
+        находящегося за маршрутизатором. Меню в старых версиях загрузчика
+        отличается отсутствием возможности установки шлюза.</para>
+      </note>
+
+      <para>Первые три строчки над меню содержат информацию, установленную во
+      время последнего обновления прошивки. Для их изменения следует выбрать
+      пункт меню set parameters нажатием клавиши p. В ответ на это будет
+      предложено ввести:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>IP-адрес TFTP-сервера</emphasis> — (Please Enter
+          TFTP Server IP) — IP-адрес TFTP-сервера, на котором находится файл
+          прошивки. Можно использовать TFTP-сервер, предоставляемый компанией
+          Сигранд — <emphasis>sigrand.ru</emphasis> . Вводить следует IP-адрес
+          сервера.</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>IP-адрес шлюза</emphasis> — (Please enter gateway
+          IP). Установка данного параметра позволяет обновлять прошивку с
+          TFTP-сервера, находящегося в отличной от маршрутизатора сети. Шлюз
+          должен находиться в той же сети, что и интерфейс
+          маршрутизатора.</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>Имя файла прошивки</emphasis> — (Enter remote system
+          file name) — имя файла прошивки, расположенного на
+          TFTP-сервере.</para>
+        </listitem>
+      </itemizedlist>
+
+      <screen>
+				Please enter TFTP server IP : 80.66.88.167
+				Please enter
+				gateway IP : 10.10.10.2
+				Enter remote system file name : openwrt
+			</screen>
 
       <para>Для обновления прошивки маршрутизатора переходим в пункт меню [S]:
-      Update OS:</para>
+      Update system:</para>
 
       <screen>
-Enter your option:s
-Starting the TFTP download(ESC to stop) ..........................................................
-..................................................................................................
-.............................................................. PASS
+				Enter your option:s
+				Starting the TFTP download(ESC to
+				stop)...................................
+				PASS
+				File total Length:
+				00B62808 Starting address: A0820000
 
-Eraseing flash ...................................................................................
-..................................................................................................
-..................................................................................................
-.............................................................. PASS
-Programming flash ................................................................................
-..................................................................................................
-.............................................................. PASS
-
-
-</screen>
+				Eraseing flash.......
+				PASS
+				Programming flash....
+				PASS
+			</screen>
 
       <para>PASS, соответствующий строчкам Eraseing flash и Programming flash
       означает, что обновление прошло успешно. FAIL говорит о возникших
       проблемах, как правило это неправильный IP-адрес TFTP-сервера
       (маршрутизатор и TFTP-сервер находятся в разных сетях) или неправильное
       имя файла на сервере. Для загрузки новой прошивки необходимо выполнить
-      перезагрузку маршрутизатора нажатием на клавишу 'R' меню верхнего уровня
-      или включением/выключением питания.</para>
+      перезагрузку маршрутизатора нажатием на кнопку RESET или
+      включением/выключением питания.</para>
 
       <para>После загрузки маршрутизатора (при обычной загрузке не требуется
       входить в меню загрузчика, поэтому надо подождать, пока истечёт таймер и
       начнётся загрузка операционной системы), можно перейти к настройке
       посредством веб-интерфейса. Доступ к консоли больше не требуется,
-      поэтому кабель и соответствующее <acronym>ПО</acronym> можно
+      поэтому провод и соответствующее <acronym>ПО</acronym> можно
       отключить.</para>
 
       <para>В случае, если на экран была выведена строчка:</para>
 
-      <screen>Starting the TFTP download(ESC to stop) ... FAIL</screen>
+      <screen>Starting the TFTP download(ESC to stop)..FAIL</screen>
 
       <para>— значит, загрузчику не удалось загрузить файл прошивки с
       указанного TFTP-сервера. В этом случае следует проверить корректность
       указания IP адреса TFTP-сервера и имени файла прошивки на нем. Если всё
-      корректно, то следует проверить настройки, введённые в пункте Set
-      Parameters. Так же может помочь смена MAC-адреса и проверка, не
-      блокирует ли сервер TFTP соединения с маршрутизатора.</para>
+      корректно, то следует проверить настройки, введённые в пункте Set Boot
+      Params. Так же может помочь смена MAC-адреса и проверка, не блокирует ли
+      сервер TFTP соединения с маршрутизатора.</para>
+    </section>
+
+    <section>
+      <title>Установка программ</title>
+
+      <para>Функциональность маршрутизатора может быть расширена за счёт
+      установки дополнительного программного обеспечения, поставляемого в виде
+      пакетов.</para>
+
+      <para>Перед установкой пакета его надо загрузить на маршрутизатор.
+      Сделать это можно несколькими способами:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Разместить на WWW/FTP сервере и загрузить с помощью утилиты
+          <command>wget</command> .</para>
+        </listitem>
+
+        <listitem>
+          <para>Разместить на TFTP-сервере и загрузить с помощью
+          <command>tftp</command> клиента.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Загрузка пакета с TFTP-сервера:</para>
+
+      <para># <command>tftp</command> <replaceable>192.168.2.1</replaceable>
+      <option>-r</option>
+      <replaceable>libpthread_0.9.28-1_mipsel.ipk</replaceable>
+      <option>-g</option></para>
+
+      <para>Установка пакета:</para>
+
+      <screen>
+				#
+				<command>ipkg</command>
+				<option>install</option>
+				<replaceable>libpthread_0.9.28-1_mipsel.ipk</replaceable>
+				Installing libpthread (0.9.28-1) to root...
+				Configuring libpthread
+				Done.
+			</screen>
+
+      <para>Если при выполнении установки пакета будет выведено сообщение
+      <computeroutput> ERROR: Cannot satisfy the following dependencies for
+      <replaceable>fprobe</replaceable> : </computeroutput> , следует
+      установить указанный пакет и повторить установку текущего пакета (
+      <replaceable>fprobe</replaceable> ).</para>
     </section>
 
     <section id="mac-address">
