@@ -1746,18 +1746,16 @@ Checking flash......</screen>
 
       <screen>
 
-				CPU: Infineon 5120-175MHz
-				SDRAM: 64MB
-				Flash: NAND-32MB
-				Boot System:
-				Linux-5120
-				Loader Version: 1.00.03
-				Creation Date: 17.04.2007
+CPU: Infineon 5120-175MHz
+SDRAM: 64MB
+Flash: NAND-32MB
+Boot System: Linux-5120
+Version 2.3 (Feb  1 2011 - 17:53:29)
 
-				Press &lt;space&gt; key tree times to enter boot menu..
-				3
-			</screen>
+Press any key to enter boot menu or 'q' to boot OS immediately...
+3</screen>
 
+      <screen>
 [P] Set Parameters
 [S] Update OS
 [B] Update bootloader
@@ -1841,31 +1839,22 @@ Enter your option:</screen>
       войти в меню загрузчика (см. раздел <link endterm="firstboot.title"
       linkend="bootloader"></link>).</para>
 
-        <listitem>
-          <para><emphasis>IP-адрес</emphasis> — (Enter new IP address for this
-          board) — следует ввести IP-адрес, находящийся в одной сети с
-          TFTP-сервером.</para>
-        </listitem>
-      </itemizedlist>
-
       <para>Пример конфигурации приведен ниже:</para>
 
       <screen>
-				Set Boot Parameters.
-				==========================
-				Current mac
-				addres: 00-05-5D-77-86-01
-				Number of mac address: 1
-				Enter new mac
-				address (AA-AA-AA-AA-AA-AA):
-				Enter new number of mac address (between
-				1-8):
-				Mac address unchanged.
-				IP address for this board: 10.10.10.1
-				Enter new IP address for this board: 10.10.10.1
-				IP updated
-				successfully.
-			</screen>
+
+Parameters Menu
+=====================================
+ [P] Pre-defined parameters menu
+ [M] Local MAC address: 00-FF-0F-22-32-11
+ [I] Local IP  address: 192.168.2.100
+ [T] TFTP server IP address: 192.168.2.1
+ [G] TFTP server gateway address: 0.0.0.0
+ [B] Bootloader file name: sg5120boot_rom.bin
+ [S] OS file name: sg.bin
+ [E] Expert mode: Off
+ [X] Save parameters and exit menu
+Enter your option:</screen>
 
       <para>В приведённом примере был введён только IP адрес маршрутизатора,
       остальные параметры оставлены без изменений.</para>
@@ -1916,54 +1905,6 @@ Programming flash ..............................................................
       корректно, то следует проверить настройки, введённые в пункте Set
       Parameters. Так же может помочь смена MAC-адреса и проверка, не
       блокирует ли сервер TFTP соединения с маршрутизатора.</para>
-    </section>
-
-    <section>
-      <title>Установка программ</title>
-
-      <para>Функциональность маршрутизатора может быть расширена за счёт
-      установки дополнительного программного обеспечения, поставляемого в виде
-      пакетов.</para>
-
-      <para>Перед установкой пакета его надо загрузить на маршрутизатор.
-      Сделать это можно несколькими способами:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>Разместить на WWW/FTP сервере и загрузить с помощью утилиты
-          <command>wget</command> .</para>
-        </listitem>
-
-        <listitem>
-          <para>Разместить на TFTP-сервере и загрузить с помощью
-          <command>tftp</command> клиента.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Загрузка пакета с TFTP-сервера:</para>
-
-      <para># <command>tftp</command> <replaceable>192.168.2.1</replaceable>
-      <option>-r</option>
-      <replaceable>libpthread_0.9.28-1_mipsel.ipk</replaceable>
-      <option>-g</option></para>
-
-      <para>Установка пакета:</para>
-
-      <screen>
-				#
-				<command>ipkg</command>
-				<option>install</option>
-				<replaceable>libpthread_0.9.28-1_mipsel.ipk</replaceable>
-				Installing libpthread (0.9.28-1) to root...
-				Configuring libpthread
-				Done.
-			</screen>
-
-      <para>Если при выполнении установки пакета будет выведено сообщение
-      <computeroutput> ERROR: Cannot satisfy the following dependencies for
-      <replaceable>fprobe</replaceable> : </computeroutput> , следует
-      установить указанный пакет и повторить установку текущего пакета (
-      <replaceable>fprobe</replaceable> ).</para>
     </section>
 
     <section id="mac-address">
