@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
 "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
 <book lang="ru">
@@ -5928,6 +5928,65 @@ Programming flash ..............................................................
     <section id="rs232ip">
       <title>"Удлинитель" портов RS-232 через Internet</title>
 
+      <para>Описание</para>
+
+      <para>"Удлинитель" портов RS-232 заменяет невозможно длинный кабель,
+      соединяющий два устройства с портами RS-232 (DTE и DCE), передавая в
+      обоих направлениях данные и состояние управляющих/модемных линий.</para>
+
+      <para>Схема удлинителя:</para>
+
+      <screen>
+---------       ----------              ----------       --------
+|    DTE|--&gt; &gt;--|DCE     |              |     DTE|--&gt; &gt;--|DCE   |
+| ПК    | ..... | SG-17R |-- Internet --| SG-17R | ..... | УСТР.|
+|    DTE|--&gt; &gt;--|DCE     |              |     DTE|--&gt; &gt;--|DCE   |
+---------       ----------              ----------       --------</screen>
+
+      <para>Направление передачи управляющих/модемных линий:</para>
+
+      <screen>
+Прямой соединительный кабель:
+
+    DTE    DCE
+    ---    ---
+    DTR -&gt; DTR
+    DSR &lt;- DSR
+    RTS -&gt; RTS
+    CTS &lt;- CTS
+    CD  &lt;- CD
+    RI  &lt;- RI
+
+null-modem:
+
+    DTE    DTE
+    ---    ---
+    DTR -&gt; DSR,CD
+ CD,DSR &lt;- DTR
+    RTS -&gt; CTS
+    CTS &lt;- RTS</screen>
+
+      <para>Устройство и принципы работы</para>
+
+      <para>На каждый сконфигурированный порт RS-232 на каждом рутере
+      запускается отдельный экземпляр демона rs232-tcpext, на одной стороне
+      (рутере SG-17R) в пассивном режиме (ожидание соединений), на другой
+      стороне в активном режиме (установление соединений).</para>
+
+      <para>Устанавливаются два соединения TCP/IP, одно для данных, другое для
+      состояния управляющих/модемных линий. Состояние управляющих/модемных
+      линий опрашивается с заданным интервалом времени, обычно 100
+      msec.</para>
+
+      <para>В случае любой ошибки, закрытия любого из соединений, закрытия
+      порта RS-232, невожможности установления соединений с другой стороной,
+      происходит рестарт (закрытие и открытие) соединений и порта RS-232 с
+      заданной задержкой, обычно 1000 msec.</para>
+
+      <para>Архитектура с отдельными экземплярами демонов для каждого порта
+      обеспечивает при конфигурировании/рестарте одного порта невмешательство
+      в потоки данных других портов.</para>
+
       <para>Инструкция по настройке</para>
 
       <itemizedlist>
@@ -5938,108 +5997,127 @@ Programming flash ..............................................................
 
         <listitem>
           <para>Во вкладках Hardware/ttyRS* настройте параметры выбранных
-          портов и нажмите save.</para>
+          портов и нажмите "save".</para>
         </listitem>
 
         <listitem>
           <para>Для каждого порта решите, который из рутеров для данного порта
-          будет активной и пассивной сторонами.</para>
+          будет активной и пассивной сторонами. Пассивная сторона ждёт
+          соединения на выбранном сетевом адресе от активной стороны.</para>
         </listitem>
 
         <listitem>
-          <para>Во вкладках Services/ttyRS* обоих рутеров настройте пассивную
-          сторону соединения: Listening host, Listening port. Listening port
-          должен быть уникальным для каждого рутера. Включите "Enable" и
-          нажмите save. Убедитесь, что на этом рутере запущен процесс: во
-          вкладке System/Console введите команду ps и убедитесь, что процесс
-          sercd запущен:</para>
+          <para>Во вкладках Services/ttyRS* обоих рутеров настройте стороны
+          соединения.</para>
 
-          <para><command>ps</command></para>
+          <para>Селектор "mode" определяет режим:</para>
 
-          <para><command>...</command></para>
+          <itemizedlist>
+            <listitem>
+              <para>"Disable" - служба выключена,</para>
+            </listitem>
 
-          <para><command>2894 root 716 S socat -d -d -P
-          /var/run/socat.ttyRS0.pid -ly TCP-LIST</command></para>
-        </listitem>
+            <listitem>
+              <para>"Listen On" - ждать соединений на заданных "host", "port"
+              (пассивный режим)</para>
+            </listitem>
 
-        <listitem>
-          <para>Вернитесь во вкладку Services/ttyRS* одного из рутеров и
-          настройте активную часть соединения, секция "Connect to": Host, Port
-          - адрес и порт на рутере с запущенной пассивной частью, включите
-          "Enable" и "Connect To" и нажмите save. Убедитесь, что на этом
-          рутере запущен процесс: во вкладке System/Console введите команду ps
-          и убедитесь, что процесс socat запущен:</para>
-
-          <para><command>ps</command></para>
-
-          <para><command>...</command></para>
-
-          <para><command>3528 root 716 S socat -d -d -P
-          /var/run/socat.ttyRS0.pid -ly file:/de </command></para>
-
-          <para>Во вкладке System/Tools/Syslog наблюдайте сообщения
-          socat:</para>
-
-          <para><command>Пассивная сторона:</command></para>
-
-          <para><command>daemon.notice socat[2894]: N listening on AF=2
-          0.0.0.0:3000</command></para>
-
-          <para><command>daemon.notice socat[2894]: N accepting connection
-          from AF=2 192.168.2.101:4221 on AF=2
-          192.168.2.102:3000</command></para>
-
-          <para><command>daemon.notice socat[2894]: N opening character device
-          "/dev/ttyRS0" for reading and writing</command></para>
-
-          <para><command>daemon.notice socat[2894]: N starting data transfer
-          loop with FDs [6,6] and [3,3]</command></para>
-
-          <para><command>Активная сторона:</command></para>
-
-          <para><command>daemon.notice socat[3528]: N opening character device
-          "/dev/ttyRS0" for reading and writing</command></para>
-
-          <para><command>daemon.notice socat[3528]: N opening connection to
-          AF=2 192.168.2.102:3000</command></para>
-
-          <para><command>daemon.notice socat[3528]: N successfully connected
-          from local address AF=2 192.168.2.101:4221</command></para>
-
-          <para><command>daemon.notice socat[3528]: N starting data transfer
-          loop with FDs [4,4] and [6,6]</command></para>
-        </listitem>
-
-        <listitem>
-          <para>Проверка работы портов. Соедините выбранные порты RS-232
-          рутеров с портами ПК:</para>
-
-          <para><mediaobject>
-              <textobject>
-                <literallayout class="monospaced">
-
----------------     --------------------------
-|     :   COM | --- | ttyRS0 : рутер1 : eth0 | ... Internet ...
-| ПК1 :       |     --------------------------  .             .
-|     :  eth0 | .................................             .
----------------                                               .
-                                                              .
----------------                                               .
-|     :  eth0 | .................................             .
-| ПК2 :       |     --------------------------  .             .
-|     :   COM | --- | ttyRS0 : рутер2 : eth0 | ... Internet ...
----------------     --------------------------
-                </literallayout>
-              </textobject>
-            </mediaobject></para>
-        </listitem>
-
-        <listitem>
-          <para>Настройте порты RS-232 ПК (скорость, 8n1, ...) так же, как и
-          соединённые с ними порты рутера. На обоих ПК запустите терминальные
-          программы на соотвествующие порты и попечатайте.</para>
+            <listitem>
+              <para>"Connect To" - соединится с заданными "host", "port"
+              (активный режим)</para>
+            </listitem>
+          </itemizedlist>
         </listitem>
       </itemizedlist>
+
+      <para>Поля "host" и "port" определяют сетевой адрес и порт, на котором
+      пассивная сторона ждёт соединения от активной стороны (см. bind(2)) или
+      на которые делает соединение активная сторна. Значение по умолчанию -
+      0.0.0.0 - принимать соединение от любого из сетевых интерфейсов.
+      localhost (127.0.0.1) не сможет принимать соединения от других узлов в
+      сети.</para>
+
+      <para>Поле "Modem lines polling interval (msec)" определяет интервал
+      времени опроса состояния модемных линий, по умолчанию 100 msec.</para>
+
+      <para>Поле "Restart delay (msec)" определяет задержку перед рестартом в
+      случае любой ошибки, по умолчанию 1000 msec.</para>
+
+      <para>Нажмите кнопки "save".</para>
+
+      <para>Убедитесь, что на каждом рутере запущен процесс: во вкладке
+      System/Console введите команду "ps ax" и убедитесь, что процесс
+      rs232-tcpext запущен:</para>
+
+      <screen>
+ps ax
+...
+ 728 ? S 0:00 rs232-tcpext /dev/ttyRS0 0.0.0.0 3000 listen /var/run/rs232-tcpext.ttyRS0.pid 100 1000
+
+3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</screen>
+
+      <para>Учтите, что процесс запуска из web системы достаточно
+      медленный.</para>
+
+      <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
+      демонов:</para>
+
+      <para>Пассивная сторона:</para>
+
+      <screen>
+daemon.warn rs232-tcpext ttyRS0  listen : started up
+daemon.info rs232-tcpext ttyRS0  listen : pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
+daemon.info rs232-tcpext ttyRS0  listen : Waiting data connection...</screen>
+
+      <para>После соединения от активной стороны:</para>
+
+      <screen>
+daemon.info rs232-tcpext ttyRS0  listen : Data connection from 192.168.3.102:2937
+daemon.info rs232-tcpext ttyRS0  listen : Waiting state connection...
+daemon.info rs232-tcpext ttyRS0  listen : State connection from 192.168.3.102:2938
+daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  listen : Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
+
+      <para>Активная сторона:</para>
+
+      <screen>
+daemon.warn rs232-tcpext ttyRS0  connect: started up
+daemon.info rs232-tcpext ttyRS0  connect: pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
+daemon.err rs232-tcpext ttyRS0  connect: socket_connect(): Could not connect to 192.168.2.101:3000
+daemon.warn rs232-tcpext ttyRS0  connect: restart
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (state) to 192.168.2.101:3000 ...
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  connect: Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
+
+      <para>Простая проверка работы удлинителя RS-232.</para>
+
+      <para>Соедините выбранные интерфейсы RS-232 рутеров с портами ПК:</para>
+
+      <screen>
+------------------        ------------------------------
+|     : COM1 DTE | ------ | DCE ttyRS0 : рутер1 : eth0 | ...... Internet ...
+|     :          |        ------------------------------    .              .
+|     :     eth1 | ..........................................              .
+|     :          |                                                         .
+| ПК  :..........|                                                         .
+|     :          |                                                         .
+|     :     eth2 | ..........................................              .
+|     :          |        ------------------------------    .              .
+|     : COM2 DTE | ------ | DCE ttyRS0 : рутер2 : eth0 | ...... Internet ...
+------------------        ------------------------------</screen>
+
+      <para>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) так же, как и
+      соединённые с ними интерфейсы рутера.</para>
+
+      <para>На обоих ПК запустите терминальные программы на соотвествующие
+      интерфейсы и попечатайте.</para>
+
+      <para>Для проверки передачи сигналов управления/модемных линий эта схема
+      непригодна.</para>
     </section>
   </chapter>
 
