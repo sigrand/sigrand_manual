@@ -27,8 +27,7 @@
 
     <abstract>
       <para>В данном руководстве рассмотрены вопросы настройки и эксплуатации
-      маршрутизаторов ООО "Сигранд" 16-й и 17-й серии (SG-16R и SG-17R
-      соответственно).</para>
+      маршрутизаторов ООО "Сигранд" 17-й серии ( SG-17R).</para>
 
       <para>Приводится краткое описание характеристик и возможностей
       маршрутизатора, условий его эксплуатации, параметров сетевых
@@ -471,7 +470,7 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Используемые кодеки</emphasis> </para>
+            <para><emphasis>Используемые кодеки</emphasis></para>
 
             <itemizedlist>
               <listitem>
@@ -526,7 +525,7 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Используемые кодеки</emphasis> </para>
+            <para><emphasis>Используемые кодеки</emphasis></para>
 
             <itemizedlist>
               <listitem>
@@ -564,8 +563,8 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Параметры четырёхпроводного окончания</emphasis>
-            </para>
+            <para><emphasis>Параметры четырёхпроводного
+            окончания</emphasis></para>
 
             <itemizedlist>
               <listitem>
@@ -603,8 +602,8 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Параметры двухпроводного окончания</emphasis>
-            </para>
+            <para><emphasis>Параметры двухпроводного
+            окончания</emphasis></para>
 
             <itemizedlist>
               <listitem>
@@ -696,265 +695,13 @@
         </section>
 
         <section>
-          <title>SG-16</title>
+          <title>Модули MR-17H</title>
 
-          <para>Таблица дальности/скорости для SHDSL версии SG-16 представлена
-          ниже.</para>
-
-          <table align="center" frame="all">
-            <title>Таблица дальности/скорости для SG-16</title>
-
-            <tgroup cols="3">
-              <thead>
-                <row>
-                  <entry>Скорость, кбит/с</entry>
-
-                  <entry>Кабель сечением 0,4 мм, км</entry>
-
-                  <entry>Кабель сечением 0,5 мм, км</entry>
-                </row>
-              </thead>
-
-              <tbody>
-                <row>
-                  <entry>6016</entry>
-
-                  <entry>1,8</entry>
-
-                  <entry>2,2</entry>
-                </row>
-
-                <row>
-                  <entry>4608</entry>
-
-                  <entry>2,0</entry>
-
-                  <entry>2,6</entry>
-                </row>
-
-                <row>
-                  <entry>3072</entry>
-
-                  <entry>3,0</entry>
-
-                  <entry>4,2</entry>
-                </row>
-
-                <row>
-                  <entry>2304</entry>
-
-                  <entry>3,8</entry>
-
-                  <entry>5,4</entry>
-                </row>
-
-                <row>
-                  <entry>1536</entry>
-
-                  <entry>4,4</entry>
-
-                  <entry>6,4</entry>
-                </row>
-
-                <row>
-                  <entry>1024</entry>
-
-                  <entry>5,0</entry>
-
-                  <entry>7,6</entry>
-                </row>
-
-                <row>
-                  <entry>512</entry>
-
-                  <entry>5,8</entry>
-
-                  <entry>9,0</entry>
-                </row>
-
-                <row>
-                  <entry>256</entry>
-
-                  <entry>6,6</entry>
-
-                  <entry>10,0</entry>
-                </row>
-
-                <row>
-                  <entry>128</entry>
-
-                  <entry>7,4</entry>
-
-                  <entry>11,4</entry>
-                </row>
-
-                <row>
-                  <entry>64</entry>
-
-                  <entry>7,4</entry>
-
-                  <entry>11,4</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-        </section>
-
-        <section>
-          <title>SG-17</title>
-
-          <para>Таблица дальности/скорости для SHDSL версии SG-17 представлена
-          ниже.</para>
-
-          <table align="center" frame="all">
-            <title>Таблица дальности/скорости для SG-17</title>
-
-            <tgroup cols="4">
-              <thead>
-                <row>
-                  <entry>Скорость, кбит/с</entry>
-
-                  <entry>Кабель сечением 0,5 мм, км</entry>
-
-                  <entry>Кабель сечением 0,9 мм, км</entry>
-
-                  <entry>Кабель сечением 1,2 мм, км</entry>
-                </row>
-              </thead>
-
-              <tbody>
-                <row>
-                  <entry>5696</entry>
-
-                  <entry>2,6</entry>
-
-                  <entry>5,0</entry>
-
-                  <entry>8,6</entry>
-                </row>
-
-                <row>
-                  <entry>4608</entry>
-
-                  <entry>3,6</entry>
-
-                  <entry>5,6</entry>
-
-                  <entry>9,6</entry>
-                </row>
-
-                <row>
-                  <entry>4096</entry>
-
-                  <entry>4,0</entry>
-
-                  <entry>7,4</entry>
-
-                  <entry>12,4</entry>
-                </row>
-
-                <row>
-                  <entry>3072</entry>
-
-                  <entry>5,0</entry>
-
-                  <entry>8,0</entry>
-
-                  <entry>13,4</entry>
-                </row>
-
-                <row>
-                  <entry>2304</entry>
-
-                  <entry>5,4</entry>
-
-                  <entry>11,2</entry>
-
-                  <entry>19,0</entry>
-                </row>
-
-                <row>
-                  <entry>2048</entry>
-
-                  <entry>6,2</entry>
-
-                  <entry>13,0</entry>
-
-                  <entry>22,2</entry>
-                </row>
-
-                <row>
-                  <entry>1536</entry>
-
-                  <entry>7,0</entry>
-
-                  <entry>15,8</entry>
-
-                  <entry>26,6</entry>
-                </row>
-
-                <row>
-                  <entry>1024</entry>
-
-                  <entry>7,8</entry>
-
-                  <entry>17,4</entry>
-
-                  <entry>29,6</entry>
-                </row>
-
-                <row>
-                  <entry>768</entry>
-
-                  <entry>8,4</entry>
-
-                  <entry>18,6</entry>
-
-                  <entry>31,6</entry>
-                </row>
-
-                <row>
-                  <entry>512</entry>
-
-                  <entry>9,0</entry>
-
-                  <entry>20,0</entry>
-
-                  <entry>33,8</entry>
-                </row>
-
-                <row>
-                  <entry>384</entry>
-
-                  <entry>9,6</entry>
-
-                  <entry>21,0</entry>
-
-                  <entry>35,8</entry>
-                </row>
-
-                <row>
-                  <entry>192</entry>
-
-                  <entry>10,4</entry>
-
-                  <entry>23,0</entry>
-
-                  <entry>40,0</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-        </section>
-
-        <section>
-          <title>SG-17+</title>
-
-          <para>Таблица дальности/скорости для SHDSL версии SG-17+
+          <para>Таблица дальности/скорости для SHDSL модулей MR-17H
           представлена ниже.</para>
 
           <table frame="all">
-            <title>Таблица дальности/скорости для SG-17+</title>
+            <title>Таблица дальности/скорости для SHDSL модулей MR-17H</title>
 
             <tgroup align="center" cols="4">
               <thead>
@@ -963,13 +710,23 @@
 
                   <entry>Кабель сечением 0,5 мм, км</entry>
 
-                  <entry>Кабель сечением 0,9 мм, км</entry>
+                  <entry>Кабель сечением 0,9 мм, км (*)</entry>
 
-                  <entry>Кабель сечением 1,2 мм, км</entry>
+                  <entry>Кабель сечением 1,2 мм, км (*)</entry>
                 </row>
               </thead>
 
               <tbody>
+                <row>
+                  <entry>15296 (**)</entry>
+
+                  <entry>0,6</entry>
+
+                  <entry></entry>
+
+                  <entry></entry>
+                </row>
+
                 <row>
                   <entry>14080</entry>
 
@@ -1182,54 +939,15 @@
               </tbody>
             </tgroup>
           </table>
+
+          <para><note>
+              <para>(*) - не все данные получены экспериментальным
+              путем</para>
+
+              <para>(**) - скорость 15296 кбит/c возможна только для модулей
+              MS-17H4 для базовой платформы SG-17S</para>
+            </note></para>
         </section>
-      </section>
-
-      <section>
-        <title>Совместимость оборудования по интерфейсу SHDSL</title>
-
-        <para>Таблица совместимости оборудования по интерфейсу SHDSL приведена
-        ниже. SG-16R относится к серии SG-16, а SG-17R — к серии SG-17.</para>
-
-        <table align="center" frame="all">
-          <title>Совместимость оборудования по интерфейсу SHDSL</title>
-
-          <tgroup cols="4">
-            <thead>
-              <row>
-                <entry>Серия/версия интерфейса</entry>
-
-                <entry>SG-16</entry>
-
-                <entry>SG-17</entry>
-
-                <entry>SG-17+</entry>
-              </row>
-            </thead>
-
-            <tbody>
-              <row>
-                <entry>SG-16</entry>
-
-                <entry>+</entry>
-
-                <entry>-</entry>
-
-                <entry>-</entry>
-              </row>
-
-              <row>
-                <entry>SG-17</entry>
-
-                <entry>-</entry>
-
-                <entry>+</entry>
-
-                <entry>+</entry>
-              </row>
-            </tbody>
-          </tgroup>
-        </table>
       </section>
 
       <section>
@@ -1289,199 +1007,6 @@
 
         <para>Затем подключите кабель к разъёму SHDSL маршрутизатора.</para>
       </section>
-    </section>
-
-    <section id="hw.sg-16r">
-      <title>Внешний вид, назначение индикаторов и разъёмов SG-16R</title>
-
-      <para>Маршрутизатор Sigrand SG-16R поставляется в настольном
-      форм-факторе и в форм-факторе 19" для монтажа в коммуникационную
-      стойку.</para>
-
-      <para>Вид передней панели маршрутизатора с одним и двумя каналами SHDSL,
-      выполненного в форм-факторе 19", представлен ниже.</para>
-
-      <figure>
-        <title>Вид передней панели маршрутизатора с одним каналом SHDSL в
-        форм-факторе 19"</title>
-
-        <graphic fileref="img/hw-sg16-1dsl-front-text.png" width="6in" />
-      </figure>
-
-      <figure>
-        <title>Вид передней панели маршрутизатора с двумя каналами SHDSL в
-        форм-факторе 19"</title>
-
-        <graphic fileref="img/hw-sg16-2dsl-front-text.png" width="6in" />
-      </figure>
-
-      <itemizedlist>
-        <listitem>
-          <para><emphasis>Порты Ethernet</emphasis> — RJ-45 порты для
-          подключения по интерфейсу Ethernet.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Порты SHDSL</emphasis> — RJ-45 порты для подключения
-          по интерфейсу SHDSL.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>PGND</emphasis> — клемма для подключения
-          заземления.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Консольный порт</emphasis> — RJ-45 порт для
-          управления маршрутизатором.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Индикаторы Ethernet</emphasis> — каждому каналу
-          соответствует два индикатора:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Верхний — <emphasis>FD/C</emphasis> :</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para><emphasis>Горит</emphasis> — полнодуплексный режим
-                  работы (Full duplex).</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Не горит</emphasis> — полудуплексный режим
-                  работы (Half duplex).</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Мигает</emphasis> — наличие коллизии в
-                  канале (Collision).</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Нижний — <emphasis>LINK</emphasis> :</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para><emphasis>Горит</emphasis> — связь с удалённым
-                  устройством есть.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Не горит</emphasis> — связи с удалённым
-                  устройством нет.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Мигает</emphasis> — идёт обмен
-                  данными.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Индикаторы SHDSL</emphasis></para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Верхний — <emphasis>ERR</emphasis> :</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para><emphasis>Не горит</emphasis> — нет сбойных
-                  пакетов.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Мигает</emphasis> — получен сбойный
-                  пакет.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para>Нижний — <emphasis>LINK</emphasis> :</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para><emphasis>Горит</emphasis> — связь с удалённым
-                  устройством есть.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Не горит</emphasis> — связи с удалённым
-                  устройством нет.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Мигает</emphasis> — процесс установки
-                  связи.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Выключатель питания</emphasis> — выключатель питания
-          маршрутизатора.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Индикатор питания</emphasis> — горит, когда
-          маршрутизатор включён.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Вид задней панели маршрутизатора с питанием 220В/50Гц в
-      форм-факторе 19" показан ниже.</para>
-
-      <figure>
-        <title>Вид задней панели маршрутизатора с питанием 220В/50Гц в
-        форм-факторе 19"</title>
-
-        <graphic fileref="img/hw-sg16-back-text.png" width="6in" />
-      </figure>
-
-      <itemizedlist>
-        <listitem>
-          <para><emphasis>Разъём питания</emphasis> — для подключения к сети
-          220В/50Гц.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Вид задней панели маршрутизатора с питанием AC 220В/50Гц и DC
-      36-72В в форм-факторе 19" показан ниже.</para>
-
-      <figure>
-        <title>Вид задней панели маршрутизатора с питанием AC 220В/50Гц и DC
-        36-72В в форм-факторе 19"</title>
-
-        <graphic fileref="img/hw-sg16-back-ac_dc-text.png" width="6in" />
-      </figure>
-
-      <itemizedlist>
-        <listitem>
-          <para><emphasis>Разъём питания DC 36-72В</emphasis> — для
-          подключения к источнику питания постоянного тока 36-72В.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Разъём питания AC 220В/50Гц</emphasis> — для
-          подключения к сети 220В/50Гц.</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Переключатель питания</emphasis> — переключатель
-          питания DC 36-72B / AC 220В/50Гц.</para>
-        </listitem>
-      </itemizedlist>
     </section>
 
     <section id="hw.sg-17r">
@@ -1642,7 +1167,8 @@
 
       <para>При использовании маршрутизатора SG-17R имеется возможность
       расширять его функциональные возможности за счёт использования сменных
-      модулей — на данный момент это модули SHDSL и E1.</para>
+      модулей — на данный момент это модули SHDSL, E1, RS-232 и VoIP (FXO,
+      FXS, VF - каналы тональной частоты).</para>
 
       <section id="hw.modules.dsl">
         <title>Модули SHDSL</title>
@@ -1799,6 +1325,14 @@
           <listitem>
             <para>Два канала Е1 (MR-17G2).</para>
           </listitem>
+
+          <listitem>
+            <para>Четыре канала E1 (MR-17G4).</para>
+          </listitem>
+
+          <listitem>
+            <para>Восемь каналов E1 (MR-17G8).</para>
+          </listitem>
         </itemizedlist>
 
         <figure>
@@ -1833,6 +1367,49 @@
                 устройством нет.</para>
               </listitem>
             </itemizedlist>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Модули RS-232</title>
+
+        <para>Существует несколько типов модулей RS-232:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Два канала RS-232 DCE (MR-17S2C).</para>
+          </listitem>
+
+          <listitem>
+            <para>Два канала RS-232 DTE (MR-17S2T).</para>
+          </listitem>
+
+          <listitem>
+            <para>Четыре канала RS-232 DCE (MR-1742C).</para>
+          </listitem>
+
+          <listitem>
+            <para>Четыре канала RS-232 DTE (MR-1742T).</para>
+          </listitem>
+        </itemizedlist>
+      </section>
+
+      <section>
+        <title>Модули для установки субмодулей VoIP</title>
+
+        <para>Существует несколько несущих модулей для установки субмодулей
+        VoIP (FXO, FXS, VF - каналов тональной частоты):</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Для установки двух субмодулей или четырех каналов VoIP
+            (MR-17V4).</para>
+          </listitem>
+
+          <listitem>
+            <para>Для установки четырех субмодулей или восьми каналов VoIP
+            (MR-17V8).</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -2761,120 +2338,18 @@ Programming flash ..............................................................
     </section>
 
     <section id="dsl">
-      <title>Интерфейс SHDSL</title>
+      <title>Модули интерфейса SHDSL</title>
 
       <section>
         <title>Настройка параметров интерфейса</title>
 
         <para>Для соединения по SHDSL один маршрутизатор работает в режиме
-        мастера (master), второй — в режиме слейва (slave). Настройка SHDSL
-        соединения зависит от модели маршрутизатора и используемых модулей.
-        Настройка интерфейса SHDSL выполняется на странице
+        мастера (master), второй — в режиме слейва (slave). Настройка
+        интерфейса SHDSL выполняется на странице
         Hardware/SHDSL/dsl*/Settings.</para>
 
-        <section id="dsl.mr16h">
-          <title>Маршрутизатор SG-16R</title>
-
-          <note>
-            <para>Драйвер для SHDSL маршрутизатора SG-16R называется MR16H,
-            его имя отображается в заголовке конфигурационного окна.</para>
-          </note>
-
-          <para>Маршрутизаторы SG-16R поддерживают два способа
-          конфигурирования интерфейса SHDSL (MR16H) —
-          <emphasis>local</emphasis> и <emphasis>preact</emphasis>.</para>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>local</emphasis> — конфигурация параметров линии
-              связи задаётся на обоих маршрутизаторах;</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>preact</emphasis> — конфигурация параметров
-              линии связи задаётся на мастере, а слейв получает настройки при
-              установлении соединения.</para>
-            </listitem>
-          </itemizedlist>
-
-          <figure>
-            <title>Настройка SHDSL (MR16H)</title>
-
-            <graphic fileref="img/wf2-shdsl-mr16h-cfg.png" width="6in" />
-          </figure>
-
-          <itemizedlist>
-            <listitem>
-              <para><emphasis>Mode</emphasis> — режим: мастер (master), слейв
-              (slave).</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>Rate</emphasis> — скорость передачи,
-              кбит/c.</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>Coding</emphasis> — метод кодирования. Подробнее
-              см. раздел <link endterm="hw.shdsl.details.tcpam.title"
-              linkend="hw.shdsl.details.tcpam"></link>.</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>Config</emphasis> — способ
-              конфигурирования.</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>Annex</emphasis> — выбор дополнений.</para>
-
-              <itemizedlist>
-                <listitem>
-                  <para><emphasis>Annex A</emphasis> — используется для
-                  совместимости с SG-16B предыдущих версий, а так же для
-                  работы на скоростях ниже 192 и выше 5696 кбит/с (с локальной
-                  настройкой). В режиме preact при использовании Annex A
-                  максимальная скорость ограничена до 2304 кбит/с.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Annex B</emphasis> — равноценен режиму Annex
-                  A.</para>
-                </listitem>
-
-                <listitem>
-                  <para><emphasis>Annex F</emphasis> — используется
-                  по-умолчанию. В режиме preact максимальная скорость 5696
-                  кбит/с, в режиме local — 6016.</para>
-                </listitem>
-              </itemizedlist>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>CRC</emphasis> — значение контрольной суммы
-              пакета.</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>Fill</emphasis> — выбор байта для заполнения
-              канала, когда нет пакетов на передачу.</para>
-            </listitem>
-
-            <listitem>
-              <para><emphasis>Inversion</emphasis> — логическое инвертирование
-              всего потока.</para>
-            </listitem>
-          </itemizedlist>
-
-          <important>
-            <para>Конфигурационные параметры, за исключением параметра
-            <emphasis>Mode</emphasis>, на обоих устройствах должны
-            совпадать.</para>
-          </important>
-        </section>
-
         <section id="dsl.mr17h">
-          <title>Маршрутизатор SG-17R</title>
+          <title>Настройки для модулей SHDSL</title>
 
           <note>
             <para>Драйвер для SHDSL маршрутизатора SG-17R (и модулей MR-17H*)
@@ -3032,14 +2507,7 @@ Programming flash ..............................................................
           на лицевой панели маршрутизатора. Так же информацию о состоянии
           соединения можно просмотреть на вкладке статуса:</para>
 
-          <figure>
-            <title>Информация о состоянии соединения SHDSL (MR16H)</title>
-
-            <graphic fileref="img/wf2-shdsl-mr16h-status.png" width="6in" />
-          </figure>
-
-          <para>Вкладка статуса для MR17H отображает более подробную
-          информацию. Если соединение не установлено, выводится следующая
+          <para>Если соединение не установлено, выводится следующая
           информация:</para>
 
           <figure>
@@ -3228,9 +2696,9 @@ Programming flash ..............................................................
         <title id="eoc.title">Мониторинг SHDSL каналов</title>
 
         <note>
-          <para>Мониторинг поддерживают только модули MR17H. Интерфейсы должны
-          управляться через EOCd. Просмотр статистики линии связи возможен
-          только на мастере.</para>
+          <para>Мониторинг поддерживают только модули MR-17H*. Интерфейсы
+          должны управляться через EOCd. Просмотр статистики линии связи
+          возможен только на мастере.</para>
         </note>
 
         <section>
@@ -3521,213 +2989,12 @@ Programming flash ..............................................................
         <para>Для каждой серии SHDSL соответствуют свои допустимые и
         рекомендуемые значения кодировок TCPAM.</para>
 
-        <section id="hw.shdsl.details.tcpam.sg-16">
-          <title>SG-16</title>
-
-          <table align="center" frame="all">
-            <title>Допустимые значения для режима CFG=LOCAL, ANNEX A</title>
-
-            <tgroup cols="2">
-              <thead>
-                <row>
-                  <entry>Линейный код</entry>
-
-                  <entry>Диапазон скоростей, кбит/с</entry>
-                </row>
-              </thead>
-
-              <tbody>
-                <row>
-                  <entry>TCPAM32</entry>
-
-                  <entry>256..5696</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM16</entry>
-
-                  <entry>192..3840</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM8</entry>
-
-                  <entry>192..1216</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM4</entry>
-
-                  <entry>64..704</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-
-          <table align="center" frame="all">
-            <title>Рекомендуемые значения для режима CFG=LOCAL, ANNEX
-            A</title>
-
-            <tgroup cols="2">
-              <thead>
-                <row>
-                  <entry>Линейный код</entry>
-
-                  <entry>Диапазон скоростей, кбит/с</entry>
-                </row>
-              </thead>
-
-              <tbody>
-                <row>
-                  <entry>TCPAM32</entry>
-
-                  <entry>2560..5696</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM16</entry>
-
-                  <entry>1152..2496</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM8</entry>
-
-                  <entry>192..1088</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM4</entry>
-
-                  <entry>64..128</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-
-          <table align="center" frame="all">
-            <title>Допустимые значения для режима CFG=PREACT, ANNEX F</title>
-
-            <tgroup cols="2">
-              <thead>
-                <row>
-                  <entry>Линейный код</entry>
-
-                  <entry>Диапазон скоростей, кбит/с</entry>
-                </row>
-              </thead>
-
-              <tbody>
-                <row>
-                  <entry>TCPAM32</entry>
-
-                  <entry>768..5696</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM16</entry>
-
-                  <entry>192..3840</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-
-          <table align="center" frame="all">
-            <title>Рекомендуемые значения для режима CFG=PREACT, ANNEX
-            F</title>
-
-            <tgroup cols="2">
-              <thead>
-                <row>
-                  <entry>Линейный код</entry>
-
-                  <entry>Диапазон скоростей, кбит/с</entry>
-                </row>
-              </thead>
-
-              <tbody>
-                <row>
-                  <entry>TCPAM32</entry>
-
-                  <entry>2560..5696</entry>
-                </row>
-
-                <row>
-                  <entry>TCPAM16</entry>
-
-                  <entry>192..2496</entry>
-                </row>
-              </tbody>
-            </tgroup>
-          </table>
-        </section>
-
         <section id="hw.shdsl.details.tcpam.sg-17">
-          <title>SG-17</title>
+          <title>Серия SG-17</title>
 
           <section>
-            <title>Модули, работающие на скорости 5,7 Мбит/с</title>
-
-            <table align="center" frame="all">
-              <title>Допустимые значения</title>
-
-              <tgroup cols="2">
-                <thead>
-                  <row>
-                    <entry>Линейный код</entry>
-
-                    <entry>Диапазон скоростей, кбит/с</entry>
-                  </row>
-                </thead>
-
-                <tbody>
-                  <row>
-                    <entry>TCPAM32</entry>
-
-                    <entry>768..5696</entry>
-                  </row>
-
-                  <row>
-                    <entry>TCPAM16</entry>
-
-                    <entry>192..3840</entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </table>
-
-            <table align="center" frame="all">
-              <title>Рекомендуемые значения</title>
-
-              <tgroup cols="2">
-                <thead>
-                  <row>
-                    <entry>Линейный код</entry>
-
-                    <entry>Диапазон скоростей, кбит/с</entry>
-                  </row>
-                </thead>
-
-                <tbody>
-                  <row>
-                    <entry>TCPAM32</entry>
-
-                    <entry>2560..5696</entry>
-                  </row>
-
-                  <row>
-                    <entry>TCPAM16</entry>
-
-                    <entry>192..2496</entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </table>
-          </section>
-
-          <section>
-            <title>Модули, работающие на скорости 14 Мбит/с</title>
+            <title>Модули MR-17+H*, работающие на скорости до 14
+            Мбит/с</title>
 
             <table align="center" frame="all">
               <title>Рекомендуемые значения</title>
@@ -3774,7 +3041,7 @@ Programming flash ..............................................................
     </section>
 
     <section id="e1">
-      <title>Интерфейс E1</title>
+      <title>Модули интерфейса E1</title>
 
       <para>Настройка интерфейса выполняется на странице
       Hardware/E1/E1_*.</para>
@@ -4021,7 +3288,7 @@ Programming flash ..............................................................
     </section>
 
     <section id="rs232">
-      <title>Интерфейс RS232</title>
+      <title>Модули интерфейса RS232</title>
 
       <para>Настройка интерфейса RS232 осуществляется на странице
       Hardware/RS232/ttyRS*.</para>
@@ -4087,8 +3354,8 @@ Programming flash ..............................................................
       <para>В приведенном примере к маршрутизаторам SG-17R подключено два
       канала Е1, а так же сеть TCP/IP по Ethernet. Два маршрутизатора
       соединены между собой через SHDSL. Максимальная скорость SHDSL
-      составляет 5696 кбит/c, т.е. по одному каналу SHDSL можно передать два
-      канала Е1 (2048 кбит/с каждый), и останется неиспользованными 1600
+      составляет 14080 кбит/c, т.е. по одному каналу SHDSL можно передать два
+      канала Е1 (2048 кбит/с каждый), и останется неиспользованными 9984
       кбит/с.</para>
 
       <para>Для передачи потоков Е1 используется мультиплексирование: оба
@@ -5930,18 +5197,21 @@ Programming flash ..............................................................
 
       <para>Описание</para>
 
-      <para>"Удлинитель" портов RS-232 заменяет невозможно длинный кабель,
-      соединяющий два устройства с портами RS-232 (DTE и DCE), передавая в
-      обоих направлениях данные и состояние управляющих/модемных линий.</para>
+      <para>Функциональность "Удлинитель" портов RS-232 дает возможность
+      соединять два маршрутизатора с портами RS-232 (DTE и DCE) через сети
+      построенные по IP-технологии, передавая в обоих направлениях данные и
+      состояние управляющих/модемных линий.</para>
 
-      <para>Схема удлинителя:</para>
+      <para><figure>
+          <title>Схема удлинителя RS-232 через сети построенные по IP
+          технологии</title>
 
-      <screen>
----------       ----------              ----------       --------
-|    DTE|--&gt; &gt;--|DCE     |              |     DTE|--&gt; &gt;--|DCE   |
-| ПК    | ..... | SG-17R |-- Internet --| SG-17R | ..... | УСТР.|
-|    DTE|--&gt; &gt;--|DCE     |              |     DTE|--&gt; &gt;--|DCE   |
----------       ----------              ----------       --------</screen>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip.png" />
+            </imageobject>
+          </mediaobject>
+        </figure></para>
 
       <para>Направление передачи управляющих/модемных линий:</para>
 
@@ -5968,10 +5238,11 @@ null-modem:
 
       <para>Устройство и принципы работы</para>
 
-      <para>На каждый сконфигурированный порт RS-232 на каждом рутере
-      запускается отдельный экземпляр демона rs232-tcpext, на одной стороне
-      (рутере SG-17R) в пассивном режиме (ожидание соединений), на другой
-      стороне в активном режиме (установление соединений).</para>
+      <para>Для каждого сконфигурированного порта RS-232 на обоих
+      маршрутизаторах запускается отдельный экземпляр демона rs232-tcpext - на
+      стороне машрутизатора ожидающего соединения в пассивном режиме, на
+      стороне маршрутзатора, устанавливающего соединение, в активном
+      режиме.</para>
 
       <para>Устанавливаются два соединения TCP/IP, одно для данных, другое для
       состояния управляющих/модемных линий. Состояние управляющих/модемных
@@ -5992,7 +5263,7 @@ null-modem:
       <itemizedlist>
         <listitem>
           <para>Откройте в браузере две вкладки на страницы управления обоими
-          рутерами</para>
+          маршрутизаторами</para>
         </listitem>
 
         <listitem>
@@ -6001,14 +5272,15 @@ null-modem:
         </listitem>
 
         <listitem>
-          <para>Для каждого порта решите, который из рутеров для данного порта
-          будет активной и пассивной сторонами. Пассивная сторона ждёт
-          соединения на выбранном сетевом адресе от активной стороны.</para>
+          <para>Для каждого порта решите, который из маршрутизаторов для
+          данного порта будет активной и пассивной сторонами. Пассивная
+          сторона ждёт соединения на выбранном сетевом адресе от активной
+          стороны.</para>
         </listitem>
 
         <listitem>
-          <para>Во вкладках Services/ttyRS* обоих рутеров настройте стороны
-          соединения.</para>
+          <para>Во вкладках Services/ttyRS* обоих маршрутизаторов настройте
+          стороны соединения.</para>
 
           <para>Селектор "mode" определяет режим:</para>
 
@@ -6045,8 +5317,8 @@ null-modem:
 
       <para>Нажмите кнопки "save".</para>
 
-      <para>Убедитесь, что на каждом рутере запущен процесс: во вкладке
-      System/Console введите команду "ps ax" и убедитесь, что процесс
+      <para>Убедитесь, что на каждом маршрутизаторе запущен процесс: во
+      вкладке System/Console введите команду "ps ax" и убедитесь, что процесс
       rs232-tcpext запущен:</para>
 
       <screen>
@@ -6056,8 +5328,10 @@ ps ax
 
 3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</screen>
 
-      <para>Учтите, что процесс запуска из web системы достаточно
-      медленный.</para>
+      <para><note>
+          <para>Учтите, что процесс запуска из web системы достаточно
+          медленный.</para>
+        </note></para>
 
       <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
       демонов:</para>
@@ -6095,23 +5369,23 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>Простая проверка работы удлинителя RS-232.</para>
 
-      <para>Соедините выбранные интерфейсы RS-232 рутеров с портами ПК:</para>
+      <para>Соедините выбранные интерфейсы RS-232 маршрутизатров с портами ПК
+      по нижеприведенной схеме:</para>
 
-      <screen>
-------------------        ------------------------------
-|     : COM1 DTE | ------ | DCE ttyRS0 : рутер1 : eth0 | ...... Internet ...
-|     :          |        ------------------------------    .              .
-|     :     eth1 | ..........................................              .
-|     :          |                                                         .
-| ПК  :..........|                                                         .
-|     :          |                                                         .
-|     :     eth2 | ..........................................              .
-|     :          |        ------------------------------    .              .
-|     : COM2 DTE | ------ | DCE ttyRS0 : рутер2 : eth0 | ...... Internet ...
-------------------        ------------------------------</screen>
+      <para><figure>
+          <title>Тестовая схема для проверки "удлинителя" RS-232 через
+          IP</title>
 
-      <para>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) так же, как и
-      соединённые с ними интерфейсы рутера.</para>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip_test.png" />
+            </imageobject>
+          </mediaobject>
+        </figure><note>
+          <para>Указанную схему можно собрать на одном PC при наличии COM1,
+          COM2 и двух портов Ethernet.</para>
+        </note>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) так же, как
+      и соединённые с ними интерфейсы маршрутизаторов.</para>
 
       <para>На обоих ПК запустите терминальные программы на соотвествующие
       интерфейсы и попечатайте.</para>
@@ -6128,8 +5402,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <title>Основные сведения</title>
 
       <para>Устройство позволяет организовывать IP-телефонию с помощью модулей
-      MR-17V, которые могут быть укомплектованы портами FXO, FXS или
-      ТЧ.</para>
+      MR-17V, которые могут быть укомплектованы субмодулями с портами FXO
+      (SMR-17Vo), FXS (SMR-17Vs) или ТЧ (SMR-17Vf).</para>
 
       <itemizedlist>
         <listitem>
@@ -8162,7 +7436,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </table>
 
         <table align="center" frame="all">
-          <title>Адресная книга маршрутизатора</title>
+          <title>Адресная книга маршрутизатора 033</title>
 
           <tgroup cols="3">
             <thead>
