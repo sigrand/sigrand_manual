@@ -3291,8 +3291,7 @@ Programming flash ..............................................................
       <title>Модули интерфейса RS232</title>
 
       <section id="rs232-config">
-        <title>Настройка параметров интерфейса в режиме
-        мультиплексирования</title>
+        <title>Настройка параметров интерфейса</title>
 
         <para>Настройка интерфейсов RS232 осуществляется на странице
         Hardware/RS232/ttyRS*.</para>
@@ -3340,6 +3339,224 @@ Programming flash ..............................................................
           </listitem>
         </itemizedlist>
       </section>
+
+    <section id="rs232ip">
+      <title>"RS-232 через TCP/IP</title>
+
+      <para>Описание</para>
+
+      <para>Эта функция позволяет соединять два маршрутизатора с портами 
+      RS-232 (DTE и DCE) через сети построенные по IP-технологии, 
+      передавая в обоих направлениях данные и состояние 
+      управляющих/модемных линий.</para>
+
+      <para><figure>
+          <title>Схема удлинителя RS-232 через сети построенные по IP
+          технологии</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip.png" />
+            </imageobject>
+          </mediaobject>
+        </figure></para>
+
+      <para>Направление передачи управляющих/модемных линий:</para>
+
+      <screen>
+Прямой соединительный кабель:
+
+    DTE    DCE
+    ---    ---
+    DTR -&gt; DTR
+    DSR &lt;- DSR
+    RTS -&gt; RTS
+    CTS &lt;- CTS
+    CD  &lt;- CD
+    RI  &lt;- RI
+
+null-modem:
+
+    DTE    DTE
+    ---    ---
+    DTR -&gt; DSR,CD
+ CD,DSR &lt;- DTR
+    RTS -&gt; CTS
+    CTS &lt;- RTS</screen>
+
+      <para>Устройство и принципы работы</para>
+
+      <para>Для каждого сконфигурированного порта RS-232 на обоих
+      маршрутизаторах запускается отдельный экземпляр демона rs232-tcpext - на
+      стороне машрутизатора ожидающего соединения в пассивном режиме, на
+      стороне маршрутзатора, устанавливающего соединение, в активном
+      режиме.</para>
+
+      <para>Устанавливаются два соединения TCP/IP, одно для данных, другое для
+      состояния управляющих/модемных линий. Состояние управляющих/модемных
+      линий опрашивается с заданным интервалом времени, обычно 100
+      msec.</para>
+
+      <para>В случае любой ошибки, закрытия любого из соединений, закрытия
+      порта RS-232, невожможности установления соединений с другой стороной,
+      происходит рестарт (закрытие и открытие) соединений и порта RS-232 с
+      заданной задержкой, обычно 1000 msec.</para>
+
+      <para>Архитектура с отдельными экземплярами демонов для каждого порта
+      обеспечивает при конфигурировании/рестарте одного порта невмешательство
+      в потоки данных других портов.</para>
+
+      <para>Инструкция по настройке</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Откройте в браузере две вкладки на страницы управления обоими
+          маршрутизаторами</para>
+        </listitem>
+
+        <listitem>
+          <para>Во вкладках Hardware/ttyRS* настройте параметры выбранных
+          портов и нажмите "save".</para>
+        </listitem>
+        <figure>
+          <title>Настройка параметров порта RS232</title>
+          <graphic fileref="img/wf2-rs232.png" width="6in" />
+        </figure>
+
+
+        <listitem>
+          <para>Для каждого порта решите, который из маршрутизаторов для
+          данного порта будет активной и пассивной сторонами. Пассивная
+          сторона ждёт соединения на выбранном сетевом адресе от активной
+          стороны.</para>
+        </listitem>
+
+        <listitem>
+          <para>Во вкладках Services / RS-232 over TCP/IP / ttyRS* обоих маршрутизаторов настройте
+          стороны соединения.</para>
+
+          <figure>
+            <title>Настройка RS-232 over TCP/IP</title>
+            <graphic fileref="img/rs232ip_options.png" width="6in" />
+          </figure>
+
+
+          <para>Селектор "mode" определяет режим:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>"Disable" - служба выключена,</para>
+            </listitem>
+
+            <listitem>
+              <para>"Listen On" - ждать соединений на заданных "host", "port"
+              (пассивный режим)</para>
+            </listitem>
+
+            <listitem>
+              <para>"Connect To" - соединится с заданными "host", "port"
+              (активный режим)</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+      </itemizedlist>
+
+      <para>Поля "host" и "port" определяют сетевой адрес и порт, на котором
+      пассивная сторона ждёт соединения от активной стороны (см. bind(2)) или
+      на которые делает соединение активная сторна. Значение по умолчанию -
+      0.0.0.0 - принимать соединение от любого из сетевых интерфейсов.
+      localhost (127.0.0.1) не сможет принимать соединения от других узлов в
+      сети.</para>
+
+      <para>Поле "ToS" определяет биты ToS для IP пакетов которые будет 
+      посылать демон rs232-tcpext.</para>
+
+      <para>Поле "Modem lines polling interval (msec)" определяет интервал
+      времени опроса состояния модемных линий, по умолчанию 100 msec.</para>
+
+      <para>Поле "Restart delay (msec)" определяет задержку перед рестартом в
+      случае любой ошибки, по умолчанию 1000 msec.</para>
+
+      <para>Нажмите кнопки "save".</para>
+
+      <para>Убедитесь, что на каждом маршрутизаторе запущен процесс: во
+      вкладке System/Console введите команду "ps ax" и убедитесь, что процесс
+      rs232-tcpext запущен:</para>
+
+      <screen>
+ps ax
+...
+ 728 ? S 0:00 rs232-tcpext /dev/ttyRS0 0.0.0.0 3000 listen /var/run/rs232-tcpext.ttyRS0.pid 100 1000
+
+3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</screen>
+
+      <para><note>
+          <para>Учтите, что процесс запуска из web системы достаточно
+          медленный.</para>
+        </note></para>
+
+      <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
+      демонов:</para>
+
+      <para>Пассивная сторона:</para>
+
+      <screen>
+daemon.warn rs232-tcpext ttyRS0  listen : started up
+daemon.info rs232-tcpext ttyRS0  listen : pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
+daemon.info rs232-tcpext ttyRS0  listen : Waiting data connection...</screen>
+
+      <para>После соединения от активной стороны:</para>
+
+      <screen>
+daemon.info rs232-tcpext ttyRS0  listen : Data connection from 192.168.3.102:2937
+daemon.info rs232-tcpext ttyRS0  listen : Waiting state connection...
+daemon.info rs232-tcpext ttyRS0  listen : State connection from 192.168.3.102:2938
+daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  listen : Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
+
+      <para>Активная сторона:</para>
+
+      <screen>
+daemon.warn rs232-tcpext ttyRS0  connect: started up
+daemon.info rs232-tcpext ttyRS0  connect: pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
+daemon.err rs232-tcpext ttyRS0  connect: socket_connect(): Could not connect to 192.168.2.101:3000
+daemon.warn rs232-tcpext ttyRS0  connect: restart
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (state) to 192.168.2.101:3000 ...
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  connect: Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
+
+      <para>Простая проверка работы удлинителя RS-232.</para>
+
+      <para>Соедините выбранные интерфейсы RS-232 маршрутизатров с портами ПК
+      по нижеприведенной схеме:</para>
+
+      <para><figure>
+          <title>Тестовая схема для проверки "удлинителя" RS-232 через
+          IP</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip_test.png" />
+            </imageobject>
+          </mediaobject>
+        </figure><note>
+          <para>Указанную схему можно собрать на одном PC при наличии COM1,
+          COM2 и двух портов Ethernet.</para>
+        </note>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) так же, как
+      и соединённые с ними интерфейсы маршрутизаторов.</para>
+
+      <para>На обоих ПК запустите терминальные программы на соотвествующие
+      интерфейсы и попечатайте.</para>
+
+      <para>Для проверки передачи сигналов управления/модемных линий эта схема
+      непригодна.</para>
+    </section>
+
+
 
       <section id="rs232-terminal">
         <title>Терминальный сервер</title>
@@ -5310,208 +5527,6 @@ Programming flash ..............................................................
 
       <para>Для возврата к списку зон следует нажать на кнопку <emphasis>Back
       to list of zones</emphasis>.</para>
-    </section>
-
-    <section id="rs232ip">
-      <title>"Удлинитель" портов RS-232 через Internet</title>
-
-      <para>Описание</para>
-
-      <para>Функциональность "Удлинитель" портов RS-232 дает возможность
-      соединять два маршрутизатора с портами RS-232 (DTE и DCE) через сети
-      построенные по IP-технологии, передавая в обоих направлениях данные и
-      состояние управляющих/модемных линий.</para>
-
-      <para><figure>
-          <title>Схема удлинителя RS-232 через сети построенные по IP
-          технологии</title>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/rs232_ip.png" />
-            </imageobject>
-          </mediaobject>
-        </figure></para>
-
-      <para>Направление передачи управляющих/модемных линий:</para>
-
-      <screen>
-Прямой соединительный кабель:
-
-    DTE    DCE
-    ---    ---
-    DTR -&gt; DTR
-    DSR &lt;- DSR
-    RTS -&gt; RTS
-    CTS &lt;- CTS
-    CD  &lt;- CD
-    RI  &lt;- RI
-
-null-modem:
-
-    DTE    DTE
-    ---    ---
-    DTR -&gt; DSR,CD
- CD,DSR &lt;- DTR
-    RTS -&gt; CTS
-    CTS &lt;- RTS</screen>
-
-      <para>Устройство и принципы работы</para>
-
-      <para>Для каждого сконфигурированного порта RS-232 на обоих
-      маршрутизаторах запускается отдельный экземпляр демона rs232-tcpext - на
-      стороне машрутизатора ожидающего соединения в пассивном режиме, на
-      стороне маршрутзатора, устанавливающего соединение, в активном
-      режиме.</para>
-
-      <para>Устанавливаются два соединения TCP/IP, одно для данных, другое для
-      состояния управляющих/модемных линий. Состояние управляющих/модемных
-      линий опрашивается с заданным интервалом времени, обычно 100
-      msec.</para>
-
-      <para>В случае любой ошибки, закрытия любого из соединений, закрытия
-      порта RS-232, невожможности установления соединений с другой стороной,
-      происходит рестарт (закрытие и открытие) соединений и порта RS-232 с
-      заданной задержкой, обычно 1000 msec.</para>
-
-      <para>Архитектура с отдельными экземплярами демонов для каждого порта
-      обеспечивает при конфигурировании/рестарте одного порта невмешательство
-      в потоки данных других портов.</para>
-
-      <para>Инструкция по настройке</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>Откройте в браузере две вкладки на страницы управления обоими
-          маршрутизаторами</para>
-        </listitem>
-
-        <listitem>
-          <para>Во вкладках Hardware/ttyRS* настройте параметры выбранных
-          портов и нажмите "save".</para>
-        </listitem>
-
-        <listitem>
-          <para>Для каждого порта решите, который из маршрутизаторов для
-          данного порта будет активной и пассивной сторонами. Пассивная
-          сторона ждёт соединения на выбранном сетевом адресе от активной
-          стороны.</para>
-        </listitem>
-
-        <listitem>
-          <para>Во вкладках Services/ttyRS* обоих маршрутизаторов настройте
-          стороны соединения.</para>
-
-          <para>Селектор "mode" определяет режим:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>"Disable" - служба выключена,</para>
-            </listitem>
-
-            <listitem>
-              <para>"Listen On" - ждать соединений на заданных "host", "port"
-              (пассивный режим)</para>
-            </listitem>
-
-            <listitem>
-              <para>"Connect To" - соединится с заданными "host", "port"
-              (активный режим)</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-      </itemizedlist>
-
-      <para>Поля "host" и "port" определяют сетевой адрес и порт, на котором
-      пассивная сторона ждёт соединения от активной стороны (см. bind(2)) или
-      на которые делает соединение активная сторна. Значение по умолчанию -
-      0.0.0.0 - принимать соединение от любого из сетевых интерфейсов.
-      localhost (127.0.0.1) не сможет принимать соединения от других узлов в
-      сети.</para>
-
-      <para>Поле "Modem lines polling interval (msec)" определяет интервал
-      времени опроса состояния модемных линий, по умолчанию 100 msec.</para>
-
-      <para>Поле "Restart delay (msec)" определяет задержку перед рестартом в
-      случае любой ошибки, по умолчанию 1000 msec.</para>
-
-      <para>Нажмите кнопки "save".</para>
-
-      <para>Убедитесь, что на каждом маршрутизаторе запущен процесс: во
-      вкладке System/Console введите команду "ps ax" и убедитесь, что процесс
-      rs232-tcpext запущен:</para>
-
-      <screen>
-ps ax
-...
- 728 ? S 0:00 rs232-tcpext /dev/ttyRS0 0.0.0.0 3000 listen /var/run/rs232-tcpext.ttyRS0.pid 100 1000
-
-3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</screen>
-
-      <para><note>
-          <para>Учтите, что процесс запуска из web системы достаточно
-          медленный.</para>
-        </note></para>
-
-      <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
-      демонов:</para>
-
-      <para>Пассивная сторона:</para>
-
-      <screen>
-daemon.warn rs232-tcpext ttyRS0  listen : started up
-daemon.info rs232-tcpext ttyRS0  listen : pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
-daemon.info rs232-tcpext ttyRS0  listen : Waiting data connection...</screen>
-
-      <para>После соединения от активной стороны:</para>
-
-      <screen>
-daemon.info rs232-tcpext ttyRS0  listen : Data connection from 192.168.3.102:2937
-daemon.info rs232-tcpext ttyRS0  listen : Waiting state connection...
-daemon.info rs232-tcpext ttyRS0  listen : State connection from 192.168.3.102:2938
-daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  listen : Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
-
-      <para>Активная сторона:</para>
-
-      <screen>
-daemon.warn rs232-tcpext ttyRS0  connect: started up
-daemon.info rs232-tcpext ttyRS0  connect: pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
-daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
-daemon.err rs232-tcpext ttyRS0  connect: socket_connect(): Could not connect to 192.168.2.101:3000
-daemon.warn rs232-tcpext ttyRS0  connect: restart
-daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
-daemon.info rs232-tcpext ttyRS0  connect: Connecting (state) to 192.168.2.101:3000 ...
-daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  connect: Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
-
-      <para>Простая проверка работы удлинителя RS-232.</para>
-
-      <para>Соедините выбранные интерфейсы RS-232 маршрутизатров с портами ПК
-      по нижеприведенной схеме:</para>
-
-      <para><figure>
-          <title>Тестовая схема для проверки "удлинителя" RS-232 через
-          IP</title>
-
-          <mediaobject>
-            <imageobject>
-              <imagedata fileref="img/rs232_ip_test.png" />
-            </imageobject>
-          </mediaobject>
-        </figure><note>
-          <para>Указанную схему можно собрать на одном PC при наличии COM1,
-          COM2 и двух портов Ethernet.</para>
-        </note>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) так же, как
-      и соединённые с ними интерфейсы маршрутизаторов.</para>
-
-      <para>На обоих ПК запустите терминальные программы на соотвествующие
-      интерфейсы и попечатайте.</para>
-
-      <para>Для проверки передачи сигналов управления/модемных линий эта схема
-      непригодна.</para>
     </section>
   </chapter>
 
