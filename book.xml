@@ -1607,8 +1607,8 @@ Enter your option:</screen>
       необходимо в каталог, являющийся для него (TFTP-сервера) корневым,
       скопировать файл прошивки, который можно скачать с веб-сайта <ulink
       url="http://www.sigrand.ru">www.sigrand.ru</ulink> . Последняя версия
-      прошивки находится по адресу <ulink
-      url="http://sigrand.ru/temp/sigrand">http://sigrand.ru/temp/sigrand</ulink>
+      прошивки находится по адресу: <ulink
+      url="http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/">http://sigrand.ru:8280/downloads//firmware_sg17-r-cp1/</ulink>
       .</para>
 
       <para>Как подготовить маршрутизатор для управления по консольному
@@ -3289,8 +3289,11 @@ Programming flash ..............................................................
 
     <section id="rs232">
       <title>Модули интерфейса RS232</title>
+
       <section id="rs232-config">
-        <title>Настройка параметров интерфейса</title>
+        <title>Настройка параметров интерфейса в режиме
+        мультиплексирования</title>
+
         <para>Настройка интерфейсов RS232 осуществляется на странице
         Hardware/RS232/ttyRS*.</para>
 
@@ -3318,7 +3321,8 @@ Programming flash ..............................................................
           </listitem>
 
           <listitem>
-            <para><emphasis>Stop bits</emphasis> — кличество стоповых битов.</para>
+            <para><emphasis>Stop bits</emphasis> — кличество стоповых
+            битов.</para>
           </listitem>
 
           <listitem>
@@ -3331,80 +3335,123 @@ Programming flash ..............................................................
           </listitem>
 
           <listitem>
-            <para><emphasis>Forward modem signals</emphasis> — передавать сигналы модема.</para>
+            <para><emphasis>Forward modem signals</emphasis> — передавать
+            сигналы модема.</para>
           </listitem>
         </itemizedlist>
       </section>
+
       <section id="rs232-terminal">
         <title>Терминальный сервер</title>
-        <para>Существует множество устройств настройка и управление которых осуществляется через последовательный интерфейс RS232. 
-	Для удаленного управления такими устройствами можно использовать терминальный сервер маршрутизатора.</para>
+
+        <para>Существует множество устройств настройка и управление которых
+        осуществляется через последовательный интерфейс RS232. Для удаленного
+        управления такими устройствами можно использовать терминальный сервер
+        маршрутизатора.</para>
+
         <figure>
           <title>Настройка терминального сервера</title>
+
           <graphic fileref="img/rs232-terminal-options.png" width="6in" />
         </figure>
-        <para>На вкладке Options осуществляется включение/выключение данной функции для конкретного порта.</para>
-	<important>
-	<para>Перед тем как включать данную функцию для порта необходимо убедится что другие функции
-	(мультиплексирование, RS232-over-IP, Dial-in) выключены.</para>
-	</important>
-	<para>Для удобства можно присвоить каждому порту имя, оно будет отображаться на вкладке порта.</para>
-	<para>Buffer size задает размер буфера для хранения данных, приходящих из порта.</para>
+
+        <para>На вкладке Options осуществляется включение/выключение данной
+        функции для конкретного порта.</para>
+
+        <important>
+          <para>Перед тем как включать данную функцию для порта необходимо
+          убедится что другие функции (мультиплексирование, RS232-over-IP,
+          Dial-in) выключены.</para>
+        </important>
+
+        <para>Для удобства можно присвоить каждому порту имя, оно будет
+        отображаться на вкладке порта.</para>
+
+        <para>Buffer size задает размер буфера для хранения данных, приходящих
+        из порта.</para>
 
         <figure>
           <title>Консоль терминального сервера</title>
+
           <graphic fileref="img/rs232-terminal-console.png" width="6in" />
         </figure>
-        <para>Управление удаленным устройством осуществляется через веб-интерфейс.</para>
+
+        <para>Управление удаленным устройством осуществляется через
+        веб-интерфейс.</para>
       </section>
+
       <section id="dial-in">
         <title>Dial-in сервер</title>
-        <para>Dial-in сервер позволяет организовать резервный или управляющий канал данных через беспроводные или коммутируемые соединения.
-	Для этого могут использоваться различные GSM и проводные модемы с интерфейсом RS232.</para>
+
+        <para>Dial-in сервер позволяет организовать резервный или управляющий
+        канал данных через беспроводные или коммутируемые соединения. Для
+        этого могут использоваться различные GSM и проводные модемы с
+        интерфейсом RS232.</para>
+
         <figure>
           <title>Вкладка General</title>
+
           <graphic fileref="img/dial-in-general.png" width="6in" />
         </figure>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Enable terminal access</emphasis> — включить доступ к консоли маршрутизатора.</para>
+            <para><emphasis>Enable terminal access</emphasis> — включить
+            доступ к консоли маршрутизатора.</para>
           </listitem>
+
           <listitem>
-            <para><emphasis>Authentification type</emphasis> — тип аутентификации (PAP или CHAP).</para>
+            <para><emphasis>Authentification type</emphasis> — тип
+            аутентификации (PAP или CHAP).</para>
           </listitem>
         </itemizedlist>
 
         <figure>
           <title>Вкладка Users</title>
+
           <graphic fileref="img/dial-in-users.png" width="6in" />
         </figure>
-	<para>На вкладке users осуществляется управление пользователями и их паролями.</para>
+
+        <para>На вкладке users осуществляется управление пользователями и их
+        паролями.</para>
+
         <figure>
           <title>Вкладка Ports</title>
+
           <graphic fileref="img/dial-in-ports.png" width="6in" />
         </figure>
+
         <itemizedlist>
           <listitem>
-            <para><emphasis>Enable</emphasis> — принимать соединения на порту.</para>
+            <para><emphasis>Enable</emphasis> — принимать соединения на
+            порту.</para>
           </listitem>
+
           <listitem>
-            <para><emphasis>Speed</emphasis> — скорость на которой будет устанавливаться соединение.</para>
+            <para><emphasis>Speed</emphasis> — скорость на которой будет
+            устанавливаться соединение.</para>
           </listitem>
+
           <listitem>
-            <para><emphasis>Rings</emphasis> — количество звонков после которых будет поднята трубка.</para>
+            <para><emphasis>Rings</emphasis> — количество звонков после
+            которых будет поднята трубка.</para>
           </listitem>
+
           <listitem>
-            <para><emphasis>Init-chat</emphasis> — строка инициализации модема.</para>
+            <para><emphasis>Init-chat</emphasis> — строка инициализации
+            модема.</para>
           </listitem>
+
           <listitem>
-            <para><emphasis>Server IP</emphasis> — IP адрес PPP соединения на стороне маршрутизатора.</para>
+            <para><emphasis>Server IP</emphasis> — IP адрес PPP соединения на
+            стороне маршрутизатора.</para>
           </listitem>
+
           <listitem>
-            <para><emphasis>Client IP</emphasis> — IP адрес PPP соединения на удаленной стороне.</para>
+            <para><emphasis>Client IP</emphasis> — IP адрес PPP соединения на
+            удаленной стороне.</para>
           </listitem>
         </itemizedlist>
-
       </section>
     </section>
 
