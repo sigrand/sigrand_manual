@@ -5880,7 +5880,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
 
         <listitem>
-          <para><emphasis>Bitpack</emphasis> —</para>
+          <para><emphasis>Bitpack</emphasis> — bits packetization type</para>
         </listitem>
 
         <listitem>
