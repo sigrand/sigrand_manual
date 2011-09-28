@@ -5833,10 +5833,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       устройствами с модулями ТЧ, которые передают сигнал от подключённых к
       ним аналоговых устройств.</para>
 
-      <para>Для установки связи указываются номер канала ТЧ на локальном и
-      удалённом устройствах, а так же идентификатор удалённого устройства. Так
-      же задаются параметры кодека, используемые для оцифровки сигнала.
-      Поддерживаются как 2-х проводной, так и 4-х проводной режим ТЧ.</para>
+      <para>Для установления соединения, указывается соответствие между 
+      выбранным локальным номером канала и идентификатором удаленного 
+      устройства и его номером канала.  После чего задаются параметры кодека,
+      используемые для оцифровки сигнала и другие настройки. Поддерживаются 
+      как 2-х проводной, так и 4-х проводной режим ТЧ.</para>
 
       <figure>
         <title>Настройка каналов ТЧ</title>
@@ -5910,26 +5911,25 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </listitem>
 
             <listitem>
-              <para><emphasis>SI</emphasis> — with sample Interpolaton
-              —</para>
+              <para><emphasis>SI</emphasis> — with sample interpolaton</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>nScal</emphasis> —</para>
+          <para><emphasis>nScal</emphasis> — average play out delay is equal to the estimated jitter times the scaling factor. Values: [1;16]</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>nInit</emphasis> —</para>
+          <para><emphasis>nInit</emphasis> — initial size of the jitter buffer in ms. Values: JB Adaptive [nMin;nMax], JB Fixed: for aLaw [10; 150], for others [10; nMax]</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>nMin</emphasis> —</para>
+          <para><emphasis>nMin</emphasis> — minimum size of the jitter buffer in ms. Values: [10; nMax]</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>nMax</emphasis> —</para>
+          <para><emphasis>nMax</emphasis> — maximum size of the jitter buffer in ms. Values are depended on Codec and Pkt.time</para>
         </listitem>
       </itemizedlist>
 
@@ -6674,8 +6674,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <para>Заключительным этапом является создание бриджа (см. <link
         linkend="bridge">настройка бриджа</link>). Бридж состоит из
         интерфейсов <emphasis>bond0v4</emphasis> и <emphasis>eth3</emphasis>,
-        между которыми осуществляется передача трафика. Число интерфейсов
-        бриджа так же зависит от числа портов, между которыми организуется
+        между которыми осуществляется передача трафика. Количество бриджей 
+	зависит от числа портов, между которыми организуется
         обмен трафиком — на каждый порт один бридж.</para>
 
         <para>Таким образом, если мы хотим организовать передачу между портами
