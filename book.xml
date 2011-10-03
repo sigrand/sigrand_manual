@@ -3,7 +3,7 @@
 "/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
 <book lang="ru">
   <bookinfo>
-    <title>cРуководство пользователя SG-17R</title>
+    <title>Руководство пользователя SG-17R</title>
 
     <copyright>
       <year>2007</year>
@@ -1408,10 +1408,10 @@
         <title>Установка сменных интерфейсов</title>
 
         <important>
-          <para>Для установки модулей можно использовать слоты A, B, C, D
+          <para>Для установки модулей можно использовать слоты 0, 1, 2, 3
           маршрутизатора (см "Важно" в разделе <link endterm="SlotD.title"
           linkend="SlotD"></link> ограничения для использования слота
-          D).</para>
+          3).</para>
         </important>
 
         <figure>
@@ -2453,7 +2453,7 @@ Programming flash ..............................................................
             </listitem>
 
             <listitem>
-              <para><emphasis>Annex</emphasis> — выбор дополнений.</para>
+              <para><emphasis>Annex</emphasis> — выбор дополнения G.991.2</para>
             </listitem>
 
             <listitem>
@@ -3982,12 +3982,15 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
           <listitem>
             <para><emphasis>Enabled</emphasis> — интерфейс активен. Это делает
-            возможным запуск интерфейса другим интерфейсом при загрузке,
-            например интерфейсом бондинга или бриджа. Самостоятельно интерфейс
-            не будет запущен при загрузке, для этого его можно запустить
-            нажатием кнопки <emphasis>Start interface</emphasis> на вкладке
+            возможным автоматический запуск интерфейса и запуск другим интерфейсом
+            при загрузке, например интерфейсом бондинга или бриджа. Если интерфейс
+            входит в состав бондинга или бриджа или для него создан VLAN интерфейс,
+            то он будет запущен при загрузке. Если интерфейс не ипользуется другим
+            интерфейсом, он не будет запущен при загрузке.
+            Его можно запустить нажатием кнопки
+            <emphasis>Start interface</emphasis> на вкладке
             <emphasis>Status</emphasis> , или для автоматического запуска
-            интерфейса при загрузке установите
+            интерфейса при загрузке установить
             <emphasis>Auto</emphasis>.<emphasis /> <emphasis /></para>
           </listitem>
 
@@ -4419,8 +4422,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         определённым VLAN ID на основе физического или другого динамического
         интерфейса.</para>
 
-        <para>Для создания интерфейса VLAN необходимо создать динамический
-        интерфейс VLAN на странице Network/Dynamic interfaces/Manage. Для
+        <para>Создание интерфейса VLAN производится на странице 
+        Network/Dynamic interfaces/Manage. Для
         этого выбираем протокол VLAN, после чего будут доступны два
         параметра:</para>
 
@@ -4564,7 +4567,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>Межсетевой экран используется, чтобы ограничить доступ к тем или
       иным сетевым ресурсам, основываясь на IP-адресах, портах отправителя и
-      назначения, или используемого протокола.</para>
+      назначения или используемых протоколах.</para>
 
       <para>Активация межсетевого экрана осуществляется на странице
       Network/Firewall:</para>
@@ -5610,13 +5613,6 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
               порт;</para>
             </listitem>
 
-            <listitem>
-              <para><emphasis>#</emphasis> — звоним через SIP-сервер (только
-              абонентам, зарегистрированным на SIP-сервере, указанном в
-              настройке. Для звонков абонентам других SIP-серверов — их
-              необходимо добавить в адресную книгу и звонить через
-              неё).</para>
-            </listitem>
           </itemizedlist>
         </listitem>
       </itemizedlist>
@@ -5661,14 +5657,12 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <itemizedlist>
         <listitem>
           <para><emphasis>RTP port start</emphasis> — начало диапазона номеров
-          портов, используемых устройством при отправке RTP трафика
-          (используется протокол UDP).</para>
+          портов, используемых устройством при отправке RTP трафика.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>RTP port end</emphasis> — конец диапазона номеров
-          портов, используемых устройством при отправке RTP трафика
-          (используется протокол UDP).</para>
+          портов, используемых устройством при отправке RTP трафика.</para>
         </listitem>
 
         <listitem>
@@ -5700,41 +5694,6 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
       </itemizedlist>
 
-      <para>Устройство позволяет совершать вызовы через SIP-прокси,
-      предоставляя следующие настройки.</para>
-
-      <figure>
-        <title>Настройки SIP</title>
-
-        <graphic fileref="img/wf2-voip-settings-sip.png" width="6in" />
-      </figure>
-
-      <itemizedlist>
-        <listitem>
-          <para><emphasis>Registrar</emphasis> — сервер IP-телефонии в виде
-          <emphasis>sip:server.domain</emphasis>;</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Username</emphasis> — имя пользователя на
-          сервере;</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>Password</emphasis> — пароль для
-          пользователя;</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>User SIP URI</emphasis> — URI пользователя в виде
-          <emphasis>sip:user@server.domain</emphasis>;</para>
-        </listitem>
-
-        <listitem>
-          <para><emphasis>FXS channel</emphasis> — номер канала FXS, на
-          которой направлять входящие вызовы, полученные с SIP-прокси.</para>
-        </listitem>
-      </itemizedlist>
     </section>
 
     <section id="voip.hotline">
@@ -5856,6 +5815,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <listitem>
           <para><emphasis>Bitpack</emphasis> — bits packetization type</para>
         </listitem>
+Рисунок 10-1. Основные настройки VoIP
+
 
         <listitem>
           <para><emphasis>JB type</emphasis> — jitter buffer type — тип
@@ -6091,8 +6052,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <para><emphasis>Complete number</emphasis> — полный номер,
           вызываемый при наборе «#короткий_номер». При указании полного номера
           можно использовать символ <emphasis>-</emphasis> в качестве
-          разделителя групп цифр. Здесь так же может быть указан SIP-номер в
-          виде <emphasis>#sip:user1@domain#</emphasis>.</para>
+          разделителя групп цифр.</para>
         </listitem>
 
         <listitem>
@@ -7386,27 +7346,6 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </orderedlist>
           </listitem>
 
-          <listitem>
-            <para>С телефона 3 на телефон 1:</para>
-
-            <orderedlist>
-              <listitem>
-                <para>напрямую:</para>
-
-                <orderedlist>
-                  <listitem>
-                    <para>322 120, дождаться сигнала маршрутизатора, *
-                    01</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>322 120, дождаться сигнала маршрутизатора, 032
-                    01</para>
-                  </listitem>
-                </orderedlist>
-              </listitem>
-            </orderedlist>
-          </listitem>
         </itemizedlist>
 
         <para>Режим Hotline позволяет реализовать возможности, указанные ниже
