@@ -7315,7 +7315,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           набора номера.</para>
         </note>
 
-        <para>С такой конфигурацией возможны следующие способы вызова:</para>
+        <para>Примеры возможных вызовов для данной конфигурации:</para>
 
         <itemizedlist>
           <listitem>
@@ -7557,7 +7557,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           </tgroup>
         </table>
 
-        <para>С такой конфигурацией возможны следующие способы вызова:</para>
+        <para>Примеры возможных вызовов для данной конфигурации:</para>
 
         <itemizedlist>
           <listitem>
@@ -7598,17 +7598,6 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
               <listitem>
                 <para>через адресную книгу: #02</para>
-              </listitem>
-            </orderedlist>
-          </listitem>
-
-          <listitem>
-            <para>С телефона 3 на телефон 2:</para>
-
-            <orderedlist>
-              <listitem>
-                <para>напрямую: 322 120, дождаться сигнала маршрутизатора, 032
-                02</para>
               </listitem>
             </orderedlist>
           </listitem>
