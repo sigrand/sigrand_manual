@@ -7348,6 +7348,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         </itemizedlist>
 
+	<important>В текущей версии ПО звонки от АТС могут приниматься только при 
+        настройке режима Hotline.</important>
+
         <para>Режим Hotline позволяет реализовать возможности, указанные ниже
         в таблице.</para>
 
@@ -7602,6 +7605,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </orderedlist>
           </listitem>
         </itemizedlist>
+
+	<important>В текущей версии ПО звонки от АТС могут приниматься только при 
+        настройке режима Hotline.</important>
 
         <para>Так же, настроим режим Hotline, как показано ниже в
         таблицах.</para>
