@@ -6,13 +6,9 @@
     <title>Руководство пользователя SG-17R</title>
 
     <copyright>
-      <year>2007</year>
+      <year>2007-2011</year>
 
-      <year>2009</year>
-
-      <year>2010</year>
-
-      <holder>2011 ООО "Сигранд"</holder>
+      <holder>ООО "Сигранд"</holder>
     </copyright>
 
     <author>
@@ -27,7 +23,7 @@
 
     <abstract>
       <para>В данном руководстве рассмотрены вопросы настройки и эксплуатации
-      маршрутизаторов ООО "Сигранд" 17-й серии ( SG-17R).</para>
+      маршрутизаторов ООО "Сигранд" 17-й серии (SG-17R).</para>
 
       <para>Приводится краткое описание характеристик и возможностей
       маршрутизатора, условий его эксплуатации, параметров сетевых
@@ -35,23 +31,25 @@
 
       <para>Поясняются процедуры настройки сетевых интерфейсов и сервисов, а
       также различных режимов работы маршрутизатора: мультиплексирование,
-      бриджирование, объединение каналов (бондинг), VLAN, QoS, VoIP и
+      бриджинг, объединение каналов (бондинг), VLAN, QoS, VoIP и
       другие.</para>
     </abstract>
   </bookinfo>
 
   <chapter>
-    <title>Описание маршрутизатора SG-17R</title>
+    <title>Краткое описание маршрутизатора SG-17R</title>
 
     <para>Маршрутизатор SG-17R - многофункциональное устройство, включающее в
     себя IP маршрутизатор, DSL модем, E1/DSL мультиплексор и VoIP шлюз.
-    Маршрутизатор SG-17R имеет модульную архитектуру включающую модули Е1,
+    Маршрутизатор SG-17R имеет модульную архитектуру, включающую модули Е1,
     SHDSL, RS-232 и VoIP (FXO, FXS, VF), что позволяет использовать различные
-    протоколы и физические каналы. Имеется возможность совместной работы с
-    регенераторами SG-17E, что позволяет увеличить дальность связи при
-    сохранении требуемой скорости. При использовании SHDSL оборудования можно
-    получать информацию о канале связи, в том числе со всех регенераторов,
-    работающих на линии.</para>
+    протоколы и физические каналы.</para>
+
+    <para>Имеется возможность совместной работы модулей SHDSL с регенераторами
+    SG-17E, что позволяет увеличить дальность связи при сохранении требуемой
+    скорости. При этом можно получать статисктику со всех устройств,
+    работающих на линии, включая регенераторы. Модули SHDSL могут осуществлять
+    дистанционное питание регенераторов.</para>
 
     <para>Программное обеспечение маршрутизатора разрабатывается на основе
     операционной системы GNU/Linux с ядром версии 2.6 и распространяется в
@@ -61,77 +59,77 @@
 
     <itemizedlist>
       <listitem>
-        <para>Настройка через веб-интерфейс.</para>
+        <para>Настройка через веб-интерфейс;</para>
       </listitem>
 
       <listitem>
-        <para>Сохранение и восстановление конфигурации.</para>
+        <para>Сохранение и восстановление конфигурации;</para>
       </listitem>
 
       <listitem>
         <para>Сохранение настроек сменных интерфейсов с привязкой к номеру
-        слота.</para>
+        слота;</para>
       </listitem>
 
       <listitem>
-        <para>Логирование событий.</para>
+        <para>Логирование событий;</para>
       </listitem>
 
       <listitem>
         <para>Независимая настройка Ethernet-портов входящих в состав базовой
-        платформы.</para>
+        платформы;</para>
       </listitem>
 
       <listitem>
         <para>Дополнительные Ethernet-сервисы на основе VLAN
-        технологий.</para>
+        технологий;</para>
       </listitem>
 
       <listitem>
-        <para>Мультиплексирование синхронных каналов.</para>
+        <para>Мультиплексирование синхронных каналов;</para>
       </listitem>
 
       <listitem>
-        <para>Передача IP трафика в режимах бридж и маршрутизатор.</para>
+        <para>Передача IP трафика в режимах "бридж" и "маршрутизатор";</para>
       </listitem>
 
       <listitem>
         <para>Агрегирование остатков полос при использовании
         мультиплексирования в многопарном режиме в один логический транспорт
-        Ethernet.</para>
+        Ethernet;</para>
       </listitem>
 
       <listitem>
         <para>Объединение физических интерфейсов для увеличения скорости
-        передачи данных.</para>
+        передачи данных;</para>
       </listitem>
 
       <listitem>
         <para>Поддержка сетевых интерфейсов: SHDSL, E1, Ethernet, RS-232,
-        FXO/FXS, VF (ТЧ-каналов).</para>
+        FXO/FXS, VF (ТЧ-каналов);</para>
       </listitem>
 
       <listitem>
         <para>Работа с SHDSL интерфейсами, обеспечивающими скорости до 14
-        Мбит/c по одной паре.</para>
+        Мбит/c по одной паре;</para>
       </listitem>
 
       <listitem>
-        <para>Обеспечение удалённого питания для регенераторов SG-17E-P,
-        модемов SG-17B-P .</para>
+        <para>Обеспечение дистанционного питания регенераторов SG-17E-P,
+        модемов SG-17B-P;</para>
       </listitem>
 
       <listitem>
-        <para>Поддержка сетевых служб: DHCP, DNS.</para>
+        <para>Поддержка сетевых служб: DHCP, DNS;</para>
       </listitem>
 
       <listitem>
-        <para>Управление трафиком: NAT, Firewall, QoS.</para>
+        <para>Управление трафиком: NAT, Firewall, QoS;</para>
       </listitem>
 
       <listitem>
         <para>Встроенный мониторинг SHDSL тракта в соответствии со стандартом
-        G.SHDSL (G.991.2).</para>
+        G.SHDSL (G.991.2);</para>
       </listitem>
 
       <listitem>
@@ -144,30 +142,30 @@
     <title>Комплект поставки</title>
 
     <section>
-      <title>SG-17R</title>
+      <title>Маршрутизарор SG-17R поставляется в следующей
+      комплектации:</title>
 
       <itemizedlist>
         <listitem>
-          <para>Шасси маршрутизатора.</para>
+          <para>Шасси маршрутизатора;</para>
         </listitem>
 
         <listitem>
           <para>При типе питания DC 36-72В — ответная часть разъёма
-          питания.</para>
+          питания;</para>
         </listitem>
 
         <listitem>
-          <para>При типе питания 220В/50Гц — сетевой шнур питания.</para>
+          <para>При типе питания 220В/50Гц — сетевой шнур питания;</para>
         </listitem>
 
         <listitem>
-          <para>Терминальный провод DB-9M — DB-9F — кабель для подключения
-          терминала.</para>
+          <para>Кабель для подключения терминала DB-9M — DB-9F;</para>
         </listitem>
 
         <listitem>
           <para>Компакт-диск с программным обеспечением и
-          документацией.</para>
+          документацией;</para>
         </listitem>
 
         <listitem>
@@ -184,29 +182,28 @@
       <title>Характеристики и параметры устройства</title>
 
       <section id="hw.desc.common">
-        <title>Общие параметры</title>
+        <title>Параметры базовой платформы</title>
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Процессор</emphasis> : 32-разрядный MIPS процессор
+            <para><emphasis>Процессор</emphasis>: 32-разрядный MIPS процессор
             с ядром 4KC, производительность 227 MIPS.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Оперативная память</emphasis> : 64 MB
-            SDRAM.</para>
+            <para><emphasis>Оперативная память</emphasis>: 64 MB SDRAM.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Дисковая память </emphasis>: 32 MB flash.</para>
+            <para><emphasis>Дисковая память </emphasis>: 32 MB Flash.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Интерфейсы</emphasis> :</para>
+            <para><emphasis>Интерфейсы</emphasis>:</para>
 
             <itemizedlist>
               <listitem>
-                <para>4 Ethernet/Fast Ethernet, auto negotiations, auto
+                <para>4 Ethernet / Fast Ethernet, Auto negotiation, Auto
                 MDI/MDI-X.</para>
               </listitem>
 
@@ -222,16 +219,16 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Габариты, мм</emphasis> : 438х258х43.</para>
+            <para><emphasis>Габариты, мм</emphasis>: 438х258х43.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Питание</emphasis> : 220 B/50 Гц или 36-72 В
+            <para><emphasis>Питание</emphasis>: 220 B/50 Гц или 36-72 В
             постоянного тока (в зависимости от модели и поставки).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Вес базовой платформы, кг </emphasis> : 3,9 для
+            <para><emphasis>Вес базовой платформы, кг</emphasis>: 3,9 для
             варианта 220В/50 Гц и 3,3 для варианта 36-72 В постоянного
             тока.</para>
           </listitem>
@@ -244,20 +241,20 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Тип разъема</emphasis> : DB-9F.</para>
+            <para><emphasis>Тип разъема</emphasis>: DB-9F.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Скорость передачи, бит/сек</emphasis> : 115
+            <para><emphasis>Скорость передачи, бит/с</emphasis>: 115
             200.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Протокол</emphasis> : 8-N-1.</para>
+            <para><emphasis>Протокол</emphasis>: 8-N-1.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Управление потоком</emphasis> : нет.</para>
+            <para><emphasis>Управление потоком</emphasis>: нет.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -268,34 +265,34 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Тип разъема</emphasis> : RJ-45 (розетка).</para>
+            <para><emphasis>Тип разъема</emphasis>: RJ-45 (розетка).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Тип интерфейса</emphasis> : G.SHDSL (рекоменд.
-            ITU-T G.991.2.bis).</para>
+            <para><emphasis>Тип интерфейса</emphasis>: G.SHDSL
+            (G.991.2.bis).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Тип соединения</emphasis> : точка-точка.</para>
+            <para><emphasis>Тип соединения</emphasis>: точка-точка.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Количество проводов линии связи</emphasis> : 2
+            <para><emphasis>Количество проводов линии связи</emphasis>: 2
             (одна пара). Используются контакты 4 и 5.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Скорость передачи, кбит/c</emphasis> : от 192 до
+            <para><emphasis>Скорость передачи, кбит/c</emphasis>: от 192 до
             14080.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Линейный код</emphasis> : TCPAM.</para>
+            <para><emphasis>Линейный код</emphasis>: TCPAM.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Вид связи</emphasis> : полный дуплекс.</para>
+            <para><emphasis>Вид связи</emphasis>: полный дуплекс.</para>
           </listitem>
 
           <listitem>
@@ -304,18 +301,18 @@
 
             <itemizedlist>
               <listitem>
-                <para><emphasis>Напряжение, В</emphasis> : 240.</para>
+                <para><emphasis>Напряжение, В</emphasis>: 240.</para>
               </listitem>
 
               <listitem>
-                <para><emphasis>Максимальный ток, мА</emphasis> : 70.</para>
+                <para><emphasis>Максимальный ток, мА</emphasis>: 70.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
             <para><emphasis>Количество интерфейсов в зависимости от
-            модификаций модуля</emphasis> : 1, 2.</para>
+            модификаций модуля</emphasis>: 1, 2.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -325,49 +322,48 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Тип разъема</emphasis> : RJ-45 (розетка).</para>
+            <para><emphasis>Тип разъема</emphasis>: RJ-45 (розетка).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Число проводов в линии связи</emphasis> : 4 (две
-            пары). Контакты 4, 5 используются для передачи, 1, 2 — для
+            <para><emphasis>Число проводов в линии связи</emphasis>: 4 (две
+            пары). Контакты 4, 5 используются для передачи; 1, 2 — для
             приёма.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Линейный код (ITU-T G.703)</emphasis> : HDB3,
+            <para><emphasis>Линейный код (ITU-T G.703)</emphasis>: HDB3,
             AMI.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Скорость передачи данных</emphasis> : Nx64 кбит/c,
-            где N=1:32, для каждого из интерфейсов Е1 (64:2048 кбит/с с шагом
-            64 кбит/с).</para>
+            <para><emphasis>Скорость передачи данных</emphasis>: от 64 до 2048
+            кбит/с с шагом 64 кбит/с.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Расстояние до оборудования DTE, км</emphasis> :
-            2,4 (для кабеля 0,5 мм), 1,6 (для кабеля 0,4 мм).</para>
+            <para><emphasis>Расстояние до оборудования DTE, км</emphasis>: 2,4
+            (для кабеля 0,5 мм); 1,6 (для кабеля 0,4 мм).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Цикловая структура (framing)</emphasis> :
+            <para><emphasis>Цикловая структура (framing)</emphasis>:
             G.704.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Сверхциклы (superframe)</emphasis> : CRC4,
+            <para><emphasis>Сверхциклы (superframe)</emphasis>: CRC4,
             CAS.</para>
           </listitem>
 
           <listitem>
             <para><emphasis>Отключение цикловой структуры (unframed
-            mode)</emphasis> : есть.</para>
+            mode)</emphasis>: есть.</para>
           </listitem>
 
           <listitem>
             <para><emphasis>Количество интерфейсов в зависимости от
-            модификаций модуля</emphasis> : 1, 2, 4, 8.</para>
+            модификаций модуля</emphasis>: 1, 2, 4, 8.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -377,40 +373,39 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Тип разъема</emphasis> : DB-9F (DCE), DB-9M
+            <para><emphasis>Тип разъема</emphasis>: DB-9F (DCE), DB-9M
             (DTE).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Тип интерфейса</emphasis> : RS-232 (V.28).</para>
+            <para><emphasis>Тип интерфейса</emphasis>: RS-232 (V.28).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Скорость передачи, бит/сек</emphasis> : от 300 до
+            <para><emphasis>Скорость передачи, бит/с</emphasis>: от 300 до
             230400.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Разрядность данных</emphasis> : 7 или 8
-            бит.</para>
+            <para><emphasis>Разрядность данных</emphasis>: 7 или 8 бит.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Количество стоп-бит</emphasis> : 1 или 2.</para>
+            <para><emphasis>Количество стоп-бит</emphasis>: 1 или 2.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Четность</emphasis> : ODD, EVEN, NONE.</para>
+            <para><emphasis>Четность</emphasis>: ODD, EVEN, NONE.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Сигналы управления</emphasis> : DTR/DSR, RTS/CTS,
+            <para><emphasis>Сигналы управления</emphasis>: DTR/DSR, RTS/CTS,
             CD, RI.</para>
           </listitem>
 
           <listitem>
             <para><emphasis>Количество интерфейсов в зависимости от
-            модификаций модуля</emphasis> : 2, 4.</para>
+            модификаций модуля</emphasis>: 2, 4.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -421,23 +416,23 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Установочный интерфейс для субмодулей</emphasis> :
-            2 разъёма: 40+10 контактов (системная + линейная часть).</para>
+            <para><emphasis>Установочный интерфейс для субмодулей</emphasis>:
+            2 разъёма: 40 и 10 контактов.</para>
           </listitem>
 
           <listitem>
             <para><emphasis>Максимальное количество устанавливаемых
-            субмодулей</emphasis> : 4.</para>
+            субмодулей</emphasis>: 4.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Поддерживаемые субмодули</emphasis> : FXO, FXS, FV
+            <para><emphasis>Поддерживаемые субмодули</emphasis>: FXO, FXS, FV
             (ТЧ) в любых сочетаниях.</para>
           </listitem>
 
           <listitem>
             <para><emphasis>Количество интерфейсов VoIP в зависимости от
-            заполняемости модуля</emphasis> субмодулями : 2, 4, 6, 8.</para>
+            заполняемости модуля</emphasis> субмодулями: 2, 4, 6, 8.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -451,21 +446,21 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Напряжение батареи, В </emphasis>: 30-72.</para>
+            <para><emphasis>Напряжение батареи, В</emphasis>: 30-72.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Амплитуда вызывного напряжения, В</emphasis> :
+            <para><emphasis>Амплитуда вызывного напряжения, В</emphasis>:
             30-120.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Частота вызывного сигнала, Гц</emphasis> :
+            <para><emphasis>Частота вызывного сигнала, Гц</emphasis>:
             15-65.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Импеданс двухпроводного окончания, Ом </emphasis>:
+            <para><emphasis>Импеданс двухпроводного окончания, Ом</emphasis>:
             600.</para>
           </listitem>
 
@@ -474,12 +469,12 @@
 
             <itemizedlist>
               <listitem>
-                <para><emphasis>Высокое качество</emphasis> : G711
+                <para><emphasis>Высокое качество</emphasis>: G711
                 (A-law).</para>
               </listitem>
 
               <listitem>
-                <para><emphasis>Высокая скорость</emphasis> : G729.</para>
+                <para><emphasis>Высокая скорость</emphasis>: G729.</para>
               </listitem>
 
               <listitem>
@@ -493,7 +488,7 @@
         <itemizedlist>
           <listitem>
             <para><emphasis>Количество интерфейсов на одном
-            субмодуле</emphasis> : 2.</para>
+            субмодуле</emphasis>: 2.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -503,24 +498,24 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Тип разъема </emphasis>: RJ-11.</para>
+            <para><emphasis>Тип разъема</emphasis>: RJ-11.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Напряжение батареи, В </emphasis>: 48.</para>
+            <para><emphasis>Напряжение батареи, В</emphasis>: 48.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Амплитуда вызывного напряжения, В</emphasis> :
+            <para><emphasis>Амплитуда вызывного напряжения, В</emphasis>:
             65.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Максимальная нагрузка, REN</emphasis> : 3.</para>
+            <para><emphasis>Максимальная нагрузка, REN</emphasis>: 3.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Импеданс двухпроводного окончания, Ом </emphasis>:
+            <para><emphasis>Импеданс двухпроводного окончания, Ом</emphasis>:
             600.</para>
           </listitem>
 
@@ -529,12 +524,12 @@
 
             <itemizedlist>
               <listitem>
-                <para><emphasis>Высокое качество</emphasis> : G711
+                <para><emphasis>Высокое качество</emphasis>: G711
                 (A-law).</para>
               </listitem>
 
               <listitem>
-                <para><emphasis>Высокая скорость</emphasis> : G729.</para>
+                <para><emphasis>Высокая скорость</emphasis>: G729.</para>
               </listitem>
 
               <listitem>
@@ -548,7 +543,7 @@
         <itemizedlist>
           <listitem>
             <para><emphasis>Количество интерфейсов на одном
-            субмодуле</emphasis> : 2.</para>
+            субмодуле</emphasis>: 2.</para>
           </listitem>
         </itemizedlist>
       </section>
@@ -568,33 +563,33 @@
 
             <itemizedlist>
               <listitem>
-                <para><emphasis>Контакты</emphasis> : 3-4 - приём (выход), 2-5
-                - передача (вход).</para>
+                <para><emphasis>Контакты</emphasis>: 3, 4 - приём (выход); 2,
+                5 - передача (вход).</para>
               </listitem>
 
               <listitem>
-                <para><emphasis>Входной и выходной импеданс, Ом</emphasis> :
+                <para><emphasis>Входной и выходной импеданс, Ом</emphasis>:
                 600.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на входе канала,
-                дБо</emphasis> : минус 13.</para>
+                дБо</emphasis>: минус 13.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на выходе канала,
-                дБо</emphasis> : плюс 4.</para>
+                дБо</emphasis>: плюс 4.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на входе канала в
-                транзитном режиме, дБо</emphasis> : плюс 4.</para>
+                транзитном режиме, дБо</emphasis>: плюс 4.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на выходе канала в
-                транзитном режиме, дБо</emphasis> : плюс 4.</para>
+                транзитном режиме, дБо</emphasis>: плюс 4.</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -607,67 +602,66 @@
 
             <itemizedlist>
               <listitem>
-                <para><emphasis>Контакты</emphasis> : 3,4 -
+                <para><emphasis>Контакты</emphasis>: 3, 4 -
                 приём/передача.</para>
               </listitem>
 
               <listitem>
-                <para><emphasis>Входной и выходной импеданс, Ом</emphasis> :
+                <para><emphasis>Входной и выходной импеданс, Ом</emphasis>:
                 600.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на входе канала,
-                дБо</emphasis> : 0.</para>
+                дБо</emphasis>: 0.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на выходе канала,
-                дБо</emphasis> : минус 7.</para>
+                дБо</emphasis>: минус 7.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на входе канала в
-                транзитном режиме, дБо</emphasis> : минус 3,5.</para>
+                транзитном режиме, дБо</emphasis>: минус 3,5.</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Относительный уровень на выходе канала в
-                транзитном режиме, дБо</emphasis> : минус 3,5.</para>
+                транзитном режиме, дБо</emphasis>: минус 3,5.</para>
               </listitem>
             </itemizedlist>
           </listitem>
 
           <listitem>
             <para><emphasis>Количество интерфейсов на одном
-            субмодуле</emphasis> : 2.</para>
+            субмодуле</emphasis>: 2.</para>
           </listitem>
         </itemizedlist>
       </section>
+    </section>
 
-      <section>
-        <title>Условия эксплуатации</title>
+    <section>
+      <title>Условия эксплуатации</title>
 
-        <para>Маршрутизатор предназначен для эксплуатации в закрытом
-        отапливаемом помещении при следующих климатических условиях:</para>
+      <para>Маршрутизатор предназначен для эксплуатации в закрытом
+      отапливаемом помещении при следующих климатических условиях:</para>
 
-        <itemizedlist>
-          <listitem>
-            <para><emphasis>Температура воздуха, °C</emphasis> : 10 ..
-            40.</para>
-          </listitem>
+      <itemizedlist>
+        <listitem>
+          <para><emphasis>Температура воздуха, °C</emphasis>: 10 - 40;</para>
+        </listitem>
 
-          <listitem>
-            <para><emphasis>Относительная влажность воздуха, %</emphasis> : до
-            85.</para>
-          </listitem>
+        <listitem>
+          <para><emphasis>Относительная влажность воздуха, %</emphasis>: до
+          85;</para>
+        </listitem>
 
-          <listitem>
-            <para><emphasis>Атмосферное давление, кПа</emphasis> : 84 ..
-            107.</para>
-          </listitem>
-        </itemizedlist>
-      </section>
+        <listitem>
+          <para><emphasis>Атмосферное давление, кПа</emphasis>: 84 -
+          107.</para>
+        </listitem>
+      </itemizedlist>
     </section>
 
     <section id="hw.shdsl.details">
@@ -682,22 +676,17 @@
           <para>Информация о дальности связи и скорости соединения приведена
           ниже. Результаты получены на линиях длиной, при которой коэффициент
           ошибок (Bit Error Rate, BER) равен или меньше 10
-          <superscript>-7</superscript> . Указанная дальность проверена
+          <superscript>-7</superscript>. Указанная дальность проверена
           экспериментальным путём на контрольной линии связи лаборатории
           компании.</para>
 
           <para>Результаты, полученные при эксплуатации на реальных линиях
           связи, могут отличаться от приведённых значений ввиду отличий
           параметров этих линий от эталонной.</para>
-
-          <para>Разные серии маршрутизаторов и разные модули имеют различные
-          показатели дальности/скорости.</para>
         </section>
 
         <section>
-          <title>Модули MR-17H</title>
-
-          <para>Таблица дальности/скорости для SHDSL модулей MR-17H.</para>
+          <title>Таблица дальности/скорости для SHDSL модулей MR-17H</title>
 
           <table frame="all">
             <title>Таблица дальности/скорости для SHDSL модулей MR-17H</title>
@@ -719,7 +708,7 @@
                 <row>
                   <entry>14080</entry>
 
-                  <entry>1,2</entry>
+                  <entry>1,0</entry>
 
                   <entry>3,6</entry>
 
@@ -889,7 +878,7 @@
                 <row>
                   <entry>768</entry>
 
-                  <entry>8,4</entry>
+                  <entry>8,4е</entry>
 
                   <entry>18,4</entry>
 
@@ -937,14 +926,14 @@
       </section>
 
       <section>
-        <title>Подключение линии связи</title>
+        <title>Требования к линии связи</title>
 
         <warning>
           <para>Удостоверьтесь, что выделенная линия связи не имеет источников
-          электрического напряжения, и не подключена к какому-либо
-          постороннему оборудованию АТС! Несоблюдение этого правила может
-          привести к выводу из строя как маршрутизаторов, так и аппаратуры на
-          линии связи!</para>
+          электрического напряжения и не подключена к какому-либо постороннему
+          оборудованию АТС! Несоблюдение этого правила может привести к выводу
+          из строя как маршрутизаторов, так и аппаратуры на линии
+          связи!</para>
         </warning>
 
         <para>Для нормальной работы маршрутизаторов и обеспечения заданных
@@ -978,20 +967,21 @@
         </itemizedlist>
 
         <para>Отступление от указанных выше требований может привести к
-        снижению показателей, или к полной неработоспособности линии
+        снижению показателей или к полной неработоспособности линии
         связи.</para>
+      </section>
 
-        <para>Для подключения линии связи к маршрутизатору, установите вилку
-        RJ-45 на кабель. Маршрутизатор использует только одну пару проводов,
-        контакты 4 и 5, остальные контакты не задействованы.</para>
+      <section>
+        <title>Подключение линии</title>
+
+        <para>Интерфейс SHDSL использует только одну пару проводов, контакты 4
+        и 5, остальные контакты не задействованы.</para>
 
         <figure>
           <title>Разъём RJ-45</title>
 
           <graphic fileref="img/hw-rj45.png" />
         </figure>
-
-        <para>Затем подключите кабель к разъёму SHDSL маршрутизатора.</para>
       </section>
     </section>
 
@@ -1015,16 +1005,19 @@
           модулей.</para>
 
           <important>
-            <para>Слот <emphasis>3</emphasis> может быть использован только
-            для установки модулей SHDSL и Е1 для работы в режиме
+            <para>Модули SHDSL и Е1, установленные в слот
+            <emphasis>3,</emphasis> могут работать только в режиме
             <emphasis>мультиплексирования</emphasis>. Соответствующий сетевой
             интерфейс будет виден в системе и веб-интерфейсе и будет доступен
             для настройки, но он не будет иметь возможности передавать сетевой
-            трафик (трафик, идущий не по линиям мультиплексирования). Связано
-            это с отсутствием поддержки DMA для данного слота. Слот
-            <emphasis>3</emphasis> не накладывает ограничений на
-            использованием модулей RS-232 и VoIP.<emphasis> </emphasis></para>
+            трафик (IP-трафик). Связано это с отсутствием поддержки DMA для
+            данного слота.<emphasis> </emphasis></para>
           </important>
+
+          <note>
+            <para>Слот <emphasis>3</emphasis> не накладывает ограничений на
+            использование модулей RS-232 и VoIP.</para>
+          </note>
         </listitem>
 
         <listitem>
@@ -1043,7 +1036,7 @@
 
           <itemizedlist>
             <listitem>
-              <para>Верхний — <emphasis>FD/C</emphasis> :</para>
+              <para>Верхний — <emphasis>FD/C</emphasis>:</para>
 
               <itemizedlist>
                 <listitem>
@@ -1064,7 +1057,7 @@
             </listitem>
 
             <listitem>
-              <para>Нижний — <emphasis>LINK</emphasis> :</para>
+              <para>Нижний — <emphasis>LINK</emphasis>:</para>
 
               <itemizedlist>
                 <listitem>
@@ -1154,10 +1147,10 @@
     <section id="hw.modules">
       <title>Сменные интерфейсы</title>
 
-      <para>При использовании маршрутизатора SG-17R имеется возможность
-      расширять его функциональные возможности за счёт использования сменных
-      модулей — на данный момент это модули SHDSL, E1, RS-232 и VoIP (FXO,
-      FXS, VF - каналы тональной частоты).</para>
+      <para>Функциональные возможности маршрутизатора SG-17R можно расширять
+      за счёт использования сменных модулей — на данный момент это модули
+      SHDSL, E1, RS-232 и VoIP (FXO, FXS, VF - каналы тональной
+      частоты).</para>
 
       <section id="hw.modules.dsl">
         <title>Модули SHDSL</title>
@@ -1167,17 +1160,17 @@
         <itemizedlist>
           <listitem>
             <para>Один канал SHDSL без дистанционного питания
-            (MR-17H1).</para>
+            (MR-17H1);</para>
           </listitem>
 
           <listitem>
             <para>Два канала SHDSL без дистанционного питания
-            (MR-17H2).</para>
+            (MR-17H2);</para>
           </listitem>
 
           <listitem>
             <para>Один канал SHDSL с дистанционным питанием
-            (MR-17H1P2).</para>
+            (MR-17H1P2);</para>
           </listitem>
 
           <listitem>
@@ -1221,16 +1214,16 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Индикаторы SHDSL</emphasis></para>
+            <para><emphasis>Индикаторы SHDSL:</emphasis></para>
 
             <itemizedlist>
               <listitem>
-                <para><emphasis>ERR</emphasis> :</para>
+                <para><emphasis>ERR</emphasis>:</para>
 
                 <itemizedlist>
                   <listitem>
                     <para><emphasis>Не горит</emphasis> — нет сбойных
-                    пакетов.</para>
+                    пакетов;</para>
                   </listitem>
 
                   <listitem>
@@ -1241,17 +1234,17 @@
               </listitem>
 
               <listitem>
-                <para><emphasis>LINK</emphasis> :</para>
+                <para><emphasis>LINK</emphasis>:</para>
 
                 <itemizedlist>
                   <listitem>
                     <para><emphasis>Горит</emphasis> — связь с удалённым
-                    устройством есть.</para>
+                    устройством есть;</para>
                   </listitem>
 
                   <listitem>
                     <para><emphasis>Не горит</emphasis> — связи с удалённым
-                    устройством нет.</para>
+                    устройством нет;</para>
                   </listitem>
 
                   <listitem>
@@ -1262,15 +1255,16 @@
               </listitem>
 
               <listitem>
-                <para><emphasis>UNB</emphasis> :</para>
+                <para><emphasis>UNB</emphasis>:</para>
 
                 <itemizedlist>
                   <listitem>
-                    <para><emphasis>Горит</emphasis> — нарушен баланс питания
-                    относительно земли. В норме на одном проводе плюс 120 В,
-                    на другом минус 120 В. Если перекос больше 30 В или
-                    отсутствует земля — это означает несбалансированность
-                    питания.</para>
+                    <para><emphasis>Горит</emphasis> — нарушен баланс
+                    дистанционного питания относительно земли. В норме на
+                    одном проводе плюс 120 В, на другом — минус 120 В. Если
+                    имеется перекос перекос больше 30 В, зажигается индикатор
+                    UNB. Причиной перекоса может быть утечка либо замыкание
+                    одного из проводов на "землю";</para>
                   </listitem>
 
                   <listitem>
@@ -1281,14 +1275,14 @@
               </listitem>
 
               <listitem>
-                <para><emphasis>OVL</emphasis> :</para>
+                <para><emphasis>OVL</emphasis>:</para>
 
                 <itemizedlist>
                   <listitem>
                     <para><emphasis>Горит</emphasis> — перегрузка питания или
                     короткое замыкание линии. Это вызвано слишком большим
                     числом (больше 4) регенераторов на линии, настроенных на
-                    питание от данного маршрутизатора.</para>
+                    питание от данного маршрутизатора;</para>
                   </listitem>
 
                   <listitem>
@@ -1309,15 +1303,15 @@
 
         <itemizedlist>
           <listitem>
-            <para>Один канал Е1 (MR-17G).</para>
+            <para>Один канал Е1 (MR-17G1);</para>
           </listitem>
 
           <listitem>
-            <para>Два канала Е1 (MR-17G2).</para>
+            <para>Два канала Е1 (MR-17G2);</para>
           </listitem>
 
           <listitem>
-            <para>Четыре канала E1 (MR-17G4).</para>
+            <para>Четыре канала E1 (MR-17G4);</para>
           </listitem>
 
           <listitem>
@@ -1344,12 +1338,12 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Индикаторы E1</emphasis></para>
+            <para><emphasis>Индикаторы E1:</emphasis></para>
 
             <itemizedlist>
               <listitem>
                 <para><emphasis>Горит</emphasis> — связь с удалённым
-                устройством есть.</para>
+                устройством есть;</para>
               </listitem>
 
               <listitem>
@@ -1368,15 +1362,15 @@
 
         <itemizedlist>
           <listitem>
-            <para>Два канала RS-232 DCE (MR-17S2C).</para>
+            <para>Два канала RS-232 DCE (MR-17S2C);</para>
           </listitem>
 
           <listitem>
-            <para>Два канала RS-232 DTE (MR-17S2T).</para>
+            <para>Два канала RS-232 DTE (MR-17S2T);</para>
           </listitem>
 
           <listitem>
-            <para>Четыре канала RS-232 DCE (MR-17S4C).</para>
+            <para>Четыре канала RS-232 DCE (MR-17S4C);</para>
           </listitem>
 
           <listitem>
@@ -1424,19 +1418,19 @@
 
         <orderedlist>
           <listitem>
-            <para>Выключить питание маршрутизатора.</para>
+            <para>Выключить питание маршрутизатора;</para>
           </listitem>
 
           <listitem>
-            <para>Снять с маршрутизатора заглушку, закрывающую слот.</para>
+            <para>Снять с маршрутизатора заглушку, закрывающую слот;</para>
           </listitem>
 
           <listitem>
-            <para>Установить модуль в слот.</para>
+            <para>Установить модуль в слот;</para>
           </listitem>
 
           <listitem>
-            <para>Зафиксировать его при помощи ручек-винтов.</para>
+            <para>Зафиксировать его при помощи ручек-винтов;</para>
           </listitem>
 
           <listitem>
@@ -1463,7 +1457,7 @@
 
       <warning>
         <para>В случае, если устройство перевозилось или хранилось при
-        отрицательной температуре — включение его допускается только по
+        отрицательной температуре, включение его допускается только по
         истечении часа нахождения при комнатной температуре!</para>
       </warning>
 
@@ -1473,17 +1467,16 @@
 
       <para>Если требуется управление маршрутизатором по консольному
       интерфейсу, например, для обновления прошивки маршрутизатора (см. <link
-      endterm="update.title" linkend="update"></link> , или для диагностики
+      endterm="update.title" linkend="update"></link> ), или для диагностики
       процесса загрузки, соедините консольный порт маршрутизатора с
       последовательным портом компьютера с помощью терминального
-      провода.</para>
+      кабеля.</para>
 
       <para>Для управления маршрутизатором по консольному интерфейсу
       используется любая терминальная программа — HyperTerminal или Putty для
-      ОС Windows и Minicom для ОС GNU/Linux. Настройки последовательного порта
-      приведены выше, в разделе <link endterm="hw.desc.rs232.title"
-      linkend="hw.desc.rs232"></link> (скорость передачи, бит/сек: 115 200;
-      протокол: 8-N-1; управление потоком: нет).</para>
+      ОС Windows, Minicom для ОС GNU/Linux. Настройки последовательного порта
+      следующие: скорость передачи — 115 200 бит/с; протокол: 8-N-1;
+      управление потоком: нет.</para>
 
       <para>Для настройки маршрутизатора через веб-интерфейс соедините его
       интерфейс eth0 с сетевым адаптером компьютера или портом коммутатора
@@ -1496,11 +1489,10 @@
     <section id="bootloader">
       <title>Загрузчик</title>
 
-      <para>Работа с меню загрузчика выполняется при подключении к
-      маршрутизатору по консольному интерфейсу RS-232. После включения
-      питания, на экран программы эмулятора терминала будет выведено
-      предложение войти в меню загрузчика. Для этого необходимо быстро (в
-      течение 3-х секунд) нажать на любую клавишу, кроме 'q':</para>
+      <para>После включения питания на экран программы эмулятора терминала
+      будет выведено предложение войти в меню загрузчика. Для этого необходимо
+      быстро (в течение трёх секунд) нажать на любую клавишу, кроме
+      'q':</para>
 
       <screen>
 ADM5120 Boot:
@@ -1514,8 +1506,8 @@ Press any key to enter boot menu or 'q' to boot OS immediately...
 3
 Checking flash......</screen>
 
-      <para>Если вы нажали любую клавишу, кроме 'q', то выведутся параметры и
-      меню загрузчика:</para>
+      <para>Если клавиша была нажата, будут выведены параметры и меню
+      загрузчика:</para>
 
       <screen>
 
@@ -1550,22 +1542,22 @@ Enter your option:</screen>
       <itemizedlist>
         <listitem>
           <para>Set Parameters - вход в меню установки всех параметров
-          загрузчика</para>
+          загрузчика;</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Update OS</emphasis> — обновление системы с помощью
-          TFTP-сервера.</para>
+          TFTP-сервера;</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Update Bootloader</emphasis> — обновление загрузчика
-          с помощью TFTP-сервера (доступно только в режиме эксперта).</para>
+          с помощью TFTP-сервера (доступно только в режиме эксперта);</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Flash</emphasis> operations — Управление
-          флэш-памятью (доступно только в режиме эксперта).</para>
+          flash-памятью (доступно только в режиме эксперта);</para>
         </listitem>
 
         <listitem>
@@ -1591,7 +1583,7 @@ Enter your option:</screen>
       <itemizedlist>
         <listitem>
           <para>Компьютер с портом последовательного интерфейса RS-232 (или с
-          кабелем-переходником USB -&gt; RS232).</para>
+          кабелем-переходником USB -&gt; RS232);</para>
         </listitem>
 
         <listitem>
@@ -1638,7 +1630,7 @@ Enter your option:</screen>
       <para>В приведённом примере был введён только IP адрес маршрутизатора,
       остальные параметры оставлены без изменений.</para>
 
-      <para>После настройки сетевых параметров, следует выбрать пункт меню
+      <para>После настройки сетевых параметров следует выбрать пункт меню
       Update OS для обновления системы.</para>
 
       <screen>
@@ -1660,9 +1652,9 @@ Programming flash ..............................................................
 
       <para>PASS, соответствующий строчкам Eraseing flash и Programming flash
       означает, что обновление прошло успешно. FAIL говорит о возникших
-      проблемах, как правило это неправильный IP-адрес TFTP-сервера
+      проблемах, как правило, это неправильный IP-адрес TFTP-сервера
       (маршрутизатор и TFTP-сервер находятся в разных сетях) или неправильное
-      имя файла на сервере. Для загрузки новой прошивки необходимо выполнить
+      имя файла на сервере. Для запуска новой прошивки необходимо выполнить
       перезагрузку маршрутизатора нажатием на клавишу 'R' меню верхнего уровня
       или включением/выключением питания.</para>
 
@@ -1689,10 +1681,10 @@ Programming flash ..............................................................
       <title id="update.title">Режим эксперта</title>
 
       <para>В режиме эксперта можно обновить загрузчик маршрутизатора и
-      осуществить некоторые действия с флеш памятью маршрутизатора.</para>
+      осуществить некоторые действия с flash-памятью маршрутизатора.</para>
 
       <important>
-         Используейте режим эксперта только если вы понимаете что делаете! Эти действия могут привести маршрутизатор в нерабочее состояние! 
+        Используейте режим эксперта только если вы понимаете что делаете! Эти действия могут привести маршрутизатор в нерабочее состояние! 
       </important>
 
       <para>Включение режима эксперта осуществялется в меню параметров
@@ -1727,10 +1719,9 @@ Programming flash ..............................................................
           MAC-адресов — получение списка MAC-адресов со специализированного
           сервера. Скрипт проверяет, доступен ли данный сервер — и если
           доступен, загружает с него список уникальных MAC-адресов, которые
-          затем назначает сетевым интерфейсам. Данный способ доступен и
-          используется только производителем маршрутизатора. При успешном
-          обновлении MAC-адресов будет выдано соответствующее
-          сообщение:</para>
+          затем назначает сетевым интерфейсам. Данный способ используется
+          только производителем маршрутизатора. При успешном обновлении
+          MAC-адресов будет выдано соответствующее сообщение:</para>
 
           <screen>
 						Updating MAC addresses
@@ -1752,7 +1743,7 @@ Programming flash ..............................................................
       полученными со специализированного сервера, что гарантирует их
       уникальность для всех возможных интерфейсов маршрутизатора.</para>
 
-      <para>Так как MAC-адреса хранятся в конфигурационном файле — после
+      <para>Так как MAC-адреса хранятся в конфигурационном файле, после
       перепрошивки они будут потеряны. Чтобы этого не произошло, перед
       перепрошивкой следует сохранить конфигурацию маршрутизатора (см. раздел
       <link endterm="cfg.title" linkend="cfg"></link>), а затем произвести её
@@ -1781,22 +1772,22 @@ Programming flash ..............................................................
         настройки необходимо в строке адреса веб-браузера ввести
         http://192.168.2.100 или https://192.168.2.100, после чего будут
         заданы несколько вопросов касательно сертификатов шифрования, на
-        которые следует ответить положительно. По-умолчанию, логин/пароль
+        которые следует ответить положительно. По умолчанию, логин/пароль
         admin/1234.</para>
 
-        <para>При входе в веб-интерфейс, производится загрузка всех
-        необходимых файлов и содержимого конфигурационного файла. Отрисовка
-        всех элементов пользовательского интерфейса производится на стороне
-        клиента (в браузере) средствами JavaScript, что позволяет ускорить
-        работу интерфейса, так как переносит ресурсоёмкие операции с
+        <para>При входе в веб-интерфейс производится загрузка всех необходимых
+        файлов и содержимого конфигурационного файла. Отрисовка всех элементов
+        пользовательского интерфейса производится на стороне клиента (в
+        браузере) средствами JavaScript, что позволяет ускорить работу
+        интерфейса, так как переносит ресурсоёмкие операции с
         маршрутизатора.</para>
 
         <para>При сохранении изменений не происходит перезагрузки страницы —
         на маршрутизатор отправляются только конфигурационные данные
-        (используя технологию AJAX). После сохранения настроек и производится
+        (используя технологию AJAX). После сохранения настроек производится
         перезапуск соответствующей подсистемы. Всё это происходит в фоновом
         режиме, и пользователь может сразу перейти к настройке других
-        подсистем. При этом в веб- интерфейсе будет отображаться число задач,
+        подсистем. При этом в веб-интерфейсе будет отображаться число задач,
         выполняющихся или ожидающих выполнения на маршрутизаторе (одновременно
         на маршрутизаторе выполняется только одна задача).</para>
 
@@ -2004,8 +1995,7 @@ Programming flash ..............................................................
 
       <important>
         <para>Настоятельно рекомендуется поменять пароль для доступа к
-        настройке маршрутизатора, это выполняется на странице
-        System/Security.</para>
+        веб-интерфейсу. Это выполняется на странице System/Security.</para>
       </important>
 
       <para>Там же следует поменять и пароль для управления маршрутизатором
@@ -2053,22 +2043,22 @@ Programming flash ..............................................................
       <itemizedlist>
         <listitem>
           <para><emphasis>Time</emphasis> — системное время на
-          устройстве;</para>
+          устройстве.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Use time synchronizing</emphasis> — включить
-          синхронизацию времени;</para>
+          синхронизацию времени.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Time server</emphasis> — сервер NTP, используемый
-          для синхронизации времени;</para>
+          для синхронизации времени.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Time zone</emphasis> — часовой пояс, в котором
-          работает устройство;</para>
+          работает устройство.</para>
         </listitem>
 
         <listitem>
@@ -2090,7 +2080,7 @@ Programming flash ..............................................................
       системные события (логи) не сохраняются локально на маршрутизаторе, а
       пишутся в специальный буфер, доступный для просмотра через специальные
       утилиты (в консоли через команду logread, в веб-интерфейсе на странице
-      System/tools/syslog). Устройство имеет несколько параметров, управляющих
+      System/Tools/Syslog). Устройство имеет несколько параметров, управляющих
       логированием:</para>
 
       <figure>
@@ -2103,16 +2093,16 @@ Programming flash ..............................................................
         <listitem>
           <para><emphasis>Kernel console priority logging</emphasis> — уровень
           приоритета системных сообщений, при котором они выводятся на
-          консоль.</para>
+          консоль;</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Circular buffer</emphasis> — размер буфера.</para>
+          <para><emphasis>Circular buffer</emphasis> — размер буфера;</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Enable remote syslog logging</emphasis> — включение
-          логирования на удалённый syslog-сервер.</para>
+          логирования на удалённый syslog-сервер;</para>
         </listitem>
 
         <listitem>
@@ -2127,7 +2117,7 @@ Programming flash ..............................................................
       </note>
 
       <note>
-        <para>Для того, чтобы удалённый syslog-сервер принимал логи от
+        <para>Для того чтобы удалённый syslog-сервер принимал логи от
         маршрутизатора, его необходимо запустить с опцией "-r". Логирование
         производится по протоколу udp, 514 порт.</para>
       </note>
@@ -2136,24 +2126,24 @@ Programming flash ..............................................................
     <section id="tools">
       <title>Утилиты</title>
 
-      <para>В веб-интерфейсе на странице System/tools доступны различные
+      <para>В веб-интерфейсе на странице System/Tools доступны различные
       утилиты, которые используются для анализа работы устройства либо
       проверки работоспособности.</para>
 
       <itemizedlist>
         <listitem>
           <para><emphasis>syslog</emphasis> — предоставляет доступ к логам,
-          получаемым от утилиты logread;</para>
+          получаемым от утилиты logread.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>dmesg</emphasis> — предоставляет доступ к логам,
-          получаемым от утилиты dmesg;</para>
+          получаемым от утилиты dmesg.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>ping</emphasis> — позволяет проверить доступность
-          узла с помощью протокола icmp;</para>
+          узла с помощью протокола icmp.</para>
         </listitem>
 
         <listitem>
@@ -2186,7 +2176,7 @@ Programming flash ..............................................................
       </figure>
 
       <para>При нажатии на кнопку Backup будет предложено сохранить файл
-      конфигурации, который в последствии можно будет загрузить.</para>
+      конфигурации, который впоследствии можно будет загрузить.</para>
 
       <important>
         <para>После восстановления конфигурации устройство будет автоматически
@@ -2202,8 +2192,8 @@ Programming flash ..............................................................
         <graphic fileref="img/wf2-cfg-restore.png" width="6in" />
       </figure>
 
-      <para>На вкладке System/Configuration/default можно восстановить
-      заводскую конфигурацию нажатием на кнопку Restore default.</para>
+      <para>На вкладке System/Configuration/Default можно восстановить
+      заводскую конфигурацию нажатием на кнопку Restore.</para>
 
       <figure id="cfg-default">
         <title>Восстановление заводской конфигурации</title>
@@ -2230,7 +2220,7 @@ Programming flash ..............................................................
       <itemizedlist>
         <listitem>
           <para><emphasis>Path</emphasis> — каталог на файловой системе
-          устройства, в который будет загружен файл;</para>
+          устройства, в который будет загружен файл.</para>
         </listitem>
 
         <listitem>
@@ -2244,7 +2234,7 @@ Programming flash ..............................................................
       <title>Консоль</title>
 
       <para>При отсутствии или затруднённом доступе к консоли устройства (SSH
-      или через последовательный порт), может воспользоваться консолью
+      или через последовательный порт), можно воспользоваться консолью
       веб-интерфейса, которая доступна на странице System/Console.</para>
 
       <important>
@@ -2253,7 +2243,7 @@ Programming flash ..............................................................
         программ (то есть программ, которые взаимодействуют с пользователем,
         например, top). После запуска интерактивной программы, например top,
         консоль напишет "executing command..." и остановится. Для
-        восстановления работоспособности, надо заново открыть страницу консоли
+        восстановления работоспособности надо заново открыть страницу консоли
         щелчком в меню или на имени вкладки.</para>
       </important>
 
@@ -2272,18 +2262,12 @@ Programming flash ..............................................................
       <title id="modules.settings.title">Принцип хранения настроек для
       модулей</title>
 
-      <para>В предыдущих версиях прошивок<emphasis> </emphasis>настройки
-      интерфейсов привязывались к имени интерфейса, что вызывало проблемы при
-      работе с модулями, так как при добавлении нового модуля имена
-      интерфейсов могли изменяться, и настройки применялись не к тому
-      модулю.</para>
-
       <para>В текущих версиях <emphasis> </emphasis>прошивок аппаратные
-      настройки привязываются к PCI-слоту, а сетевые, в случае изменения имени
-      интерфейса, копируются. То есть, если при добавлении нового модуля, имя
-      интерфейса старого модуля изменилось с <emphasis>dsl0</emphasis> на
-      <emphasis>dsl1</emphasis> , то сетевые настройки будут скопированы с
-      dsl0 на dsl1.</para>
+      настройки привязываются к номеру слота, а сетевые, в случае изменения
+      имени интерфейса, копируются. То есть, если при добавлении нового модуля
+      имя интерфейса старого модуля изменилось с <emphasis>dsl0</emphasis> на
+      <emphasis>dsl1</emphasis>, то сетевые настройки будут скопированы с dsl0
+      на dsl1.</para>
 
       <para>Основное отличие хранения между аппаратными и сетевыми настройками
       в том, что если модуль временно извлечь и включить маршрутизатор,
@@ -2314,7 +2298,7 @@ Programming flash ..............................................................
       <para>Настройка коммутатора осуществляется на странице Hardware/Switch,
       на которой производится привязка физических портов коммутатора к сетевым
       интерфейсам. Отнесение нескольких портов к одному сетевому интерфейсу
-      создаёт для них единую физическую среду, то есть они начинают работать,
+      создаёт для них единую физическую среду. То есть, они начинают работать,
       как порты одного коммутатора. Окно настройки представлено на
       рисунке:</para>
 
@@ -2380,12 +2364,12 @@ Programming flash ..............................................................
 
           <important>
             <para>Если данный сетевой интерфейс относится к модулю,
-            установленному в четвёртый слот (слот <emphasis>3</emphasis> ), то
-            он может быть использован только для работы в режиме
+            установленному в слот <emphasis>3</emphasis>, то он может быть
+            использован только для работы в режиме
             <emphasis>мультиплексирования</emphasis> . Этот сетевой интерфейс
             не имеет возможности передавать сетевой трафик (трафик, идущий не
             по линиям мультиплексирования). Связано это с отсутствием
-            поддержки DMA для четвёртого слота.</para>
+            поддержки DMA для слота 3.</para>
           </important>
 
           <para>Настройка скорости соединения (<emphasis>Rate</emphasis>),
@@ -2394,7 +2378,7 @@ Programming flash ..............................................................
           (<emphasis>Annex</emphasis>) и снижения уровня сигнала
           (<emphasis>PBO Forced</emphasis>) выполняется только на мастере,
           слейв получает эти настройки во время инициализации соединения. Окно
-          конфигурирования показано ниже:</para>
+          конфигурирования показано ниже.</para>
 
           <figure>
             <title>Настройка SHDSL (MR17H)</title>
@@ -2418,7 +2402,7 @@ Programming flash ..............................................................
                 <listitem>
                   <para><emphasis>Manual</emphasis> — задание настроек со
                   страницы конфигурирования интерфейса (с текущей
-                  страницы).</para>
+                  страницы);</para>
                 </listitem>
 
                 <listitem>
@@ -2453,20 +2437,21 @@ Programming flash ..............................................................
             </listitem>
 
             <listitem>
-              <para><emphasis>Annex</emphasis> — выбор дополнения G.991.2</para>
+              <para><emphasis>Annex</emphasis> — выбор дополнения
+              G.991.2.</para>
             </listitem>
 
             <listitem>
-              <para><emphasis>Power</emphasis> — включить подачу питания для
-              регенераторов, находящихся на линии.</para>
+              <para><emphasis>Power</emphasis> — включение дистанционного
+              питания регенераторов.</para>
             </listitem>
 
             <listitem>
-              <para><emphasis>Clock mode</emphasis> — режим синхронизации,
-              по-умолчанию используется режим <emphasis>sync</emphasis>
+              <para><emphasis>Clock mode</emphasis> — режим синхронизации. По
+              умолчанию используется режим <emphasis>sync</emphasis>
               (синхронный). <emphasis> </emphasis>Следует удостовериться, что
-              всё оборудование, находящееся на линии связи (регенераторы,
-              маршрутизаторы) используют данный режим.</para>
+              все устройства, находящееся на линии связи (регенераторы,
+              маршрутизатор), могут использовать данный режим.</para>
             </listitem>
 
             <listitem>
@@ -2487,17 +2472,12 @@ Programming flash ..............................................................
 
             <listitem>
               <para><emphasis>AdvLink</emphasis> — расширенный режим
-              определения состояния линка. В обычном режиме линк на интерфейсе
-              считается поднятым, когда установлено соединение между
-              интерфейсом данного устройства и ближайшим подключённым к нему
-              устройством, будь то регенератор или конечное устройство. Когда
-              на линии работают регенераторы, это не всегда является верным,
-              так как зачастую поднятое состояние линка на интерфейсе должно
-              свидетельствовать об установлении связи между конечными
-              устройствами, а не между устройством и регенератором. Для этого
-              и предназначен параметр <emphasis>AdvLink</emphasis> — когда он
-              активен, линк на интерфейсе считается поднятым только в том
-              случае, когда установлена связь между мастером и слейвом.</para>
+              определения состояния соединения. В этом режиме соединение
+              считается установленным (линк поднят) только в том случае, когда
+              установлена связь между мастером и слейвом через всю цепочку
+              регенераторов. Если данный режим выключен, будет показываться
+              состояние соединения (линка) с устройством, непосредственно
+              подключенным к данному порту (первым в цепочке).</para>
             </listitem>
 
             <listitem>
@@ -2507,7 +2487,7 @@ Programming flash ..............................................................
 
             <listitem>
               <para><emphasis>Fill</emphasis> — выбор байта для заполнения
-              канала, когда нет пакетов на передачу.</para>
+              канала, когда нет пакетов, ожидающих передачи.</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -2535,7 +2515,7 @@ Programming flash ..............................................................
             <listitem>
               <para><emphasis>Link state</emphasis> — состояние соединения:
               <emphasis>offline</emphasis> — соединение не установлено,
-              <emphasis>online</emphasis> — соединение установлено.</para>
+              <emphasis>online</emphasis> — соединение установлено;</para>
             </listitem>
 
             <listitem>
@@ -2546,17 +2526,19 @@ Programming flash ..............................................................
               светодиод unbalanced на модуле SHDSL. Значение
               <emphasis>balanced</emphasis> этого параметра соответствует
               нормальной работе, <emphasis>unbalanced</emphasis> —
-              несбалансированности питания.</para>
+              несбалансированности питания. Причиной перекоса может быть
+              утечка либо замыкание одного из проводов на "землю";</para>
             </listitem>
 
             <listitem>
               <para><emphasis>Power overload</emphasis> — перегрузка питания.
-              Слишком большое число регенераторов на линии, настроенных на
-              питание от данного маршрутизатора, вызывает перегрузку питания.
-              На модуле SHDSL загорается светодиод overload. Значение
-              <emphasis>no overload</emphasis> этого параметра соответствует
-              нормальной работе, <emphasis>overload</emphasis> — перегрузке
-              питания.</para>
+              Слишком большое число регенераторов на линии, питающихся от
+              данного маршрутизатора, вызывает перегрузку питания. Перегрузка
+              также может быть вызвана коротким замыканием линии. На модуле
+              SHDSL загорается светодиод overload. Значение <emphasis>no
+              overload</emphasis> этого параметра соответствует нормальной
+              работе, <emphasis>overload</emphasis> — перегрузке
+              питания;</para>
             </listitem>
 
             <listitem>
@@ -2579,22 +2561,22 @@ Programming flash ..............................................................
           <itemizedlist>
             <listitem>
               <para><emphasis>Actual rate</emphasis> — скорость передачи
-              данных в установленном соединении, кбит/с.</para>
+              данных в установленном соединении, кбит/с;</para>
             </listitem>
 
             <listitem>
-              <para><emphasis>Actual line code</emphasis> — метод
-              кодирования.</para>
+              <para><emphasis>Actual line code</emphasis> — используемый
+              линейный код;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>Actual clock mode</emphasis> — режим
-              синхронизации.</para>
+              синхронизации;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>SNR margin</emphasis> — запас по соотношению
-              сигнал/шум в линии связи (чем больше, тем лучше).</para>
+              сигнал/шум в линии связи (чем больше, тем лучше);</para>
             </listitem>
 
             <listitem>
@@ -2635,7 +2617,7 @@ Programming flash ..............................................................
               <para><emphasis>Config profile</emphasis> — используемый для
               данного интерфейса профиль. Для выбора доступны только те
               профили, уровень совместимости которых соответствует данному
-              интерфейсу.</para>
+              интерфейсу;</para>
             </listitem>
 
             <listitem>
@@ -2673,7 +2655,7 @@ Programming flash ..............................................................
 
           <itemizedlist>
             <listitem>
-              <para><emphasis>Name</emphasis> — название профиля;</para>
+              <para><emphasis>Name</emphasis> — название профиля.</para>
             </listitem>
 
             <listitem>
@@ -2682,15 +2664,15 @@ Programming flash ..............................................................
 
               <itemizedlist>
                 <listitem>
-                  <para><emphasis>base</emphasis> — стандартная совместить,
-                  подходит как для модулей, работающих на скорости 5,7 Мбит/с,
-                  так и на скорости 14 Мбит/с.</para>
+                  <para><emphasis>base</emphasis> — стандартная совместимость,
+                  подходит для устаревших модулей и регенераторов, работающих
+                  на скорости до 5,7 Мбит/с.</para>
                 </listitem>
 
                 <listitem>
                   <para><emphasis>extended</emphasis> — расширенная
-                  совместимость, предназначена только для модулей, работающих
-                  на скорости 14 Мбит/с.</para>
+                  совместимость, предназначена для модулей и регенераторов,
+                  работающих на скорости до 14 Мбит/с.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -2732,15 +2714,15 @@ Programming flash ..............................................................
           <itemizedlist>
             <listitem>
               <para><emphasis>General</emphasis> — общая информация о линии
-              связи;</para>
+              связи.</para>
             </listitem>
 
             <listitem>
-              <para><emphasis>STU-C</emphasis> — статистика с мастера;</para>
+              <para><emphasis>STU-C</emphasis> — статистика с мастера.</para>
             </listitem>
 
             <listitem>
-              <para><emphasis>STU-R</emphasis> — статистика со слейва;</para>
+              <para><emphasis>STU-R</emphasis> — статистика со слейва.</para>
             </listitem>
 
             <listitem>
@@ -2768,17 +2750,17 @@ Programming flash ..............................................................
               установить между собой соединение. Это может быть вызвано
               несколькими причинами: один из процессов EOCd может быть не
               запущен, либо соответствующий интерфейс не управляется через
-              EOCd.</para>
+              EOCd;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>Regenerators</emphasis> — фактическое число
-              регенераторов на линии.</para>
+              регенераторов на линии;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>Wire pairs</emphasis> — число пар в
-              канале.</para>
+              канале;</para>
             </listitem>
 
             <listitem>
@@ -2798,29 +2780,27 @@ Programming flash ..............................................................
               CRC аномалий или более одного LOSW дефекта. При работе с данным
               параметром необходимо учитывать правила приоритетов параметров
               (см. <link linkend="shdsl.rules">правила
-              приоритетов</link>).</para>
+              приоритетов</link>);</para>
 
               <note>
                 <para><emphasis>Loss of Sync Defect (LOSW defect)</emphasis> –
                 потеря синхронизации. В плезиохронном режиме дефект потери
-                синхронизации должен обозначаться, когда не менее трех
+                синхронизации индицируется, когда не менее трех
                 последовательно полученных кадров содержат ошибки
-                синхронизации. Данные ошибки индицируются группой битов в
-                кадре: Frame Sync Word, Stuff Bits и Stuff Bit Ids. Индикация
-                LOSW очищается после получения не менее двух кадров не
-                содержащих ошибок синхронизации, следующих друг за
-                другом.</para>
+                синхронизации. Индикация LOSW очищается после получения не
+                менее двух кадров не содержащих ошибок синхронизации,
+                следующих друг за другом.</para>
               </note>
             </listitem>
 
             <listitem>
               <para><emphasis>Severely Errored Second (SES)</emphasis> —
-              количество односекундных интервалов, в течение которых произошло
-              не менее 50-ти CRC аномалий или более одного LOSW дефекта. (50
-              CRC аномалий в течение одной секунды соответствуют 30%
-              некорректных кадров для стандартной длины кадра). При работе с
-              данным параметром необходимо учитывать правила приоритетов
-              параметров.</para>
+              количество секундных интервалов, в течение которых произошло не
+              менее 50-ти CRC аномалий или более одного LOSW дефекта. (50 CRC
+              аномалий в течение одной секунды соответствуют 30% некорректных
+              кадров для стандартной длины кадра). При работе с данным
+              параметром необходимо учитывать правила приоритетов
+              параметров;</para>
             </listitem>
 
             <listitem>
@@ -2828,13 +2808,13 @@ Programming flash ..............................................................
               аномалий, обнаруженных за период, в течение которого
               производился мониторинг. При работе с данным параметром
               необходимо учитывать правила приоритетов параметров, которые
-              будут описаны ниже.</para>
+              будут описаны ниже;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>LOSW Second (LOSWS)</emphasis> — количество
               секундных интервалов, в течение которых обнаружено более одного
-              LOSW дефекта.</para>
+              LOSW дефекта;</para>
             </listitem>
 
             <listitem>
@@ -2859,7 +2839,7 @@ Programming flash ..............................................................
               <itemizedlist>
                 <listitem>
                   <para><emphasis>NetSide</emphasis> — направление мастера
-                  (линия связи, идущая к мастеру).</para>
+                  (линия связи, идущая к мастеру);</para>
                 </listitem>
 
                 <listitem>
@@ -2935,7 +2915,7 @@ Programming flash ..............................................................
           <title>Мониторинг через консоль</title>
 
           <para>Для мониторинга SHDSL канала используется утилита
-          <command>eoc-info</command>, для получения подробной информации об
+          <command>eoc-info</command>. Для получения подробной информации об
           её использовании используется ключ <option>--help</option>.</para>
 
           <para>Для получения краткой информации о состоянии канала
@@ -2990,14 +2970,14 @@ Programming flash ..............................................................
         используемое для передачи информации по стандарту G.SHDSL (G.991.2),
         имеет несколько вариантов, отличающихся степенью сложности алгоритма
         кодирования. Большим скоростям передачи соответствует режим с большим
-        количеством позиций модуляции (TCPAM32), на малых скоростях
-        используется режим с меньшим числом позиций модуляции (TCPAM16).
-        Соответственно, с увеличением сложности алгоритма кодирования,
-        снижается помехоустойчивость канала, и наоборот.</para>
+        количеством позиций модуляции, на малых скоростях используется режим с
+        меньшим числом позиций модуляции. Соответственно, с увеличением
+        сложности алгоритма кодирования, снижается помехоустойчивость канала,
+        и наоборот.</para>
 
         <para>Поэтому, при настройке скорости линии, следует обращать особое
-        внимание на алгоритм кодирования TCPAM и, при необходимости, изменять
-        линейный код для достижения наилучшего результата.</para>
+        внимание на выбор линейного кода TCPAM и, при необходимости, изменять
+        его для достижения наилучшего результата.</para>
 
         <para>Для SHDSL модулей серии MR-17H* существуют свои допустимые и
         рекомендуемые значения кодировок TCPAM.</para>
@@ -3020,25 +3000,25 @@ Programming flash ..............................................................
                   <row>
                     <entry>TCPAM128</entry>
 
-                    <entry>8192..14080</entry>
+                    <entry>8192 - 14080</entry>
                   </row>
 
                   <row>
                     <entry>TCPAM64</entry>
 
-                    <entry>5760..8128</entry>
+                    <entry>5760 - 8128</entry>
                   </row>
 
                   <row>
                     <entry>TCPAM32</entry>
 
-                    <entry>2560..5696</entry>
+                    <entry>2560 - 5696</entry>
                   </row>
 
                   <row>
                     <entry>TCPAM16</entry>
 
-                    <entry>192..2496</entry>
+                    <entry>192 - 2496</entry>
                   </row>
                 </tbody>
               </tgroup>
@@ -3061,22 +3041,20 @@ Programming flash ..............................................................
 
       <important>
         <para>Если данный сетевой интерфейс относится к модулю, установленному
-        в четвёртый слот (слот <emphasis>3</emphasis>), то он может быть
-        использован только для работы в режиме
-        <emphasis>мультиплексирования</emphasis>. Этот сетевой интерфейс не
-        имеет возможности передавать сетевой трафик (трафик, идущий не по
-        линиям мультиплексирования). Связано это с отсутствием поддержки DMA
-        для данного четвёртого слота.</para>
+        в слот <emphasis>3</emphasis>, то он может быть использован только для
+        работы в режиме <emphasis>мультиплексирования</emphasis>. Этот сетевой
+        интерфейс не имеет возможности передавать сетевой трафик (IP-трафик).
+        Связано это с отсутствием поддержки DMA для данного слота.</para>
       </important>
 
       <important>
-        <para>Четыре старших порта на некоторых версиях 8-и канальных модулей
-        так же могут использоваться только в режиме
+        <para>Четыре старших порта на восьмиканальных модулях могут
+        использоваться только в режиме
         <emphasis>мультиплексирования</emphasis>. В этом случае в заголовке
         страницы, рядом с названием модуля, будет написано: <emphasis>MR17G8,
-        multiplexing only, ...</emphasis>. Это связано с техническими
-        особенностями модуля. При этом для конфигурирования не доступны
-        параметры, относящиеся к передаче IP трафика.</para>
+        multiplexing only. </emphasis>Это связано с техническими особенностями
+        модуля. При этом для конфигурирования не доступны параметры,
+        относящиеся к передаче IP трафика.</para>
       </important>
 
       <section>
@@ -3119,12 +3097,12 @@ Programming flash ..............................................................
                 интерфейсе Е1 зарезервированы 0 и 16 слоты, которые могут быть
                 использованы для служебной информации. Активация этого
                 параметра позволяет использовать тайм-слот 16 для передачи
-                данных (в режиме мультиплексирования или IP).</para>
+                данных (в режиме мультиплексирования или IP);</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>E1 CRC4 multiframe</emphasis> — включение
-                режима CRC4.</para>
+                режима CRC4;</para>
               </listitem>
 
               <listitem>
@@ -3132,7 +3110,7 @@ Programming flash ..............................................................
                 Тайм-слоты можно указывать через запятую или диапазоном, через
                 дефис. После сохранения карта слотов может быть обновлена
                 драйвером, в этом случае будет изменён фон, а рядом со словом
-                Slotamp будет написано <emphasis>updated</emphasis>.</para>
+                Slotamp будет написано <emphasis>updated</emphasis>;</para>
 
                 <figure>
                   <title>Обновление карты тайм-слотов</title>
@@ -3147,9 +3125,15 @@ Programming flash ..............................................................
           <listitem>
             <para><emphasis>E1 CAS multiframe</emphasis> (не доступен при
             включённом <emphasis>Use time slot 16</emphasis>) — включение
-            режима CAS, используемого, как правило, при работе с АТС
-            оборудованием. В этом режиме тайм-слот 16 зарезервирован для
-            служебного использования.</para>
+            режима сигнализации CAS, используемого, как правило, при работе с
+            АТС оборудованием. В этом режиме тайм-слот 16 занят для передачи
+            CAS. Данный режим может использоваться только для имитации CAS,
+            если этого требует подключаемое оборудование, но не для
+            полноценного использования CAS;<note>
+                <para>Для прозрачной передачи CAS от АТС к АТС не следует
+                включать этот режим. Должен быть включен ражим Use time slot
+                16;</para>
+              </note></para>
           </listitem>
 
           <listitem>
@@ -3157,12 +3141,12 @@ Programming flash ..............................................................
             режиме long haul расстояние от маршрутизатора до подключённого к
             нему оборудования DTE может достигать 1600 метров по кабелю
             сечением 0,4 мм, и 2400 по кабелю сечением 0,5 мм. При отключении,
-            эта дистанция ограничена 400 метрами.</para>
+            эта дистанция ограничена 400 метрами;</para>
           </listitem>
 
           <listitem>
             <para><emphasis>E1 HDB3/AMI line code</emphasis> — способ
-            кодирования сигнала на линии связи.</para>
+            кодирования сигнала;</para>
 
             <important>
               <para>Рекомендация ITU-T G.703 требует использования линейного
@@ -3173,7 +3157,7 @@ Programming flash ..............................................................
           <listitem>
             <para><emphasis>Local Loopback, Remote Loopback</emphasis> —
             используется для диагностирования соединения, см. в следующем
-            разделе.</para>
+            разделе;</para>
           </listitem>
 
           <listitem>
@@ -3188,7 +3172,7 @@ Programming flash ..............................................................
                 <itemizedlist>
                   <listitem>
                     <para><emphasis>Parity</emphasis> — алгоритм контроля
-                    паритета.</para>
+                    паритета;</para>
                   </listitem>
 
                   <listitem>
@@ -3206,7 +3190,7 @@ Programming flash ..............................................................
                     <para><emphasis>Timeout</emphasis> — время в секундах
                     после последнего полученного пакета поддержания
                     соединения, по истечению которого соединение считается
-                    разорванным.</para>
+                    разорванным;</para>
                   </listitem>
 
                   <listitem>
@@ -3221,8 +3205,8 @@ Programming flash ..............................................................
 
           <listitem>
             <para><emphasis>E1 external transmit clock</emphasis> —
-            использовать внешний источник тактирования. По-умолчанию
-            используется внутренний.</para>
+            использовать внешний источник тактирования. Устройство будет
+            тактироваться от сигнала, приходящего по линии;</para>
 
             <note>
               <para>Если для данного интерфейса включено мультиплексирование
@@ -3234,12 +3218,12 @@ Programming flash ..............................................................
 
           <listitem>
             <para><emphasis>CRC</emphasis> — значение контрольной суммы
-            пакета.</para>
+            пакета;</para>
           </listitem>
 
           <listitem>
             <para><emphasis>Fill</emphasis> — выбор байта для заполнения
-            канала, когда нет пакетов на передачу.</para>
+            канала, когда нет пакетов на передачу;</para>
           </listitem>
 
           <listitem>
@@ -3252,9 +3236,9 @@ Programming flash ..............................................................
       <section id="e1-loopback">
         <title>Диагностирование соединения Е1</title>
 
-        <para>Для диагностирования соединения можно использовать "петлю": то
-        есть вместо того, чтобы передавать трафик дальше, возвращать его
-        обратно, симулируя ответ получателя трафика.</para>
+        <para>Для диагностирования соединения можно использовать "петлю":
+        вместо того чтобы передавать трафик дальше, возвращать его обратно,
+        имитируя ответ получателя трафика.</para>
 
         <para>Возможно создание двух видов петель — локальной и удалённой. При
         создании локальной петли, модуль Е1 передаёт данные в физическую линию
@@ -3287,11 +3271,6 @@ Programming flash ..............................................................
         интерфейса Е1 активировать параметр "Remote Loopback" на
         маршрутизаторе, на котором создаётся петля (на нашей схеме — на
         маршрутизаторе R2).</para>
-
-        <para>Таким образом, при использовании обоих видов петель данные
-        продолжают передаваться в физическую линию, но одновременно с этим
-        возвращаются обратно, что позволяет проверять корректность
-        конфигурации независимо от состояния линии связи.</para>
       </section>
     </section>
 
@@ -3323,17 +3302,17 @@ Programming flash ..............................................................
           </listitem>
 
           <listitem>
-            <para><emphasis>Character size</emphasis> — число битов при
-            передаче.</para>
+            <para><emphasis>Character size</emphasis> — число битов на
+            символ.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Stop bits</emphasis> — кличество стоповых
-            битов.</para>
+            <para><emphasis>Stop bits</emphasis> — количество
+            стоп-битов.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Parity</emphasis> — контроль паритета.</para>
+            <para><emphasis>Parity</emphasis> — контроль чётности.</para>
           </listitem>
 
           <listitem>
@@ -3352,27 +3331,28 @@ Programming flash ..............................................................
       <section id="rs232ip">
         <title>RS-232 через TCP/IP</title>
 
-        <para>Описание</para>
+        <section>
+          <title>Описание</title>
 
-        <para>Эта функция позволяет соединять два маршрутизатора с портами
-        RS-232 (DTE и DCE) через сети построенные по IP-технологии, передавая
-        в обоих направлениях данные и состояние управляющих/модемных
-        линий.</para>
+          <para>Эта функция позволяет соединять два маршрутизатора с портами
+          RS-232 (DTE и DCE) через сети построенные по IP-технологии,
+          передавая в обоих направлениях данные и состояние
+          управляющих/модемных линий.</para>
 
-        <para><figure>
-            <title>Схема удлинителя RS-232 через сети построенные по IP
-            технологии</title>
+          <para><figure>
+              <title>Схема удлинителя RS-232 через сети построенные по IP
+              технологии</title>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/rs232_ip.png" />
-              </imageobject>
-            </mediaobject>
-          </figure></para>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/rs232_ip.png" />
+                </imageobject>
+              </mediaobject>
+            </figure></para>
 
-        <para>Направление передачи управляющих/модемных линий:</para>
+          <para>Направление передачи управляющих/модемных линий:</para>
 
-        <screen>
+          <screen>
 Прямой соединительный кабель:
 
     DTE    DCE
@@ -3392,132 +3372,136 @@ null-modem:
  CD,DSR &lt;- DTR
     RTS -&gt; CTS
     CTS &lt;- RTS</screen>
+        </section>
 
-        <para>Устройство и принципы работы</para>
+        <section>
+          <title>Устройство и принципы работы</title>
 
-        <para>Для каждого сконфигурированного порта RS-232 на обоих
-        маршрутизаторах запускается отдельный экземпляр демона rs232-tcpext -
-        на стороне машрутизатора ожидающего соединения в пассивном режиме, на
-        стороне маршрутзатора, устанавливающего соединение, в активном
-        режиме.</para>
+          <para>Для каждого сконфигурированного порта RS-232 на обоих
+          маршрутизаторах запускается отдельный экземпляр демона rs232-tcpext:
+          на стороне машрутизатора, ожидающего соединения — в пассивном
+          режиме, на стороне маршрутзатора, запрашивающего соединение — в
+          активном режиме.</para>
 
-        <para>Устанавливаются два соединения TCP/IP, одно для данных, другое
-        для состояния управляющих/модемных линий. Состояние
-        управляющих/модемных линий опрашивается с заданным интервалом времени,
-        обычно 100 мс.</para>
+          <para>Устанавливаются два соединения TCP/IP, одно для данных, другое
+          для состояния управляющих/модемных линий. Состояние
+          управляющих/модемных линий опрашивается с заданным интервалом
+          времени, обычно 100 мс.</para>
 
-        <para>В случае любой ошибки, закрытия любого из соединений, закрытия
-        порта RS-232, невозможности установления соединений с другой стороной,
-        происходит рестарт (закрытие и открытие) соединений и порта RS-232 с
-        заданной задержкой, обычно 1000 мс.</para>
+          <para>В случае любой ошибки, закрытия любого из соединений, закрытия
+          порта RS-232, невозможности установления соединений с другой
+          стороной, происходит рестарт (закрытие и открытие) соединений и
+          порта RS-232 с заданной задержкой, обычно 1000 мс.</para>
 
-        <para>Архитектура с отдельными экземплярами демонов для каждого порта
-        обеспечивает при конфигурировании/рестарте одного порта
-        невмешательство в потоки данных других портов.</para>
+          <para>Архитектура с отдельными экземплярами демонов для каждого
+          порта обеспечивает при конфигурировании/рестарте одного порта
+          невмешательство в потоки данных других портов.</para>
+        </section>
 
-        <para>Инструкция по настройке</para>
+        <section>
+          <title>Инструкция по настройке</title>
 
-        <itemizedlist>
-          <listitem>
-            <para>Откройте в браузере две вкладки на страницы управления
-            обоими маршрутизаторами</para>
-          </listitem>
+          <itemizedlist>
+            <listitem>
+              <para>Откройте в браузере две вкладки на страницы управления
+              обоими маршрутизаторами.</para>
+            </listitem>
 
-          <listitem>
-            <para>Во вкладках Hardware/ttyRS* настройте параметры выбранных
-            портов и нажмите "save".</para>
-          </listitem>
-
-          <figure>
-            <title>Настройка параметров порта RS232</title>
-
-            <graphic fileref="img/wf2-rs232.png" width="6in" />
-          </figure>
-
-          <listitem>
-            <para>Для каждого порта решите, который из маршрутизаторов для
-            данного порта будет активной и пассивной сторонами. Пассивная
-            сторона ждёт соединения на выбранном сетевом адресе от активной
-            стороны.</para>
-          </listitem>
-
-          <listitem>
-            <para>Во вкладках Services / RS-232 over TCP/IP / ttyRS* обоих
-            маршрутизаторов настройте стороны соединения.</para>
+            <listitem>
+              <para>Во вкладках Hardware/ttyRS* настройте параметры выбранных
+              портов и нажмите "save".</para>
+            </listitem>
 
             <figure>
-              <title>Настройка RS-232 over TCP/IP</title>
+              <title>Настройка параметров порта RS232</title>
 
-              <graphic fileref="img/rs232ip_options.png" width="6in" />
+              <graphic fileref="img/wf2-rs232.png" width="6in" />
             </figure>
 
-            <para>Селектор "mode" определяет режим:</para>
+            <listitem>
+              <para>Для каждого порта решите, какой из маршрутизаторов для
+              данного порта будет активной и пассивной стороной. Пассивная
+              сторона ждёт соединения на выбранном сетевом адресе от активной
+              стороны.</para>
+            </listitem>
 
-            <itemizedlist>
-              <listitem>
-                <para>"Disable" - служба выключена,</para>
-              </listitem>
+            <listitem>
+              <para>Во вкладках Services / RS-232 over TCP/IP / ttyRS* обоих
+              маршрутизаторов настройте стороны соединения.</para>
 
-              <listitem>
-                <para>"Listen On" - ждать соединений на заданных "host",
-                "port" (пассивный режим)</para>
-              </listitem>
+              <figure>
+                <title>Настройка RS-232 over TCP/IP</title>
 
-              <listitem>
-                <para>"Connect To" - соединится с заданными "host", "port"
-                (активный режим)</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-        </itemizedlist>
+                <graphic fileref="img/rs232ip_options.png" width="6in" />
+              </figure>
 
-        <para>Поля "host" и "port" определяют сетевой адрес и порт, на котором
-        пассивная сторона ждёт соединения от активной стороны (см. bind(2))
-        или на которые делает соединение активная сторона. Значение по
-        умолчанию - 0.0.0.0 - принимать соединение от любого из сетевых
-        интерфейсов. localhost (127.0.0.1) не сможет принимать соединения от
-        других узлов в сети.</para>
+              <para>Селектор "mode" определяет режим:</para>
 
-        <para>Поле "ToS" определяет биты ToS для IP пакетов которые будет
-        посылать демон rs232-tcpext.</para>
+              <itemizedlist>
+                <listitem>
+                  <para>"Disable" - служба выключена;</para>
+                </listitem>
 
-        <para>Поле "Modem lines polling interval (msec)" определяет интервал
-        времени опроса состояния модемных линий, по умолчанию 100 мс.</para>
+                <listitem>
+                  <para>"Listen On" - ждать соединений на заданных "host",
+                  "port" (пассивный режим);</para>
+                </listitem>
 
-        <para>Поле "Restart delay (msec)" определяет задержку перед рестартом
-        в случае любой ошибки, по умолчанию 1000 мс.</para>
+                <listitem>
+                  <para>"Connect To" - соединиться с заданными "host", "port"
+                  (активный режим).</para>
+                </listitem>
+              </itemizedlist>
+            </listitem>
+          </itemizedlist>
 
-        <para>Нажмите кнопки "save".</para>
+          <para>Поля "host" и "port" определяют сетевой адрес и порт, на
+          котором пассивная сторона ждёт соединения от активной стороны (см.
+          bind(2)) или на которые делает соединение активная сторона. Значение
+          по умолчанию - 0.0.0.0 - принимать соединение от любого из сетевых
+          интерфейсов. localhost (127.0.0.1) не сможет принимать соединения от
+          других узлов в сети.</para>
 
-        <para>Убедитесь, что на каждом маршрутизаторе запущен процесс: во
-        вкладке System/Console введите команду "ps ax" и убедитесь, что
-        процесс rs232-tcpext запущен:</para>
+          <para>Поле "ToS" определяет биты ToS для IP пакетов которые будет
+          посылать демон rs232-tcpext.</para>
 
-        <screen>
+          <para>Поле "Modem lines polling interval (msec)" определяет интервал
+          времени опроса состояния модемных линий, по умолчанию 100 мс.</para>
+
+          <para>Поле "Restart delay (msec)" определяет задержку перед
+          рестартом в случае любой ошибки, по умолчанию 1000 мс.</para>
+
+          <para>Нажмите кнопки "save".</para>
+
+          <para>Убедитесь, что на каждом маршрутизаторе запущен процесс: во
+          вкладке System/Console введите команду "ps ax" и убедитесь, что
+          процесс rs232-tcpext запущен:</para>
+
+          <screen>
 ps ax
 ...
  728 ? S 0:00 rs232-tcpext /dev/ttyRS0 0.0.0.0 3000 listen /var/run/rs232-tcpext.ttyRS0.pid 100 1000
 
 3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</screen>
 
-        <para><note>
-            <para>Учтите, что процесс запуска из web системы достаточно
-            медленный.</para>
-          </note></para>
+          <para><note>
+              <para>Учтите, что процесс запуска из web системы достаточно
+              медленный.</para>
+            </note></para>
 
-        <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
-        демонов:</para>
+          <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
+          демонов:</para>
 
-        <para>Пассивная сторона:</para>
+          <para>Пассивная сторона:</para>
 
-        <screen>
+          <screen>
 daemon.warn rs232-tcpext ttyRS0  listen : started up
 daemon.info rs232-tcpext ttyRS0  listen : pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
 daemon.info rs232-tcpext ttyRS0  listen : Waiting data connection...</screen>
 
-        <para>После соединения от активной стороны:</para>
+          <para>После соединения от активной стороны:</para>
 
-        <screen>
+          <screen>
 daemon.info rs232-tcpext ttyRS0  listen : Data connection from 192.168.3.102:2937
 daemon.info rs232-tcpext ttyRS0  listen : Waiting state connection...
 daemon.info rs232-tcpext ttyRS0  listen : State connection from 192.168.3.102:2938
@@ -3525,9 +3509,9 @@ daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RT
 daemon.info rs232-tcpext ttyRS0  listen : Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
 daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
 
-        <para>Активная сторона:</para>
+          <para>Активная сторона:</para>
 
-        <screen>
+          <screen>
 daemon.warn rs232-tcpext ttyRS0  connect: started up
 daemon.info rs232-tcpext ttyRS0  connect: pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
 daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
@@ -3537,33 +3521,36 @@ daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:300
 daemon.info rs232-tcpext ttyRS0  connect: Connecting (state) to 192.168.2.101:3000 ...
 daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
 daemon.info rs232-tcpext ttyRS0  connect: Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 R</screen>
+        </section>
 
-        <para>Простая проверка работы удлинителя RS-232.</para>
+        <section>
+          <title>Простая проверка работы удлинителя RS-232</title>
 
-        <para>Соедините выбранные интерфейсы RS-232 маршрутизатров с портами
-        ПК по нижеприведенной схеме:</para>
+          <para>Соедините выбранные интерфейсы RS-232 маршрутизатров с портами
+          ПК по нижеприведенной схеме:</para>
 
-        <para><figure>
-            <title>Тестовая схема для проверки "удлинителя" RS-232 через
-            IP</title>
+          <para><figure>
+              <title>Тестовая схема для проверки "удлинителя" RS-232 через
+              IP</title>
 
-            <mediaobject>
-              <imageobject>
-                <imagedata fileref="img/rs232_ip_test.png" />
-              </imageobject>
-            </mediaobject>
-          </figure><note>
-            <para>Указанную схему можно собрать на одном PC при наличии COM1,
-            COM2 и двух портов Ethernet.</para>
-          </note>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) также,
-        как и соединённые с ними интерфейсы маршрутизаторов.</para>
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/rs232_ip_test.png" />
+                </imageobject>
+              </mediaobject>
+            </figure><note>
+              <para>Указанную схему можно собрать на одном PC при наличии
+              COM1, COM2 и двух портов Ethernet.</para>
+            </note>Настройте интерфейсы RS-232 ПК (скорость, 8n1, ...) так же,
+          как соединённые с ними интерфейсы маршрутизаторов.</para>
 
-        <para>На обоих ПК запустите терминальные программы на соотвествующие
-        интерфейсы и попечатайте.</para>
+          <para>На обоих ПК запустите терминальные программы на соотвествующие
+          интерфейсы и попечатайте.</para>
 
-        <para>Для проверки передачи сигналов управления/модемных линий эта
-        схема непригодна.</para>
+          <para>Для проверки передачи сигналов управления/модемных линий эта
+          схема непригодна.</para>
+        </section>
       </section>
 
       <section id="rs232-terminal">
@@ -3585,11 +3572,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <important>
           <para>Перед тем как включать данную функцию для порта, необходимо
-          убедится, что другие функции (мультиплексирование, RS232-over-IP,
+          убедиться, что другие функции (мультиплексирование, RS232-over-IP,
           Dial-in) выключены.</para>
         </important>
 
-        <para>Для удобства, можно присвоить каждому порту имя, оно будет
+        <para>Для удобства можно присвоить каждому порту имя. Оно будет
         отображаться на вкладке порта.</para>
 
         <para>Buffer size задает размер буфера для хранения данных, приходящих
@@ -3609,9 +3596,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <title>Dial-in сервер</title>
 
         <para>Dial-in сервер позволяет организовать резервный или управляющий
-        канал данных через беспроводные или коммутируемые соединения. Для
-        этого могут использоваться различные GSM и проводные модемы с
-        интерфейсом RS232.</para>
+        канал через беспроводные или коммутируемые соединения. Для этого могут
+        использоваться различные GSM и проводные модемы с интерфейсом
+        RS232.</para>
 
         <figure>
           <title>Вкладка General</title>
@@ -3653,12 +3640,12 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           </listitem>
 
           <listitem>
-            <para><emphasis>Speed</emphasis> — скорость на которой будет
+            <para><emphasis>Speed</emphasis> — скорость, на которой будет
             устанавливаться соединение.</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Rings</emphasis> — количество звонков после
+            <para><emphasis>Rings</emphasis> — количество звонков, после
             которых будет поднята трубка.</para>
           </listitem>
 
@@ -3683,10 +3670,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
     <section id="multiplexing">
       <title>Мультиплексирование</title>
 
-      <para>Мультиплексирование используется для передачи трафика с одного
-      интерфейса на другой, минуя центральный процессор.
-      <emphasis>SG-17R</emphasis> позволяет одновременно мультиплексировать и
-      передавать IP трафик.</para>
+      <para>Мультиплексирование используется для передачи потоков с одного
+      интерфейса на другой без разделения на пакеты. Мультиплексирование
+      производится средствами интерфейсных модулей без участия центрального
+      процессора. <emphasis>SG-17R</emphasis> позволяет мультиплексировать и
+      передавать IP трафик одновременно.</para>
 
       <para>В общем виде это можно представить так:</para>
 
@@ -3699,8 +3687,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <para>В приведенном примере к маршрутизаторам SG-17R подключено два
       канала Е1, а также сеть TCP/IP по Ethernet. Два маршрутизатора соединены
       между собой через SHDSL. Максимальная скорость SHDSL составляет 14080
-      кбит/c, то есть по одному каналу SHDSL можно передать два канала Е1
-      (2048 кбит/с каждый), и останется неиспользованными 9984 кбит/с.</para>
+      кбит/c. В таком случае по одному каналу SHDSL можно передать два канала
+      Е1 (2048 кбит/с каждый), и останется неиспользованными 9984
+      кбит/с.</para>
 
       <para>Для передачи потоков Е1 используется мультиплексирование: оба
       входных потока Е1 мультиплексируются в канал SHDSL, по которому они
@@ -3711,14 +3700,15 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>Для мультиплексирования в маршрутизаторе выделена шина, состоящая
       из 16 линий, каждая из которых содержит 256 тайм-слотов. Каждый
-      тайм-слот на линии соответствует тайм-слоту в Е1 или SHDSL, то есть
+      тайм-слот на линии соответствует тайм-слоту в Е1 или SHDSL, то есть,
       имеет скорость 64 кбит/с. E1 содержит 32 тайм-слота, SHDSL — в
-      зависимости от скорости интерфейса. Интерфейсы E1 (E1) и SHDSL (dsl)
-      могут выставлять на шину данные, полученные из физической линии, и
-      принимать данные, выставленные другим интерфейсом.</para>
+      зависимости от скорости интерфейса. Интерфейсы E1 и SHDSL могут
+      выставлять на шину данные, полученные из физической линии, и принимать
+      данные, выставленные другим интерфейсом.</para>
 
       <para><note>
-          <para>Некоторые модули могут использовать только 8 линий.</para>
+          <para>Некоторые модули (MR-17G1, MR-17G2, MR-17S**) могут
+          использовать только 8 линий.</para>
         </note></para>
 
       <figure>
@@ -3727,7 +3717,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <graphic fileref="img/multiplexing-line.png" width="6in" />
       </figure>
 
-      <para>Все устройства, участвующие в мультиплексировании трафика, должны
+      <para>Все устройства, участвующие в мультиплексировании, должны
       тактироваться одним сигналом. Для этого при настройке
       мультиплексирования необходимо указать, какой интерфейс будет задавать
       тактовый сигнал.</para>
@@ -3789,19 +3779,20 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <itemizedlist>
             <listitem>
               <para><emphasis>local</emphasis> — использовать для тактирования
-              локальный клок.</para>
+              локальный генератор.</para>
             </listitem>
 
             <listitem>
               <para><emphasis>remote</emphasis> — использовать для
-              тактирования внешний клок.</para>
+              тактирования сигнал от удалённого устройства.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>RLINE</emphasis> — номер линии, на которую интерфейс
-          будет выставлять данные, полученные из физической линии.</para>
+          <para><emphasis>RLINE</emphasis> — номер линии мультиплексирования,
+          на которую интерфейс будет выставлять данные, полученные из
+          физической линии.</para>
         </listitem>
 
         <listitem>
@@ -3822,24 +3813,22 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
 
         <listitem>
-          <para><emphasis>MXRATE</emphasis>  — число тайм-слотов, отводимых
-          для мультиплексирования (для интерфейсов SHDSL).</para>
+          <para><emphasis>MXRATE</emphasis> — число тайм-слотов, отводимых для
+          мультиплексирования (для интерфейсов SHDSL).</para>
         </listitem>
 
         <listitem>
           <para><emphasis>MXSMAP</emphasis> — карта тайм-слотов, используемых
-          для мультиплексирования (для интерфейсов Е1). Эта карта не должна
-          пересекаться с картой, которая задаётся при настройки интерфейса Е1
-          для передачи IP трафика. Карта задаётся в виде "1-16", "16-31",
-          ...</para>
+          для мультиплексирования (для интерфейсов Е1). Карта задаётся виде
+          перечисления тайм-слотов и их диапазонов (1,2,3,5-7).</para>
         </listitem>
       </itemizedlist>
 
       <important>
         <para>Тайм-слот в Е1 может использоваться <emphasis>только</emphasis>
-        либо для мультиплексирования, либо для передачи IP трафика, поэтому
+        либо для мультиплексирования, либо для передачи IP трафика. Поэтому
         карта тайм-слотов, задаваемых для мультиплексирования параметром
-        <parameter>mxsmap</parameter> не должна пересекаться с картой
+        <parameter>mxsmap</parameter>, не должна пересекаться с картой
         тайм-слотов, указанных при настройке Е1 для использования в передаче
         IP трафика.</para>
       </important>
@@ -3863,7 +3852,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
     <section>
       <para>В веб-интерфейсе есть разделение сетевых интерфейсов на два типа:
       статические и динамические. К статическим интерфейсам относятся
-      интерфейсы, которые нельзя создать или удалить, то есть по сути это
+      интерфейсы, которые нельзя создать или удалить. То есть, по сути это
       физические интерфейсы, относящиеся к определённому аппаратному
       обеспечению. К динамическим интерфейсам относятся интерфейсы бондинга,
       бриджа, VLAN, так как эти интерфейсы можно создавать и удалять, они не
@@ -3908,12 +3897,12 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <listitem>
             <para>Кнопка <emphasis>Start</emphasis> позволяет запустить
             ("поднять") интерфейс, если на вкладке General установлен флажок
-            <emphasis>enabled</emphasis>.</para>
+            <emphasis>enabled</emphasis>;</para>
           </listitem>
 
           <listitem>
             <para>Кнопка <emphasis>Stop</emphasis> останавливает ("опускает")
-            интерфейс.</para>
+            интерфейс;</para>
           </listitem>
 
           <listitem>
@@ -3982,15 +3971,14 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
           <listitem>
             <para><emphasis>Enabled</emphasis> — интерфейс активен. Это делает
-            возможным автоматический запуск интерфейса и запуск другим интерфейсом
-            при загрузке, например интерфейсом бондинга или бриджа. Если интерфейс
-            входит в состав бондинга или бриджа или для него создан VLAN интерфейс,
-            то он будет запущен при загрузке. Если интерфейс не ипользуется другим
-            интерфейсом, он не будет запущен при загрузке.
-            Его можно запустить нажатием кнопки
-            <emphasis>Start interface</emphasis> на вкладке
-            <emphasis>Status</emphasis> , или для автоматического запуска
-            интерфейса при загрузке установить
+            возможным автоматический запуск интерфейса и запуск другим
+            интерфейсом при загрузке, например интерфейсом бондинга или
+            бриджа. Если интерфейс входит в состав бондинга или бриджа или для
+            него создан VLAN интерфейс, то он будет запущен при загрузке. Если
+            интерфейс не ипользуется другим интерфейсом, он не будет запущен
+            при загрузке. Его можно запустить нажатием кнопки <emphasis>Start
+            interface</emphasis> на вкладке <emphasis>Status</emphasis> , или
+            для автоматического запуска интерфейса при загрузке установить
             <emphasis>Auto</emphasis>.<emphasis /> <emphasis /></para>
           </listitem>
 
@@ -4042,12 +4030,12 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
                   <listitem>
                     <para><emphasis>Static address</emphasis> — требуемый
                     IP-адрес в формате xxx.xxx.xxx.xxx (например,
-                    192.168.2.100);</para>
+                    192.168.2.100).</para>
                   </listitem>
 
                   <listitem>
                     <para><emphasis>Netmask</emphasis> — маска сети в формате
-                    xxx.xxx.xxx.xxx (например, 255.255.255.0);</para>
+                    xxx.xxx.xxx.xxx (например, 255.255.255.0).</para>
                   </listitem>
 
                   <listitem>
@@ -4056,12 +4044,12 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
                     (192.168.2.255). Если не указан, рассчитывается
                     автоматически при запуске интерфейса (доступен для
                     просмотра на вкладке Status в выводе состояния
-                    интерфейса);</para>
+                    интерфейса).</para>
                   </listitem>
 
                   <listitem>
-                    <para><emphasis>Gateway</emphasis> — маршрут
-                    по-умолчанию;</para>
+                    <para><emphasis>Gateway</emphasis> — маршрут по
+                    умолчанию.</para>
                   </listitem>
                 </itemizedlist>
 
@@ -4069,7 +4057,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
                   <para>Для интерфейса <emphasis>Е1</emphasis> при
                   использовании протоколов, отличных от
                   <emphasis>ETHER-HDLC</emphasis>, адрес устанавливается в
-                  виде Point-to-Point (точка - точка), то есть указываются
+                  виде Point-to-Point (точка - точка), то есть, указываются
                   IP-адреса локальной и удалённой стороны.</para>
 
                   <figure>
@@ -4082,7 +4070,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
                   <itemizedlist>
                     <listitem>
                       <para><emphasis>Point to Point local</emphasis> —
-                      локальный IP-адрес (для текущего устройства);</para>
+                      локальный IP-адрес (для текущего устройства).</para>
                     </listitem>
 
                     <listitem>
@@ -4174,25 +4162,25 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <graphic fileref="img/wf2-ifaces-dynamic-added.png" width="2in" />
         </figure>
 
-        <para id="ifaces.del">Чтобы удалить динамический интерфейс выберите
+        <para id="ifaces.del">Чтобы удалить динамический интерфейс, выберите
         его имя в списке интерфейсов и нажмите кнопку
         <emphasis>Delete</emphasis>.</para>
       </section>
 
       <section id="bonding">
-        <title>Настройка объединения каналов (bonding)</title>
+        <title>Настройка объединения каналов (бондинг)</title>
 
-        <para>Bonding позволяет объединять несколько физических соединений в
+        <para>Бондинг позволяет объединять несколько физических соединений в
         одно логическое (с помощью создания динамического интерфейса
         <emphasis>bond</emphasis>). К примеру, два SHDSL канала можно
         объединить в один, увеличив пропускную способность и надёжность
         соединения.</para>
 
         <important>
-          <para>В режиме Bonding поддерживается объединение только
+          <para>В режиме бондинга поддерживается объединение только
           ethernet-совместимых интерфейсов. В устройстве ethernet-совместимыми
-          интерфейсами являются Ethernet, SHDSL, E1 в режиме ETHER-HDLC, а так
-          же интерфейсы бондинга, бриджа, VLAN.</para>
+          интерфейсами являются Ethernet, SHDSL, E1 в режиме ETHER-HDLC, а
+          также интерфейсы бондинга, бриджа, VLAN.</para>
         </important>
 
         <para>Динамический интерфейс бондинга создаётся на странице
@@ -4249,7 +4237,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <note>
           <para>Если вы настраиваете несколько бондингов, то после настройки
           устройство надо перезагрузить. Это связано с тем, что после запуска
-          первого bonding-интерфейса, запуск новых bonding-интерфейсов будет
+          первого бондинг-интерфейса, запуск новых бондинг-интерфейсов будет
           возможен только после перезагрузки.</para>
         </note>
       </section>
@@ -4266,8 +4254,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <important>
           <para>В режиме Bridge поддерживается использование только
           ethernet-совместимых интерфейсов. В устройстве ethernet-совместимыми
-          интерфейсами являются Ethernet, SHDSL, E1 в режиме ETHER-HDLC, а так
-          же интерфейсы бондинга, бриджа, VLAN.</para>
+          интерфейсами являются Ethernet, SHDSL, E1 в режиме ETHER-HDLC, а
+          также интерфейсы бондинга, бриджа, VLAN.</para>
         </important>
 
         <figure>
@@ -4295,10 +4283,10 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </note>
 
         <para>На следующем рисунке изображена сеть, аналогичная предыдущей, но
-        с использованием технологии объединения каналов (bonding), позволяющей
-        увеличить производительность сети. В этом случае бридж состоит из
-        Ethernet-интерфейса eth0 и объединенных SHDSL-интерфейсов dsl0 и dsl1
-        в один интерфейс bond0:</para>
+        с использованием технологии объединения каналов (бондинга),
+        позволяющей увеличить производительность сети. В этом случае бридж
+        состоит из Ethernet-интерфейса eth0 и объединенных SHDSL-интерфейсов
+        dsl0 и dsl1 в один интерфейс bond0:</para>
 
         <figure>
           <title>Пример бриджа с объединением интерфейсов</title>
@@ -4359,7 +4347,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <para>Для бриджа можно настроить дополнительные параметры, которые
         доступны на странице Network/Dynamic interfaces/br*, на вкладке
-        Specific:</para>
+        Specific.</para>
 
         <figure>
           <title>Дополнительные параметры бриджа</title>
@@ -4422,10 +4410,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         определённым VLAN ID на основе физического или другого динамического
         интерфейса.</para>
 
-        <para>Создание интерфейса VLAN производится на странице 
-        Network/Dynamic interfaces/Manage. Для
-        этого выбираем протокол VLAN, после чего будут доступны два
-        параметра:</para>
+        <para>Создание интерфейса VLAN производится на странице
+        Network/Dynamic interfaces/Manage. Для этого выбираем протокол VLAN,
+        после чего будут доступны два параметра:</para>
 
         <figure>
           <title>Добавление интерфейса VLAN</title>
@@ -4435,8 +4422,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Physical interface</emphasis> — физический
-            интерфейс, на основе которого создаётся интерфейс VLAN.</para>
+            <para><emphasis>Physical interface</emphasis> — интерфейс, на
+            основе которого создаётся интерфейс VLAN;</para>
           </listitem>
 
           <listitem>
@@ -4469,10 +4456,10 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
     <section id="routes">
       <title id="routes.title">Добавление сетевых маршрутов</title>
 
-      <para>Сетевые маршруты определяют через какие маршрутизаторы доступна та
-      или иная сеть. Добавление маршрутов осуществляется на странице настройки
-      того сетевого интерфейса, через который он пролегает. К примеру, сеть
-      имеет следующую структуру:</para>
+      <para>Сетевые маршруты определяют, через какие маршрутизаторы доступна
+      та или иная сеть. Добавление маршрутов осуществляется на странице
+      настройки того сетевого интерфейса, через который он пролегает. К
+      примеру, сеть имеет следующую структуру:</para>
 
       <figure>
         <title>Пример: структура сети</title>
@@ -4508,8 +4495,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       страницах соответствующих интерфейсов.</para>
 
       <note>
-        <para>Маршрут на сеть Network3 добавляется так же как и для сети
-        Network 2 через маршрутизатор GW2 по причине того, что маршрутизатор
+        <para>Маршрут на сеть Network3 добавляется так же, как и для сети
+        Network 2, через маршрутизатор GW2 по причине того, что маршрутизатор
         SG-17R не имеет прямого подключения к маршрутизатору GW3 и вынужден
         обращаться к нему через GW2.</para>
       </note>
@@ -4524,7 +4511,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <graphic fileref="img/wf2-routes-list-empty.png" width="6in" />
       </figure>
 
-      <para>Изначально список пустой. Для добавления нового маршрута, нажимаем
+      <para>Изначально список пустой. Для добавления нового маршрута нажимаем
       на кнопку со значком "+" и заполняем поля в новом окне:</para>
 
       <figure>
@@ -4533,7 +4520,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <graphic fileref="img/wf2-routes-add.png" width="6in" />
       </figure>
 
-      <para>После добавления маршрута, информация о нём появится в таблице
+      <para>После добавления маршрута информация о нём появится в таблице
       маршрутов:</para>
 
       <figure>
@@ -4542,7 +4529,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <graphic fileref="img/wf2-routes-list-eth0.png" width="6in" />
       </figure>
 
-      <para>После добавление необходимых маршрутов для интерфейса dsl0, его
+      <para>После добавления необходимых маршрутов для интерфейса dsl0 его
       таблица маршрутов примет следующий вид:</para>
 
       <figure>
@@ -4553,7 +4540,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>После добавления маршрута он сразу прописывается в системе.
       Проверить, что добавленные добавленные маршруты корректно приняты
-      системой можно на вкладке Status, в выводе Routes:</para>
+      системой, можно на вкладке Status, в выводе Routes:</para>
 
       <figure>
         <title>Проверка списка маршрутов для интерфейса dsl0</title>
@@ -4582,8 +4569,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       правил, где каждое правило определяет одно из действий: приём или отброс
       пакета, основываясь на одном или нескольких критериях. Добавление правил
       осуществляется на вкладке Filter. Для каждой цепочки устанавливается
-      действие по-умолчанию — политика, то есть в случае, если пакет не попал
-      ни под один критерий:</para>
+      действие по умолчанию — политика. Оно выполняется в случае, если пакет
+      не попал ни под один критерий:</para>
 
       <figure id="filter_policy">
         <title>Политики цепочек</title>
@@ -4611,7 +4598,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <listitem>
           <para><emphasis>REJECT</emphasis> — отброс пакета с отправкой
-          уведомления;</para>
+          уведомления.</para>
         </listitem>
       </itemizedlist>
 
@@ -4696,8 +4683,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       </itemizedlist>
 
       <note>
-        <para>Если внесённые вами изменения не вступают в силу, проверьте, что
-        вы активировали межсетевой экран на странице Network/Firewall.</para>
+        <para>Если внесённые вами изменения не вступают в силу, проверьте,
+        активирован ли межсетевой экран на странице Network/Firewall.</para>
       </note>
     </section>
 
@@ -4708,8 +4695,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       источника или отправителя пакета.</para>
 
       <para>NAT является частью межсетевого экрана, поэтому схема управления
-      остаётся той же, меняется только действие. Для цепочек в NAT так же
-      выставляются политики, то есть действия для пакетов, не попавшие ни под
+      остаётся той же, меняется только действие. Для цепочек в NAT также
+      выставляются политики, то есть действия для пакетов, не попавших ни под
       одно правило:</para>
 
       <figure>
@@ -4730,7 +4717,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       где над ними может быть выполнено несколько действий. В этой цепочке не
       рекомендуется производить фильтрацию пакетов, для этого надо
       использовать цепочку FORWARD. Цепочка PREROUTING предназначена для
-      выполнения DNAT — destination NAT, то есть замена адреса получателя
+      выполнения DNAT — destination NAT, то есть замены адреса получателя
       пакета.</para>
 
       <figure id="nat_prerouting">
@@ -4753,7 +4740,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       адрес вместе с номером порта через двоеточие (например,
       192.168.2.1:25).</para>
 
-      <para>В цепочку POSTROUTING идут пакеты, выходящие с маршрутизатора,
+      <para>В цепочку POSTROUTING идут пакеты, выходящие с маршрутизатора:
       транзитные или сгенерированные на маршрутизаторе. В этой цепочке можно
       выполнить SNAT — source NAT — замену адреса отправителя, с указанием
       адреса, либо MASQUERADE — смысл тот же, только адрес замены будет
@@ -4796,7 +4783,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <listitem>
           <para><emphasis>TX queue length</emphasis> — исходящая очередь
           интерфейса, измеряется в пакетах. Если ничего не указано, для
-          интерфейса устанавливается значение по-умолчанию.</para>
+          интерфейса устанавливается значение по умолчанию.</para>
         </listitem>
 
         <listitem>
@@ -4835,7 +4822,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
           <listitem>
             <para><emphasis>Minimum Cost</emphasis> — минимальная стоимость
-            канала;</para>
+            канала.</para>
           </listitem>
         </itemizedlist>
 
@@ -4868,28 +4855,28 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <para>SFQ — Stochastic Fairness Queueing — дисциплина честного
         планирования. Она оперирует таким понятием, как "поток" — сессия TCP
-        или поток данных UDP, для каждого из которого создаётся своя
-        псевдо-очередь в рамках этой дисциплины. Дисциплина поочередно (round
-        robin) переключается между псевдо-очередями, не позволяя какому-либо
-        потоку использовать весь канал монопольно.</para>
+        или поток данных UDP. Для каждого потока создаётся своя псевдоочередь
+        в рамках этой дисциплины. Дисциплина поочередно (round robin)
+        переключается между псевдоочередями, не позволяя какому-либо потоку
+        использовать весь канал монопольно.</para>
 
-        <para>Для распределения сессий по псевдо-очередям используются хэши,
+        <para>Для распределения сессий по псевдоочередям используются хэши,
         которые для повышения эффективности работы дисциплины требуется
         реконфигурировать. Дисциплина конфигурируется несколькими
-        параметрами.</para>
+        параметрами:</para>
 
         <itemizedlist>
           <listitem>
             <para><emphasis>perturb</emphasis> — интервал времени в секундах,
             через который выполняется реконфигурация хэша. Рекомендуемое
-            значение — 10.</para>
+            значение — 10;</para>
           </listitem>
 
           <listitem>
             <para><emphasis>quantum</emphasis> — число байт, которое изымается
             из очереди за один "ход" (перед тем, как переключиться на другую
-            очередь). По-умолчанию равно максимальному размеру пакета (MTU), и
-            не должно его превышать!</para>
+            очередь). По умолчанию равно максимальному размеру пакета (MTU), и
+            не должно его превышать;</para>
           </listitem>
 
           <listitem>
@@ -4915,7 +4902,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         неэффективной, так как она не может разделить канал между
         пользователями. Дисциплина ESFQ позволяет выбрать другой алгоритм
         хэширования, например, по IP-адресу отправителя или получателя пакета,
-        что позволяет разнести разных пользователей по разным псевдо-очередям
+        что позволяет разнести разных пользователей по разным псевдоочередям
         независимо от числа сессий каждого пользователя.</para>
 
         <figure>
@@ -4933,22 +4920,22 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
           <listitem>
             <para><emphasis>Depth</emphasis> — максимально возможное
-            количество псевдо-очередей (в SFQ жёстко задано значение
+            количество псевдоочередей (в SFQ жёстко задано значение
             1024).</para>
           </listitem>
 
           <listitem>
-            <para><emphasis>Hash</emphasis> — тип хэша.</para>
+            <para><emphasis>Hash</emphasis> — тип хэша:</para>
 
             <itemizedlist>
               <listitem>
                 <para><emphasis>Classic</emphasis> — аналогичный используемому
-                в SFQ.</para>
+                в SFQ;</para>
               </listitem>
 
               <listitem>
                 <para><emphasis>Source address</emphasis> — по адресу
-                источника.</para>
+                источника;</para>
               </listitem>
 
               <listitem>
@@ -4979,20 +4966,20 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <para>Смысл работы данной дисциплины заключается в следующем.
         Поступающие для передачи пакеты записываются в буфер дисциплины,
         откуда они с заданной скоростью поступают на исходящий интерфейс.
-        Возможно три ситуации:</para>
+        Возможны три ситуации:</para>
 
         <itemizedlist>
           <listitem>
             <para>Пакеты поступают со скоростью, равной скорости передачи их
             на исходящий интерфейс. В этом случае пакеты проходят через
-            интерфейс без задержек.</para>
+            интерфейс без задержек;</para>
           </listitem>
 
           <listitem>
             <para>Пакеты поступают со скоростью, меньшей скорости передачи их
             на исходящий интерфейс. В этом случае при кратковременном
-            возрастании скорости входящего трафика — он будет накоплен во
-            входящей очереди и передан с заданной скоростью.</para>
+            возрастании скорости входящего трафика он будет накоплен во
+            входящей очереди и передан с заданной скоростью;</para>
           </listitem>
 
           <listitem>
@@ -5053,14 +5040,14 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         направляться весь трафик, не подходящий ни под один фильтр.</para>
 
         <figure>
-          <title>Класс по-умолчанию</title>
+          <title>Класс по умолчанию</title>
 
           <graphic fileref="img/wf2-qos-htb-default-class.png" width="6in" />
         </figure>
 
         <para>Ниже приведена таблица, содержащая информацию о классах.
         Опционально для каждого класса может быть добавлена своя бесклассовая
-        дисциплина обслуживания, которые описаны выше.</para>
+        дисциплина обслуживания из описанных выше.</para>
 
         <figure id="qos_class">
           <title>Классы трафика</title>
@@ -5117,18 +5104,16 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           </listitem>
         </itemizedlist>
 
-        <para>Чтобы избежать путаницы, заранее рассмотрим принятые в QoS
-        сокращения, описывающие скорость:</para>
+        <para>При указании скорости в QoS необходимо использовать следующие
+        сокращения:</para>
 
         <itemizedlist>
           <listitem>
-            <para>mbps = 1024 kbps = 1024 * 1024 bps =&gt; byte/s =&gt; 1024
-            килобайт в секунду.</para>
+            <para>1 mbps = 1024 kbps — 1024 килобайта в секунду.</para>
           </listitem>
 
           <listitem>
-            <para>mbit = 1024 kbit =&gt; kilo bit/s =&gt; 1024 килобит в
-            секунду.</para>
+            <para>1 mbit = 1024 kbit — 1024 килобита в секунду.</para>
           </listitem>
         </itemizedlist>
 
@@ -5199,7 +5184,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <emphasis>data</emphasis>. Подкласс <emphasis>voip</emphasis>
         используется для передачи высокоприоритетного трафика, для него
         установлена скорость от 1500 до 1900 кбит/с. Подкласс
-        <emphasis>data</emphasis> используется как класс по-умолчанию для
+        <emphasis>data</emphasis> используется как класс по умолчанию для
         всего остального трафика. Его скорость от 400 до 1900 кбит/с.</para>
 
         <para>В подкласс <emphasis>voip</emphasis> направляется весь трафик,
@@ -5250,8 +5235,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
 
         <listitem>
-          <para><emphasis>Default router</emphasis> — маршрут
-          по-умолчанию.</para>
+          <para><emphasis>Default router</emphasis> — маршрут по
+          умолчанию.</para>
         </listitem>
 
         <listitem>
@@ -5303,7 +5288,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <listitem>
           <para><emphasis>Host name</emphasis> — задаёт имя машины, для
           которой выполняется привязка адреса. Это значение носит справочный
-          характер и используется только в правиле, может не соответствовать
+          характер, используется только в правиле и может не соответствовать
           фактическому имени машины.</para>
         </listitem>
 
@@ -5354,8 +5339,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <listitem>
           <para><emphasis>Forwarder DNS 2</emphasis> — сервер DNS №2, к
-          которому следует перенаправлять запросы в случае, если локальный
-          сервер DNS и DNS №1не может дать ответ.</para>
+          которому следует перенаправлять запросы в случае, если DNS №1также
+          не может дать ответ.</para>
         </listitem>
       </itemizedlist>
 
@@ -5462,35 +5447,35 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <itemizedlist>
             <listitem>
               <para><emphasis>A</emphasis> — указывает IP-адрес,
-              соответствующий имени.</para>
+              соответствующий имени;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>CNAME</emphasis> — синоним другого имени. В этом
-              случае в качестве DATA указывается соответствующее имя.</para>
+              случае в качестве DATA указывается соответствующее имя;</para>
             </listitem>
 
             <listitem>
               <para><emphasis>MX</emphasis> — имя почтового сервера для
               данного домена. При выборе этого типа записи доступен
-              дополнительный параметр.</para>
+              дополнительный параметр:</para>
 
               <itemizedlist>
                 <listitem>
                   <para><emphasis>Priority</emphasis> — приоритет для записи
-                  MX.</para>
+                  MX;</para>
                 </listitem>
               </itemizedlist>
             </listitem>
 
             <listitem>
               <para><emphasis>NS</emphasis> — указывает авторитетный сервер
-              DNS для домена (по сути — делегирование домена).</para>
+              DNS для домена (по сути — делегирование домена);</para>
             </listitem>
 
             <listitem>
               <para><emphasis>PTR</emphasis> — указывает имя для данного
-              IP-адреса. Используется в обратной зоне.</para>
+              IP-адреса. Используется в обратной зоне;</para>
             </listitem>
 
             <listitem>
@@ -5553,10 +5538,10 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
       </itemizedlist>
 
-      <para>При работе с VoIP маршрутизатор должен иметь свой уникальный
-      трёхзначный номер, который используется для обращения к нему со стороны
-      других маршрутизаторов. Для каждого маршрутизатора интерфейсы модуля
-      VoIP (FXO/FXS/ТЧ) имеют свой уникальный двухзначный номер канала,
+      <para>При работе с VoIP маршрутизатор имеет свой уникальный трёхзначный
+      номер, который используется для обращения к нему со стороны других
+      маршрутизаторов. Каждый интерфейс модуля VoIP (FXO/FXS/ТЧ) имеет свой
+      уникальный в пределах маршрутизатора двухзначный номер канала,
       позволяющий идентифицировать его для приема или совершения
       звонков.</para>
 
@@ -5567,11 +5552,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>xxx</emphasis> — номер маршрутизатора.</para>
+          <para><emphasis>xxx</emphasis> — номер маршрутизатора;</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>yy</emphasis> — номер канала.</para>
+          <para><emphasis>yy</emphasis> — номер канала;</para>
         </listitem>
 
         <listitem>
@@ -5584,7 +5569,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       его второй порт, то набор номера с телефона, подключённого к этому
       маршрутизатору либо другому, выглядит следующим образом: 10002.</para>
 
-      <para>Так же, при наборе номера с телефона, подключённого к
+      <para>Также при наборе номера с телефона, подключённого к
       маршрутизатору, доступны следующие коды:</para>
 
       <itemizedlist>
@@ -5610,18 +5595,17 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <itemizedlist>
             <listitem>
               <para><emphasis>*</emphasis> — звоним на первый свободный FXO
-              порт;</para>
+              порт.</para>
             </listitem>
-
           </itemizedlist>
         </listitem>
       </itemizedlist>
 
       <para>Для звонков на другие маршрутизаторы необходимо получить IP-адрес
       маршрутизатора по его номеру. Для этих целей используется таблица
-      маршрутизации, которая хранит соответствие между номером маршрутизатора
-      и его IP-адресом. Как правило, содержимое этой таблицы одинаково на всех
-      маршрутизаторах сети.</para>
+      маршрутизации VoIP, которая хранит соответствие между номером
+      маршрутизатора и его IP-адресом. Как правило, содержимое этой таблицы
+      должно быть одинаково на всех маршрутизаторах сети.</para>
 
       <para>Чтобы ускорить набор часто набираемых или длинных номеров,
       используется адресная книга. В неё заносится короткий номер,
@@ -5630,11 +5614,10 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>В программном обеспечении IP-телефонии реализована поддержка
       режима Hotline. Смысл его заключается в следующем: при поднятии трубки
-      телефона, подключённого к FXS порту, специальный фоновый процесс (демон)
-      может начать автоматический набор записанного номера. При поступлении
-      звонка на порт FXO (подключенный к PSTN или PBX), демон может сделать
-      переадресацию вызова с одного порта на другой, либо перенаправить звонок
-      на указанный порт другого маршрутизатора.</para>
+      телефона, подключённого к FXS порту, происходит автоматический набор
+      записанного номера. При поступлении звонка на порт FXO (подключенный к
+      PSTN или PBX), вызов перенаправляется на указанный порт FXS этого или
+      другого маршрутизатора.</para>
 
       <para>При записи полных номеров в таблицы телефонной книги и Hotline
       допускается использовать специальный символ — «,», означающий секундную
@@ -5672,8 +5655,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       </itemizedlist>
 
       <para>Так как трафик VoIP чувствителен к задержкам, предусмотрена
-      возможность установки необходимых значений битов Type of Service.
-      По-умолчанию используется значение 0x10, означающее минимальную задержку
+      возможность установки необходимых значений битов Type of Service. По
+      умолчанию используется значение 0x10, означающее минимальную задержку
       при передачи трафика.</para>
 
       <figure>
@@ -5684,16 +5667,16 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>RTP ToS</emphasis> — значение для 8 бит поля ToS,
-          устанавливаемое на пакеты RTP (собственно голосовой трафик).</para>
+          <para><emphasis>RTP ToS</emphasis> — значение для восьмибитного поля
+          ToS, устанавливаемое на пакеты RTP (собственно голосовой
+          трафик).</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>SIP ToS</emphasis> — значение для 8 бит поля ToS,
-          устанавливаемое на пакеты SIP (сигнализация).</para>
+          <para><emphasis>SIP ToS</emphasis> — значение для восьмибитного поля
+          ToS, устанавливаемое на пакеты SIP (сигнализация).</para>
         </listitem>
       </itemizedlist>
-
     </section>
 
     <section id="voip.hotline">
@@ -5709,9 +5692,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>FXO</emphasis> — переадресация вызова на другой
-          канал или маршрутизатор при входящем звонке на канал FXO
-          (подключаемый к PSTN или PBX).</para>
+          <para><emphasis>FXO</emphasis> — переадресация вызова на порт FXS
+          при входящем звонке на порт FXO (подключаемый к PSTN или
+          PBX).</para>
         </listitem>
 
         <listitem>
@@ -5739,8 +5722,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
 
         <listitem>
-          <para><emphasis>Hotline</emphasis> — при установленном флажке
-          переводит канал в режим Hotline;</para>
+          <para><emphasis>Hotline</emphasis> — включение режима
+          Hotline;</para>
         </listitem>
 
         <listitem>
@@ -5759,8 +5742,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
     <section id="voip.vf">
       <title>Каналы ТЧ</title>
 
-      <para>Каналы ТЧ позволяют выполнять оцифровку сигнала поступающего от
-      аналогового оборудования для последующей его передачи с использованием
+      <para>Каналы ТЧ позволяют выполнять оцифровку сигнала, поступающего от
+      аналогового оборудования, для последующей его передачи с использованием
       IP-технологии. Настройка каналов ТЧ выполняется на странице
       Hardware/VoIP/VF и заключается в настройке связи между двумя
       устройствами с модулями ТЧ, которые передают сигнал от подключённых к
@@ -5770,7 +5753,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       выбранным локальным номером канала и идентификатором удаленного
       устройства и его номером канала. После чего задаются параметры кодека,
       используемые для оцифровки сигнала и другие настройки. Поддерживаются
-      как 2-х проводной, так и 4-х проводной режим ТЧ.</para>
+      как двухпроводный, так и четырёхпроводный режим ТЧ.</para>
 
       <figure>
         <title>Настройка каналов ТЧ</title>
@@ -5780,47 +5763,46 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>#</emphasis> — номер локального канала ТЧ;</para>
+          <para><emphasis>#</emphasis> — номер локального канала ТЧ.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>EN</emphasis> — активировать соединение ТЧ;</para>
+          <para><emphasis>EN</emphasis> — активировать соединение ТЧ.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>R.ID</emphasis> — идентификатор удалённого
           устройства, должен присутствовать в таблице маршрутов VoIP (см.
-          далее);</para>
+          далее).</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Chan</emphasis> — номер канала ТЧ на удалённом
-          устройстве;</para>
+          устройстве.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Codec</emphasis> — используемые кодек VoIP;</para>
+          <para><emphasis>Codec</emphasis> — используемый кодек VoIP.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>P.time</emphasis> — packetization time — время
-          пакетизации;</para>
+          пакетизации.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Pay-d</emphasis> — Payload — идентификатор
-          содержимого пакета RTP;</para>
+          содержимого пакета RTP.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Bitpack</emphasis> — bits packetization type</para>
+          <para><emphasis>Bitpack</emphasis> — bits packetization type —
+          способ разделения битового потока кодека на пакеты.</para>
         </listitem>
-Рисунок 10-1. Основные настройки VoIP
-
 
         <listitem>
           <para><emphasis>JB type</emphasis> — jitter buffer type — тип
-          джиттер-буфера;</para>
+          джиттер-буфера:</para>
 
           <itemizedlist>
             <listitem>
@@ -5828,13 +5810,13 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </listitem>
 
             <listitem>
-              <para><emphasis>Adapt.</emphasis> — адаптивный;</para>
+              <para><emphasis>Adapt.</emphasis> — адаптивный.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>LAT</emphasis> — Local Adaptation Type —</para>
+          <para><emphasis>LAT</emphasis> — Local Adaptation Type:</para>
 
           <itemizedlist>
             <listitem>
@@ -5846,31 +5828,39 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </listitem>
 
             <listitem>
-              <para><emphasis>SI</emphasis> — with sample interpolaton</para>
+              <para><emphasis>SI</emphasis> — with sample interpolaton —
+              включён, с интерполяцией отсчётов.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
           <para><emphasis>nScal</emphasis> — average play out delay is equal
-          to the estimated jitter times the scaling factor. Values:
-          [1;16]</para>
+          to the estimated jitter times the scaling factor. Values: [1;16].
+          Средняя задержка воспроизведения равна оценке джиттера, помноженной
+          на данный коэффициент (от 1 до 16).</para>
         </listitem>
 
         <listitem>
           <para><emphasis>nInit</emphasis> — initial size of the jitter buffer
           in ms. Values: JB Adaptive [nMin;nMax], JB Fixed: for aLaw [10;
-          150], for others [10; nMax]</para>
+          150], for others [10; nMax]. Начальный размер джиттер-буфера в
+          миллисекундах (в фиксированном режиме - от nMin до nMax, в
+          адаптивном — от 10 до 150 для aLaw, от 10 до nMax для остальных
+          кодеков).</para>
         </listitem>
 
         <listitem>
           <para><emphasis>nMin</emphasis> — minimum size of the jitter buffer
-          in ms. Values: [10; nMax]</para>
+          in ms. Values: [10; nMax]. Минимальный размер джиттер-буфера в
+          миллисекундах (от 10 до nMax).</para>
         </listitem>
 
         <listitem>
           <para><emphasis>nMax</emphasis> — maximum size of the jitter buffer
-          in ms. Values are depended on Codec and Pkt.time</para>
+          in ms. Values are depended on Codec and Pkt.time. Максимальный
+          размер джиттер-буфера в миллисекундах. Значения зависят от
+          параметров Codec и Pkt.time.</para>
         </listitem>
       </itemizedlist>
 
@@ -5895,8 +5885,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Wires</emphasis> — тип соединения: 2-х проводное или
-          4-х двухпроводное;</para>
+          <para><emphasis>Wires</emphasis> — тип соединения: двухпроводное или
+          четырёхпроводное.</para>
         </listitem>
 
         <listitem>
@@ -5981,7 +5971,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <para>В таблице должна присутствовать запись с идентификатором и
       IP-адресом настраиваемого устройства. Таким образом выполняется
       присвоение идентификатора устройству и указание, какой IP-адрес надо
-      использовать при работе по VoIP. Как правило, в качестве комментария к
+      использовать при работе с VoIP. Как правило, в качестве комментария к
       данной записи указывается <emphasis>self</emphasis>.</para>
 
       <para>Добавление новой записи в таблицу показано на рисунке ниже.</para>
@@ -5996,16 +5986,16 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <listitem>
           <para><emphasis>Enabled</emphasis> — активна ли запись. Если запись
           не активна, то она не будет добавлена в таблицу маршрутизации
-          звонков;</para>
+          звонков.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Router ID</emphasis> — 3-х значный номер
-          маршрутизатора, для которого добавляется запись;</para>
+          <para><emphasis>Router ID</emphasis> — трёхзначный номер
+          маршрутизатора, для которого добавляется запись.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Address</emphasis> — IP-адрес маршрутизатора;</para>
+          <para><emphasis>Address</emphasis> — IP-адрес маршрутизатора.</para>
         </listitem>
 
         <listitem>
@@ -6019,7 +6009,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>Телефонная книга находится на странице Hardware/VoIP/Phone book.
       Она используется для быстрого набора телефонных номеров. К примеру, для
-      номера 100 02 833 можно задать короткий номер 10, и для набора
+      номера 100 02 833 можно задать короткий номер 10 и для набора
       использовать номер #10.</para>
 
       <figure>
@@ -6051,8 +6041,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <listitem>
           <para><emphasis>Complete number</emphasis> — полный номер,
           вызываемый при наборе «#короткий_номер». При указании полного номера
-          можно использовать символ <emphasis>-</emphasis> в качестве
-          разделителя групп цифр.</para>
+          можно использовать символ «-» (дефис) в качестве разделителя групп
+          цифр.</para>
         </listitem>
 
         <listitem>
@@ -6076,16 +6066,17 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <itemizedlist>
         <listitem>
           <para><emphasis>Tx.C</emphasis> — уровень громкости исходящего
-          сигнала;</para>
+          сигнала.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Rx.C</emphasis> — уровень громкости входящего
-          сигнала;</para>
+          сигнала.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>VAD</emphasis> — voice activity detector;</para>
+          <para><emphasis>VAD</emphasis> — voice activity detector — детектор
+          голосовой активности.</para>
         </listitem>
 
         <listitem>
@@ -6116,7 +6107,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>На вкладках <emphasis>Internal</emphasis> и
       <emphasis>External</emphasis> устанавливаются настройки кодеков для
-      соответствующих направлений вызовов. Как правило, значений по-умолчанию
+      соответствующих направлений вызовов. Как правило, значений по умолчанию
       достаточно для большинства конфигураций.</para>
 
       <figure id="voip.codecs.settings">
@@ -6127,25 +6118,26 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Codec</emphasis> — название кодека;</para>
+          <para><emphasis>Codec</emphasis> — название кодека.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Pkt.time</emphasis> — время пакетизации;</para>
+          <para><emphasis>Pkt.time</emphasis> — время пакетизации.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>Payload</emphasis> — идентификатор содержимого
-          пакета RTP;</para>
+          пакета RTP.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Bitpack</emphasis> —</para>
+          <para><emphasis>Bitpack</emphasis> — bits packetization type —
+          способ разделения битового потока кодека на пакеты.</para>
         </listitem>
 
         <listitem>
           <para><emphasis>JB type</emphasis> — jitter buffer type — тип
-          джиттер-буфера;</para>
+          джиттер-буфера:</para>
 
           <itemizedlist>
             <listitem>
@@ -6153,13 +6145,13 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </listitem>
 
             <listitem>
-              <para><emphasis>Adaptive</emphasis> — адаптивный;</para>
+              <para><emphasis>Adaptive</emphasis> — адаптивный.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>LAT</emphasis> — Local Adaptation Type —</para>
+          <para><emphasis>LAT</emphasis> — Local Adaptation Type:</para>
 
           <itemizedlist>
             <listitem>
@@ -6171,26 +6163,39 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
             </listitem>
 
             <listitem>
-              <para><emphasis>SI</emphasis> — with sample interpolaton
-              —</para>
+              <para><emphasis>SI</emphasis> — with sample interpolaton —
+              включён, с интерполяцией отсчётов.</para>
             </listitem>
           </itemizedlist>
         </listitem>
 
         <listitem>
-          <para><emphasis>nScaling</emphasis> —</para>
+          <para><emphasis>nScaling</emphasis> — average play out delay is
+          equal to the estimated jitter times the scaling factor. Values:
+          [1;16]. Средняя задержка воспроизведения равна оценке джиттера,
+          помноженной на данный коэффициент (от 1 до 16).</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>nInit</emphasis> —</para>
+          <para><emphasis>nInit</emphasis> — nitial size of the jitter buffer
+          in ms. Values: JB Adaptive [nMin;nMax], JB Fixed: for aLaw [10;
+          150], for others [10; nMax]. Начальный размер джиттер-буфера в
+          миллисекундах (в фиксированном режиме - от nMin до nMax, в
+          адаптивном — от 10 до 150 для aLaw, от 10 до nMax для остальных
+          кодеков).</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>nMin</emphasis> —</para>
+          <para><emphasis>nMin</emphasis> — minimum size of the jitter buffer
+          in ms. Values: [10; nMax]. Минимальный размер джиттер-буфера в
+          миллисекундах (от 10 до nMax).</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>nMax</emphasis> —</para>
+          <para><emphasis>nMax</emphasis> — maximum size of the jitter buffer
+          in ms. Values are depended on Codec and Pkt.time. Максимальный
+          размер джиттер-буфера в миллисекундах. Значения зависят от
+          параметров Codec и Pkt.time.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -6209,19 +6214,24 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>WLEC type</emphasis> — тип подавления эха;</para>
+          <para><emphasis>WLEC type</emphasis> — тип подавления эха: NE (near
+          end) — на ближнем конце, NFE (near and far end) — на ближнем и
+          дальнем конце, off - выключено.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>NLP</emphasis> —</para>
+          <para><emphasis>NLP</emphasis> — Non-linear processing — нелинейная
+          обработка при эхоподавлении.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Near-end window</emphasis> —</para>
+          <para><emphasis>Near-end window</emphasis> — размер окна
+          эхоподавления на ближнем конце, в миллисекундах.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Far-end window</emphasis> —</para>
+          <para><emphasis>Far-end window</emphasis> — размер окна
+          эхоподавления на дальнем конце, в миллисекундах.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -6232,7 +6242,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <para>Настройка режима набора номера выполняется на странице
       Hardware/VoIP/Dial mode. На странице присутствует одна настройка —
       <emphasis>PSTN type</emphasis>, или тип телефонной станции. Этот
-      параметр указывает, какой способ дозвона поддерживается телефонной
+      параметр указывает, какой способ набора номера поддерживается телефонной
       станцией.</para>
 
       <figure>
@@ -6259,7 +6269,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       Агент — ПО, работающее на сетевом устройстве, которое подлежит
       мониторингу или управлению, менеджер — ПО, собирающее информацию с
       агентов для мониторинга либо управления. Взаимодействие, как правило,
-      осуществляется с помощью транспортного протокола UDP, порт 161. Так же
+      осуществляется с помощью транспортного протокола UDP, порт 161. Также
       возможно использование протокола TCP.</para>
 
       <para>Объекты, над которыми можно выполнять операции (чтения или записи)
@@ -6277,9 +6287,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       относится к тому или иному сообществу. При получении команды
       производится проверка, принадлежит ли он к сообществу, указанному в
       команде. Если да — команда будет принята и обработана, иначе —
-      проигнорирована. Сообщество представляет из себя простую строку,
-      по-умолчанию используется два сообщества — public для просмотра
-      объектов, private — для их изменения.</para>
+      проигнорирована. Сообщество представляет из себя простую строку, по
+      умолчанию используется два сообщества: public — для просмотра объектов,
+      private — для их изменения.</para>
     </section>
 
     <section id="support">
@@ -6293,20 +6303,20 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <para>Маршрутизатором поддерживается <emphasis>MIB-2</emphasis> ,
       предоставляющий общую информацию о системе (информацию о сетевых
-      интерфейсах, таблицы маршрутизации, системную информацию), а так же
+      интерфейсах, таблицы маршрутизации, системную информацию), а также
       <emphasis>HDSL2-SHDSL-LINE-MIB</emphasis> , содержащий объекты,
       используемые для мониторинга и управления каналами SHDSL.</para>
 
-      <para>MIB-2 является стандартной MIB и входит в состав большинства
+      <para>MIB-2 является стандартным MIB и входит в состав большинства
       менеджеров, в то время как HDSL2-SHDSL-LINE-MIB является специфичным для
       определённого типа устройств. Загрузить этот файл можно либо из
       источников в Интернете, либо по <ulink
       url="http://sigrand.ru:8280/temp/HDSL2-SHDSL-LINE-MIB-rfc4319.txt">ссылке</ulink>
       .</para>
 
-      <para>На данный момент по SNMP доступен только мониторинг маршрутизатора
-      и SHDSL каналов и регенераторов, возможность управления будет добавлена
-      в ближайшее время.</para>
+      <para>На данный момент по SNMP доступен только мониторинг
+      маршрутизатора, SHDSL каналов и регенераторов. Возможность управления
+      будет добавлена в ближайшее время.</para>
     </section>
 
     <section id="snmpd">
@@ -6338,23 +6348,23 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 			</programlisting>
 
       <para>Директива <emphasis>com2sec</emphasis> устанавливает соответствие
-      между сообществом и правами доступа, а так же устанавливает адреса,
+      между сообществом и правами доступа, а также устанавливает адреса,
       которые могут относится к этим сообществам. В приведенном выше
       конфигурационном файле первая директива определяет, что сообщество
-      public соответствует безопасности ro, и ему соответствуют любые
+      public соответствует правам доступа ro, и ему соответствуют любые
       IP-адреса. Вторая директива определяет соответствие сообществу private
-      безопасности rw, и ограничивают доступ только самим
+      правам доступа rw, и ограничивают доступ только самим
       маршрутизатором.</para>
 
       <para>Директива <emphasis>group</emphasis> определяет, к какой группе
-      какая безопасность относится. В нашем примере, к группе public относится
-      безопасность ro, а к группе private — безопасность rw. v1, v2c, usm
-      определяют модель безопасности. v1 относится к протоколу SNMP первой
-      версии, v2c — ко второй, usm — SNMPv3.</para>
+      какие права доступа относятся. В нашем примере, к группе public
+      относятся права доступу ro, а к группе private — права rw. Параметры v1,
+      v2c, usm определяют модель безопасности. v1 относится к протоколу SNMP
+      первой версии, v2c — ко второй, usm — SNMPv3.</para>
 
       <para>Директива <emphasis>view</emphasis> определяет имя области
-      видимости, и что в неё входит. В нашем случае имя области видимости —
-      all, и в неё входит всё дерево MIB.</para>
+      видимости и её содержимое. В нашем случае имя области видимости — all, и
+      в неё входит всё дерево MIB.</para>
 
       <para>Последняя директива <emphasis>access</emphasis> определяет права
       доступа различных групп. В нашем примере обеим группам разрешён доступ
@@ -6373,8 +6383,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <para><emphasis>SNMPD</emphasis> получает информацию о состоянии
       SHDSL-канала от демона <emphasis>EOCD</emphasis> . Таким образом, чтобы
       иметь возможность получать информацию о состоянии SHDSL-канала через
-      SNMP, необходимо сконфигурировать демон EOCD. После того, как информация
-      будет доступна через утилиту <command>eoc-info</command> — информацию
+      SNMP, необходимо сконфигурировать демон EOCD. После того как информация
+      будет доступна через утилиту <command>eoc-info</command>, информацию
       можно будет получить через SNMP. Подробнее о назначении и настройки
       демона EOCD можно прочитать в разделе <link endterm="eoc.title"
       linkend="eoc"></link> .</para>
@@ -6405,9 +6415,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 				1.3.6.1.2.1.10.48.1.5.1.2.11.2.1.1 = INTEGER 17
 			</programlisting>
 
-      <para>То есть число регенераторов равно 0, затухание сигнала на обоих
-      сторонах соединения — 0 dB, соотношение сигнал/шум на клиентской стороне
-      19 dB, на стороне мастера — 17 dB.</para>
+      <para>Это значит, что число регенераторов равно 0, затухание сигнала на
+      обоих сторонах соединения — 0 dB, соотношение сигнал/шум на клиентской
+      стороне 19 dB, на стороне мастера — 17 dB.</para>
 
       <para>При использовании специализированного ПО, поддерживающего загрузку
       MIB-ов, возможно получение информации в более удобной форме.</para>
@@ -6420,8 +6430,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       программный пакет <emphasis>net-snmp</emphasis> , что позволяет работать
       со всеми программными продуктами, совместимыми с net-snmp.</para>
 
-      <para>Дополнительно был проведён краткий обзор доступного программного
-      обеспечения, результаты которого представлены ниже.</para>
+      <para>Ниже представлен краткий обзор доступного программного
+      обеспечения.</para>
 
       <section>
         <title>The Dude</title>
@@ -6439,22 +6449,22 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <itemizedlist>
           <listitem>
-            <para>Автоматически определяет устройства сети.</para>
+            <para>Автоматически определяет устройства сети;</para>
           </listitem>
 
           <listitem>
             <para>Рисует карту сети, позволяет добавлять на карту новые
-            устройства, выводить на карту значения SNMP-переменных.</para>
+            устройства, выводить на карту значения SNMP-переменных;</para>
           </listitem>
 
           <listitem>
             <para>Выполняет мониторинг устройств, построение графиков в режиме
-            реального времени.</para>
+            реального времени;</para>
           </listitem>
 
           <listitem>
             <para>Имеет несколько удобных встроенных утилит для сетевого
-            администрирования и мониторинга (терминалы, snmpwalk).</para>
+            администрирования и мониторинга (терминалы, snmpwalk);</para>
           </listitem>
 
           <listitem>
@@ -6468,7 +6478,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <itemizedlist>
           <listitem>
             <para>Неправильно отображаются индексы интерфейсов в табличном
-            представлении.</para>
+            представлении;</para>
           </listitem>
 
           <listitem>
@@ -6505,7 +6515,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <itemizedlist>
           <listitem>
-            <para>Удобный интерфейс.</para>
+            <para>Удобный интерфейс;</para>
           </listitem>
 
           <listitem>
@@ -6518,7 +6528,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <itemizedlist>
           <listitem>
             <para>Бесплатная версия не поддерживает SNMPv3, позволяет
-            загружать дополнительно к имеющимся не более 5 MIB.</para>
+            загружать не более 5 MIB дополнительно к имеющимся;</para>
           </listitem>
 
           <listitem>
@@ -6578,8 +6588,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         между Ethernet-портами устройств, соединённых через SHDSL.</para>
 
         <para>Рассмотрим организацию передачи данных с порта eth3 одного
-        устройства на порт eth3 другого устройства через соединения SHDSL. При
-        необходимости, можно задействовать все порты устройств (eth0, eth1,
+        устройства на порт eth3 другого устройства через SHDSL соединения. При
+        необходимости можно задействовать все порты устройств (eth0, eth1,
         eth2). Схему взаимодействия между устройствами можно изобразить
         следующим образом:</para>
 
@@ -6606,7 +6616,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         интерфейсов VLAN зависит от того, между сколькими портами ethernet мы
         будем организовывать независимую передачу данных — по одному VLAN на
         каждый порт. Детально процедура настройки интерфейса VLAN рассмотрена
-        в соответствующем <link linkend="vlan">разделе</link>. То есть нам
+        в соответствующем <link linkend="vlan">разделе</link>. То есть, нам
         надо создать VLAN интерфейс поверх интерфейса bond0 с номером VLAN ID
         равным 4. В итоге мы получим интерфейс
         <emphasis>bond0v4</emphasis>.</para>
@@ -6615,8 +6625,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         linkend="bridge">настройка бриджа</link>). Бридж состоит из
         интерфейсов <emphasis>bond0v4</emphasis> и <emphasis>eth3</emphasis>,
         между которыми осуществляется передача трафика. Количество бриджей
-        зависит от числа портов, между которыми организуется обмен трафиком —
-        на каждый порт один бридж.</para>
+        зависит от числа пар портов, между которыми организуется обмен
+        трафиком — на каждую пару портов один бридж.</para>
 
         <para>Таким образом, если мы хотим организовать передачу между портами
         eth2, мы должны создать ещё один VLAN поверх интерфейса
@@ -6626,7 +6636,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <note>
           <para>Если необходимо организовать управление устройством через
-          порт, который участвует в передачи данных (добавлен в бридж), то его
+          порт, который участвует в передаче данных (добавлен в бридж), то его
           IP-адрес (по которому производится настройка) необходимо назначить
           интерфейсу бриджа, в который входит данный порт. Более подробно это
           описывается в соответствующей <link
@@ -6639,9 +6649,9 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         ID</title>
 
         <para>Допустим, мы хотим организовать передачу VLAN-трафика,
-        поступающего на trunk-порт одного устройства через SHDSL-канал, а на
+        поступающего на trunk-порт одного устройства, через SHDSL-канал, а на
         втором устройстве, в зависимости от номера VLAN ID, передавать трафик
-        (со снятым тегом VLAN) на соответствующий ethernet-порт.</para>
+        (со снятым тегом VLAN) на соответствующий ethernet -порт.</para>
 
         <figure>
           <title>Структурная схема</title>
@@ -6657,8 +6667,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <para>К примеру, к устройству SG-17R-2 (например, к четвёртому
         ethernet-порту) подключена сеть, в которой работает несколько сетей
         VLAN с номерами 3 и 4. Нам необходимо соединить сеть с VLAN ID 3 с
-        сетью, подключённой к третьему ethernet-порту устройства SG-17R-1. Так
-        же необходимо соединить сеть с VLAN ID 4 с сетью, подключённой к
+        сетью, подключённой к третьему ethernet-порту устройства SG-17R-1.
+        Также необходимо соединить сеть с VLAN ID 4 с сетью, подключённой к
         четвёртому ethernet-порту устройства SG-17R-1. Следует заметить, что
         сети, подключённые к SG-17R-2 являются обычными LAN сетями, поэтому
         передаваемый туда трафик должен идти без заголовков VLAN.</para>
@@ -6697,7 +6707,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           ethernet-портов устройства будет выполнять функции trunk-порта, то
           есть к которому будут подключены сети VLAN.</para>
 
-          <para>Для выбранного trunk-порта создаются интерфейс VLAN, и
+          <para>Создаётся интерфейс VLAN для выбранного trunk-порта и
           соответствующий ему интерфейс VLAN на основе интерфейса бондинга.
           Затем создаётся бридж между соответствующим интерфейсом VLAN
           trunk-порта и интерфейсом VLAN бондинга. Идея заключается в том, что
@@ -6785,22 +6795,22 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para>Интерфейс Е1 <parameter>E1_0</parameter> получает из
-          физической линии данные и выставляет их на линию 0 (с нулевого
-          тайм-слота). Для передачи в физическую линию данные берутся с линии
-          1, с нулевого тайм-слота. Так же этот интерфейс является источником
-          синхронизации для данного домена.</para>
+          <para>Интерфейс <parameter>E1_0</parameter> получает из физической
+          линии данные и выставляет их на линию 0 (с нулевого тайм-слота). Для
+          передачи в физическую линию данные берутся с линии 1, с нулевого
+          тайм-слота. Также этот интерфейс является источником синхронизации
+          для данного домена;</para>
         </listitem>
 
         <listitem>
-          <para>Интерфейс E1 <parameter>E1_1</parameter> работает так же, как
+          <para>Интерфейс <parameter>E1_1</parameter> работает так же, как
           <parameter>E1_0</parameter>, только выставляет и забирает данные
           начиная с 32 тайм-слота (и не подает синхросигнал, то есть работает
-          в режиме <emphasis>clock slave</emphasis>).</para>
+          в режиме <emphasis>clock slave</emphasis>);</para>
         </listitem>
 
         <listitem>
-          <para>Интерфейс SHDSL <parameter>dsl0</parameter> выставляет данные,
+          <para>Интерфейс <parameter>dsl0</parameter> выставляет данные,
           полученные из физической линии, на линию 1 (откуда их заберут
           интерфейсы E1), а данные для передачи в физическую линию берет с
           линии 0 (куда их выставляют интерфейсы Е1). Число тайм-слотов,
@@ -6828,7 +6838,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
       <itemizedlist>
         <listitem>
-          <para>Интерфейс E1 <emphasis>E1_0</emphasis></para>
+          <para>Интерфейс <emphasis>E1_0</emphasis></para>
 
           <itemizedlist>
             <listitem>
@@ -6866,7 +6876,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
 
         <listitem>
-          <para>Интерфейс E1 <emphasis>E1_1</emphasis></para>
+          <para>Интерфейс <emphasis>E1_1</emphasis></para>
 
           <itemizedlist>
             <listitem>
@@ -6904,7 +6914,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </listitem>
 
         <listitem>
-          <para>Интерфейс SHDSL <emphasis>dsl0</emphasis></para>
+          <para>Интерфейс <emphasis>dsl0</emphasis></para>
 
           <itemizedlist>
             <listitem>
@@ -6943,14 +6953,14 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       </itemizedlist>
 
       <note>
-        <para>Так же для этих интерфейсов необходимо активировать
+        <para>Также для этих интерфейсов необходимо активировать
         мультиплексирование — установить параметр
         <parameter>mxen</parameter>.</para>
       </note>
 
       <para>Следуя этой логике, конфигурацию на втором маршрутизаторе можно
-      выполнить аналогичным образом. Единственное отличие, в нашем случае,
-      будет заключаться в изменении интерфейса, являющегося источником
+      выполнить аналогичным образом. Единственное отличие в нашем случае будет
+      заключаться в изменении интерфейса, являющегося источником
       синхронизации. Эту функцию будет выполнять интерфейс SHDSL
       <parameter>dsl0</parameter>, так как именно он получает
       мультиплексированный поток от первого маршрутизатора, подключенного к
@@ -6976,7 +6986,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <title>VoIP</title>
 
       <section id="examples.voip.ex1">
-        <title>Обычные телефоны работают как пара IP-телефонов</title>
+        <title>Обычные телефоны используются в качестве IP-телефонов</title>
 
         <para>В маршрутизатор устанавливаются модули VoIP с каналами FXS, к
         которым подключаются обычные аналоговые телефоны. Используя эти
@@ -6985,7 +6995,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         схемы подключения показан ниже.</para>
 
         <figure>
-          <title>Обычные телефоны работают как пара IP-телефонов</title>
+          <title>Обычные телефоны используются в качестве IP-телефонов</title>
 
           <graphic fileref="img/voip-ex1.png" width="6in" />
         </figure>
@@ -6996,11 +7006,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         собой соединены по любой технологии — Ethernet, SHDSL или Е1.</para>
 
         <para>Для настройки IP-телефонии необходимо внести данные в таблицы
-        маршрутизации, адресной книги и Hotline. Для удобства, примеры
+        маршрутизации VoIP, адресной книги и Hotline. Для удобства, примеры
         настроек представлены не в виде скриншотов, а в виде текстовых таблиц,
         приведённых ниже.</para>
 
-        <para>Таблица маршрутизации имеет одинаковое содержимое на всех
+        <para>Таблица маршрутизации VoIP имеет одинаковое содержимое на всех
         маршрутизаторах одной сети и приведена ниже.</para>
 
         <table align="center" frame="all">
@@ -7038,8 +7048,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </table>
 
         <para>Адресная книга заполняется для каждого маршрутизатора отдельно,
-        так как могут использоваться различные сокращённые номера. Адресная
-        книга для маршрутизаторов приведена в таблицах ниже.</para>
+        так как могут использоваться различные сокращённые номера. Адресные
+        книги для маршрутизаторов приведены в таблицах ниже.</para>
 
         <table align="center" frame="all">
           <title>Адресная книга маршрутизатора 032</title>
@@ -7186,9 +7196,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <para>При использовании режима Hotline можно создать конфигурацию, при
         которой после поднятия трубки на телефоне будет автоматически
-        происходить набор номера, заданный для канала FXS, к которому
-        подключён телефон. Настройка Hotline для маршрутизатора 032 приведена
-        в таблице ниже.</para>
+        происходить набор заданного номера. Настройка Hotline для
+        маршрутизатора 032 приведена в таблице ниже.</para>
 
         <table align="center" frame="all">
           <title>Таблица Hotline для маршрутизатора 032</title>
@@ -7229,7 +7238,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <itemizedlist>
           <listitem>
             <para>при подъёме телефонной трубки на телефоне 1 производится
-            автоматический вызов на телефон 3.</para>
+            автоматический вызов на телефон 3;</para>
           </listitem>
 
           <listitem>
@@ -7242,8 +7251,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <section id="examples.voip.ex3">
         <title>Организация связи через АТС</title>
 
-        <para>В маршрутизатор установлены модули VoIP с каналами FXS, для
-        подключения аналоговых телефонов, и FXO, для подключения к АТС —
+        <para>В маршрутизатор установлены модули VoIP с каналами FXS для
+        подключения аналоговых телефонов и FXO для подключения к АТС —
         например, к городской сети (ТфОП, или PSTN). На АТС для маршрутизатора
         выделен номер 322 120. Схема, иллюстрирующая пример, показана ниже на
         рисунке.</para>
@@ -7254,7 +7263,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           <graphic fileref="img/voip-ex3.png" width="6in" />
         </figure>
 
-        <para>В данном случае таблица маршрутизации так же не используется, по
+        <para>В данном случае таблица маршрутизации VoIP не используется. По
         желанию можно настроить адресную книгу для быстрого набора номеров.
         Настройки адресной книги приведены ниже в таблице.</para>
 
@@ -7345,11 +7354,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
               </listitem>
             </orderedlist>
           </listitem>
-
         </itemizedlist>
 
-	<important>В текущей версии ПО звонки от АТС могут приниматься только при 
-        настройке режима Hotline.</important>
+        <important>
+           В текущей версии ПО звонки от АТС могут приниматься только при настройке режима Hotline. 
+        </important>
 
         <para>Режим Hotline позволяет реализовать возможности, указанные ниже
         в таблице.</para>
@@ -7398,10 +7407,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <para>Рассмотрим более сложный вариант сети, представленной в
         предыдущем примере. В сети работает два маршрутизатора, к которым
         подключены аналоговые телефоны. Маршрутизаторы соединены между собой
-        по технологиями Ethernet/SHDSL/E1, и к одному из маршрутизаторов
+        посредством Ethernet/SHDSL/E1, и к одному из маршрутизаторов
         подключена АТС. Необходимо реализовать возможность вызовов между
-        телефонами, подключёнными к маршрутизаторам, и между маршрутизаторами
-        и АТС. Схема сети представлена ниже на рисунке.</para>
+        телефонами, подключёнными к маршрутизаторам, а также между
+        маршрутизаторами и АТС. Схема сети представлена ниже на
+        рисунке.</para>
 
         <figure>
           <title>Организация связи через АТС с использованием двух
@@ -7412,7 +7422,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <para>Так как в сети работают два маршрутизатора, необходимо настроить
         таблицу маршрутизации VoIP (вкладка Routes), содержимое которой
-        представлено ниже в таблице.</para>
+        представлено ниже.</para>
 
         <table align="center" frame="all">
           <title>Таблица маршрутизации</title>
@@ -7448,9 +7458,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           </tgroup>
         </table>
 
-        <para>Для быстрого набора номера настроим адресную книгу для каждого
-        маршрутизатора, содержимое которой представлено ниже в
-        таблицах.</para>
+        <para>Для быстрого набора номера настроим адресные книги для каждого
+        из маршрутизаторов, как описано ниже.</para>
 
         <table align="center" frame="all">
           <title>Адресная книга маршрутизатора 032</title>
@@ -7606,10 +7615,11 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
           </listitem>
         </itemizedlist>
 
-	<important>В текущей версии ПО звонки от АТС могут приниматься только при 
-        настройке режима Hotline.</important>
+        <important>
+           В текущей версии ПО звонки от АТС могут приниматься только при настройке режима Hotline. 
+        </important>
 
-        <para>Так же, настроим режим Hotline, как показано ниже в
+        <para>Также настроим режим Hotline, как показано ниже в
         таблицах.</para>
 
         <table align="center" frame="all">
@@ -7664,7 +7674,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
             <tbody>
               <row>
-                <entry>01 (FX0)</entry>
+                <entry>01 (FXO)</entry>
 
                 <entry>032 02</entry>
 
@@ -7693,8 +7703,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
     <para>Изготовитель гарантирует работоспособность маршрутизатора при
     соблюдением потребителем правил эксплуатации.</para>
 
-    <para>Гарантийный срок 5 лет со дня продажи, отмеченного в паспорте, либо,
-    при отсутствии отметки, с момента выпуска, указанного на
+    <para>Гарантийный срок — 5 лет со дня продажи, отмеченного в паспорте,
+    либо, при отсутствии отметки, с момента выпуска, указанного на
     маркировке.</para>
 
     <warning>
