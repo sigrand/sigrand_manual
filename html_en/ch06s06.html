@@ -1,0 +1,104 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>RS232 interface modules</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="SG-17R User Manual"><link rel="up" href="ch06.html" title="Chapter 6. Equipment adjustment"><link rel="prev" href="ch06s05.html" title="Modules of E1 interface"><link rel="next" href="ch06s07.html" title="Multiplexing"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">RS232 interface modules</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch06s05.html">Prev</a> </td><th width="60%" align="center">Chapter 6. Equipment adjustment</th><td width="20%" align="right"> <a accesskey="n" href="ch06s07.html">Next</a></td></tr></table><hr></div><div class="section" title="RS232 interface modules"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="rs232"></a>RS232 interface modules</h2></div></div></div><div class="section" title="Setting of interface parameters"><div class="titlepage"><div><div><h3 class="title"><a name="rs232-config"></a>Setting of interface parameters</h3></div></div></div><p>Setting of RS232 interface parameters is made on page
+        Hardware/RS232/ttyRS*.</p><div class="figure"><a name="id426632"></a><p class="title"><b>Figure 6.19. Settings o RS232 interface parameters</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-rs232.png" width="540" alt="Settings o RS232 interface parameters"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Enable multiplexing</em></span> — enable the
+            multiplexing mode at the interface. This parameter reproduces the
+            correspondent parameter on the multiplexing adjustment
+            page.</p></li><li class="listitem"><p><span class="emphasis"><em>Baud rate</em></span> — bit rate of the
+            port.</p></li><li class="listitem"><p><span class="emphasis"><em>Character size</em></span> — number of bits to
+            transfer.</p></li><li class="listitem"><p><span class="emphasis"><em>Stop bits</em></span> — number of stop bits.</p></li><li class="listitem"><p><span class="emphasis"><em>Parity</em></span> — parity control.</p></li><li class="listitem"><p><span class="emphasis"><em>Hardware Flow control</em></span> — hardware
+            control of the data flow.</p></li><li class="listitem"><p><span class="emphasis"><em>Forward modem signals</em></span> — transfer of
+            control signals of the serial port, usually used when operating a
+            modem.</p></li></ul></div></div><div class="section" title="RS-232 over TCP/IP"><div class="titlepage"><div><div><h3 class="title"><a name="rs232ip"></a>RS-232 over TCP/IP</h3></div></div></div><p>Description</p><p>This option allows to connect two routers with RS-232 ports (DTE
+        andDCE) through IP networks, transferring data and control/modem lines
+        statuses in both directions.</p><div class="figure"><a name="id426734"></a><p class="title"><b>Figure 6.20. Scheme of the RS-232 extention cord via IP networks</b></p><div class="figure-contents"><div class="mediaobject"><img src="img/rs232_ip.png" alt="Scheme of the RS-232 extention cord via IP networks"></div></div></div><p><br class="figure-break"></p><p>Transmitting direction of control/modem lines:</p><pre class="screen">
+Direct connecting cable:
+
+    DTE    DCE
+    ---    ---
+    DTR -&gt; DTR
+    DSR &lt;- DSR
+    RTS -&gt; RTS
+    CTS &lt;- CTS
+    CD  &lt;- CD
+    RI  &lt;- RI
+
+null-modem:
+
+    DTE    DTE
+    ---    ---
+    DTR -&gt; DSR,CD
+ CD,DSR &lt;- DTR
+    RTS -&gt; CTS
+    CTS &lt;- RTS</pre><p>Design and principles of operation</p><p>For each configured RS-232 port on both routers a separate
+        version of rs232-tcpext daemon is launched - at the side of the router
+        waiting for connection in passive mode, and at the side of the router
+        initiating the connection, in active mode.</p><p>TwoTCP/IP connections are established: one for data transfer,
+        the other - for control/modem lines statuses transfer. Control/modem
+        lines status is requested in set periods, usually 1000 msec.</p><p>Architecture with separate daemons for each port provides the
+        non-involvement of other ports in data flows while one port is being
+        configured/restarted.</p><p>Setting instructions</p><div class="itemizedlist"><div class="figure"><a name="id426802"></a><p class="title"><b>Figure 6.21. Settings of RS232 port parameters</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-rs232.png" width="540" alt="Settings of RS232 port parameters"></td></tr></table></div></div></div><br class="figure-break"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Browse two tabs to management pages of both routers</p></li><li class="listitem"><p>In tabs Hardware/ttyRS* set the parameters of the chosen
+            ports and click "save".</p></li><li class="listitem"><p>For each port deside which of the routers will be passive
+            and which active side. Passive side waits for connection at a
+            chosen network address from the active side.</p></li><li class="listitem"><p>In tabs Services / RS-232 over TCP/IP / ttyRS* of both
+            routers adjust the connecting sides.</p><div class="figure"><a name="id426831"></a><p class="title"><b>Figure 6.22. Setting of RS-232 over TCP/IP</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/rs232ip_options.png" width="540" alt="Setting of RS-232 over TCP/IP"></td></tr></table></div></div></div><br class="figure-break"><p>Selector "mode" defines the mode:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p>"Disable" - service is disabled,</p></li><li class="listitem"><p>"Listen On" - wait for connection at the set "host",
+                "port" (passive mode)</p></li><li class="listitem"><p>"Connect To" - connect to the set "host", "port" (active
+                mode)</p></li></ul></div></li></ul></div><p>Boxes "host" and "port" define the network address and the port
+        on which the passive side in waiting for the connection from the
+        active side (see bind(2)) or to which the active side connects. Value
+        on default - 0.0.0.0 - accept connections from all of the network
+        interfaces.localhost (127.0.0.1) cannot accept connections from other
+        nodes of the network.</p><p>Box "ToS" defines bits ToS for IP packets which will be
+        transferred by the daemon rs232-tcpext.</p><p>Box "Modem lines polling interval (msec)" defines the time
+        intervals between the requests for modem lines status, on default 1000
+        msec.</p><p>Box "Restart delay (msec)" defines the delay before the restart
+        in case of any error, on default 1000 msec.</p><p>Click "save".</p><p>Make sure that the process is active on both routers: in tab
+        System/Console enter the command "ps ax" and check that the
+        rs232-tcpext process is launched:</p><pre class="screen">
+ps ax
+...
+ 728 ? S 0:00 rs232-tcpext /dev/ttyRS0 0.0.0.0 3000 listen /var/run/rs232-tcpext.ttyRS0.pid 100 1000
+
+3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</pre><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Take into account that the launching process over web system
+            is rather slow.</p></div><p>In tabs System/Tools/Syslog you may see the daemon
+        messages:</p><p>Passive side:</p><pre class="screen">
+daemon.warn rs232-tcpext ttyRS0  listen : started up
+daemon.info rs232-tcpext ttyRS0  listen : pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
+daemon.info rs232-tcpext ttyRS0  listen : Waiting data connection...</pre><p>After connection to the active side:</p><pre class="screen">
+daemon.info rs232-tcpext ttyRS0  listen : Data connection from 192.168.3.102:2937
+daemon.info rs232-tcpext ttyRS0  listen : Waiting state connection...
+daemon.info rs232-tcpext ttyRS0  listen : State connection from 192.168.3.102:2938
+daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  listen : Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</pre><p>Active side:</p><pre class="screen">
+daemon.warn rs232-tcpext ttyRS0  connect: started up
+daemon.info rs232-tcpext ttyRS0  connect: pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
+daemon.err rs232-tcpext ttyRS0  connect: socket_connect(): Could not connect to 192.168.2.101:3000
+daemon.warn rs232-tcpext ttyRS0  connect: restart
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
+daemon.info rs232-tcpext ttyRS0  connect: Connecting (state) to 192.168.2.101:3000 ...
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  connect: Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
+daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</pre><p>Simple check of the RS-232 extention cord performance.</p><p>Connect the chosen RS-232 interfaces of the routers to the PC
+        ports as shown below:</p><div class="figure"><a name="id375174"></a><p class="title"><b>Figure 6.23. Scheme for RS-232 extention cord check over IP</b></p><div class="figure-contents"><div class="mediaobject"><img src="img/rs232_ip_test.png" alt="Scheme for RS-232 extention cord check over IP"></div></div></div><p><br class="figure-break"></p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>The given scheme can be configured on one PC if there are
+            COM1, COM2 and two Ethernet ports.</p></div><p>Adjust the RS-232 Interfaces PC (rate, 8n1, ...) in the same
+        way as the router interfaces connected to them.</p><p>Launch terminal programs at the corresponding interfaces on both
+        PCs and type something.</p><p>This scheme cannot be used to check the transfer of control
+        signals/modem lines.</p></div><div class="section" title="Terminal server"><div class="titlepage"><div><div><h3 class="title"><a name="rs232-terminal"></a>Terminal server</h3></div></div></div><p>There exist many devices which can be adjusted and managed via
+        the serial interface RS232. For remote management of such devices the
+        terminal server of the router can be used.</p><div class="figure"><a name="id375225"></a><p class="title"><b>Figure 6.24. Terminal server adjustement</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/rs232-terminal-options.png" width="540" alt="Terminal server adjustement"></td></tr></table></div></div></div><br class="figure-break"><p>In the tab "Options" you can activate/diasctivate this function
+        for a specific port.</p><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>Before activating this function for a port, make sure that
+          other options (multiplexing, RS232-over-IP, Dial-in) are not
+          active.</p></div><p>For the convenience each port can be given a name which will be
+        indicated in the tab of the port.</p><p>"Buffer size" defines the size of the buffer for keeping the
+        data from the port.</p><div class="figure"><a name="id427124"></a><p class="title"><b>Figure 6.25. Terminal server console</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/rs232-terminal-console.png" width="540" alt="Terminal server console"></td></tr></table></div></div></div><br class="figure-break"><p>Management of the remote device is carries out via
+        web-interface.</p></div><div class="section" title="Dial-in server"><div class="titlepage"><div><div><h3 class="title"><a name="dial-in"></a>Dial-in server</h3></div></div></div><p>Dial-in server allows to organize a spare or controlling data
+        channel via wireless or switched connections. For this purpose
+        different GSM and wired modems with RS232 interface can be used.</p><div class="figure"><a name="id427156"></a><p class="title"><b>Figure 6.26. Tab General</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/dial-in-general.png" width="540" alt="Tab General"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Enable terminal access</em></span> — enable access
+            to the router console.</p></li><li class="listitem"><p><span class="emphasis"><em>Authentification type</em></span> — PAP or
+            CHAP.</p></li></ul></div><div class="figure"><a name="id427193"></a><p class="title"><b>Figure 6.27. Tab Users</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/dial-in-users.png" width="540" alt="Tab Users"></td></tr></table></div></div></div><br class="figure-break"><p>In the tab "users" user and users password management is
+        performed.</p><div class="figure"><a name="id427211"></a><p class="title"><b>Figure 6.28. Tab Ports</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/dial-in-ports.png" width="540" alt="Tab Ports"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Enable</em></span> — accept connections to the
+            port.</p></li><li class="listitem"><p><span class="emphasis"><em>Speed</em></span> — speed of connection.</p></li><li class="listitem"><p><span class="emphasis"><em>Rings</em></span> — number of rings after which the
+            connection will be accepted.</p></li><li class="listitem"><p><span class="emphasis"><em>Init-chat</em></span> — modem initialization
+            chart.</p></li><li class="listitem"><p><span class="emphasis"><em>Server IP</em></span> — IP address of the PPP
+            connection, router side.</p></li><li class="listitem"><p><span class="emphasis"><em>Client IP</em></span> — IP address of the PPP
+            connection, remote device side.</p></li></ul></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch06s05.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch06.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch06s07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Modules of E1 interface </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Multiplexing</td></tr></table></div></body></html>

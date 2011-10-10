@@ -1,0 +1,44 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Device Management</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="SG-17R User Manual"><link rel="up" href="ch04.html" title="Chapter 4. Start of Work with Router"><link rel="prev" href="ch04s05.html" title="MAC-addresses of network interfaces"><link rel="next" href="ch05.html" title="Chapter 5. System settings and information"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Device Management</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch04s05.html">Prev</a> </td><th width="60%" align="center">Chapter 4. Start of Work with Router</th><td width="20%" align="right"> <a accesskey="n" href="ch05.html">Next</a></td></tr></table><hr></div><div class="section" title="Device Management"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="device-manage"></a>Device Management</h2></div></div></div><p>With the manufacturer configuration and after the firmware update
+      the router has an active eth0 interface with the IP-address
+      192.168.2.100, net mask 255.255.255.0.</p><p>To adjust the router connect the network adapter of the computer
+      to the Ethernet-port eth0 via patch-cord. On the computer set an
+      IP-address of the network where the router is located (192.168.2.0/24),
+      for example, 192.168.2.1, with the net mask 255.255.255.0.</p><div class="section" title="Management via web-interface"><div class="titlepage"><div><div><h3 class="title"><a name="web"></a>Management via web-interface</h3></div></div></div><p>Router adjustment via web-interface is carried out using any
+        web-browser supporting HTTPS protocol and JavaScript: Internet
+        Explorer begining from Ver. 6, Opera, Mozilla Firefox. To forward to
+        the adjustment page, type http://192.168.2.100 or
+        https://192.168.2.100 in address line. After that several questions
+        concerning encryption certificates, which should be answered
+        positively. On default, login/password admin/1234.</p><p>When entering web-interface loading of all necessary files and
+        the content of configuration file is done. Rendering of all elements
+        of user interface is performed on client-side (in browser) by means of
+        JavaScript, which allows to speed the work of the interface as it
+        shifts resource-intensive operations from the router.</p><p>When saving changes, the page does not reset - only
+        confuguration data is sent to the router (using AJAX technology).
+        After saving the configuration parameters the relevant subsystem is
+        restarted. All this performs as a background operation while the user
+        may forward to the adjustment of other subsystems. In this case the
+        number of active or queued tasks will be displayed in the
+        web-interface (router can perform only one task at a time).</p><p>When enterring the web-interface, the page with general
+        information about the device will be opened first: device name,
+        firmware version, device local time, and information about the mounted
+        modules. This page is shown below.</p><div class="figure"><a name="id423909"></a><p class="title"><b>Figure 4.1. Page with general information</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-intro.png" width="540" alt="Page with general information"></td></tr></table></div></div></div><br class="figure-break"><p>On the given page the status bar is highlighted which indicates
+        the interaction between the web-interface and the device. It indicates
+        the following parametres:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Hostname</em></span> — name of current
+            device;</p></li><li class="listitem"><p><span class="emphasis"><em>status</em></span> — whether the device is online
+            or offline. For example, if you switch off the power supply of the
+            router , the status will change to "offline" after a while (about
+            10-15 seconds). In this case it is impossible to make settings or
+            poll the status of the router;</p></li><li class="listitem"><p><span class="emphasis"><em>tasks</em></span> — number of active or queued
+            tasks;</p><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>It is not allowed to switch off the router at a non-zero
+                value of "tasks".</p></div></li><li class="listitem"><p><span class="emphasis"><em>ajax</em></span> — how many AJAX-requests waiting
+            for answer were transmitted to the router (these requests are not
+            related to changes in device configuration).</p></li></ul></div></div><div class="section" title="Manageent via console interface"><div class="titlepage"><div><div><h3 class="title"><a name="console"></a>Manageent via console interface</h3></div></div></div><p>To perform the adjustement of the router via console interface,
+        it is necessary to connect to it on serial interface using a terminal
+        program, or using network through Ethernet-port and SSH protocol (port
+        22). There are several programs supporting SSH protocol, for example,
+        Putty for OS Windows and ssh for OS GNU/Linux. Enter "root" as a
+        login,and the password— 1234.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>It should be noted that the changes introduced in the router
+          configuration via the console interface will be substituted with the
+          parameters introduced via web-interface after the restart.</p></div></div><div class="section" title="Summary"><div class="titlepage"><div><div><h3 class="title"><a name="id424012"></a>Summary</h3></div></div></div><div class="table"><a name="id424017"></a><p class="title"><b>Table 4.1. Summary chart</b></p><div class="table-contents"><table summary="Summary chart" border="1"><colgroup><col><col><col></colgroup><thead><tr><th colspan="2">Parameter</th><th>Value</th></tr></thead><tbody><tr><td colspan="2">IP-address(eth0)</td><td>192.168.2.100</td></tr><tr><td colspan="2">Net mask</td><td>255.255.255.0</td></tr><tr><td colspan="2">Web interface</td><td class="auto-generated"> </td></tr><tr><td> </td><td>Protocol</td><td>HTTPS</td></tr><tr><td> </td><td>Address</td><td>http://192.168.2.100</td></tr><tr><td> </td><td>Login</td><td>admin</td></tr><tr><td> </td><td>Password</td><td>1234</td></tr><tr><td colspan="2">Console interface</td><td class="auto-generated"> </td></tr><tr><td> </td><td>Protocol</td><td>SSH</td></tr><tr><td> </td><td>Login</td><td>root</td></tr><tr><td> </td><td>Password</td><td>1234</td></tr></tbody></table></div></div><br class="table-break"></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch04s05.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch04.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">MAC-addresses of network
+      interfaces </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 5. System settings and information</td></tr></table></div></body></html>
