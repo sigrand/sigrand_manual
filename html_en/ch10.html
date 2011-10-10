@@ -1,0 +1,34 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Chapter 10. VoIP</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="SG-17R User Manual"><link rel="up" href="index.html" title="SG-17R User Manual"><link rel="prev" href="ch09s02.html" title="DNS server"><link rel="next" href="ch10s02.html" title="Setting of basic parameters"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 10. VoIP</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch09s02.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="ch10s02.html">Next</a></td></tr></table><hr></div><div class="chapter" title="Chapter 10. VoIP"><div class="titlepage"><div><div><h2 class="title"><a name="voip"></a>Chapter 10. VoIP</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="ch10.html#voip.intro">General information</a></span></dt><dt><span class="section"><a href="ch10s02.html">Setting of basic parameters</a></span></dt><dt><span class="section"><a href="ch10s03.html">Hotline mode</a></span></dt><dt><span class="section"><a href="ch10s04.html">VF channels</a></span></dt><dt><span class="section"><a href="ch10s05.html">Calls routing</a></span></dt><dt><span class="section"><a href="ch10s06.html">Phone book</a></span></dt><dt><span class="section"><a href="ch10s07.html">Audio settings</a></span></dt><dt><span class="section"><a href="ch10s08.html">Codecs</a></span></dt><dt><span class="section"><a href="ch10s09.html">Echo cancellation settings</a></span></dt><dt><span class="section"><a href="ch10s10.html">Dialing mode settings</a></span></dt></dl></div><div class="section" title="General information"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="voip.intro"></a>General information</h2></div></div></div><p>The device allows to arrange the IP-telephony using modules MR-17V
+      which can be complete with submodules having FXO (SMR-17Vo), FXS
+      (SMR-17Vs) or Voice Frequency (SMR-17Vf) ports.</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>FXO</em></span> — connection to the public telephone
+          network (PSTN) or to office PBX.</p></li><li class="listitem"><p><span class="emphasis"><em>FXS</em></span> — commutation of telephone
+          apparatuses.</p></li><li class="listitem"><p><span class="emphasis"><em>VF</em></span> — commutation of voice frequency
+          equipment.</p></li></ul></div><p>When working with VoIP, the router must have a unique three-digit
+      number which is used for addressing it from the side of other routers.
+      For each router, the interfaces of the VoIP module (FXO/FXS/VF) have
+      unique two-digit channel numbers which allow to identify it for call
+      receiption and initiation.</p><p>Numbers used for calls via the router look as follows:</p><p>xxxyy[zzz...], where:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>xxx</em></span> — the number of router.</p></li><li class="listitem"><p><span class="emphasis"><em>yy</em></span> — the number of channel.</p></li><li class="listitem"><p><span class="emphasis"><em>[zzz...]</em></span> — an additional number, for
+          example, when calling via PBX.</p></li></ul></div><p>For example, if the number of the router is 100, and we want to
+      call to its second port, then dialling number from phone connected to
+      this router or to another one looks as follws: 10002.</p><p>Also, when dialling number from phone connected to the router, the
+      following codes are available:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>Instead of the router number you can dial:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>*</em></span> — calling to the own router;</p></li><li class="listitem"><p><span class="emphasis"><em>#</em></span> — calling to a number from the
+              address book.</p></li></ul></div></li><li class="listitem"><p>Instead of the channel number you can dial:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>*</em></span> — calling to the first unoccupied
+              FXO port;</p></li><li class="listitem"><p><span class="emphasis"><em>#</em></span> — calling via SIP-server (only for
+              the abonents registered at SIP-server, indicated in settings. In
+              order to call to an abonent of another SIP-server - it is
+              necessary to add them to the address book and make calls through
+              it).</p></li></ul></div></li></ul></div><p>For calls to other routers an IP-address of the router should be
+      received according to its number. For this purpose the routing table is
+      used, where the correlations between the router number and its
+      IP-address are stored. The content of the table is usually similar for
+      all the routers of the network.</p><p>In order to speed up the dialling of frequently used or long
+      numbers, the address book is used. A short number for speed-dial (with
+      «#» before the number) and the corresponding full number should be added
+      to the address book.</p><p>In the IP-telephony software the Hotline mode support is realized.
+      The essence is the following: when answering the phone connected to a
+      FXS port, a special background process (daemon) may start automatic
+      dialling of the recorded number. When a call is incoming to a FXO port
+      (connected to PSTN or PBX), daemon can redirect the call from one port
+      to another or to a specified port of another router.</p><p>When adding full numbers to the address book table and Hotline
+      table, the use of a special symbol «,» is accepted - it denotes a second
+      delay when dialling the number.</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch09s02.html">Prev</a> </td><td width="20%" align="center"> </td><td width="40%" align="right"> <a accesskey="n" href="ch10s02.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">DNS server </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Setting of basic parameters</td></tr></table></div></body></html>

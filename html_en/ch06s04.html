@@ -1,0 +1,210 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>SHDSL interface modules</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="SG-17R User Manual"><link rel="up" href="ch06.html" title="Chapter 6. Equipment adjustment"><link rel="prev" href="ch06s03.html" title="Bonding of interfaces states"><link rel="next" href="ch06s05.html" title="Modules of E1 interface"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">SHDSL interface modules</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch06s03.html">Prev</a> </td><th width="60%" align="center">Chapter 6. Equipment adjustment</th><td width="20%" align="right"> <a accesskey="n" href="ch06s05.html">Next</a></td></tr></table><hr></div><div class="section" title="SHDSL interface modules"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="dsl"></a>SHDSL interface modules</h2></div></div></div><div class="section" title="Interface settings"><div class="titlepage"><div><div><h3 class="title"><a name="id424911"></a>Interface settings</h3></div></div></div><p>For SHDSL connection one router should operate in "master", the
+        other - in "slave" mode. Settings of SHDSL interface can be made on
+        page Hardware/SHDSL/dsl*/Settings.</p><div class="section" title="Settings of SHDSL modules"><div class="titlepage"><div><div><h4 class="title"><a name="dsl.mr17h"></a>Settings of SHDSL modules</h4></div></div></div><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>SHDSL driver for the router SG-17R (and modules MR-17H*) is
+            called MR17H, its name is displayed in the headline of the
+            configuration window.</p></div><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>Read Chapter <a class="link" href="ch06.html#modules.settings" title="Principle of module settings holding">Principle of module settings
+      holding</a>.</p></div><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>If the given network interface refers to the module pluged
+            into the fourth slot (<span class="emphasis"><em>D slot</em></span>), it can be used
+            only for operation in <span class="emphasis"><em>multiplexing mode</em></span>. This
+            netork interface cannot transfer the network traffic (traffic
+            transmitted not via multiplexing lines). It is associated with the
+            absence of DMA support for the fourth slot.</p></div><p>Settings of <span class="emphasis"><em>rate</em></span>, <span class="emphasis"><em>clock
+          mode</em></span>, <span class="emphasis"><em>coding</em></span>,
+          <span class="emphasis"><em>annex</em></span>es and signal level reduction
+          (<span class="emphasis"><em>PBO Forced</em></span>) are made on the master device,
+          "slave" receive these settings during connection initialization.
+          Configuration window is shown below:</p><div class="figure"><a name="id424985"></a><p class="title"><b>Figure 6.3. SHDSL Settings (MR17H)</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-shdsl-mr17h-cfg.png" width="540" alt="SHDSL Settings (MR17H)"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Enable multiplexing</em></span> — enable the
+              multiplexing mode at the given interface. This parameter
+              reproduces the relevant parameter on the multiplexing settings
+              page.</p></li><li class="listitem"><p><span class="emphasis"><em>Control type</em></span> — interface management
+              mode:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>Manual</em></span> — making settings on
+                  interface configuration page (on the current page).</p></li><li class="listitem"><p><span class="emphasis"><em>EOCd</em></span> — interface is managed by
+                  the daemon EOCd. It allows monitoring of different
+                  parameters of the interface and of the communication line in
+                  general. Further information on settings and operation of
+                  this mode is given in Chapter <a class="link" href="ch06s04.html#dsl-eoc" title="Interface management via EOCd">Interface management via EOCd</a>.</p></li></ul></div></li><li class="listitem"><p><span class="emphasis"><em>Mode</em></span> — mode: master, slave.</p></li><li class="listitem"><p><span class="emphasis"><em>Coding</em></span> — coding method. For
+              information see Chapter<a class="link" href="ch06s04.html#hw.shdsl.details.tcpam" title="Specific features of TCPAM coding use">Specific features of TCPAM
+        coding use</a>.</p></li><li class="listitem"><p><span class="emphasis"><em>Rate</em></span> — traffic rate, kbit/sec. The
+              dropdown list does not include all the available bit rates - to
+              set a voluntary bit rate, choose the value
+              <span class="emphasis"><em>other</em></span>, which will open an input box. After
+              saving the input value will be rounded to the nearest correct
+              value of the bit rate.</p></li><li class="listitem"><p><span class="emphasis"><em>Annex</em></span> — amendments selection.</p></li><li class="listitem"><p><span class="emphasis"><em>Power</em></span> — switch on the power supply
+              for the regenerators on line.</p></li><li class="listitem"><p><span class="emphasis"><em>Clock mode</em></span> — synchronization mode, on
+              default <span class="emphasis"><em>sync</em></span> (synchronic) mode is used.
+              <span class="emphasis"><em> </em></span>Make sure that all the equipment of the
+              communication line (regenerators, routers) are operated in this
+              mode.</p></li><li class="listitem"><p><span class="emphasis"><em>PBO Forced</em></span> — reduction of the output
+              signal to the set value (in dB). Used to reduce the impact on
+              the ewuipment operating on the same cable.The given parameter
+              influence on distance/rate of the connection.</p><p>Signal level reduction can be carried out on all segments
+              of the communication line - for this purpose the values of
+              signal level reduction are input with colons. For example,
+              "3:0:12" reduces the signal level in segmant STU-C — SRU1 by 3
+              dB, in segment SRU1 — SRU2 the signal level remains the same, in
+              segment SRU2 — STU-R — by 12 dB. If the value of reduction is
+              set not for all segments, there will be no signal level
+              reduction in those segments.</p></li><li class="listitem"><p><span class="emphasis"><em>AdvLink</em></span> — expanded mode of link
+              statusing. In normal mode the link at the interface is
+              considered advanced when there is a connection between the
+              interface of the given device and the nearest device connected
+              to it, whether it is a regenerator or the terminal device. It is
+              not always correct when regenerators are operated on line,
+              because the advanced state of the link at the interface should
+              indicate the connection between the terminal devices, not
+              between the device and a regenerator. For this purpose the
+              parameter <span class="emphasis"><em>AdvLink</em></span> is used — when it is
+              active, a link at the interface is considered advanced only when
+              there is a connection between the master device and the
+              slave.</p></li><li class="listitem"><p><span class="emphasis"><em>CRC</em></span> — batch total computation
+              algorithm.</p></li><li class="listitem"><p><span class="emphasis"><em>Fill</em></span> — byte selection for channel
+              filling in the absence of batches to transmit.</p></li></ul></div></div><div class="section" title="Connection and status of the connection"><div class="titlepage"><div><div><h4 class="title"><a name="dsl.status"></a>Connection and status of the connection</h4></div></div></div><p>When settings are saved, after a while the connection will be
+          established, which will be indicated by light-emitting diodes on the
+          front panel of the router. Connection status information can also be
+          found in the status tab.</p><p>In case the connection is not made, the following information
+          will be displayed:</p><div class="figure"><a name="id425223"></a><p class="title"><b>Figure 6.4. Information about not-established SHDSL connection
+            (MR17H)</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-shdsl-mr17h-status-offline.png" width="540" alt="Information about not-established SHDSL connection (MR17H)"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Link state</em></span> — connection status:
+              <span class="emphasis"><em>offline</em></span> — connection is not established,
+              <span class="emphasis"><em>online</em></span> — connection is established.</p></li><li class="listitem"><p><span class="emphasis"><em>Power balance</em></span> — power supply balance
+              to earth. Norm is plus120 V in one wire, and minus 120 V in the
+              other. If the shift exceeds 30 V or earth is absent - it
+              indicates power supply unbalance; in this case the "unbalanced"
+              LED flashes on the SHDSL module. The value "<span class="emphasis"><em>balanced"
+              </em></span>of the parameter corresponds to normal operation,
+              ,<span class="emphasis"><em>"unbalanced</em></span>" — to unbalanced power
+              supply.</p></li><li class="listitem"><p><span class="emphasis"><em>Power overload</em></span> — excess power load.
+              An excess number of regenerators operating on line which are set
+              for power supply from the given router lead to power overload.
+              In this case "overload" LED flashes on the SHDSL module. The
+              value "<span class="emphasis"><em>no overload</em></span>" of the parameter
+              corresponds to normal operation, "<span class="emphasis"><em>overload"</em></span>
+              — to power overload.</p></li><li class="listitem"><p><span class="emphasis"><em>PBO</em></span> — active settings for output
+              signal level reduction.</p></li></ul></div><p>When the connection is established the following information
+          is added:</p><div class="figure"><a name="id425315"></a><p class="title"><b>Figure 6.5. Information about the established SHDSL connection
+            (MR17H)</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-shdsl-mr17h-status-online.png" width="540" alt="Information about the established SHDSL connection (MR17H)"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Actual rate</em></span> — data transfer rate in
+              the established connection, kbit/sec.</p></li><li class="listitem"><p><span class="emphasis"><em>Actual line code</em></span> — coding
+              method.</p></li><li class="listitem"><p><span class="emphasis"><em>Actual clock mode</em></span> — synchronizing
+              mode.</p></li><li class="listitem"><p><span class="emphasis"><em>SNR margin</em></span> — signal to noise ratio
+              margin in the communication line (the more the better).</p></li><li class="listitem"><p><span class="emphasis"><em>Loop attenuation</em></span> — signal attenuation
+              in the communication line (the less the better).</p></li></ul></div></div></div><div class="section" title="Interface management via EOCd"><div class="titlepage"><div><div><h3 class="title"><a name="dsl-eoc"></a>Interface management via EOCd</h3></div></div></div><p>Interface adjustment for operating via EOCd means passing the
+        control over the interface to a customized application which works
+        with the devices on line via the service channel EOC. It allows to
+        obtain information about the communication line from all segments,
+        obtaining it from the regenerators and the terminal device -
+        slave.</p><div class="section" title="Interface adjustment for operating via EOCd"><div class="titlepage"><div><div><h4 class="title"><a name="id425400"></a>Interface adjustment for operating via EOCd</h4></div></div></div><p>To manage the interface via EOCd it is necessary to set a
+          relevant value of the parameter in interface settings (parameter
+          <span class="emphasis"><em>Control type</em></span>).</p><div class="figure"><a name="id425414"></a><p class="title"><b>Figure 6.6. Interface adjustment for operating via EOCd</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-interface.png" width="540" alt="Interface adjustment for operating via EOCd"></td></tr></table></div></div></div><br class="figure-break"><p>After selecting of EOCd mode in <span class="emphasis"><em>Control
+          type</em></span>, additional parameters will be displayed:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Config profile</em></span> — profile used for the
+              given interface. Only those profiles are available for
+              selection, compatibility level of which corresponds with the
+              given interface.</p></li><li class="listitem"><p><span class="emphasis"><em>Regenerators</em></span> — the number of
+              regenerators installed. This value is informative and is meant
+              for help to the network administrator. Actual number of
+              regenerators on line may not coincide with the indicated
+              value.</p></li></ul></div></div><div class="section" title="Profile creation and editing"><div class="titlepage"><div><div><h4 class="title"><a name="id425464"></a>Profile creation and editing</h4></div></div></div><p>The creation and editing of link profile is made in EOC
+          Profiles tab which is shown below.</p><div class="figure"><a name="id425473"></a><p class="title"><b>Figure 6.7. Creation and editing of link profiles</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-profiles.png" width="540" alt="Creation and editing of link profiles"></td></tr></table></div></div></div><br class="figure-break"><p>In EOCd the profile "default", the parameters of which cannot
+          be changed, is available. The process of creation of a new profile
+          or editing of the existing profile is shown below.</p><div class="figure"><a name="id425493"></a><p class="title"><b>Figure 6.8. Creation of a new profile or editing of the existing
+            one</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-profile-add.png" width="540" alt="Creation of a new profile or editing of the existing one"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Name</em></span> — profile name;</p></li><li class="listitem"><p><span class="emphasis"><em>Compatibility</em></span> — compatibility level
+              of the profile:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>base</em></span> — base combatibility, for
+                  modules operating at the rate of 5,7 Mbit/sec and 14
+                  Mbit/sec.</p></li><li class="listitem"><p><span class="emphasis"><em>extended</em></span> — extended
+                  compatibility, can be used only for modules operating at the
+                  rate of 14 Mbit/sec.</p></li></ul></div></li><li class="listitem"><p><span class="emphasis"><em>Encoding, Rate, Annex, Power</em></span> — the
+              given parameters correspond to the parameters on the interface
+              configuration page (<a class="link" href="ch06s04.html#dsl.mr17h" title="Settings of SHDSL modules">SHDSL
+              settings</a>).</p></li></ul></div></div></div><div class="section" title="SHDSL-channels monitoring"><div class="titlepage"><div><div><h3 class="title"><a name="eoc"></a>SHDSL-channels monitoring</h3></div></div></div><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Monitoring option is supported only by MR-17H* modules.
+          Interfaces should be managed via EOCd. Browsing of the statistics of
+          the communication line is available only on master device.</p></div><div class="section" title="Monitoring via web-interface"><div class="titlepage"><div><div><h4 class="title"><a name="id425590"></a>Monitoring via web-interface</h4></div></div></div><p>SHDSL-channels monitoring allows to obtain information about
+          different parameters and errors of the communication lines. If
+          <span class="emphasis"><em>SG-17E</em></span> regenerators are used in the
+          communication line, it is possible to obtain information about their
+          status and number.</p><p>Browsing of statistics of the channel parameters is available
+          in "Statistics" tab. On page information about the connection in
+          general and about the devices operating on line is available. The
+          name of the parameter - <span class="emphasis"><em>Channel unit</em></span>:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>General</em></span> — general information about
+              the communication line;</p></li><li class="listitem"><p><span class="emphasis"><em>STU-C</em></span> — master statistics;</p></li><li class="listitem"><p><span class="emphasis"><em>STU-R</em></span> — slave statistics;</p></li><li class="listitem"><p><span class="emphasis"><em>SRU1 - SRU8</em></span> — regenerator
+              statistics.</p></li></ul></div><p>When opening the page, general statistics of the connection is
+          displayed:</p><div class="figure"><a name="id425656"></a><p class="title"><b>Figure 6.9. General statistics of the connection</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-stat-general.png" width="540" alt="General statistics of the connection"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Channel link</em></span> — status of the
+              connection between master device and slave, determined by the
+              status of the connection between EOCd processes on the devices.
+              If the connection is established but the parameter value is
+              <span class="emphasis"><em>"offline</em></span>", the EOCd processes failed to
+              establish the connection between them. It can be associated with
+              several reasons: one of the EOCd processes may not be launched,
+              or a relative interface may not be managed via EOCd.</p></li><li class="listitem"><p><span class="emphasis"><em>Regenerators</em></span> — actual number of
+              regenerators on line.</p></li><li class="listitem"><p><span class="emphasis"><em>Wire pairs</em></span> — number of pair in the
+              channel.</p></li><li class="listitem"><p><span class="emphasis"><em>Rate, Annex, Encoding</em></span> — transfer
+              rate, amendments, coding mode.</p></li></ul></div><p>When statistics for a concrete device is displayed, the
+          following parameters of the performance characterizing the SHDSL
+          channel are available:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Errored Second (ES)</em></span> — number of
+              second intervals when one or more CRC anomalies were detected or
+              more than one LOSW bug. When working with this parameter it is
+              necessary to consider the rules of parameters priority (see
+              <a class="link" href="ch06s04.html#shdsl.rules" title="Rules of SHDSL -channel performance parameters priority">parameters priority</a>).</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p><span class="emphasis"><em>Loss of Sync Defect (LOSW defect)</em></span> –
+                loss of synchronization. In plesiochronous mode loss of
+                synchronization bug should be identified when not less than
+                three successively received slides contain synchronization
+                errors. These errors are indicated by a group of bits in a
+                slide: Frame Sync Word, Stuff Bits and Stuff Bit Ids. LOSW
+                indication clears after receiving at least two successive
+                slides not containing any synchronization errors.</p></div></li><li class="listitem"><p><span class="emphasis"><em>Severely Errored Second (SES)</em></span> —
+              number of one-second intervals, in which not less than 50 CRC
+              anomalies occured or more than one LOSW bug was found. (50 CRC
+              anomalier per second corresponds to 30% of incorrect slides for
+              standard frame length). When working with this parameter it is
+              necessary to consider the rules of parameters priority.</p></li><li class="listitem"><p><span class="emphasis"><em>Code Violation (CV)</em></span> — number of CRC
+              anomalies, found withing the monitoring period. When working
+              with this parameter it is necessary to consider the rules of
+              parameters priority which will be described below.</p></li><li class="listitem"><p><span class="emphasis"><em>LOSW Second (LOSWS)</em></span> — number of
+              one-second intervals in which more than one LOSW bug was
+              found.</p></li><li class="listitem"><p><span class="emphasis"><em>Unavailable Second (UAS)</em></span> — number of
+              one-second intervals in which SHDSL-channel was not available.
+              The channel after failure is considered available in 10 seconds
+              without SES. These 10 seconds should be extracted from the
+              number of seconds when the channel was unavailable.</p></li></ul></div><p>Many parameters are set for different pairs and sides:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Side</em></span> — there are two sides, to which
+              the communication settings may belong:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>NetSide</em></span> — master side
+                  (communication line to the master).</p></li><li class="listitem"><p><span class="emphasis"><em>CustSide</em></span> — customer side
+                  (communication line to the slave).</p></li></ul></div></li><li class="listitem"><p><span class="emphasis"><em>Pair</em></span> — number of wire pair.</p></li></ul></div><p>The table "<span class="emphasis"><em>state"</em></span> shows the current
+          parameters of the line (SNR margin and LoopAttn) and errors found
+          from the begining of channel monitoring.</p><div class="figure"><a name="id425867"></a><p class="title"><b>Figure 6.10. Table "state"</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-stat-unit-state.png" width="540" alt='Table "state"'></td></tr></table></div></div></div><br class="figure-break"><p>The table "<span class="emphasis"><em>relative counters"</em></span> contains
+          the same parameters that the table "<span class="emphasis"><em>state"</em></span>,
+          allowing to reset them in order to take samples in certain time
+          intervals.</p><div class="figure"><a name="id425892"></a><p class="title"><b>Figure 6.11. Table "relative counters"</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-stat-unit-relative.png" width="540" alt='Table "relative counters"'></td></tr></table></div></div></div><br class="figure-break"><p>The table "<span class="emphasis"><em>current intervals</em></span>" contains
+          errors occured during the last 15 minutes and the previous day. The
+          values, thus, are updated every 15 minutes and every day.</p><div class="figure"><a name="id425915"></a><p class="title"><b>Figure 6.12. Table "current intervals"</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-stat-unit-curr.png" width="540" alt='Table "current intervals"'></td></tr></table></div></div></div><br class="figure-break"><p>Besides, tables are maintained for each wire pair and for each
+          side (NetSide and CustSide), where 15-minutes and day-intervals when
+          errors occured are kept. Tables keep the information about the last
+          96 15-minutes intervals and the last 30 day intervals.</p><div class="figure"><a name="id425935"></a><p class="title"><b>Figure 6.13. Table of 15-minutes intervals for CustSide</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-stat-unit-15min.png" width="540" alt="Table of 15-minutes intervals for CustSide"></td></tr></table></div></div></div><br class="figure-break"><div class="figure"><a name="id425950"></a><p class="title"><b>Figure 6.14. Table of day intervals for CustSide</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-eocd-stat-unit-1day.png" width="540" alt="Table of day intervals for CustSide"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>Monitoring</em></span> — ratio of time when the
+              channel was being monitored.</p></li></ul></div></div><div class="section" title="Monitoring via console"><div class="titlepage"><div><div><h4 class="title"><a name="id425978"></a>Monitoring via console</h4></div></div></div><p>For SHDSL-channel monitoring <span class="command"><strong>eoc-info</strong></span>
+          utility is used; for further information about the utility functions
+          use the key <code class="option">--help</code>.</p><p>To get a aummary of channel status use the command
+          <span class="command"><strong>eoc-info</strong></span> <code class="option">-s</code>. It reflects the
+          status of each channel: how many regenerators is found, is there a
+          connection to slave (the router operating in <span class="emphasis"><em>slave
+          mode</em></span>). The "<span class="emphasis"><em>offline</em></span>" status
+          indicates that the connection with the second router is not
+          established. In this case the number of regenerators shows the
+          regenerator to which the connection is established.</p><p>For the detailed information type the name of the interface:
+          <span class="command"><strong>eoc-info</strong></span> <code class="option">-i</code>
+          <em class="replaceable"><code>dsl0</code></em>. The program output will contain
+          full information about all units of the track - master, slave and
+          all the regenerators. To get information about a specific unit use
+          an option " <code class="option">-u"</code>and unit`s name: STU-C, STU-R,
+          SRU1..SRU8.</p></div><div class="section" title="Rules of SHDSL -channel performance parameters priority"><div class="titlepage"><div><div><h4 class="title"><a name="shdsl.rules"></a>Rules of SHDSL -channel performance parameters
+          priority</h4></div></div></div><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>No restrictions for <span class="emphasis"><em>UAS</em></span>
+              parameter.</p></li><li class="listitem"><p>Parameters <span class="emphasis"><em>ES</em></span> and
+              <span class="emphasis"><em>SES</em></span> are disabled if
+              <span class="emphasis"><em>UAS</em></span> indication is enabled.</p></li><li class="listitem"><p><span class="emphasis"><em>CV</em></span> parameter is disabled if
+              <span class="emphasis"><em>SES</em></span> indication is enabled.</p></li></ul></div></div></div><div class="section" title="Specific features of TCPAM coding use"><div class="titlepage"><div><div><h3 class="title"><a name="hw.shdsl.details.tcpam"></a>Specific features of TCPAM
+        coding use</h3></div></div></div><p>TCPAM Coding (Trellis-Coded Pulse Amplitude Modulation) used to
+        data transfer under G.SHDSL Standard (G.991.2) has several versions
+        with different degrees of complexity of coding algorithm. High rate
+        data transfer corresponds to the mode with high number of modulation
+        positions (TCPAM32), at lower transfer rates the mode with lower
+        number of modulation positions is used (TCPAM16). Consequently, with
+        the increase of coding algorithm complexity the noiseproof feature of
+        the channel decreases ans vice versa.</p><p>Therefore it is necessary to pay special attention to the TCPAM
+        coding algorithm when selecting a transfer rate, and change the linear
+        code, if necessary, for the best result.</p><p>For SHDSL modules of MR-17H* series there exist own acceptable
+        and recommended TCPAM coding values.</p><div class="section"><div class="titlepage"></div><div class="table"><a name="id426119"></a><p class="title"><b>Table 6.1. Recommended values</b></p><div class="table-contents"><table summary="Recommended values" border="1"><colgroup><col><col></colgroup><thead><tr><th align="center">Linear code</th><th align="center">Bitrate range, kbit/sec</th></tr></thead><tbody><tr><td align="center">TCPAM128</td><td align="center">8192..14080</td></tr><tr><td align="center">TCPAM64</td><td align="center">5760..8128</td></tr><tr><td align="center">TCPAM32</td><td align="center">2560..5696</td></tr><tr><td align="center">TCPAM16</td><td align="center">192..2496</td></tr></tbody></table></div></div><br class="table-break"></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch06s03.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch06.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch06s05.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Bonding of interfaces states </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Modules of E1 interface</td></tr></table></div></body></html>

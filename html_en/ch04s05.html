@@ -1,0 +1,34 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>MAC-addresses of network interfaces</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="SG-17R User Manual"><link rel="up" href="ch04.html" title="Chapter 4. Start of Work with Router"><link rel="prev" href="ch04s04.html" title="Expert mode"><link rel="next" href="ch04s06.html" title="Device Management"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">MAC-addresses of network
+      interfaces</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch04s04.html">Prev</a> </td><th width="60%" align="center">Chapter 4. Start of Work with Router</th><td width="20%" align="right"> <a accesskey="n" href="ch04s06.html">Next</a></td></tr></table><hr></div><div class="section" title="MAC-addresses of network interfaces"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="mac-address"></a>MAC-addresses of network
+      interfaces</h2></div></div></div><p>MAC-addresses for network interfaces (Ethernet, SHDSL, E1) are
+      kept in configuration file with all other settings of the router.</p><p>At the moment there exist two ways of the initial allocation of
+      MAC-addresses:</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>The <span class="emphasis"><em>first</em></span> is when after the firmware
+          update random MAC-addresses generation for eth* and dsl0, dsl1
+          interfaces occurs. This way of MAC-addresses generation can not
+          guarantee their uniquness for several routers - it means that two
+          routers may generate similar MAC-addresses. To minimize the
+          probability of MAC-addresses repetition, the initial loading should
+          be carried out when the router is connected to the ethernet,
+          preferably with intensive traffic - it will increase the randomness
+          of address generation.</p></li><li class="listitem"><p>Then runs the script instantiating the second way of
+          MAC-addresses allocation - Затем запускается скрипт, реализующий
+          второй способ присвоения MAC-адресов — receiption of MAC-addresses
+          list from the special-purpose server. The script checks whether the
+          given server is accessible - if yes, than it downloads the list of
+          unique MAC-addresses which then allocate to network interfaces.The
+          second way of MAC-addresses allocation is available to and used only
+          by the manufacturer of the router. In case the MAC-addresses are
+          updated successfully, the following statement is displayed:</p><pre class="screen">
+						Updating MAC addresses
+					</pre><p>If the above mentioned server is not available, relevant
+          message will be displayed, and the MAC-addresses update will not be
+          carried out during the further loadings.</p><pre class="screen">
+						MAC-address server is unreachable. You can update your MAC-address
+						manually by running:
+						/etc/init.d/updatekdb force
+					</pre></li></ul></div><p>Thr router is delivered from the manufacturer with allocated
+      MAC-addresses, received from a special-purpose server, which guarantees
+      their uniqueness for all possible interfaces of the router.</p><p>Since MAC-addresses are kept in the configuration file, they will
+      be lost after reflashing. To avoid this, please, save the configuration
+      of the router (see Chapter <a class="link" href="ch05s09.html" title="Configuration upload and failback">Configuration upload and failback</a>) before the reflashing, and then make a
+      failback.</p></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch04s04.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch04.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch04s06.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Expert mode </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Device Management</td></tr></table></div></body></html>

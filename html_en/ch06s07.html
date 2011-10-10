@@ -1,0 +1,57 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Multiplexing</title><meta name="generator" content="DocBook XSL Stylesheets V1.75.2"><link rel="home" href="index.html" title="SG-17R User Manual"><link rel="up" href="ch06.html" title="Chapter 6. Equipment adjustment"><link rel="prev" href="ch06s06.html" title="RS232 interface modules"><link rel="next" href="ch07.html" title="Chapter 7. Network interfaces adjustment"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Multiplexing</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="ch06s06.html">Prev</a> </td><th width="60%" align="center">Chapter 6. Equipment adjustment</th><td width="20%" align="right"> <a accesskey="n" href="ch07.html">Next</a></td></tr></table><hr></div><div class="section" title="Multiplexing"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="multiplexing"></a>Multiplexing</h2></div></div></div><p>Multiplexing is used for traffic transfer from one interface to
+      another, by-passing the central processor. <span class="emphasis"><em>SG-17R</em></span>
+      allows simultaneous multiplexing and IP-traffic transferring.</p><p>Generally in can be represented as follows:</p><div class="figure"><a name="id427307"></a><p class="title"><b>Figure 6.29. Network scheme</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/multiplexing1.png" width="540" alt="Network scheme"></td></tr></table></div></div></div><br class="figure-break"><p>In the given example two E1 channels are connected to the SG-17R
+      routers and there is also a TCP/IP network via Ethernet. The routers are
+      interconnected over SHDSL. Maximum rate of SHDSL - 14080 kbit/sec, i.e.
+      two E1 channels (2048 kbit/sec each) can be transferred via one SHDSL
+      channel, 9984 kbit/sec remaining not used.</p><p>To transfer E1 flows, multiplexing is used: both E1 input flows
+      are multiplexed into the SHDSL channel, by which they are transferred to
+      the second router, where athey are de-multiplexed and the flows split to
+      clients. The remaining SHDSL lane is used for the transfer of the
+      IP-traffic between the two Ethernet networks.</p><p>For purposes of multiplexing, the router has a strip which
+      consists of 16 lines, each of which contains 256 time-slots. Each
+      time-slot of the line corresponds to a time-slot in E1 or SHDSL, i.e.
+      has a rate of 64 kbit/sec. E1 contains32 time-slots, SHDSL — depending
+      on the interface speed. Interfaces E1 (E1) and SHDSL (dsl) may place data
+      received from the physical line to the strip, and accept the data placed
+      by another interface.</p><div class="note" title="Note" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Note</h3><p>Some modules may use only 8 lines.</p></div><div class="figure"><a name="id427353"></a><p class="title"><b>Figure 6.30. Architecture of multiplexing</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/multiplexing-line.png" width="540" alt="Architecture of multiplexing"></td></tr></table></div></div></div><br class="figure-break"><p>All the devices participating in traffic multiplexing should be
+      triggered by one signal. For this purpose it is necessary to define
+      which interface will determine the clock signal while multiplexing
+      adjustment.</p><p>Router may have two sources defining the synchro-signal for
+      multiplexing each of which defines a <span class="emphasis"><em>domain</em></span>. Each
+      line refers either to the domain A or to the domain B, and all the
+      interfaces associated with this line also refer to one of the domains
+      accordingly. Defining synchro-signal can be local or remote.</p><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>One domain can have one and only one device (interface)
+        controlling the clock signal! All other devices of the domain should
+        be set in <span class="emphasis"><em>clock slave</em></span> mode. Thus one device
+        trigger all the devices of the given domain.</p></div><p>Below is a multiplexing confuguration page which is located at
+      address Hardware/Multiplexing.</p><div class="figure"><a name="id427398"></a><p class="title"><b>Figure 6.31. Multiplexing adjustment</b></p><div class="figure-contents"><div><table border="0" summary="manufactured viewport for HTML img" cellspacing="0" cellpadding="0" width="540"><tr><td><img src="img/wf2-mux-cfg.png" width="540" alt="Multiplexing adjustment"></td></tr></table></div></div></div><br class="figure-break"><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p><span class="emphasis"><em>MXEN</em></span> — interface participates in
+          multiplexing.</p></li><li class="listitem"><p><span class="emphasis"><em>CLKM</em></span> — synchronization of the
+          interface:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>clock-master</em></span> — interface is the
+              source of synchronization for the given domain.</p></li><li class="listitem"><p><span class="emphasis"><em>clock-slave</em></span> — interface functions as
+              a receiver of synchronization.</p></li></ul></div></li><li class="listitem"><p><span class="emphasis"><em>CLKAB</em></span> — defines to which synchronizing
+          domain the interface is related.</p></li><li class="listitem"><p><span class="emphasis"><em>CLKR</em></span> — source of synchronization:</p><div class="itemizedlist"><ul class="itemizedlist" type="circle"><li class="listitem"><p><span class="emphasis"><em>local</em></span> — use local clock for
+              timing.</p></li><li class="listitem"><p><span class="emphasis"><em>remote</em></span> — use external clock for
+              timing.</p></li></ul></div></li><li class="listitem"><p><span class="emphasis"><em>RLINE</em></span> — number of line to which the
+          interface will place the data received from the physical
+          line.</p></li><li class="listitem"><p><span class="emphasis"><em>TLINE</em></span> — number of line, from which the
+          givn interface will take the data (placed by another interface
+          participating in multiplexing) to transfer it to the physical
+          line.</p></li><li class="listitem"><p><span class="emphasis"><em>RFS</em></span> — number of the line time-slot
+          starting from which the interface place the data on the line.</p></li><li class="listitem"><p><span class="emphasis"><em>TFS</em></span> — number of the line time-slot
+          starting from which the data can be taken from the line.</p></li><li class="listitem"><p><span class="emphasis"><em>MXRATE</em></span>  — number of time-slots for
+          multiplexing (for SHDSL interfaces).</p></li><li class="listitem"><p><span class="emphasis"><em>MXSMAP</em></span> — map of time-slots used for
+          multiplexing (for E1 interfaces). This map should not be mixed with
+          the map which is set while adjusting the E1 interface for IP-traffic
+          transfer. The map should be set as "1-16", "16-31", ... type</p></li></ul></div><div class="important" title="Important" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Important</h3><p>Time-slot in E1 can be used <span class="emphasis"><em>only</em></span> for
+        multiplexing or only for IP-traffic transfer. For this reason the
+        time-slots map set for multiplexing using the parameter
+        <em class="parameter"><code>mxsmap</code></em> should not coinside with the time-slots
+        map set while E1 adjustment for use in IP-traffic transfer.</p></div><p>If while adjustment any mistakes were made, test information will
+      be displayed:</p><pre class="screen">
+                Checking status:
+                Errors detected:
+
+                WARNING: Line2: timeslots 45 written but not read
+                WARNING: Line3: timeslots 55 read but not written
+            </pre></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="ch06s06.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="ch06.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="ch07.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">RS232 interface modules </td><td width="20%" align="center"><a accesskey="h" href="index.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 7. Network interfaces adjustment</td></tr></table></div></body></html>
