@@ -6,7 +6,8 @@ xsl = /usr/share/xml/docbook/stylesheet/nwalsh/fo/docbook.xsl
 
 .PHONY : all clean
 
-all : book/index.html book.pdf  book_en/index.html book_en.pdf
+all : book_ru/index.html book_en/index.html book_en.pdf
+# book_ru.pdf
 
 %/index.html : %.xml
 	rm -rf $*; mkdir $*
@@ -20,4 +21,5 @@ all : book/index.html book.pdf  book_en/index.html book_en.pdf
 	fop -pdf $@ -fo $<
 
 clean:
-	rm -rf book book_en *.fo *.pdf
+	rm -rf book_ru book_en
+	rm -f *.fo *.pdf
