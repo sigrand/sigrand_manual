@@ -1,12 +1,11 @@
 .PHONY: all clean
 
-all: book.html
+all: book/index.html book_en/index.html
 
-%.html: %.xml
-	rm -rf out; mkdir out
-	cd out && ln -s ../img img
-	xmlto -o out --skip-validation html $<
+%/index.html: %.xml
+	rm -rf $*; mkdir $*
+	cd $* && ln -s ../img img
+	xmlto -o $* --skip-validation html $<
 
 clean:
-	rm -f *.html
-	rm -rf out
+	rm -rf book book_en
