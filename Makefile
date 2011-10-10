@@ -3,7 +3,10 @@
 all: book.html
 
 %.html: %.xml
-	sgmltools --jade-opt='-E 0' -b onehtml $<
+	rm -rf out; mkdir out
+	cd out && ln -s ../img img
+	xmlto -o out --skip-validation html $<
 
 clean:
 	rm -f *.html
+	rm -rf out
