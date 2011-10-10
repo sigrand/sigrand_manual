@@ -410,8 +410,8 @@
         </itemizedlist>
       </section>
 
-      <section id="hw.desc.rs232">
-        <title id="hw.desc.rs232.title">Параметры несущего модуля для
+      <section id="hw.desc.voip">
+        <title id="hw.desc.voip.title">Параметры несущего модуля для
         интерфейсов VoIP (модуль расширения)</title>
 
         <itemizedlist>
@@ -1404,7 +1404,7 @@
         <important>
           <para>Для установки модулей можно использовать слоты 0, 1, 2, 3
           маршрутизатора (см "Важно" в разделе <link endterm="SlotD.title"
-          linkend="SlotD"></link> ограничения для использования слота
+          linkend="hw.sg-17r"></link> ограничения для использования слота
           3).</para>
         </important>
 
@@ -1677,8 +1677,8 @@ Programming flash ..............................................................
       ли сервер TFTP соединения с маршрутизатора.</para>
     </section>
 
-    <section id="update">
-      <title id="update.title">Режим эксперта</title>
+    <section id="update.loader">
+      <title id="update.loader.title">Режим эксперта</title>
 
       <para>В режиме эксперта можно обновить загрузчик маршрутизатора и
       осуществить некоторые действия с flash-памятью маршрутизатора.</para>
