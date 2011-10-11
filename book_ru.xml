@@ -3447,7 +3447,7 @@ Programming flash ..............................................................
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="img/rs232_ip.png" />
+                  <imagedata fileref="img/rs232_ip.png" width="6in" />
                 </imageobject>
               </mediaobject>
             </figure></para>
@@ -3638,7 +3638,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
               <mediaobject>
                 <imageobject>
-                  <imagedata fileref="img/rs232_ip_test.png" />
+                  <imagedata fileref="img/rs232_ip_test.png" width="6in" />
                 </imageobject>
               </mediaobject>
             </figure><note>
