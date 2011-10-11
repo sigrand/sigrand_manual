@@ -1,6 +1,8 @@
 # Prerequisits:
 #	xmlto for html
 #	fop, docbook-xsl for pdf
+#
+# Use make -jN for full CPU utilization
 
 xsl = /usr/share/xml/docbook/stylesheet/nwalsh/fo/docbook.xsl
 
