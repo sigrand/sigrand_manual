@@ -14,11 +14,8 @@ all : book_ru/index.html book_en/index.html book_en.pdf
 	cd $* && ln -s ../img img
 	xmlto -o $* --skip-validation html $<
 
-%.fo : %.xml
-	xsltproc -o $@ $(xsl) $<
-
-%.pdf : %.fo
-	fop -pdf $@ -fo $<
+%.pdf :
+	fop -xml $*.xml -xsl $(xsl) -pdf $@ -c fop.xconf $<
 
 clean:
 	rm -rf book_ru book_en
