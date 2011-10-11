@@ -996,7 +996,17 @@
       <figure>
         <title>Передняя панель без сменных модулей</title>
 
-        <graphic fileref="img/hw-sg17-front-empty-text.png" width="6in" />
+        <graphic fileref="img/chassis_front.png" width="6in" />
+      </figure>
+
+      <figure>
+        <title>Передняя панель</title>
+
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/chassis_front_aux.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -1096,7 +1106,7 @@
       <figure>
         <title>Вид задней панели маршрутизатора с питанием 36-72В DC</title>
 
-        <graphic fileref="img/hw-sg17-back-dc-text.png" width="6in" />
+        <graphic fileref="img/chassis_back_DC.png" width="6in" />
       </figure>
 
       <itemizedlist>
@@ -1112,7 +1122,7 @@
       <figure>
         <title>Вид задней панели маршрутизатора с питанием 220В/50Гц</title>
 
-        <graphic fileref="img/hw-sg17-back-ac-text.png" width="6in" />
+        <graphic fileref="img/chassis_back_AC.png" width="6in" />
       </figure>
 
       <itemizedlist>
@@ -1128,18 +1138,29 @@
       <figure>
         <title>Передняя панель с установленными модулями</title>
 
-        <graphic fileref="img/hw-sg17-front-modules-text.png" width="6in" />
+        <graphic fileref="img/chassis_front_full.png" width="6in" />
       </figure>
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Модули SHDSL</emphasis> — два двухканальных модуля
+          <para><emphasis>Модуль MR-17V8 — <emphasis>модуль с установленными
+          субмодулями VoIP (до четырех двухканальных субмодулей FXS, FXO,
+          VF).</emphasis></emphasis></para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>Модуль MR-17G8 — <emphasis>восьмиканальный
+          модуль</emphasis>.</emphasis></para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis>Модуль MR-17H2P2</emphasis>— двухканальный модуль
           SHDSL с дистанционным питанием.</para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Модули Е1</emphasis> — два двухканальных модуля
-          Е1.</para>
+          <para><emphasis>Модуль MR-17S4T</emphasis> — четырехканальных модуль
+          RS-232 DTE.</para>
         </listitem>
       </itemizedlist>
     </section>
@@ -1183,28 +1204,28 @@
           <title>Модуль на один канал SHDSL без дистанционного питания
           (MR-17H1)</title>
 
-          <graphic fileref="img/hw-module-17h1-text.png" width="6in" />
+          <graphic fileref="img/Module_h1.png" width="6in" />
         </figure>
 
         <figure>
           <title>Модуль на один канал SHDSL с дистанционным питанием
           (MR-17H1P2)</title>
 
-          <graphic fileref="img/hw-module-17h1p2-text.png" width="6in" />
+          <graphic fileref="img/Module_h1p.png" width="6in" />
         </figure>
 
         <figure>
           <title>Модуль на два канала SHDSL без дистанционного питания
           (MR-17H2)</title>
 
-          <graphic fileref="img/hw-module-17h2-text.png" width="6in" />
+          <graphic fileref="img/Module_h2.png" width="6in" />
         </figure>
 
         <figure>
           <title>Модуль на два канала SHDSL с дистанционным питанием
           (MR-17H2P2)</title>
 
-          <graphic fileref="img/hw-module-17h2p2-text.png" width="6in" />
+          <graphic fileref="img/Module_h2p.png" width="6in" />
         </figure>
 
         <itemizedlist>
@@ -1234,7 +1255,7 @@
               </listitem>
 
               <listitem>
-                <para><emphasis>LINK</emphasis>:</para>
+                <para><emphasis>LNK</emphasis>:</para>
 
                 <itemizedlist>
                   <listitem>
@@ -1322,13 +1343,33 @@
         <figure>
           <title>Модуль на один канал E1 (MR-17G)</title>
 
-          <graphic fileref="img/hw-module-1e1-text.png" width="6in" />
+          <graphic fileref="img/Module_g1.png" width="6in" />
         </figure>
 
         <figure>
           <title>Модуль на два канала E1 (MR-17G2)</title>
 
-          <graphic fileref="img/hw-module-2e1-text.png" width="6in" />
+          <graphic fileref="img/Module_g2.png" width="6in" />
+        </figure>
+
+        <figure>
+          <title>Модуль на четыре канала E1 (MR-17G4)</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_g4.png" width="6in" />
+            </imageobject>
+          </mediaobject>
+        </figure>
+
+        <figure>
+          <title>Модуль на восемь каналов E1 (MR-17G8)</title>
+
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_g8.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -1375,6 +1416,46 @@
 
           <listitem>
             <para>Четыре канала RS-232 DTE (MR-17S4T).</para>
+
+            <figure>
+              <title>Модуль на два канала RS-232 DCE (MR-17S2C)</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Module_s2c.png" width="6in" />
+                </imageobject>
+              </mediaobject>
+            </figure>
+
+            <figure>
+              <title>Модуль на два канала RS-232 DTE (MR-17S2T)</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Module_s2t.png" width="6in" />
+                </imageobject>
+              </mediaobject>
+            </figure>
+
+            <figure>
+              <title>Модуль на четыре канала RS-232 DCE (MR-17S4C)</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Module_s4c.png" width="6in" />
+                </imageobject>
+              </mediaobject>
+            </figure>
+
+            <figure>
+              <title>Модуль на четыре канала RS-232 DTE (MR-17S4T)</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Module_s4t.png" width="6in" />
+                </imageobject>
+              </mediaobject>
+            </figure>
           </listitem>
         </itemizedlist>
       </section>
@@ -1394,6 +1475,26 @@
           <listitem>
             <para>Для установки четырех субмодулей или восьми каналов VoIP
             (MR-17V8).</para>
+
+            <figure>
+              <title>Модуль на четыре канала VoIP (MR-17V4)</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Module_v4.png" width="6in" />
+                </imageobject>
+              </mediaobject>
+            </figure>
+
+            <figure>
+              <title>Модуль на восемь каналов VoIP (MR-17V8)</title>
+
+              <mediaobject>
+                <imageobject>
+                  <imagedata fileref="img/Module_v8.png" width="6in" />
+                </imageobject>
+              </mediaobject>
+            </figure>
           </listitem>
         </itemizedlist>
       </section>
@@ -1411,7 +1512,7 @@
         <figure>
           <title>Передняя панель без сменных модулей</title>
 
-          <graphic fileref="img/hw-sg17-front-empty-text.png" width="6in" />
+          <graphic fileref="img/chassis_front.png" width="6in" />
         </figure>
 
         <para>Установка модуля выполняется следующим образом:</para>
@@ -1684,11 +1785,12 @@ Programming flash ..............................................................
       осуществить некоторые действия с flash-памятью маршрутизатора.</para>
 
       <important>
-        Используейте режим эксперта только если вы понимаете что делаете! Эти действия могут привести маршрутизатор в нерабочее состояние! 
+         Используейте режим эксперта только если вы понимаете что делаете! Эти действия могут привести маршрутизатор в нерабочее состояние! 
       </important>
 
       <para>Включение режима эксперта осуществялется в меню параметров
-      загрузчика. Пароль режима эксперта запрашивайте у службы технической поддержки.</para>
+      загрузчика. Пароль режима эксперта запрашивайте у службы технической
+      поддержки.</para>
     </section>
 
     <section id="mac-address">
