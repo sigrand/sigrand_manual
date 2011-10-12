@@ -1698,15 +1698,15 @@ Enter your option:</screen>
       <para>Если используется локальный TFTP-сервер, то после его настройки
       необходимо в каталог, являющийся для него (TFTP-сервера) корневым,
       скопировать файл прошивки, который можно скачать с веб-сайта <ulink
-      url="http://www.sigrand.ru">www.sigrand.ru</ulink> . Последняя версия
+      url="http://www.sigrand.ru">http://www.sigrand.ru</ulink>. Последняя версия
       прошивки находится по адресу: <ulink
       url="http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/">http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/</ulink>
       .</para>
 
       <para>Как подготовить маршрутизатор для управления по консольному
-      интерфейсу написано в разделе <link endterm="firstboot.title"
+      интерфейсу, написано в разделе <link endterm="firstboot.title"
       linkend="firstboot"></link>. После запуска программы эмуляции терминала
-      и установки соответствующих настроек порта, надо включить маршрутизатор.
+      и установки соответствующих настроек порта нужно включить маршрутизатор.
       В окне программы выведется информация о маршрутизаторе с предложением
       войти в меню загрузчика (см. раздел <link endterm="firstboot.title"
       linkend="bootloader"></link>).</para>
