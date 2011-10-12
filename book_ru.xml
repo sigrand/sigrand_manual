@@ -3576,12 +3576,11 @@ null-modem:
           вкладке System/Console введите команду "ps ax" и убедитесь, что
           процесс rs232-tcpext запущен:</para>
 
-          <screen>
-ps ax
-...
- 728 ? S 0:00 rs232-tcpext /dev/ttyRS0 0.0.0.0 3000 listen /var/run/rs232-tcpext.ttyRS0.pid 100 1000
-
-3571 ? S 0:00 rs232-tcpext /dev/ttyRS0 192.168.2.101 3000 connect /var/run/rs232-tcpext.ttyRS0.pid 100 1000</screen>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip_ps.png" width="6in" />
+            </imageobject>
+          </mediaobject>
 
           <para><note>
               <para>Учтите, что процесс запуска из web системы достаточно
@@ -3593,34 +3592,26 @@ ps ax
 
           <para>Пассивная сторона:</para>
 
-          <screen>
-daemon.warn rs232-tcpext ttyRS0  listen : started up
-daemon.info rs232-tcpext ttyRS0  listen : pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
-daemon.info rs232-tcpext ttyRS0  listen : Waiting data connection...</screen>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip_passive.png" width="6in" />
+            </imageobject>
+          </mediaobject>
 
           <para>После соединения от активной стороны:</para>
-
-          <screen>
-daemon.info rs232-tcpext ttyRS0  listen : Data connection from 192.168.3.102:2937
-daemon.info rs232-tcpext ttyRS0  listen : Waiting state connection...
-daemon.info rs232-tcpext ttyRS0  listen : State connection from 192.168.3.102:2938
-daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  listen : Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  listen : Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0</screen>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip_passive2.png" width="6in" />
+            </imageobject>
+          </mediaobject>
 
           <para>Активная сторона:</para>
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232_ip_active.png" width="6in" />
+            </imageobject>
+          </mediaobject>
 
-          <screen>
-daemon.warn rs232-tcpext ttyRS0  connect: started up
-daemon.info rs232-tcpext ttyRS0  connect: pid file '/var/run/rs232-tcpext.ttyRS0.pid' created
-daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
-daemon.err rs232-tcpext ttyRS0  connect: socket_connect(): Could not connect to 192.168.2.101:3000
-daemon.warn rs232-tcpext ttyRS0  connect: restart
-daemon.info rs232-tcpext ttyRS0  connect: Connecting (data) to 192.168.2.101:3000 ...
-daemon.info rs232-tcpext ttyRS0  connect: Connecting (state) to 192.168.2.101:3000 ...
-daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  connect: Recv modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 RI:0
-daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RTS:0 CTS:0 CD:0 R</screen>
         </section>
 
         <section>
@@ -5438,7 +5429,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <listitem>
           <para><emphasis>Forwarder DNS 2</emphasis> — сервер DNS №2, к
-          которому следует перенаправлять запросы в случае, если DNS №1также
+          которому следует перенаправлять запросы в случае, если DNS №1 также
           не может дать ответ.</para>
         </listitem>
       </itemizedlist>
@@ -6054,7 +6045,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
     </section>
 
     <section id="voip.route">
-      <title>Маршрутизация звонков</title>
+      <title>Маршрутизация VoIP</title>
 
       <para>Настройка маршрутизации звонков выполняется на странице
       Hardware/VoIP/Routes. Она содержит таблицу, отображающую соответствие
@@ -6062,7 +6053,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       представлено ниже.</para>
 
       <figure>
-        <title>Маршрутизация звонков</title>
+        <title>Маршрутизация VoIP</title>
 
         <graphic fileref="img/wf2-voip-routes.png" width="6in" />
       </figure>
@@ -6076,7 +6067,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
       <para>Добавление новой записи в таблицу показано на рисунке ниже.</para>
 
       <figure id="voip.route.add">
-        <title>Маршрутизация звонков: добавление новой записи</title>
+        <title>Маршрутизация VoIP: добавление новой записи</title>
 
         <graphic fileref="img/wf2-voip-routes-add.png" width="6in" />
       </figure>
@@ -6593,7 +6584,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </figure>
 
         <para>Домашняя страница проекта: <ulink
-        url="http://www.mikrotik.com/thedude.php">The Dude</ulink>.</para>
+        url="http://www.mikrotik.com/thedude.php">http://www.mikrotik.com/thedude.php</ulink>.</para>
       </section>
 
       <section>
@@ -6637,8 +6628,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </itemizedlist>
 
         <para>Домашняя страница проекта: <ulink
-        url="http://www.ireasoning.com/mibbrowser.shtml">MIB
-        Browser</ulink>.</para>
+        url="http://www.ireasoning.com/mibbrowser.shtml">
+        http://www.ireasoning.com/mibbrowser.shtml</ulink>.</para>
       </section>
 
       <section>
@@ -6668,7 +6659,8 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         </itemizedlist>
 
         <para>Домашняя страница проекта: <ulink
-        url="http://www.opennms.org/index.php/Main_Page">OpenNMS</ulink>.</para>
+        url="http://www.opennms.org/index.php/Main_Page">
+        http://www.opennms.org/index.php/Main_Page</ulink>.</para>
       </section>
     </section>
   </chapter>
@@ -6750,7 +6742,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         <para>Допустим, мы хотим организовать передачу VLAN-трафика,
         поступающего на trunk-порт одного устройства, через SHDSL-канал, а на
         втором устройстве, в зависимости от номера VLAN ID, передавать трафик
-        (со снятым тегом VLAN) на соответствующий ethernet -порт.</para>
+        (со снятым тегом VLAN) на соответствующий ethernet-порт.</para>
 
         <figure>
           <title>Структурная схема</title>
@@ -7101,7 +7093,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
 
         <para>В данном примере в сети работает два маршрутизатора, с номерами
         032 и 033 и адресами 10.0.0.2 и 10.0.0.1 соответственно. К каждому
-        маршрутизатору подключёны аналоговые телефоны, маршрутизаторы между
+        маршрутизатору подключены аналоговые телефоны, маршрутизаторы между
         собой соединены по любой технологии — Ethernet, SHDSL или Е1.</para>
 
         <para>Для настройки IP-телефонии необходимо внести данные в таблицы
@@ -7113,7 +7105,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         маршрутизаторах одной сети и приведена ниже.</para>
 
         <table align="center" frame="all">
-          <title>Таблица маршрутизации</title>
+          <title>Таблица маршрутизации VoIP</title>
 
           <tgroup cols="3">
             <thead>
@@ -7524,7 +7516,7 @@ daemon.info rs232-tcpext ttyRS0  connect: Send modem state: 0x03, DTR:1 DSR:1 RT
         представлено ниже.</para>
 
         <table align="center" frame="all">
-          <title>Таблица маршрутизации</title>
+          <title>Таблица маршрутизации VoIP</title>
 
           <tgroup cols="3">
             <thead>
