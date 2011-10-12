@@ -91,19 +91,19 @@ the location of this file.
 -->
         <font metrics-url="./fonts/xml/arial.xml" kerning="yes" embed-url="./fonts/ttf/arial.ttf">
           <font-triplet name="serif" style="normal" weight="normal"/>
-          <font-triplet name="serif" style="normal" weight="bold"/>
-          <font-triplet name="serif" style="italic" weight="normal"/>
-          <font-triplet name="serif" style="italic" weight="bold"/>
           <font-triplet name="sans-serif" style="normal" weight="normal"/>
-          <font-triplet name="sans-serif" style="normal" weight="bold"/>
-          <font-triplet name="sans-serif" style="italic" weight="normal"/>
-          <font-triplet name="sans-serif" style="italic" weight="bold"/>
         </font>
-        <font metrics-url="./fonts/xml/cour.xml" kerning="yes" embed-url="./fonts/ttf/cour.ttf">
-          <font-triplet name="monospace" style="normal" weight="normal"/>
-          <font-triplet name="monospace" style="normal" weight="bold"/>
-          <font-triplet name="monospace" style="italic" weight="normal"/>
-          <font-triplet name="monospace" style="italic" weight="bold"/>
+        <font metrics-url="./fonts/xml/ariali.xml" kerning="yes" embed-url="./fonts/ttf/ariali.ttf">
+          <font-triplet name="serif" style="italic" weight="normal"/>
+          <font-triplet name="sans-serif" style="italic" weight="normal"/>
+        </font>
+        <font metrics-url="./fonts/xml/arialbd.xml" kerning="yes" embed-url="./fonts/ttf/arialbd.ttf">
+          <font-triplet name="serif" style="normal" weight="bold"/>
+          <font-triplet name="sans-serif" style="normal" weight="bold"/>
+        </font>
+        <font metrics-url="./fonts/xml/arialbi.xml" kerning="yes" embed-url="./fonts/ttf/arialbi.ttf">
+          <font-triplet name="serif" style="italic" weight="bold"/>
+          <font-triplet name="sans-serif" style="italic" weight="bold"/>
         </font>
       </fonts>
 
