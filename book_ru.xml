@@ -3005,7 +3005,7 @@ Programming flash ..............................................................
           <itemizedlist>
             <listitem>
               <para><emphasis>Monitoring</emphasis> — процент времени, в
-              течении которого мониторился канал.</para>
+              течение которого мониторился канал.</para>
             </listitem>
           </itemizedlist>
         </section>
@@ -4480,7 +4480,7 @@ null-modem:
 
           <listitem>
             <para><emphasis>Max age</emphasis> — если от какого-либо бриджа в
-            течении <emphasis>max age</emphasis> времени не приходит пакет
+            течение <emphasis>max age</emphasis> времени не приходит пакет
             hello, бридж считается потерянным. В этом случае возможна
             перестройка маршрутов. Указывается в секундах. Используется в
             STP.</para>
