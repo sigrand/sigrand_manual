@@ -34,12 +34,24 @@
       бриджинг, объединение каналов (бондинг), VLAN, QoS, VoIP и
       другие.</para>
     </abstract>
+    <cover>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="img/Sigrand_logo_blue.png"/>
+        </imageobject>
+      </mediaobject>
+      <mediaobject>
+        <imageobject>
+          <imagedata fileref="img/SG-17R_model.png"/>
+        </imageobject>
+      </mediaobject>
+    </cover>
   </bookinfo>
 
   <chapter>
     <title>Краткое описание маршрутизатора SG-17R</title>
 
-    <para>Маршрутизатор SG-17R - многофункциональное устройство, включающее в
+    <para>Маршрутизатор SG-17R — многофункциональное устройство, включающее в
     себя IP маршрутизатор, DSL модем, E1/DSL мультиплексор и VoIP шлюз.
     Маршрутизатор SG-17R имеет модульную архитектуру, включающую модули Е1,
     SHDSL, RS-232 и VoIP (FXO, FXS, VF), что позволяет использовать различные
@@ -141,9 +153,8 @@
   <chapter>
     <title>Комплект поставки</title>
 
-    <section>
-      <title>Маршрутизарор SG-17R поставляется в следующей
-      комплектации:</title>
+      <para>Маршрутизарор SG-17R поставляется в следующей
+      комплектации:</para>
 
       <itemizedlist>
         <listitem>
@@ -172,7 +183,6 @@
           <para>Гарантийный талон.</para>
         </listitem>
       </itemizedlist>
-    </section>
   </chapter>
 
   <chapter id="hw">
