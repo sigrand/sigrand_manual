@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
-"/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
-<book lang="ru">
-  <bookinfo>
-    <title>Руководство пользователя SG-17R</title>
-
+<book version="5.0" xml:lang="ru" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <title>Руководство пользователя SG-17R</title>
+  <info>
     <copyright>
       <year>2007-2011</year>
-
       <holder>ООО "Сигранд"</holder>
     </copyright>
-
-    <author>
-       Казанцев А.В.
-    </author>
 
     <legalnotice>
       <para>Все торговые марки, знаки и зарегистрированные права на
@@ -34,19 +32,7 @@
       бриджинг, объединение каналов (бондинг), VLAN, QoS, VoIP и
       другие.</para>
     </abstract>
-    <cover>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="img/Sigrand_logo_blue.png"/>
-        </imageobject>
-      </mediaobject>
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="img/SG-17R_model.png"/>
-        </imageobject>
-      </mediaobject>
-    </cover>
-  </bookinfo>
+  </info>
 
   <chapter>
     <title>Краткое описание маршрутизатора SG-17R</title>
@@ -153,45 +139,43 @@
   <chapter>
     <title>Комплект поставки</title>
 
-      <para>Маршрутизарор SG-17R поставляется в следующей
-      комплектации:</para>
+    <para>Маршрутизарор SG-17R поставляется в следующей комплектации:</para>
 
-      <itemizedlist>
-        <listitem>
-          <para>Шасси маршрутизатора;</para>
-        </listitem>
+    <itemizedlist>
+      <listitem>
+        <para>Шасси маршрутизатора;</para>
+      </listitem>
 
-        <listitem>
-          <para>При типе питания DC 36-72В — ответная часть разъёма
-          питания;</para>
-        </listitem>
+      <listitem>
+        <para>При типе питания DC 36-72В — ответная часть разъёма
+        питания;</para>
+      </listitem>
 
-        <listitem>
-          <para>При типе питания 220В/50Гц — сетевой шнур питания;</para>
-        </listitem>
+      <listitem>
+        <para>При типе питания 220В/50Гц — сетевой шнур питания;</para>
+      </listitem>
 
-        <listitem>
-          <para>Кабель для подключения терминала DB-9M — DB-9F;</para>
-        </listitem>
+      <listitem>
+        <para>Кабель для подключения терминала DB-9M — DB-9F;</para>
+      </listitem>
 
-        <listitem>
-          <para>Компакт-диск с программным обеспечением и
-          документацией;</para>
-        </listitem>
+      <listitem>
+        <para>Компакт-диск с программным обеспечением и документацией;</para>
+      </listitem>
 
-        <listitem>
-          <para>Гарантийный талон.</para>
-        </listitem>
-      </itemizedlist>
+      <listitem>
+        <para>Гарантийный талон.</para>
+      </listitem>
+    </itemizedlist>
   </chapter>
 
-  <chapter id="hw">
+  <chapter xml:id="hw">
     <title>Техническое описание</title>
 
-    <section id="hw.desc">
+    <section xml:id="hw.desc">
       <title>Характеристики и параметры устройства</title>
 
-      <section id="hw.desc.common">
+      <section xml:id="hw.desc.common">
         <title>Параметры базовой платформы</title>
 
         <itemizedlist>
@@ -246,7 +230,7 @@
       </section>
 
       <section>
-        <title id="hw.desc.rs232.title">Параметры интерфейса RS-232C
+        <title xml:id="hw.desc.rs232.title">Параметры интерфейса RS-232C
         (консольный порт)</title>
 
         <itemizedlist>
@@ -269,7 +253,7 @@
         </itemizedlist>
       </section>
 
-      <section id="hw.desc.shdsl">
+      <section xml:id="hw.desc.shdsl">
         <title>Параметры линейного интерфейса SHDSL (модули
         расширения)</title>
 
@@ -327,7 +311,7 @@
         </itemizedlist>
       </section>
 
-      <section id="hw.desc.e1">
+      <section xml:id="hw.desc.e1">
         <title>Параметры интерфейса Е1 (модули расширения)</title>
 
         <itemizedlist>
@@ -420,8 +404,8 @@
         </itemizedlist>
       </section>
 
-      <section id="hw.desc.voip">
-        <title id="hw.desc.voip.title">Параметры несущего модуля для
+      <section xml:id="hw.desc.voip">
+        <title xml:id="hw.desc.voip.title">Параметры несущего модуля для
         интерфейсов VoIP (модуль расширения)</title>
 
         <itemizedlist>
@@ -475,7 +459,9 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Используемые кодеки</emphasis></para>
+            <para>
+              <emphasis>Используемые кодеки</emphasis>
+            </para>
 
             <itemizedlist>
               <listitem>
@@ -530,7 +516,9 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Используемые кодеки</emphasis></para>
+            <para>
+              <emphasis>Используемые кодеки</emphasis>
+            </para>
 
             <itemizedlist>
               <listitem>
@@ -568,8 +556,9 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Параметры четырёхпроводного
-            окончания</emphasis></para>
+            <para>
+              <emphasis>Параметры четырёхпроводного окончания</emphasis>
+            </para>
 
             <itemizedlist>
               <listitem>
@@ -607,8 +596,9 @@
 
         <itemizedlist>
           <listitem>
-            <para><emphasis>Параметры двухпроводного
-            окончания</emphasis></para>
+            <para>
+              <emphasis>Параметры двухпроводного окончания</emphasis>
+            </para>
 
             <itemizedlist>
               <listitem>
@@ -674,10 +664,10 @@
       </itemizedlist>
     </section>
 
-    <section id="hw.shdsl.details">
+    <section xml:id="hw.shdsl.details">
       <title>Характеристики SHDSL</title>
 
-      <section id="hw.shdsl.details.speed">
+      <section xml:id="hw.shdsl.details.speed">
         <title>Дальность связи и скорость соединения</title>
 
         <section>
@@ -928,10 +918,12 @@
             </tgroup>
           </table>
 
-          <para><note>
+          <para>
+            <note>
               <para>(*) - не все данные получены экспериментальным
               путем</para>
-            </note></para>
+            </note>
+          </para>
         </section>
       </section>
 
@@ -990,14 +982,18 @@
         <figure>
           <title>Разъём RJ-45</title>
 
-          <graphic fileref="img/hw-rj45.png" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/hw-rj45.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
       </section>
     </section>
 
-    <section id="hw.sg-17r">
-      <title id="SlotD.title">Внешний вид, назначение индикаторов и разъёмов
-      SG-17R</title>
+    <section xml:id="hw.sg-17r">
+      <title xml:id="SlotD.title">Внешний вид, назначение индикаторов и
+      разъёмов SG-17R</title>
 
       <para>Маршрутизатор Sigrand SG-17R поставляется в форм-факторе 19" для
       монтажа в коммуникационную стойку. Вид передней панели без установленных
@@ -1006,7 +1002,11 @@
       <figure>
         <title>Передняя панель без сменных модулей</title>
 
-        <graphic fileref="img/chassis_front.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/chassis_front.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <figure>
@@ -1031,7 +1031,7 @@
             интерфейс будет виден в системе и веб-интерфейсе и будет доступен
             для настройки, но он не будет иметь возможности передавать сетевой
             трафик (IP-трафик). Связано это с отсутствием поддержки DMA для
-            данного слота.<emphasis> </emphasis></para>
+            данного слота.<emphasis /></para>
           </important>
 
           <note>
@@ -1116,7 +1116,11 @@
       <figure>
         <title>Вид задней панели маршрутизатора с питанием 36-72В DC</title>
 
-        <graphic fileref="img/chassis_back_DC.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/chassis_back_DC.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -1132,7 +1136,11 @@
       <figure>
         <title>Вид задней панели маршрутизатора с питанием 220В/50Гц</title>
 
-        <graphic fileref="img/chassis_back_AC.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/chassis_back_AC.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -1148,19 +1156,27 @@
       <figure>
         <title>Передняя панель с установленными модулями</title>
 
-        <graphic fileref="img/chassis_front_full.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/chassis_front_full.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
         <listitem>
-          <para><emphasis>Модуль MR-17V8 — <emphasis>модуль с установленными
-          субмодулями VoIP (до четырех двухканальных субмодулей FXS, FXO,
-          VF).</emphasis></emphasis></para>
+          <para>
+            <emphasis>Модуль MR-17V8 — <emphasis>модуль с установленными
+            субмодулями VoIP (до четырех двухканальных субмодулей FXS, FXO,
+            VF).</emphasis></emphasis>
+          </para>
         </listitem>
 
         <listitem>
-          <para><emphasis>Модуль MR-17G8 — <emphasis>восьмиканальный
-          модуль</emphasis>.</emphasis></para>
+          <para>
+            <emphasis>Модуль MR-17G8 — <emphasis>восьмиканальный
+            модуль</emphasis>.</emphasis>
+          </para>
         </listitem>
 
         <listitem>
@@ -1175,7 +1191,7 @@
       </itemizedlist>
     </section>
 
-    <section id="hw.modules">
+    <section xml:id="hw.modules">
       <title>Сменные интерфейсы</title>
 
       <para>Функциональные возможности маршрутизатора SG-17R можно расширять
@@ -1183,7 +1199,7 @@
       SHDSL, E1, RS-232 и VoIP (FXO, FXS, VF - каналы тональной
       частоты).</para>
 
-      <section id="hw.modules.dsl">
+      <section xml:id="hw.modules.dsl">
         <title>Модули SHDSL</title>
 
         <para>Существует несколько типов модулей SHDSL:</para>
@@ -1214,28 +1230,44 @@
           <title>Модуль на один канал SHDSL без дистанционного питания
           (MR-17H1)</title>
 
-          <graphic fileref="img/Module_h1.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_h1.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <figure>
           <title>Модуль на один канал SHDSL с дистанционным питанием
           (MR-17H1P2)</title>
 
-          <graphic fileref="img/Module_h1p.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_h1p.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <figure>
           <title>Модуль на два канала SHDSL без дистанционного питания
           (MR-17H2)</title>
 
-          <graphic fileref="img/Module_h2.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_h2.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <figure>
           <title>Модуль на два канала SHDSL с дистанционным питанием
           (MR-17H2P2)</title>
 
-          <graphic fileref="img/Module_h2p.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_h2p.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -1245,7 +1277,9 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Индикаторы SHDSL:</emphasis></para>
+            <para>
+              <emphasis>Индикаторы SHDSL:</emphasis>
+            </para>
 
             <itemizedlist>
               <listitem>
@@ -1293,9 +1327,9 @@
                     <para><emphasis>Горит</emphasis> — нарушен баланс
                     дистанционного питания относительно земли. В норме на
                     одном проводе плюс 120 В, на другом — минус 120 В. Если
-                    имеется перекос больше 30 В, зажигается индикатор
-                    UNB. Причиной перекоса может быть утечка либо замыкание
-                    одного из проводов на "землю";</para>
+                    имеется перекос больше 30 В, зажигается индикатор UNB.
+                    Причиной перекоса может быть утечка либо замыкание одного
+                    из проводов на "землю";</para>
                   </listitem>
 
                   <listitem>
@@ -1327,7 +1361,7 @@
         </itemizedlist>
       </section>
 
-      <section id="hw.modules.e1">
+      <section xml:id="hw.modules.e1">
         <title>Модули Е1</title>
 
         <para>Существует несколько типов модулей Е1:</para>
@@ -1353,13 +1387,21 @@
         <figure>
           <title>Модуль на один канал E1 (MR-17G)</title>
 
-          <graphic fileref="img/Module_g1.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_g1.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <figure>
           <title>Модуль на два канала E1 (MR-17G2)</title>
 
-          <graphic fileref="img/Module_g2.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/Module_g2.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <figure>
@@ -1389,7 +1431,9 @@
           </listitem>
 
           <listitem>
-            <para><emphasis>Индикаторы E1:</emphasis></para>
+            <para>
+              <emphasis>Индикаторы E1:</emphasis>
+            </para>
 
             <itemizedlist>
               <listitem>
@@ -1509,20 +1553,24 @@
         </itemizedlist>
       </section>
 
-      <section id="hw.modules.install">
+      <section xml:id="hw.modules.install">
         <title>Установка сменных интерфейсов</title>
 
         <important>
           <para>Для установки модулей можно использовать слоты 0, 1, 2, 3
           маршрутизатора (см "Важно" в разделе <link endterm="SlotD.title"
-          linkend="hw.sg-17r"></link> ограничения для использования слота
+          linkend="hw.sg-17r" /> ограничения для использования слота
           3).</para>
         </important>
 
         <figure>
           <title>Передняя панель без сменных модулей</title>
 
-          <graphic fileref="img/chassis_front.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/chassis_front.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Установка модуля выполняется следующим образом:</para>
@@ -1556,8 +1604,8 @@
   <chapter>
     <title>Начало работы с маршрутизатором</title>
 
-    <section id="firstboot">
-      <title id="firstboot.title">Подготовка к первому включению</title>
+    <section xml:id="firstboot">
+      <title xml:id="firstboot.title">Подготовка к первому включению</title>
 
       <important>
         <para>Удостоверьтесь в отсутствии внешних повреждений, возможно,
@@ -1578,7 +1626,7 @@
 
       <para>Если требуется управление маршрутизатором по консольному
       интерфейсу, например, для обновления прошивки маршрутизатора (см. <link
-      endterm="update.title" linkend="update"></link>), или для диагностики
+      endterm="update.title" linkend="update" />), или для диагностики
       процесса загрузки, соедините консольный порт маршрутизатора с
       последовательным портом компьютера с помощью терминального
       кабеля.</para>
@@ -1597,7 +1645,7 @@
       расположенным на лицевой панели.</para>
     </section>
 
-    <section id="bootloader">
+    <section xml:id="bootloader">
       <title>Загрузчик</title>
 
       <para>После включения питания на экран программы эмулятора терминала
@@ -1677,15 +1725,15 @@ Enter your option:</screen>
       </itemizedlist>
     </section>
 
-    <section id="update">
-      <title id="update.title">Обновление прошивки маршрутизатора</title>
+    <section xml:id="update">
+      <title xml:id="update.title">Обновление прошивки маршрутизатора</title>
 
       <important>
         <para>Перед прошивкой следует сохранить конфигурацию (см. раздел <link
-        endterm="cfg.title" linkend="cfg"></link>), так как установка новой
+        endterm="cfg.title" linkend="cfg" />), так как установка новой
         прошивки вернёт все параметры в исходное состояние, а также сбросит
         установленные производителем MAC-адреса (см. раздел <link
-        endterm="mac-address.title" linkend="mac-address"></link>).</para>
+        endterm="mac-address.title" linkend="mac-address" />).</para>
       </important>
 
       <para>Обновление прошивки выполняется через консольный интерфейс RS-232,
@@ -1707,19 +1755,17 @@ Enter your option:</screen>
 
       <para>Если используется локальный TFTP-сервер, то после его настройки
       необходимо в каталог, являющийся для него (TFTP-сервера) корневым,
-      скопировать файл прошивки, который можно скачать с веб-сайта <ulink
-      url="http://www.sigrand.ru">http://www.sigrand.ru</ulink>. Последняя версия
-      прошивки находится по адресу: <ulink
-      url="http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/">http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/</ulink>
-      </para>
+      скопировать файл прошивки, который можно скачать с веб-сайта
+      http://www.sigrand.ru/ Последняя версия прошивки находится по адресу:
+      http://sigrand.ru:8280/downloads/firmware_sg17-r-cp1/</para>
 
       <para>Как подготовить маршрутизатор для управления по консольному
       интерфейсу, написано в разделе <link endterm="firstboot.title"
-      linkend="firstboot"></link>. После запуска программы эмуляции терминала
-      и установки соответствующих настроек порта нужно включить маршрутизатор.
-      В окне программы выведется информация о маршрутизаторе с предложением
+      linkend="firstboot" />. После запуска программы эмуляции терминала и
+      установки соответствующих настроек порта нужно включить маршрутизатор. В
+      окне программы выведется информация о маршрутизаторе с предложением
       войти в меню загрузчика (см. раздел <link endterm="firstboot.title"
-      linkend="bootloader"></link>).</para>
+      linkend="bootloader" />).</para>
 
       <para>Пример конфигурации приведен ниже:</para>
 
@@ -1788,14 +1834,16 @@ Programming flash ..............................................................
       ли сервер TFTP соединения с маршрутизатора.</para>
     </section>
 
-    <section id="update.loader">
-      <title id="update.loader.title">Режим эксперта</title>
+    <section xml:id="update.loader">
+      <title xml:id="update.loader.title">Режим эксперта</title>
 
       <para>В режиме эксперта можно обновить загрузчик маршрутизатора и
       осуществить некоторые действия с flash-памятью маршрутизатора.</para>
 
       <important>
-         Используейте режим эксперта только если вы понимаете что делаете! Эти действия могут привести маршрутизатор в нерабочее состояние!
+        <para>Используейте режим эксперта только если вы понимаете что
+        делаете! Эти действия могут привести маршрутизатор в нерабочее
+        состояние!</para>
       </important>
 
       <para>Включение режима эксперта осуществялется в меню параметров
@@ -1803,8 +1851,8 @@ Programming flash ..............................................................
       поддержки.</para>
     </section>
 
-    <section id="mac-address">
-      <title id="mac-address.title">MAC-адреса сетевых интерфейсов</title>
+    <section xml:id="mac-address">
+      <title xml:id="mac-address.title">MAC-адреса сетевых интерфейсов</title>
 
       <para>MAC-адреса для сетевых интерфейсов (Ethernet, SHDSL, E1) хранятся
       в конфигурационном файле со всеми остальными настройками
@@ -1858,11 +1906,11 @@ Programming flash ..............................................................
       <para>Так как MAC-адреса хранятся в конфигурационном файле, после
       перепрошивки они будут потеряны. Чтобы этого не произошло, перед
       перепрошивкой следует сохранить конфигурацию маршрутизатора (см. раздел
-      <link endterm="cfg.title" linkend="cfg"></link>), а затем произвести её
+      <link endterm="cfg.title" linkend="cfg" />), а затем произвести её
       восстановление.</para>
     </section>
 
-    <section id="device-manage">
+    <section xml:id="device-manage">
       <title>Управление устройством</title>
 
       <para>В заводской конфигурации и после обновления прошивки на
@@ -1875,7 +1923,7 @@ Programming flash ..............................................................
       (192.168.2.0/24), к примеру, 192.168.2.1, с сетевой маской
       255.255.255.0.</para>
 
-      <section id="web">
+      <section xml:id="web">
         <title>Управление с помощью веб-интерфейса</title>
 
         <para>Настройка маршрутизатора выполняется через веб-интерфейс любым
@@ -1911,7 +1959,11 @@ Programming flash ..............................................................
         <figure>
           <title>Страница с общей информацией</title>
 
-          <graphic fileref="img/wf2-intro.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-intro.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>На представленной странице выделена строка статуса, которая
@@ -1937,10 +1989,12 @@ Programming flash ..............................................................
             <para><emphasis>tasks</emphasis> — число выполняемых или стоящих в
             очереди на выполнение задач;</para>
 
-            <para><warning>
+            <para>
+              <warning>
                 <para>Нельзя выключать маршрутизатор при ненулевом значении
                 tasks.</para>
-              </warning></para>
+              </warning>
+            </para>
           </listitem>
 
           <listitem>
@@ -1951,7 +2005,7 @@ Programming flash ..............................................................
         </itemizedlist>
       </section>
 
-      <section id="console">
+      <section xml:id="console">
         <title>Управление через консольный интерфейс</title>
 
         <para>Для настройки маршрутизатора через консольный интерфейс
@@ -2008,7 +2062,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Протокол</entry>
 
@@ -2016,7 +2070,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Адрес</entry>
 
@@ -2024,7 +2078,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Логин</entry>
 
@@ -2032,7 +2086,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Пароль</entry>
 
@@ -2044,7 +2098,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Протокол</entry>
 
@@ -2052,7 +2106,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Логин</entry>
 
@@ -2060,7 +2114,7 @@ Programming flash ..............................................................
               </row>
 
               <row>
-                <entry></entry>
+                <entry />
 
                 <entry>Пароль</entry>
 
@@ -2073,10 +2127,10 @@ Programming flash ..............................................................
     </section>
   </chapter>
 
-  <chapter id="system">
+  <chapter xml:id="system">
     <title>Системные настройки и информация</title>
 
-    <section id="language">
+    <section xml:id="language">
       <title>Язык веб-интерфейса</title>
 
       <para>Установка языка веб-интерфейса выполняется на странице
@@ -2085,11 +2139,15 @@ Programming flash ..............................................................
       <figure>
         <title>Установка языка веб-интерфейса</title>
 
-        <graphic fileref="img/wf2-language.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-language.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="hostname">
+    <section xml:id="hostname">
       <title>Имя маршрутизатора</title>
 
       <para>Смена имени маршрутизатора (hostname) может быть выполнена на
@@ -2098,11 +2156,15 @@ Programming flash ..............................................................
       <figure>
         <title>Смена имени маршрутизатора</title>
 
-        <graphic fileref="img/wf2-general.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-general.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="passwd">
+    <section xml:id="passwd">
       <title>Установка пароля</title>
 
       <important>
@@ -2116,7 +2178,11 @@ Programming flash ..............................................................
       <figure>
         <title>Смена пароля</title>
 
-        <graphic fileref="img/wf2-security.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-security.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para><emphasis>Webface password</emphasis> — пароль для доступа к
@@ -2125,7 +2191,7 @@ Programming flash ..............................................................
       (пользователь root).</para>
     </section>
 
-    <section id="dns">
+    <section xml:id="dns">
       <title>Настройка DNS</title>
 
       <para>Установка адреса DNS-сервера, к которому будет обращаться
@@ -2135,11 +2201,15 @@ Programming flash ..............................................................
       <figure>
         <title>Настройка DNS</title>
 
-        <graphic fileref="img/wf2-dns.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dns.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="time">
+    <section xml:id="time">
       <title>Синхронизация времени</title>
 
       <para>Настройки для синхронизации внутренних часов устройства находятся
@@ -2149,7 +2219,11 @@ Programming flash ..............................................................
       <figure>
         <title>Синхронизация времени</title>
 
-        <graphic fileref="img/wf2-time.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-time.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -2177,15 +2251,17 @@ Programming flash ..............................................................
           <para><emphasis>Auto daylight-saving time</emphasis> —
           автоматический переход на летнее/зимнее время.</para>
 
-          <para><note>
+          <para>
+            <note>
               <para>C 2011 года в России переход на летнее/зимнее время не
               используется.</para>
-            </note></para>
+            </note>
+          </para>
         </listitem>
       </itemizedlist>
     </section>
 
-    <section id="logging">
+    <section xml:id="logging">
       <title>Логирование событий</title>
 
       <para>Из-за особенностей используемой встроенной памяти (flash-память),
@@ -2198,7 +2274,11 @@ Programming flash ..............................................................
       <figure>
         <title>Логирование</title>
 
-        <graphic fileref="img/wf2-logging.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-logging.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -2235,7 +2315,7 @@ Programming flash ..............................................................
       </note>
     </section>
 
-    <section id="tools">
+    <section xml:id="tools">
       <title>Утилиты</title>
 
       <para>В веб-интерфейсе на странице System/Tools доступны различные
@@ -2265,15 +2345,15 @@ Programming flash ..............................................................
       </itemizedlist>
     </section>
 
-    <section id="reboot">
+    <section xml:id="reboot">
       <title>Перезагрузка</title>
 
       <para>Перезагрузку устройства можно выполнить нажав на кнопку Reboot на
       странице System/Reboot.</para>
     </section>
 
-    <section id="cfg">
-      <title id="cfg.title">Сохранение/восстановление конфигурации</title>
+    <section xml:id="cfg">
+      <title xml:id="cfg.title">Сохранение/восстановление конфигурации</title>
 
       <para>Веб-интерфейс позволяет сохранять текущую, восстанавливать
       сохраненную или заводскую конфигурацию маршрутизатора.</para>
@@ -2281,10 +2361,14 @@ Programming flash ..............................................................
       <para>Сохранение конфигурации выполняется на странице
       System/Configuration/Backup:</para>
 
-      <figure id="backup">
+      <figure xml:id="backup">
         <title>Сохранение конфигурации</title>
 
-        <graphic fileref="img/wf2-cfg-backup.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-cfg-backup.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>При нажатии на кнопку Backup будет предложено сохранить файл
@@ -2298,23 +2382,31 @@ Programming flash ..............................................................
       <para>Восстановление конфигурации выполняется на странице
       System/Configuration/Restore:</para>
 
-      <figure id="restore">
+      <figure xml:id="restore">
         <title>Восстановление конфигурации</title>
 
-        <graphic fileref="img/wf2-cfg-restore.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-cfg-restore.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>На вкладке System/Configuration/Default можно восстановить
       заводскую конфигурацию нажатием на кнопку Restore.</para>
 
-      <figure id="cfg-default">
+      <figure xml:id="cfg-default">
         <title>Восстановление заводской конфигурации</title>
 
-        <graphic fileref="img/wf2-cfg-default.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-cfg-default.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="upload">
+    <section xml:id="upload">
       <title>Загрузка файлов</title>
 
       <para>В некоторых случаях может потребоваться загрузить файл на
@@ -2326,7 +2418,11 @@ Programming flash ..............................................................
       <figure>
         <title>Загрузка файла</title>
 
-        <graphic fileref="img/wf2-upload-file.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-upload-file.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -2342,7 +2438,7 @@ Programming flash ..............................................................
       </itemizedlist>
     </section>
 
-    <section id="web-console">
+    <section xml:id="web-console">
       <title>Консоль</title>
 
       <para>При отсутствии или затруднённом доступе к консоли устройства (SSH
@@ -2362,28 +2458,32 @@ Programming flash ..............................................................
       <figure>
         <title>Выполнение в консоли команды ip addr</title>
 
-        <graphic fileref="img/wf2-console.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-console.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
   </chapter>
 
-  <chapter id="hardware">
+  <chapter xml:id="hardware">
     <title>Настройка оборудования</title>
 
-    <section id="modules.settings">
-      <title id="modules.settings.title">Принцип хранения настроек для
+    <section xml:id="modules.settings">
+      <title xml:id="modules.settings.title">Принцип хранения настроек для
       модулей</title>
 
-      <para>В текущих версиях <emphasis> </emphasis>прошивок аппаратные
-      настройки привязываются к номеру слота, а сетевые, в случае изменения
-      имени интерфейса, копируются. То есть, если при добавлении нового модуля
-      имя интерфейса старого модуля изменилось с <emphasis>dsl0</emphasis> на
+      <para>В текущих версиях <emphasis />прошивок аппаратные настройки
+      привязываются к номеру слота, а сетевые, в случае изменения имени
+      интерфейса, копируются. То есть, если при добавлении нового модуля имя
+      интерфейса старого модуля изменилось с <emphasis>dsl0</emphasis> на
       <emphasis>dsl1</emphasis>, то сетевые настройки будут скопированы с dsl0
       на dsl1.</para>
 
       <para>Основное отличие хранения между аппаратными и сетевыми настройками
       в том, что если модуль временно извлечь и включить маршрутизатор,
-      сетевые настройки <emphasis>удалятся</emphasis>, а аппаратные — 
+      сетевые настройки <emphasis>удалятся</emphasis>, а аппаратные —
       <emphasis>останутся</emphasis>. Таким образом, при последующем
       возвращении модуля и включении маршрутизатора, модуль будет
       сконфигурирован по-старому, но без сетевых настроек.</para>
@@ -2404,7 +2504,7 @@ Programming flash ..............................................................
       технических ограничений.</para>
     </section>
 
-    <section id="adm5120sw">
+    <section xml:id="adm5120sw">
       <title>Настройка встроенного Ethernet коммутатора</title>
 
       <para>Настройка коммутатора осуществляется на странице Hardware/Switch,
@@ -2417,7 +2517,11 @@ Programming flash ..............................................................
       <figure>
         <title>Настройка встроенного коммутатора</title>
 
-        <graphic fileref="img/wf2-switch.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-switch.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>В стандартной конфигурации каждый физический порт соответствует
@@ -2432,7 +2536,7 @@ Programming flash ..............................................................
       </note>
     </section>
 
-    <section id="linkdeps">
+    <section xml:id="linkdeps">
       <title>Установление зависимостей между состояниями интерфейсов</title>
 
       <para>Для создания сложных взаимосвязей между интерфейсами была
@@ -2442,7 +2546,11 @@ Programming flash ..............................................................
       <figure>
         <title>Установление зависимостей между состояниями интерфейсов</title>
 
-        <graphic fileref="img/wf2-linkdeps.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-linkdeps.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>В данной конфигурации установлено, что при пропадании линка на
@@ -2455,7 +2563,7 @@ Programming flash ..............................................................
       </note>
     </section>
 
-    <section id="dsl">
+    <section xml:id="dsl">
       <title>Модули интерфейса SHDSL</title>
 
       <section>
@@ -2466,12 +2574,12 @@ Programming flash ..............................................................
         интерфейса SHDSL выполняется на странице
         Hardware/SHDSL/dsl*/Settings.</para>
 
-        <section id="dsl.mr17h">
+        <section xml:id="dsl.mr17h">
           <title>Настройки для модулей SHDSL</title>
 
           <important>
             <para>Прочтите раздел про <link endterm="modules.settings.title"
-            linkend="modules.settings"></link>.</para>
+            linkend="modules.settings" />.</para>
           </important>
 
           <important>
@@ -2479,7 +2587,7 @@ Programming flash ..............................................................
             установленному в слот <emphasis>3</emphasis>, то он может быть
             использован только для работы в режиме
             <emphasis>мультиплексирования</emphasis>. Этот сетевой интерфейс
-            не имеет возможности передавать сетевой трафик (IP трафик). 
+            не имеет возможности передавать сетевой трафик (IP трафик).
             Связано это с отсутствием поддержки DMA для слота 3.</para>
           </important>
 
@@ -2494,7 +2602,11 @@ Programming flash ..............................................................
           <figure>
             <title>Настройка SHDSL (MR17H)</title>
 
-            <graphic fileref="img/wf2-shdsl-mr17h-cfg.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-shdsl-mr17h-cfg.png" width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <itemizedlist>
@@ -2522,7 +2634,7 @@ Programming flash ..............................................................
                   параметров интерфейса и линии связи в целом. Подробная
                   информация по настройке и использованию этого режима
                   доступна в разделе <link endterm="dsl-eoc.title"
-                  linkend="dsl-eoc"></link>.</para>
+                  linkend="dsl-eoc" />.</para>
                 </listitem>
               </itemizedlist>
             </listitem>
@@ -2535,15 +2647,15 @@ Programming flash ..............................................................
             <listitem>
               <para><emphasis>Coding</emphasis> — метод кодирования. Подробнее
               см. раздел <link endterm="hw.shdsl.details.tcpam.title"
-              linkend="hw.shdsl.details.tcpam"></link>.</para>
+              linkend="hw.shdsl.details.tcpam" />.</para>
             </listitem>
 
             <listitem>
               <para><emphasis>Rate</emphasis> — скорость передачи, кбит/c. В
               выпадающем списке приведены не все доступные скорости — для
               ввода произвольной скорости следует выбрать значение
-              <emphasis>other</emphasis>, что приведёт к появлению поля
-              ввода. После сохранения, введённое значение будет округлено до
+              <emphasis>other</emphasis>, что приведёт к появлению поля ввода.
+              После сохранения, введённое значение будет округлено до
               ближайшего корректного значения скорости.</para>
             </listitem>
 
@@ -2560,8 +2672,8 @@ Programming flash ..............................................................
             <listitem>
               <para><emphasis>Clock mode</emphasis> — режим синхронизации. По
               умолчанию используется режим <emphasis>sync</emphasis>
-              (синхронный). <emphasis> </emphasis>Следует удостовериться, что
-              все устройства, находящееся на линии связи (регенераторы,
+              (синхронный). <emphasis />Следует удостовериться, что все
+              устройства, находящееся на линии связи (регенераторы,
               маршрутизатор), могут использовать данный режим.</para>
             </listitem>
 
@@ -2603,7 +2715,7 @@ Programming flash ..............................................................
           </itemizedlist>
         </section>
 
-        <section id="dsl.status">
+        <section xml:id="dsl.status">
           <title>Установка и статус соединения</title>
 
           <para>После сохранения настроек через некоторый промежуток времени
@@ -2618,8 +2730,12 @@ Programming flash ..............................................................
             <title>Информация о неустановленном соединении SHDSL
             (MR17H)</title>
 
-            <graphic fileref="img/wf2-shdsl-mr17h-status-offline.png"
-                     width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-shdsl-mr17h-status-offline.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <itemizedlist>
@@ -2630,13 +2746,12 @@ Programming flash ..............................................................
             </listitem>
 
             <listitem>
-              <para><emphasis>Power balance</emphasis> — баланс
-              дистанционного питания относительно земли. В норме на
-              одном проводе плюс 120 В, на другом — минус 120 В. Если 
-              имеется перекос перекос больше 30 В, зажигается индикатор UNB
-              и значение меняется на <emphasis>unbalanced</emphasis>.
-              Причиной перекоса может быть утечка либо замыкание одного из
-              проводов на "землю";</para>
+              <para><emphasis>Power balance</emphasis> — баланс дистанционного
+              питания относительно земли. В норме на одном проводе плюс 120 В,
+              на другом — минус 120 В. Если имеется перекос перекос больше 30
+              В, зажигается индикатор UNB и значение меняется на
+              <emphasis>unbalanced</emphasis>. Причиной перекоса может быть
+              утечка либо замыкание одного из проводов на "землю";</para>
             </listitem>
 
             <listitem>
@@ -2663,8 +2778,12 @@ Programming flash ..............................................................
             <title>Информация об установленном соединении SHDSL
             (MR17H)</title>
 
-            <graphic fileref="img/wf2-shdsl-mr17h-status-online.png"
-                     width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-shdsl-mr17h-status-online.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <itemizedlist>
@@ -2696,8 +2815,9 @@ Programming flash ..............................................................
         </section>
       </section>
 
-      <section id="dsl-eoc">
-        <title id="dsl-eoc.title">Управление интерфейсом через EOCd</title>
+      <section xml:id="dsl-eoc">
+        <title xml:id="dsl-eoc.title">Управление интерфейсом через
+        EOCd</title>
 
         <para>Настройка интерфейса для работы через EOCd означает передачу
         контроля над интерфейсом специальной программе, которая работает с
@@ -2715,7 +2835,11 @@ Programming flash ..............................................................
           <figure>
             <title>Настройка интерфейса для работы через EOCd</title>
 
-            <graphic fileref="img/wf2-eocd-interface.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-interface.png" width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <para>После выбора в <emphasis>Control type</emphasis> режима EOCd,
@@ -2748,7 +2872,11 @@ Programming flash ..............................................................
           <figure>
             <title>Создание и редактирование профилей соединения</title>
 
-            <graphic fileref="img/wf2-eocd-profiles.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-profiles.png" width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <para>В EOCd всегда доступен профиль default, параметры которого
@@ -2759,7 +2887,11 @@ Programming flash ..............................................................
             <title>Создание нового или редактирование существующего
             профиля</title>
 
-            <graphic fileref="img/wf2-eocd-profile-add.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-profile-add.png" width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <itemizedlist>
@@ -2796,8 +2928,8 @@ Programming flash ..............................................................
         </section>
       </section>
 
-      <section id="eoc">
-        <title id="eoc.title">Мониторинг SHDSL каналов</title>
+      <section xml:id="eoc">
+        <title xml:id="eoc.title">Мониторинг SHDSL каналов</title>
 
         <note>
           <para>Мониторинг поддерживают только модули MR-17H*. Интерфейсы
@@ -2846,7 +2978,11 @@ Programming flash ..............................................................
           <figure>
             <title>Общая статистика соединения</title>
 
-            <graphic fileref="img/wf2-eocd-stat-general.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-stat-general.png" width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <itemizedlist>
@@ -2970,7 +3106,12 @@ Programming flash ..............................................................
           <figure>
             <title>Таблица state</title>
 
-            <graphic fileref="img/wf2-eocd-stat-unit-state.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-stat-unit-state.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <para>Таблица <emphasis>relative counters</emphasis> содержит те же
@@ -2981,7 +3122,12 @@ Programming flash ..............................................................
           <figure>
             <title>Таблица relative counters</title>
 
-            <graphic fileref="img/wf2-eocd-stat-unit-relative.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-stat-unit-relative.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <para>Таблица <emphasis>current intervals</emphasis> содержит ошибки
@@ -2991,7 +3137,12 @@ Programming flash ..............................................................
           <figure>
             <title>Таблица current intervals</title>
 
-            <graphic fileref="img/wf2-eocd-stat-unit-curr.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-stat-unit-curr.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <para>Также для каждой пары проводов и каждого направления (NetSide
@@ -3003,13 +3154,23 @@ Programming flash ..............................................................
           <figure>
             <title>Таблица пятнадцатиминутных интервалов для CustSide</title>
 
-            <graphic fileref="img/wf2-eocd-stat-unit-15min.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-stat-unit-15min.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <figure>
             <title>Таблица дневных интервалов для CustSide</title>
 
-            <graphic fileref="img/wf2-eocd-stat-unit-1day.png" width="6in" />
+            <mediaobject>
+              <imageobject>
+                <imagedata fileref="img/wf2-eocd-stat-unit-1day.png"
+                           width="6in" />
+              </imageobject>
+            </mediaobject>
           </figure>
 
           <itemizedlist>
@@ -3047,7 +3208,7 @@ Programming flash ..............................................................
           STU-C, STU-R, SRU1..SRU8.</para>
         </section>
 
-        <section id="shdsl.rules">
+        <section xml:id="shdsl.rules">
           <title>Правила приоритетов параметров производительности SHDSL
           канала</title>
 
@@ -3071,8 +3232,8 @@ Programming flash ..............................................................
         </section>
       </section>
 
-      <section id="hw.shdsl.details.tcpam">
-        <title id="hw.shdsl.details.tcpam.title">Особенности применения
+      <section xml:id="hw.shdsl.details.tcpam">
+        <title xml:id="hw.shdsl.details.tcpam.title">Особенности применения
         кодировок TCPAM</title>
 
         <para>Кодирование TCPAM (Trellis-Coded Pulse Amplitude Modulation),
@@ -3091,53 +3252,53 @@ Programming flash ..............................................................
         <para>Для SHDSL модулей серии MR-17H* существуют свои допустимые и
         рекомендуемые значения кодировок TCPAM.</para>
 
-        <section id="hw.shdsl.details.tcpam.sg-17">
-          <section>
-            <table align="center" frame="all">
-              <title>Рекомендуемые значения</title>
+        <section xml:id="hw.shdsl.details.tcpam.sg-17">
+          <title />
 
-              <tgroup cols="2">
-                <thead>
-                  <row>
-                    <entry>Линейный код</entry>
+          <table frame="all">
+            <title>Рекомендуемые значения</title>
 
-                    <entry>Диапазон скоростей, кбит/с</entry>
-                  </row>
-                </thead>
+            <tgroup cols="2">
+              <thead>
+                <row>
+                  <entry>Линейный код</entry>
 
-                <tbody>
-                  <row>
-                    <entry>TCPAM128</entry>
+                  <entry>Диапазон скоростей, кбит/с</entry>
+                </row>
+              </thead>
 
-                    <entry>8192 - 14080</entry>
-                  </row>
+              <tbody>
+                <row>
+                  <entry>TCPAM128</entry>
 
-                  <row>
-                    <entry>TCPAM64</entry>
+                  <entry>8192 - 14080</entry>
+                </row>
 
-                    <entry>5760 - 8128</entry>
-                  </row>
+                <row>
+                  <entry>TCPAM64</entry>
 
-                  <row>
-                    <entry>TCPAM32</entry>
+                  <entry>5760 - 8128</entry>
+                </row>
 
-                    <entry>2560 - 5696</entry>
-                  </row>
+                <row>
+                  <entry>TCPAM32</entry>
 
-                  <row>
-                    <entry>TCPAM16</entry>
+                  <entry>2560 - 5696</entry>
+                </row>
 
-                    <entry>192 - 2496</entry>
-                  </row>
-                </tbody>
-              </tgroup>
-            </table>
-          </section>
+                <row>
+                  <entry>TCPAM16</entry>
+
+                  <entry>192 - 2496</entry>
+                </row>
+              </tbody>
+            </tgroup>
+          </table>
         </section>
       </section>
     </section>
 
-    <section id="e1">
+    <section xml:id="e1">
       <title>Модули интерфейса E1</title>
 
       <para>Настройка интерфейса выполняется на странице
@@ -3145,7 +3306,7 @@ Programming flash ..............................................................
 
       <important>
         <para>Прочтите раздел про <link endterm="modules.settings.title"
-        linkend="modules.settings"></link>.</para>
+        linkend="modules.settings" />.</para>
       </important>
 
       <important>
@@ -3172,7 +3333,11 @@ Programming flash ..............................................................
         <figure>
           <title>Настройка параметров интерфейса E1</title>
 
-          <graphic fileref="img/wf2-e1-cfg.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-e1-cfg.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -3224,8 +3389,12 @@ Programming flash ..............................................................
                 <figure>
                   <title>Обновление карты тайм-слотов</title>
 
-                  <graphic fileref="img/wf2-e1-slotmap-updated.png"
-                           width="6in" />
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="img/wf2-e1-slotmap-updated.png"
+                                 width="6in" />
+                    </imageobject>
+                  </mediaobject>
                 </figure>
               </listitem>
             </itemizedlist>
@@ -3342,7 +3511,7 @@ Programming flash ..............................................................
         </itemizedlist>
       </section>
 
-      <section id="e1-loopback">
+      <section xml:id="e1-loopback">
         <title>Диагностирование соединения Е1</title>
 
         <para>Для диагностирования соединения можно использовать "петлю":
@@ -3357,7 +3526,11 @@ Programming flash ..............................................................
         <figure>
           <title>Е1: локальная петля</title>
 
-          <graphic fileref="img/E1-local_loopback.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/E1-local_loopback.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Для активации этого вида петли необходимо на странице настройки
@@ -3373,7 +3546,11 @@ Programming flash ..............................................................
         <figure>
           <title>Е1: удалённая петля</title>
 
-          <graphic fileref="img/E1-remote_loopback.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/E1-remote_loopback.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Для активации этого вида петли необходимо на странице настройки
@@ -3383,10 +3560,10 @@ Programming flash ..............................................................
       </section>
     </section>
 
-    <section id="rs232">
+    <section xml:id="rs232">
       <title>Модули интерфейса RS232</title>
 
-      <section id="rs232-config">
+      <section xml:id="rs232-config">
         <title>Настройка параметров интерфейса</title>
 
         <para>Настройка интерфейсов RS232 осуществляется на странице
@@ -3395,7 +3572,11 @@ Programming flash ..............................................................
         <figure>
           <title>Настройка интерфейса RS232</title>
 
-          <graphic fileref="img/wf2-rs232.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-rs232.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -3437,7 +3618,7 @@ Programming flash ..............................................................
         </itemizedlist>
       </section>
 
-      <section id="rs232ip">
+      <section xml:id="rs232ip">
         <title>RS-232 через TCP/IP</title>
 
         <section>
@@ -3448,7 +3629,8 @@ Programming flash ..............................................................
           передавая в обоих направлениях данные и состояние
           управляющих/модемных линий.</para>
 
-          <para><figure>
+          <para>
+            <figure>
               <title>Схема удлинителя RS-232 через сети построенные по IP
               технологии</title>
 
@@ -3457,7 +3639,8 @@ Programming flash ..............................................................
                   <imagedata fileref="img/rs232_ip.png" width="6in" />
                 </imageobject>
               </mediaobject>
-            </figure></para>
+            </figure>
+          </para>
 
           <para>Направление передачи управляющих/модемных линий:</para>
 
@@ -3519,13 +3702,17 @@ null-modem:
             <listitem>
               <para>Во вкладках Hardware/ttyRS* настройте параметры выбранных
               портов и нажмите "save".</para>
+
+              <figure>
+                <title>Настройка параметров порта RS232</title>
+
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/wf2-rs232.png" width="6in" />
+                  </imageobject>
+                </mediaobject>
+              </figure>
             </listitem>
-
-            <figure>
-              <title>Настройка параметров порта RS232</title>
-
-              <graphic fileref="img/wf2-rs232.png" width="6in" />
-            </figure>
 
             <listitem>
               <para>Для каждого порта решите, какой из маршрутизаторов для
@@ -3541,7 +3728,11 @@ null-modem:
               <figure>
                 <title>Настройка RS-232 over TCP/IP</title>
 
-                <graphic fileref="img/rs232ip_options.png" width="6in" />
+                <mediaobject>
+                  <imageobject>
+                    <imagedata fileref="img/rs232ip_options.png" width="6in" />
+                  </imageobject>
+                </mediaobject>
               </figure>
 
               <para>Селектор "mode" определяет режим:</para>
@@ -3592,10 +3783,12 @@ null-modem:
             </imageobject>
           </mediaobject>
 
-          <para><note>
+          <para>
+            <note>
               <para>Учтите, что процесс запуска из web системы достаточно
               медленный.</para>
-            </note></para>
+            </note>
+          </para>
 
           <para>Во вкладках System/Tools/Syslog можно наблюдать сообщения
           демонов:</para>
@@ -3609,6 +3802,7 @@ null-modem:
           </mediaobject>
 
           <para>После соединения от активной стороны:</para>
+
           <mediaobject>
             <imageobject>
               <imagedata fileref="img/rs232_ip_passive2.png" width="6in" />
@@ -3616,12 +3810,12 @@ null-modem:
           </mediaobject>
 
           <para>Активная сторона:</para>
+
           <mediaobject>
             <imageobject>
               <imagedata fileref="img/rs232_ip_active.png" width="6in" />
             </imageobject>
           </mediaobject>
-
         </section>
 
         <section>
@@ -3653,7 +3847,7 @@ null-modem:
         </section>
       </section>
 
-      <section id="rs232-terminal">
+      <section xml:id="rs232-terminal">
         <title>Терминальный сервер</title>
 
         <para>Существует множество устройств, управление которыми
@@ -3664,7 +3858,11 @@ null-modem:
         <figure>
           <title>Настройка терминального сервера</title>
 
-          <graphic fileref="img/rs232-terminal-options.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232-terminal-options.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>На вкладке Options осуществляется включение/выключение данной
@@ -3685,14 +3883,18 @@ null-modem:
         <figure>
           <title>Консоль терминального сервера</title>
 
-          <graphic fileref="img/rs232-terminal-console.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/rs232-terminal-console.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Управление удаленным устройством осуществляется через
         веб-интерфейс.</para>
       </section>
 
-      <section id="dial-in">
+      <section xml:id="dial-in">
         <title>Dial-in сервер</title>
 
         <para>Dial-in сервер позволяет организовать резервный или управляющий
@@ -3703,7 +3905,11 @@ null-modem:
         <figure>
           <title>Вкладка General</title>
 
-          <graphic fileref="img/dial-in-general.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/dial-in-general.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -3721,7 +3927,11 @@ null-modem:
         <figure>
           <title>Вкладка Users</title>
 
-          <graphic fileref="img/dial-in-users.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/dial-in-users.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>На вкладке users осуществляется управление пользователями и их
@@ -3730,7 +3940,11 @@ null-modem:
         <figure>
           <title>Вкладка Ports</title>
 
-          <graphic fileref="img/dial-in-ports.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/dial-in-ports.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -3767,7 +3981,7 @@ null-modem:
       </section>
     </section>
 
-    <section id="multiplexing">
+    <section xml:id="multiplexing">
       <title>Мультиплексирование</title>
 
       <para>Мультиплексирование используется для передачи потоков с одного
@@ -3781,7 +3995,11 @@ null-modem:
       <figure>
         <title>Схема сети</title>
 
-        <graphic fileref="img/multiplexing1.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/multiplexing1.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>В приведенном примере к маршрутизаторам SG-17R подключено два
@@ -3806,15 +4024,21 @@ null-modem:
       выставлять на шину данные, полученные из физической линии, и принимать
       данные, выставленные другим интерфейсом.</para>
 
-      <para><note>
+      <para>
+        <note>
           <para>Некоторые модули (MR-17G1, MR-17G2, MR-17S**) могут
           использовать только 8 линий.</para>
-        </note></para>
+        </note>
+      </para>
 
       <figure>
         <title>Физическая организация мультиплексирования</title>
 
-        <graphic fileref="img/multiplexing-line.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/multiplexing-line.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Все устройства, участвующие в мультиплексировании, должны
@@ -3843,7 +4067,11 @@ null-modem:
       <figure>
         <title>Настройка мультиплексирования</title>
 
-        <graphic fileref="img/wf2-mux-cfg.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-mux-cfg.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -3946,18 +4174,18 @@ null-modem:
     </section>
   </chapter>
 
-  <chapter id="iface">
+  <chapter xml:id="iface">
     <title>Настройка сетевых интерфейсов</title>
 
-    <section>
-      <para>В веб-интерфейсе есть разделение сетевых интерфейсов на два типа:
-      статические и динамические. К статическим интерфейсам относятся
-      интерфейсы, которые нельзя создать или удалить. То есть, по сути это
-      физические интерфейсы, относящиеся к определённому аппаратному
-      обеспечению. К динамическим интерфейсам относятся интерфейсы бондинга,
-      бриджа, VLAN, так как эти интерфейсы можно создавать и удалять, они не
-      являются физическими, а используют для работы другие интерфейсы.</para>
+    <para>В веб-интерфейсе есть разделение сетевых интерфейсов на два типа:
+    статические и динамические. К статическим интерфейсам относятся
+    интерфейсы, которые нельзя создать или удалить. То есть, по сути это
+    физические интерфейсы, относящиеся к определённому аппаратному
+    обеспечению. К динамическим интерфейсам относятся интерфейсы бондинга,
+    бриджа, VLAN, так как эти интерфейсы можно создавать и удалять, они не
+    являются физическими, а используют для работы другие интерфейсы.</para>
 
+    <section>
       <title>Общие параметры</title>
 
       <para>В этом разделе рассматриваются общие параметры настройки для всех
@@ -3974,11 +4202,15 @@ null-modem:
         <figure>
           <title>Информационное сообщение</title>
 
-          <graphic fileref="img/wf2-iface-info-message.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-info-message.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
       </tip>
 
-      <section id="status">
+      <section xml:id="status">
         <title>Вкладка Status</title>
 
         <para>На вкладке <emphasis>Status</emphasis> отображается основная
@@ -3990,7 +4222,11 @@ null-modem:
         <figure>
           <title>Управление интерфейсом</title>
 
-          <graphic fileref="img/wf2-iface-stat-buttons.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-stat-buttons.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -4016,7 +4252,11 @@ null-modem:
         <figure>
           <title>Сетевые параметры</title>
 
-          <graphic fileref="img/wf2-iface-stat.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-stat.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Состояние интерфейса (запущен или нет) можно определить по
@@ -4029,7 +4269,11 @@ null-modem:
         <figure>
           <title>Сетевые маршруты</title>
 
-          <graphic fileref="img/wf2-iface-stat-routes.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-stat-routes.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Записи в таблице ARP:</para>
@@ -4037,7 +4281,11 @@ null-modem:
         <figure>
           <title>Таблица ARP</title>
 
-          <graphic fileref="img/wf2-iface-stat-arp.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-stat-arp.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Для интерфейсов Ethernet доступна информация о работе
@@ -4046,11 +4294,15 @@ null-modem:
         <figure>
           <title>Встроенный коммутатор</title>
 
-          <graphic fileref="img/wf2-iface-stat-switch.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-stat-switch.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
       </section>
 
-      <section id="general">
+      <section xml:id="general">
         <title>Вкладка General</title>
 
         <para>На вкладке <emphasis>General</emphasis> можно активировать
@@ -4060,7 +4312,11 @@ null-modem:
         <figure>
           <title>Вкладка General</title>
 
-          <graphic fileref="img/wf2-iface-general.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-general.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -4122,8 +4378,12 @@ null-modem:
                 <figure>
                   <title>Статический метод установки IP-адреса</title>
 
-                  <graphic fileref="img/wf2-iface-general-method-static.png"
-                           width="6in" />
+                  <mediaobject>
+                    <imageobject>
+                      <imagedata fileref="img/wf2-iface-general-method-static.png"
+                                 width="6in" />
+                    </imageobject>
+                  </mediaobject>
                 </figure>
 
                 <itemizedlist>
@@ -4163,8 +4423,12 @@ null-modem:
                   <figure>
                     <title>Point-to-Point IP-адрес</title>
 
-                    <graphic fileref="img/wf2-iface-general-method-static-ptp.png"
-                             width="6in" />
+                    <mediaobject>
+                      <imageobject>
+                        <imagedata fileref="img/wf2-iface-general-method-static-ptp.png"
+                                   width="6in" />
+                      </imageobject>
+                    </mediaobject>
                   </figure>
 
                   <itemizedlist>
@@ -4199,7 +4463,7 @@ null-modem:
         </itemizedlist>
       </section>
 
-      <section id="specific">
+      <section xml:id="specific">
         <title>Вкладка Specific</title>
 
         <para>Данная вкладка содержит параметры, которые специфичны для
@@ -4211,12 +4475,16 @@ null-modem:
         <figure>
           <title>Вкладка Specific</title>
 
-          <graphic fileref="img/wf2-iface-specific.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-specific.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
       </section>
     </section>
 
-    <section id="ifaces">
+    <section xml:id="ifaces">
       <title>Динамические интерфейсы</title>
 
       <section>
@@ -4228,7 +4496,11 @@ null-modem:
         <figure>
           <title>Динамические интерфейсы</title>
 
-          <graphic fileref="img/wf2-iface-dynamic.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-dynamic.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Существуют следующие виды динамических интерфейсов:</para>
@@ -4259,15 +4531,19 @@ null-modem:
         <figure>
           <title>Динамический интерфейс в списке сетевых интерфейсов</title>
 
-          <graphic fileref="img/wf2-ifaces-dynamic-added.png" width="2in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-ifaces-dynamic-added.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
-        <para id="ifaces.del">Чтобы удалить динамический интерфейс, выберите
-        его имя в списке интерфейсов и нажмите кнопку
+        <para xml:id="ifaces.del">Чтобы удалить динамический интерфейс,
+        выберите его имя в списке интерфейсов и нажмите кнопку
         <emphasis>Delete</emphasis>.</para>
       </section>
 
-      <section id="bonding">
+      <section xml:id="bonding">
         <title>Настройка объединения каналов (бондинг)</title>
 
         <para>Бондинг позволяет объединять несколько физических соединений в
@@ -4296,7 +4572,11 @@ null-modem:
         <figure>
           <title>Окно быстрой настройки бондинга</title>
 
-          <graphic fileref="img/wf2-iface-bonding-wizard.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-bonding-wizard.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>В этом окне все параметры, кроме одного, были рассмотрены в
@@ -4342,7 +4622,7 @@ null-modem:
         </note>
       </section>
 
-      <section id="bridge">
+      <section xml:id="bridge">
         <title>Настройка бриджа</title>
 
         <para>Работа устройства в режиме бриджа позволяет прозрачно передавать
@@ -4361,7 +4641,11 @@ null-modem:
         <figure>
           <title>Пример бриджа</title>
 
-          <graphic fileref="img/bridge.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/bridge.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>В приведенном выше рисунке бридж состоит из двух интерфейсов —
@@ -4391,7 +4675,11 @@ null-modem:
         <figure>
           <title>Пример бриджа с объединением интерфейсов</title>
 
-          <graphic fileref="img/bridge+bonding.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/bridge+bonding.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Создание динамического интерфейса бриджа происходит на странице
@@ -4406,7 +4694,11 @@ null-modem:
         <figure>
           <title>Окно быстрой настройки бриджа</title>
 
-          <graphic fileref="img/wf2-iface-bridge-wizard.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-bridge-wizard.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>В этом окне все параметры, кроме одного, были рассмотрены в
@@ -4452,7 +4744,12 @@ null-modem:
         <figure>
           <title>Дополнительные параметры бриджа</title>
 
-          <graphic fileref="img/wf2-iface-bridge-specific.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-bridge-specific.png"
+                         width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -4498,7 +4795,7 @@ null-modem:
         </itemizedlist>
       </section>
 
-      <section id="vlan">
+      <section xml:id="vlan">
         <title>Настройка интерфейсов VLAN</title>
 
         <para>Использование технологии VLAN позволяет разделить трафик
@@ -4517,7 +4814,11 @@ null-modem:
         <figure>
           <title>Добавление интерфейса VLAN</title>
 
-          <graphic fileref="img/wf2-iface-vlan.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-iface-vlan.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -4550,11 +4851,11 @@ null-modem:
     </section>
   </chapter>
 
-  <chapter id="traffic">
+  <chapter xml:id="traffic">
     <title>Управление трафиком</title>
 
-    <section id="routes">
-      <title id="routes.title">Добавление сетевых маршрутов</title>
+    <section xml:id="routes">
+      <title xml:id="routes.title">Добавление сетевых маршрутов</title>
 
       <para>Сетевые маршруты определяют, через какие маршрутизаторы доступна
       та или иная сеть. Добавление маршрутов осуществляется на странице
@@ -4564,7 +4865,11 @@ null-modem:
       <figure>
         <title>Пример: структура сети</title>
 
-        <graphic fileref="img/routes-network.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/routes-network.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Наш маршрутизатор имеет обозначение SG-17R, и подключен к двум
@@ -4608,7 +4913,11 @@ null-modem:
       <figure>
         <title>Пустой список маршрутов</title>
 
-        <graphic fileref="img/wf2-routes-list-empty.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-routes-list-empty.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Изначально список пустой. Для добавления нового маршрута нажимаем
@@ -4617,7 +4926,11 @@ null-modem:
       <figure>
         <title>Добавление маршрута</title>
 
-        <graphic fileref="img/wf2-routes-add.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-routes-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>После добавления маршрута информация о нём появится в таблице
@@ -4626,7 +4939,11 @@ null-modem:
       <figure>
         <title>Список маршрутов для интерфейса eth0</title>
 
-        <graphic fileref="img/wf2-routes-list-eth0.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-routes-list-eth0.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>После добавления необходимых маршрутов для интерфейса dsl0 его
@@ -4635,7 +4952,11 @@ null-modem:
       <figure>
         <title>Список маршрутов для интерфейса dsl0</title>
 
-        <graphic fileref="img/wf2-routes-list-dsl0.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-routes-list-dsl0.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>После добавления маршрута он сразу прописывается в системе.
@@ -4645,11 +4966,15 @@ null-modem:
       <figure>
         <title>Проверка списка маршрутов для интерфейса dsl0</title>
 
-        <graphic fileref="img/wf2-iface-status-routes.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-iface-status-routes.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="fw">
+    <section xml:id="fw">
       <title>Управление межсетевым экраном</title>
 
       <para>Межсетевой экран используется, чтобы ограничить доступ к тем или
@@ -4662,7 +4987,11 @@ null-modem:
       <figure>
         <title>Активация межсетевого экрана</title>
 
-        <graphic fileref="img/wf2-fw-activate.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-fw-activate.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Работа межсетевого экрана основана на прохождении пакетом цепочек
@@ -4672,10 +5001,14 @@ null-modem:
       действие по умолчанию — политика. Оно выполняется в случае, если пакет
       не попал ни под один критерий:</para>
 
-      <figure id="filter_policy">
+      <figure xml:id="filter_policy">
         <title>Политики цепочек</title>
 
-        <graphic fileref="img/wf2-fw-policy.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-fw-policy.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <note>
@@ -4705,37 +5038,53 @@ null-modem:
       <para>Цепочку FORWARD проходят пакеты, являющиеся транзитными, то есть
       идущие с одного интерфейса маршрутизатора на другой:</para>
 
-      <figure id="filter_forward">
+      <figure xml:id="filter_forward">
         <title>Цепочка FORWARD</title>
 
-        <graphic fileref="img/wf2-fw-forward.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-fw-forward.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>В цепочку INPUT попадают пакеты, предназначающиеся
       маршрутизатору:</para>
 
-      <figure id="filter_input">
+      <figure xml:id="filter_input">
         <title>Цепочка INPUT</title>
 
-        <graphic fileref="img/wf2-fw-input.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-fw-input.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>В цепочку OUTPUT попадают пакеты, источником которых является
       маршрутизатор:</para>
 
-      <figure id="filter_output">
+      <figure xml:id="filter_output">
         <title>Цепочка OUTPUT</title>
 
-        <graphic fileref="img/wf2-fw-output.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-fw-output.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Добавление правил осуществляется нажатием кнопки "+", и
       заполнением формы, открывшейся в новом окне:</para>
 
-      <figure id="filter_add">
+      <figure xml:id="filter_add">
         <title>Добавление правила</title>
 
-        <graphic fileref="img/wf2-fw-add.png" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-fw-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -4788,7 +5137,7 @@ null-modem:
       </note>
     </section>
 
-    <section id="nat">
+    <section xml:id="nat">
       <title>NAT</title>
 
       <para>NAT — network address translation — позволяет заменять адреса
@@ -4802,7 +5151,11 @@ null-modem:
       <figure>
         <title>Политики цепочек</title>
 
-        <graphic fileref="img/wf2-nat-policy.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-nat-policy.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <note>
@@ -4820,18 +5173,26 @@ null-modem:
       выполнения DNAT — destination NAT, то есть замены адреса получателя
       пакета.</para>
 
-      <figure id="nat_prerouting">
+      <figure xml:id="nat_prerouting">
         <title>Цепочка PREROUTING</title>
 
-        <graphic fileref="img/wf2-nat-prerouting-list.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-nat-prerouting-list.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Окно добавления правила показано ниже.</para>
 
-      <figure id="nat_add">
+      <figure xml:id="nat_add">
         <title>Добавление правила в цепочку PREROUTING</title>
 
-        <graphic fileref="img/wf2-nat-prerouting-add.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-nat-prerouting-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>При выборе действия <emphasis>DNAT</emphasis> появляется новая
@@ -4847,10 +5208,14 @@ null-modem:
       выбираться автоматически (удобно при работе с динамическими интерфейсами
       и IP-адресами).</para>
 
-      <figure id="nat_postrouting">
+      <figure xml:id="nat_postrouting">
         <title>Цепочка POSTROUTING</title>
 
-        <graphic fileref="img/wf2-nat-postrouting.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-nat-postrouting.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Добавление правила аналогично добавлению правила для цепочки
@@ -4862,7 +5227,7 @@ null-modem:
       </note>
     </section>
 
-    <section id="qos">
+    <section xml:id="qos">
       <title>Качество обслуживания</title>
 
       <para>Качество обслуживания (QoS — quality of service) позволяет
@@ -4876,7 +5241,11 @@ null-modem:
       <figure>
         <title>Настройка QoS</title>
 
-        <graphic fileref="img/wf2-qos.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-qos.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -4892,7 +5261,7 @@ null-modem:
         </listitem>
       </itemizedlist>
 
-      <section id="pfifo_fast">
+      <section xml:id="pfifo_fast">
         <title>Бесклассовая дисциплина pfifo_fast</title>
 
         <para>Стандартная дисциплина обслуживания трафика, реализующая простой
@@ -4934,7 +5303,7 @@ null-modem:
         </important>
       </section>
 
-      <section id="bfifo-pfifo">
+      <section xml:id="bfifo-pfifo">
         <title>Бесклассовые дисциплины FIFO with bytes buffer (bfifo) и FIFO
         with packets buffer (pfifo)</title>
 
@@ -4950,7 +5319,7 @@ null-modem:
         </itemizedlist>
       </section>
 
-      <section id="sfq">
+      <section xml:id="sfq">
         <title>Бесклассовая дисциплина SFQ</title>
 
         <para>SFQ — Stochastic Fairness Queueing — дисциплина честного
@@ -5008,7 +5377,11 @@ null-modem:
         <figure>
           <title>Конфигурирование ESFQ</title>
 
-          <graphic fileref="img/wf2-qos-esfq.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-esfq.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -5054,7 +5427,7 @@ null-modem:
         </itemizedlist>
       </section>
 
-      <section id="tbf">
+      <section xml:id="tbf">
         <title>Бесклассовая дисциплина TBF</title>
 
         <para>Token Bucket Filter (TBF) — простая бесклассовая дисциплина,
@@ -5095,7 +5468,11 @@ null-modem:
         <figure>
           <title>Конфигурирование TBF</title>
 
-          <graphic fileref="img/wf2-qos-tbf.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-tbf.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -5106,7 +5483,7 @@ null-modem:
         </itemizedlist>
       </section>
 
-      <section id="htb">
+      <section xml:id="htb">
         <title>Классовая дисциплина HTB</title>
 
         <para>Дисциплина HTB позволяет выделить разную пропускную способность
@@ -5142,25 +5519,38 @@ null-modem:
         <figure>
           <title>Класс по умолчанию</title>
 
-          <graphic fileref="img/wf2-qos-htb-default-class.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-htb-default-class.png"
+                         width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Ниже приведена таблица, содержащая информацию о классах.
         Опционально для каждого класса может быть добавлена своя бесклассовая
         дисциплина обслуживания из описанных выше.</para>
 
-        <figure id="qos_class">
+        <figure xml:id="qos_class">
           <title>Классы трафика</title>
 
-          <graphic fileref="img/wf2-qos-class.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-class.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Окно добавления класса показано ниже.</para>
 
-        <figure id="htb_class_add">
+        <figure xml:id="htb_class_add">
           <title>Добавление класса</title>
 
-          <graphic fileref="img/wf2-qos-class-add.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-class-add.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -5220,18 +5610,26 @@ null-modem:
         <para>Таблица фильтров, по тем или иным критериям направляющих трафик
         в классы.</para>
 
-        <figure id="qos_filter">
+        <figure xml:id="qos_filter">
           <title>Фильтры, направляющие трафик в классы</title>
 
-          <graphic fileref="img/wf2-qos-filter.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-filter.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Окно создания фильтра показано ниже.</para>
 
-        <figure id="htb_filter_add">
+        <figure xml:id="htb_filter_add">
           <title>Добавление фильтра</title>
 
-          <graphic fileref="img/wf2-qos-filter-add.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/wf2-qos-filter-add.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <itemizedlist>
@@ -5293,10 +5691,10 @@ null-modem:
     </section>
   </chapter>
 
-  <chapter id="dhcp_server">
+  <chapter xml:id="dhcp_server">
     <title>Настройка сетевых служб</title>
 
-    <section id="dhcp">
+    <section xml:id="dhcp">
       <title>Сервер DHCP</title>
 
       <para>Настройка сервера DHCP выполняется независимо для каждого сетевого
@@ -5315,7 +5713,11 @@ null-modem:
       <figure>
         <title>Настройка DHCP-сервера</title>
 
-        <graphic fileref="img/wf2-dhcp.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dhcp.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5378,10 +5780,14 @@ null-modem:
       MAC-адреса сетевой карты. Форма для привязки IP-адреса к MAC-адресу
       находится внизу страницы настройки и представлена на рисунке:</para>
 
-      <figure id="dhcp_server.static_add">
+      <figure xml:id="dhcp_server.static_add">
         <title>Форма привязки IP к MAC</title>
 
-        <graphic fileref="img/wf2-dhcp-static-add.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dhcp-static-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5409,11 +5815,15 @@ null-modem:
       <figure>
         <title>Обновленный список IP-адресов</title>
 
-        <graphic fileref="img/wf2-dhcp-static-list.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dhcp-static-list.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="dns_server">
+    <section xml:id="dns_server">
       <title>Сервер DNS</title>
 
       <para>Сервер DNS отвечает за преобразование доменного имени в IP-адрес.
@@ -5422,7 +5832,11 @@ null-modem:
       <figure>
         <title>Настройка сервера DNS</title>
 
-        <graphic fileref="img/wf2-dns_server.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dns_server.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5450,19 +5864,27 @@ null-modem:
       домене и его записях. Список зон сервера DNS отображается на вкладке
       Zones.</para>
 
-      <figure id="dns_server.dns_zones">
+      <figure xml:id="dns_server.dns_zones">
         <title>Зоны сервера DNS</title>
 
-        <graphic fileref="img/wf2-dns_server-zones.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dns_server-zones.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Создание и редактирование файла зоны выполняется на вкладке Zones
       с помощью соответствующих кнопок.</para>
 
-      <figure id="dns_server.zone_add">
+      <figure xml:id="dns_server.zone_add">
         <title>Добавление зоны</title>
 
-        <graphic fileref="img/wf2-dns_server-add-zone.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dns_server-add-zone.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5533,10 +5955,14 @@ null-modem:
       В результате откроется страница с таблицей, содержащей записи для данной
       зоны. Форма добавления новой записи представлена ниже.</para>
 
-      <figure id="dns_server.zone_record_add">
+      <figure xml:id="dns_server.zone_record_add">
         <title>Добавление записи в зону</title>
 
-        <graphic fileref="img/wf2-dns_server-record-add.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dns_server-record-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5602,7 +6028,11 @@ null-modem:
       <figure>
         <title>Таблица записей для зоны</title>
 
-        <graphic fileref="img/wf2-dns_server-records.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-dns_server-records.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Для возврата к списку зон следует нажать на кнопку <emphasis>Back
@@ -5610,10 +6040,10 @@ null-modem:
     </section>
   </chapter>
 
-  <chapter id="voip">
+  <chapter xml:id="voip">
     <title>VoIP</title>
 
-    <section id="voip.intro">
+    <section xml:id="voip.intro">
       <title>Основные сведения</title>
 
       <para>Устройство позволяет организовывать IP-телефонию с помощью модулей
@@ -5724,7 +6154,7 @@ null-modem:
       задержку при наборе номера.</para>
     </section>
 
-    <section id="voip.settings">
+    <section xml:id="voip.settings">
       <title>Настройка основных параметров</title>
 
       <para>Настройка основных параметров VoIP выполняется на странице
@@ -5734,7 +6164,11 @@ null-modem:
       <figure>
         <title>Основные настройки VoIP</title>
 
-        <graphic fileref="img/wf2-voip-settings-general.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-settings-general.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5762,7 +6196,11 @@ null-modem:
       <figure>
         <title>Настройки ToS</title>
 
-        <graphic fileref="img/wf2-voip-settings-tos.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-settings-tos.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5779,7 +6217,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.hotline">
+    <section xml:id="voip.hotline">
       <title>Режим Hotline</title>
 
       <para>Hotline настраивается на странице Hardware/VoIP/Hotline. Так как
@@ -5809,7 +6247,11 @@ null-modem:
       <figure>
         <title>Таблица настройки Hotline</title>
 
-        <graphic fileref="img/wf2-voip-hotline.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-hotline.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5839,7 +6281,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.vf">
+    <section xml:id="voip.vf">
       <title>Каналы ТЧ</title>
 
       <para>Каналы ТЧ позволяют выполнять оцифровку сигнала, поступающего от
@@ -5858,7 +6300,11 @@ null-modem:
       <figure>
         <title>Настройка каналов ТЧ</title>
 
-        <graphic fileref="img/wf2-voip-vf.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-vf.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -5977,10 +6423,14 @@ null-modem:
       <para>Настройка физических параметров портов ТЧ выполняется на вкладке
       Settings.</para>
 
-      <figure id="voip.vf.settings">
+      <figure xml:id="voip.vf.settings">
         <title>Настройка физических параметров портов ТЧ</title>
 
-        <graphic fileref="img/wf2-voip-vf-settings.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-vf-settings.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -6054,7 +6504,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.route">
+    <section xml:id="voip.route">
       <title>Маршрутизация VoIP</title>
 
       <para>Настройка маршрутизации звонков выполняется на странице
@@ -6065,7 +6515,11 @@ null-modem:
       <figure>
         <title>Маршрутизация VoIP</title>
 
-        <graphic fileref="img/wf2-voip-routes.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-routes.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>В таблице должна присутствовать запись с идентификатором и
@@ -6076,10 +6530,14 @@ null-modem:
 
       <para>Добавление новой записи в таблицу показано на рисунке ниже.</para>
 
-      <figure id="voip.route.add">
+      <figure xml:id="voip.route.add">
         <title>Маршрутизация VoIP: добавление новой записи</title>
 
-        <graphic fileref="img/wf2-voip-routes-add.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-routes-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -6104,7 +6562,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.address">
+    <section xml:id="voip.address">
       <title>Телефонная книга</title>
 
       <para>Телефонная книга находится на странице Hardware/VoIP/Phone book.
@@ -6115,15 +6573,23 @@ null-modem:
       <figure>
         <title>Телефонная книга</title>
 
-        <graphic fileref="img/wf2-voip-phonebook.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-phonebook.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Добавление новой записи в таблицу показано ниже.</para>
 
-      <figure id="voip.address.add">
+      <figure xml:id="voip.address.add">
         <title>Телефонная книга: добавление новой записи</title>
 
-        <graphic fileref="img/wf2-voip-phonebook-add.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-phonebook-add.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -6151,7 +6617,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.audio">
+    <section xml:id="voip.audio">
       <title>Настройки звука</title>
 
       <para>На странице Hardware/VoIP/Audio можно настроить параметры звука
@@ -6160,7 +6626,11 @@ null-modem:
       <figure>
         <title>Настройки звука</title>
 
-        <graphic fileref="img/wf2-voip-audio.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-audio.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -6186,7 +6656,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.codecs">
+    <section xml:id="voip.codecs">
       <title>Кодеки</title>
 
       <para>Настройка используемых кодеков и их приоритетов выполняется на
@@ -6202,7 +6672,11 @@ null-modem:
       <figure>
         <title>Приоритет использования кодеков</title>
 
-        <graphic fileref="img/wf2-voip-codecs-priority.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-codecs-priority.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>На вкладках <emphasis>Internal</emphasis> и
@@ -6210,10 +6684,14 @@ null-modem:
       соответствующих направлений вызовов. Как правило, значений по умолчанию
       достаточно для большинства конфигураций.</para>
 
-      <figure id="voip.codecs.settings">
+      <figure xml:id="voip.codecs.settings">
         <title>Настройка кодеков</title>
 
-        <graphic fileref="img/wf2-voip-codecs-settings.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-codecs-settings.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -6300,7 +6778,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.echo">
+    <section xml:id="voip.echo">
       <title>Настройки подавления эха</title>
 
       <para>Настройки подавления эха выполняются на странице
@@ -6309,7 +6787,11 @@ null-modem:
       <figure>
         <title>Настройки подавления эха</title>
 
-        <graphic fileref="img/wf2-voip-echo.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-echo.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <itemizedlist>
@@ -6336,7 +6818,7 @@ null-modem:
       </itemizedlist>
     </section>
 
-    <section id="voip.dialmode">
+    <section xml:id="voip.dialmode">
       <title>Настройка режима набора номера</title>
 
       <para>Настройка режима набора номера выполняется на странице
@@ -6348,15 +6830,19 @@ null-modem:
       <figure>
         <title>Настройка режима набора номера</title>
 
-        <graphic fileref="img/wf2-voip-dial-mode.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/wf2-voip-dial-mode.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
   </chapter>
 
-  <chapter id="snmp">
+  <chapter xml:id="snmp">
     <title>SNMP</title>
 
-    <section id="intro">
+    <section xml:id="intro">
       <title>Введение в SNMP</title>
 
       <para><emphasis>SNMP</emphasis> — Simple Network Management Protocol —
@@ -6392,7 +6878,7 @@ null-modem:
       private — для их изменения.</para>
     </section>
 
-    <section id="support">
+    <section xml:id="support">
       <title>Уровень поддержки SNMP маршрутизатором</title>
 
       <para>Для поддержки протокола SNMP на маршрутизаторе используется
@@ -6410,16 +6896,15 @@ null-modem:
       <para>MIB-2 является стандартным MIB и входит в состав большинства
       менеджеров, в то время как HDSL2-SHDSL-LINE-MIB является специфичным для
       определённого типа устройств. Загрузить этот файл можно либо из
-      источников в Интернете, либо по <ulink
-      url="http://sigrand.ru:8280/temp/HDSL2-SHDSL-LINE-MIB-rfc4319.txt">ссылке.</ulink>
-      </para>
+      источников в Интернете, либо по ссылке:
+      http://sigrand.ru:8280/temp/HDSL2-SHDSL-LINE-MIB-rfc4319.txt</para>
 
       <para>На данный момент по SNMP доступен только мониторинг
       маршрутизатора, SHDSL каналов и регенераторов. Возможность управления
       будет добавлена в ближайшее время.</para>
     </section>
 
-    <section id="snmpd">
+    <section xml:id="snmpd">
       <title>Настройка SNMPD</title>
 
       <para>Настройка демона <emphasis>snmpd</emphasis> хранится в файле
@@ -6472,9 +6957,8 @@ null-modem:
       private — для чтения и записи.</para>
 
       <para>Более подробную информацию вы можете найти на сайте проекта
-      net-snmp, в частности по <ulink
-      url="http://net-snmp.sourceforge.net/wiki/index.php/Vacm">ссылке.</ulink>
-      </para>
+      net-snmp, в частности по ссылке:
+      http://net-snmp.sourceforge.net/wiki/index.php/Vacm</para>
     </section>
 
     <section>
@@ -6487,7 +6971,7 @@ null-modem:
       будет доступна через утилиту <command>eoc-info</command>, информацию
       можно будет получить через SNMP. Подробнее о назначении и настройки
       демона EOCD можно прочитать в разделе <link endterm="eoc.title"
-      linkend="eoc"></link>.</para>
+      linkend="eoc" />.</para>
     </section>
 
     <section>
@@ -6542,7 +7026,11 @@ null-modem:
         <figure>
           <title>The Dude</title>
 
-          <graphic fileref="img/thedude.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/thedude.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Достоинства:</para>
@@ -6590,11 +7078,15 @@ null-modem:
         <figure>
           <title>The Dude: маршрутизаторы Sigrand</title>
 
-          <graphic fileref="img/thedude2.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/thedude2.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
-        <para>Домашняя страница проекта: <ulink
-        url="http://www.mikrotik.com/thedude.php">http://www.mikrotik.com/thedude.php</ulink>.</para>
+        <para>Домашняя страница проекта:
+        http://www.mikrotik.com/thedude.php</para>
       </section>
 
       <section>
@@ -6608,7 +7100,11 @@ null-modem:
         <figure>
           <title>MIB Browser</title>
 
-          <graphic fileref="img/mibbrowser.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/mibbrowser.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Достоинства:</para>
@@ -6637,9 +7133,8 @@ null-modem:
           </listitem>
         </itemizedlist>
 
-        <para>Домашняя страница проекта: <ulink
-        url="http://www.ireasoning.com/mibbrowser.shtml">
-        http://www.ireasoning.com/mibbrowser.shtml</ulink>.</para>
+        <para>Домашняя страница проекта:
+        http://www.ireasoning.com/mibbrowser.shtml</para>
       </section>
 
       <section>
@@ -6654,7 +7149,11 @@ null-modem:
         <figure>
           <title>OpenNMS</title>
 
-          <graphic fileref="img/opennms.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/opennms.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Достоинства:</para>
@@ -6668,20 +7167,19 @@ null-modem:
           </listitem>
         </itemizedlist>
 
-        <para>Домашняя страница проекта: <ulink
-        url="http://www.opennms.org/index.php/Main_Page">
-        http://www.opennms.org/index.php/Main_Page</ulink>.</para>
+        <para>Домашняя страница проекта:
+        http://www.opennms.org/index.php/Main_Page.</para>
       </section>
     </section>
   </chapter>
 
-  <chapter id="examples">
+  <chapter xml:id="examples">
     <title>Примеры конфигурации</title>
 
-    <section id="examples.vlan">
+    <section xml:id="examples.vlan">
       <title>VLAN</title>
 
-      <section id="examples.vlan.scheme1">
+      <section xml:id="examples.vlan.scheme1">
         <title>Организация независимых каналов между
         Ethernet-интерфейсами</title>
 
@@ -6697,7 +7195,11 @@ null-modem:
         <figure>
           <title>Схема взаимодействия устройств</title>
 
-          <graphic fileref="img/scheme1-struct.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/scheme1-struct.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Устройства соединены двумя каналами SHDSL, которые объединены в
@@ -6745,7 +7247,7 @@ null-modem:
         </note>
       </section>
 
-      <section id="examples.vlan.scheme3">
+      <section xml:id="examples.vlan.scheme3">
         <title>Распределение трафика по Ethernet-портам в зависимости от VLAN
         ID</title>
 
@@ -6757,7 +7259,11 @@ null-modem:
         <figure>
           <title>Структурная схема</title>
 
-          <graphic fileref="img/scheme3-struct.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/scheme3-struct.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Идея построения схемы заключается в том, что на устройстве
@@ -6833,7 +7339,7 @@ null-modem:
         </section>
       </section>
 
-      <section id="examples.vlan.manage_vlan">
+      <section xml:id="examples.vlan.manage_vlan">
         <title>Ограничение доступа к управлению устройством с помощью
         VLAN</title>
 
@@ -6845,7 +7351,7 @@ null-modem:
       </section>
     </section>
 
-    <section id="manage">
+    <section xml:id="manage">
       <title>Организация управления устройством через интерфейс, входящий в
       состав бриджа или бондинга</title>
 
@@ -6870,7 +7376,7 @@ null-modem:
       </tip>
     </section>
 
-    <section id="examples.multiplexing">
+    <section xml:id="examples.multiplexing">
       <title>Мультиплексирование</title>
 
       <para>Рассмотрим работу мультиплексирования на примере следующей
@@ -6879,7 +7385,11 @@ null-modem:
       <figure>
         <title>Пример сети</title>
 
-        <graphic fileref="img/multiplexing-ex1.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/multiplexing-ex1.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Требуется передать два канала Е1 (unframed mode) от АТС к Клиенту
@@ -6925,13 +7435,21 @@ null-modem:
       <figure>
         <title>Взаимодействие интерфейсов на линии 0</title>
 
-        <graphic fileref="img/multiplexing-ex1-1-line0.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/multiplexing-ex1-1-line0.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <figure>
         <title>Взаимодействие интерфейсов на линии 1</title>
 
-        <graphic fileref="img/multiplexing-ex1-1-line1.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/multiplexing-ex1-1-line1.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
 
       <para>Для реализации этой схемы необходимо установить следующие
@@ -6943,35 +7461,51 @@ null-modem:
 
           <itemizedlist>
             <listitem>
-              <para><parameter>rline = 0</parameter></para>
+              <para>
+                <parameter>rline = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>rfs = 0</parameter></para>
+              <para>
+                <parameter>rfs = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>tline = 1</parameter></para>
+              <para>
+                <parameter>tline = 1</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>tfs = 0</parameter></para>
+              <para>
+                <parameter>tfs = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>mxsmap = "0-31"</parameter></para>
+              <para>
+                <parameter>mxsmap = "0-31"</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkm = 1</parameter></para>
+              <para>
+                <parameter>clkm = 1</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkr = 1</parameter></para>
+              <para>
+                <parameter>clkr = 1</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkab = 0</parameter></para>
+              <para>
+                <parameter>clkab = 0</parameter>
+              </para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -6981,35 +7515,51 @@ null-modem:
 
           <itemizedlist>
             <listitem>
-              <para><parameter>rline = 0</parameter></para>
+              <para>
+                <parameter>rline = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>rfs = 32</parameter></para>
+              <para>
+                <parameter>rfs = 32</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>tline = 1</parameter></para>
+              <para>
+                <parameter>tline = 1</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>tfs = 32</parameter></para>
+              <para>
+                <parameter>tfs = 32</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>mxsmap = "0-31"</parameter></para>
+              <para>
+                <parameter>mxsmap = "0-31"</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkm = 0</parameter></para>
+              <para>
+                <parameter>clkm = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkr = 0</parameter></para>
+              <para>
+                <parameter>clkr = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkab = 0</parameter></para>
+              <para>
+                <parameter>clkab = 0</parameter>
+              </para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -7019,35 +7569,51 @@ null-modem:
 
           <itemizedlist>
             <listitem>
-              <para><parameter>rline = 1</parameter></para>
+              <para>
+                <parameter>rline = 1</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>rfs = 0</parameter></para>
+              <para>
+                <parameter>rfs = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>tline = 0</parameter></para>
+              <para>
+                <parameter>tline = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>tfs = 0</parameter></para>
+              <para>
+                <parameter>tfs = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>mxrate = 64</parameter></para>
+              <para>
+                <parameter>mxrate = 64</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkm = 0</parameter></para>
+              <para>
+                <parameter>clkm = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkr = 0</parameter></para>
+              <para>
+                <parameter>clkr = 0</parameter>
+              </para>
             </listitem>
 
             <listitem>
-              <para><parameter>clkab = 0</parameter></para>
+              <para>
+                <parameter>clkab = 0</parameter>
+              </para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -7079,14 +7645,18 @@ null-modem:
         <title>Использование одной линии для передачи данных в обе
         стороны</title>
 
-        <graphic fileref="img/multiplexing-ex1-2-line.png" width="6in" />
+        <mediaobject>
+          <imageobject>
+            <imagedata fileref="img/multiplexing-ex1-2-line.png" width="6in" />
+          </imageobject>
+        </mediaobject>
       </figure>
     </section>
 
-    <section id="examples.voip">
+    <section xml:id="examples.voip">
       <title>VoIP</title>
 
-      <section id="examples.voip.ex1">
+      <section xml:id="examples.voip.ex1">
         <title>Обычные телефоны используются в качестве IP-телефонов</title>
 
         <para>В маршрутизатор устанавливаются модули VoIP с каналами FXS, к
@@ -7098,7 +7668,11 @@ null-modem:
         <figure>
           <title>Обычные телефоны используются в качестве IP-телефонов</title>
 
-          <graphic fileref="img/voip-ex1.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/voip-ex1.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>В данном примере в сети работает два маршрутизатора, с номерами
@@ -7114,7 +7688,7 @@ null-modem:
         <para>Таблица маршрутизации VoIP имеет одинаковое содержимое на всех
         маршрутизаторах одной сети и приведена ниже.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Таблица маршрутизации VoIP</title>
 
           <tgroup cols="3">
@@ -7152,7 +7726,7 @@ null-modem:
         так как могут использоваться различные сокращённые номера. Адресные
         книги для маршрутизаторов приведены в таблицах ниже.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Адресная книга маршрутизатора 032</title>
 
           <tgroup cols="3">
@@ -7202,7 +7776,7 @@ null-modem:
           </tgroup>
         </table>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Адресная книга маршрутизатора 033</title>
 
           <tgroup cols="3">
@@ -7300,7 +7874,7 @@ null-modem:
         происходить набор заданного номера. Настройка Hotline для
         маршрутизатора 032 приведена в таблице ниже.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Таблица Hotline для маршрутизатора 032</title>
 
           <tgroup cols="3">
@@ -7349,7 +7923,7 @@ null-modem:
         </itemizedlist>
       </section>
 
-      <section id="examples.voip.ex3">
+      <section xml:id="examples.voip.ex3">
         <title>Организация связи через АТС</title>
 
         <para>В маршрутизатор установлены модули VoIP с каналами FXS для
@@ -7361,14 +7935,18 @@ null-modem:
         <figure>
           <title>Организация связи через АТС</title>
 
-          <graphic fileref="img/voip-ex3.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/voip-ex3.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>В данном случае таблица маршрутизации VoIP не используется. По
         желанию можно настроить адресную книгу для быстрого набора номеров.
         Настройки адресной книги приведены ниже в таблице.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Адресная книга</title>
 
           <tgroup cols="3">
@@ -7458,13 +8036,14 @@ null-modem:
         </itemizedlist>
 
         <important>
-           В текущей версии ПО звонки от АТС могут приниматься только при настройке режима Hotline.
+          <para>В текущей версии ПО звонки от АТС могут приниматься только при
+          настройке режима Hotline.</para>
         </important>
 
         <para>Режим Hotline позволяет реализовать возможности, указанные ниже
         в таблице.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Таблица Hotline для маршрутизатора</title>
 
           <tgroup cols="3">
@@ -7501,7 +8080,7 @@ null-modem:
         </table>
       </section>
 
-      <section id="examples.voip.ex4">
+      <section xml:id="examples.voip.ex4">
         <title>Организация связи через АТС с использованием двух
         маршрутизаторов</title>
 
@@ -7518,14 +8097,18 @@ null-modem:
           <title>Организация связи через АТС с использованием двух
           маршрутизаторов</title>
 
-          <graphic fileref="img/voip-ex4.png" width="6in" />
+          <mediaobject>
+            <imageobject>
+              <imagedata fileref="img/voip-ex4.png" width="6in" />
+            </imageobject>
+          </mediaobject>
         </figure>
 
         <para>Так как в сети работают два маршрутизатора, необходимо настроить
         таблицу маршрутизации VoIP (вкладка Routes), содержимое которой
         представлено ниже.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Таблица маршрутизации VoIP</title>
 
           <tgroup cols="3">
@@ -7562,7 +8145,7 @@ null-modem:
         <para>Для быстрого набора номера настроим адресные книги для каждого
         из маршрутизаторов, как описано ниже.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Адресная книга маршрутизатора 032</title>
 
           <tgroup cols="3">
@@ -7620,7 +8203,7 @@ null-modem:
           </tgroup>
         </table>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Адресная книга маршрутизатора 033</title>
 
           <tgroup cols="3">
@@ -7717,13 +8300,14 @@ null-modem:
         </itemizedlist>
 
         <important>
-           В текущей версии ПО звонки от АТС могут приниматься только при настройке режима Hotline.
+          <para>В текущей версии ПО звонки от АТС могут приниматься только при
+          настройке режима Hotline.</para>
         </important>
 
         <para>Также настроим режим Hotline, как показано ниже в
         таблицах.</para>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Таблица Hotline для маршрутизатора 032</title>
 
           <tgroup cols="3">
@@ -7759,7 +8343,7 @@ null-modem:
           </tgroup>
         </table>
 
-        <table align="center" frame="all">
+        <table frame="all">
           <title>Таблица Hotline для маршрутизатора 033</title>
 
           <tgroup cols="3">
@@ -7798,7 +8382,7 @@ null-modem:
     </section>
   </chapter>
 
-  <chapter id="warranty">
+  <chapter xml:id="warranty">
     <title>Гарантия и обязательства</title>
 
     <para>Изготовитель гарантирует работоспособность маршрутизатора при

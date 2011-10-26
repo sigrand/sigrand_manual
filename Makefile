@@ -4,7 +4,10 @@
 #
 # Use make -jN for full CPU utilization
 
-xsl = /usr/share/xml/docbook/stylesheet/nwalsh/fo/docbook.xsl
+#xsl = /usr/share/xml/docbook/stylesheet/nwalsh/fo/docbook.xsl
+
+# for dockbook 5
+xsl = /usr/share/xml/docbook/stylesheet/docbook-xsl-ns/fo/docbook.xsl
 
 .PHONY : all clean
 
