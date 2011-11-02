@@ -4533,7 +4533,7 @@ null-modem:
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/wf2-ifaces-dynamic-added.png" width="6in" />
+              <imagedata fileref="img/wf2-ifaces-dynamic-added.png" />
             </imageobject>
           </mediaobject>
         </figure>
