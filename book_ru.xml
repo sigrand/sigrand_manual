@@ -7,9 +7,11 @@
       xmlns:html="http://www.w3.org/1999/xhtml"
       xmlns:db="http://docbook.org/ns/docbook">
   <title>Руководство пользователя SG-17R</title>
+
   <info>
     <copyright>
       <year>2007-2011</year>
+
       <holder>ООО "Сигранд"</holder>
     </copyright>
 
@@ -1767,7 +1769,8 @@ Enter your option:</screen>
       войти в меню загрузчика (см. раздел <link endterm="firstboot.title"
       linkend="bootloader" />).</para>
 
-      <para>Пример конфигурации приведен ниже:</para>
+      <para>Пример конфигурации (пункт меню "Set Parameters") приведен
+      ниже:</para>
 
       <screen>
 
@@ -1784,11 +1787,12 @@ Parameters Menu
  [X] Save parameters and exit menu
 Enter your option:</screen>
 
-      <para>В приведённом примере был введён только IP адрес маршрутизатора,
-      остальные параметры оставлены без изменений.</para>
+      <para>В приведённом примере все параметры оставлены без
+      изменений.</para>
 
-      <para>После настройки сетевых параметров следует выбрать пункт меню
-      Update OS для обновления системы.</para>
+      <para>После настройки сетевых параметров следует выйти в меню верхнего
+      уровня с сохранением (буква 'X') и выбрать пункт меню "Update OS" для
+      обновления системы.</para>
 
       <screen>
 Enter your option:s
@@ -1841,7 +1845,7 @@ Programming flash ..............................................................
       осуществить некоторые действия с flash-памятью маршрутизатора.</para>
 
       <important>
-        <para>Используейте режим эксперта только если вы понимаете что
+        <para>Используейте режим эксперта только если вы понимаете что вы
         делаете! Эти действия могут привести маршрутизатор в нерабочее
         состояние!</para>
       </important>
@@ -4574,7 +4578,8 @@ null-modem:
 
           <mediaobject>
             <imageobject>
-              <imagedata fileref="img/wf2-iface-bonding-wizard.png" width="6in" />
+              <imagedata fileref="img/wf2-iface-bonding-wizard.png"
+                         width="6in" />
             </imageobject>
           </mediaobject>
         </figure>
