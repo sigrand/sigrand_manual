@@ -2,7 +2,7 @@
 <xsl:stylesheet
          xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"
          xmlns:fo="http://www.w3.org/1999/XSL/Format">
-   <xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl-ns/fo/docbook.xsl"/>
+   <xsl:import href="/usr/share/xml/docbook/stylesheet/docbook-xsl/fo/docbook.xsl"/>
    <xsl:param name="sans.font.family">Verdana</xsl:param>
    <xsl:param name="paper.type" select="'A4'"/>
    <xsl:template name="book.titlepage.recto">
