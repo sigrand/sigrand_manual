@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
-"/usr/share/xml/docbook/schema/dtd/4.5/docbookx.dtd">
-<book lang="en">
-  <bookinfo>
+<book  version="5.0" lang="en" xml:lang="en" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+
+  <info>
     <title>SG-17R User Manual</title>
 
     <copyright>
@@ -37,7 +42,7 @@
       different operational modes of the router (multiplexing, bridging,
       bonding, VLAN, QoS, VoIP and others) are explained.</para>
     </abstract>
-  </bookinfo>
+  </info>
 
   <chapter>
     <title>Description of the Router SG-17R</title>
